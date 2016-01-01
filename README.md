@@ -13,7 +13,7 @@ GroupDocs.Conversion for .NET is a universal document conversion library designe
 
 Directory | Description
 --------- | -----------
-[Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples)  | Contains the package of all .NET examples (C# & VB) and sample files that will help you learn how to use product features.
+[Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples)  | Contains the package of all .NET examples (C# & VB) and sample files that will help you learn how to use product features.
 
 ## Resources
 
