@@ -2,7 +2,7 @@
 
 This package contains [Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples) for [GroupDocs.Conversion for .NET](#) that will help you understand API's working and write your own applications.
 
-GroupDocs.Conversion for .NET is a .NET API engine designed to generate documents based on templates. In essence, the engine accepts a template document and some data, assembles data with the template document as per syntax defined by the template document and then, generates the output document in the same format as of the template document format.
+GroupDocs.Conversion for .NET is a universal document conversion library designed for easy integration into any .NET application. Allows you to convert back and forth between over 50 types of documents and images, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and 
 
 <p align="center">
 
