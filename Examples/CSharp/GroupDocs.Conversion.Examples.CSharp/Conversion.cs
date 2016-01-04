@@ -11,62 +11,40 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     public static class Conversion
     {
-        /// you can set Input and output paths and input file name along with license path
-        public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
-        public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
-        public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.conversion.lic");
         public static string inputGUIDFile = "DOCXsample.docx";
 
-        #region Convert to Cells
+        #region Convert to Spreadsheet Document
 
         /// <summary>
-        /// Convert file to Excel format and get output as file path
+        /// Convert file  Spreadsheet Document formats and get output as file path
         /// </summary> 
-        public static void ToCellsAsPath()
+        public static void ConvertToSpreadsheetAsPath()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            /// set license path for GroupDocs.Conversion
-         //conversionHandler.SetLicense(licensePath);
-            var convertedDocumentPath = conversionHandler.Convert<string>(inputGUIDFile, new CellsSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new CellsSaveOptions());
         }
 
         /// <summary>
-        /// Convert file to Excel format and get output as Stream
+        /// Convert file  Spreadsheet Document formats and get output as Stream
         /// </summary> 
-        public static void ToCellsAsStream()
+        public static void ConvertToSpreadsheetStream()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, new CellsSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new CellsSaveOptions());
         }
 
         /// <summary>
-        /// in Advanced example Convert Password Protected file to Excel format 
+        /// In AdvanceOptions()d example Convert Password Protected file to Spreadsheet Document formats 
         /// </summary>
 
-        public static void ToCellsAdvance()
+        public static void ConvertToSpreadsheetAdvanceOptions()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-            conversionConfig.SetUseCache(true);
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -79,66 +57,47 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 NumPagesToConvert = 2
             };
 
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
         #endregion
 
-        #region Convert to Words
+        #region Convert to Word Processing Document
 
 
         /// <summary>
-        /// Convert file to Word format and get output as file path
+        /// Convert file to Word Processing Document format and get output as file path
         /// </summary> 
 
-        public static void ToWordsAsPath()
+        public static void ConvertToWordDocumentAsPath()
         {
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentPath = conversionHandler.Convert<string>(inputGUIDFile, new WordsSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new WordsSaveOptions());
         }
 
 
         /// <summary>
-        /// Convert file to Word format and get output as Stream
+        /// Convert file to Word Processing Document format and get output as Stream
         /// </summary>
 
-        public static void ToWordsAsStream()
+        public static void ConvertToWordDocumentAsStream()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, new WordsSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new WordsSaveOptions());
         }
 
         /// <summary>
-        /// in Advanced example Convert Password Protected file to Word format
+        /// In AdvanceOptions()d example Convert Password Protected file to Word Processing Document format
         /// </summary>
 
-        public static void ToWordsAdvance()
+        public static void ConvertToWordDocumentAdvanceOptions()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-            conversionConfig.SetUseCache(true);
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -151,63 +110,44 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 NumPagesToConvert = 2,
             };
 
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
         #endregion
 
-        #region Convert to PDF
+        #region Convert to Pdf
 
         /// <summary>
-        /// Convert file to PDF format and get output as file path
+        /// Convert file to Pdf format and get output as file path
         /// </summary>
 
-        public static void ToPdfAsPath()
+        public static void ConvertToPdfAsPath()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentPath = conversionHandler.Convert<string>(inputGUIDFile, new PdfSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions());
         }
 
         /// <summary>
-        /// Convert file to PDF format and get output as Stream
+        /// Convert file to Pdf format and get output as Stream
         /// </summary>
 
-        public static void ToPdfAsStream()
+        public static void ConvertToPdfAsStream()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, new PdfSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new PdfSaveOptions());
         }
 
         /// <summary>
-        /// in Advanced example Convert Password Protected file to PDF format
+        /// In AdvanceOptions()d example Convert Password Protected file to Pdf format
         /// </summary>        
-        public static void ToPdfAdvance()
+        public static void ConvertToPdfAdvanceOptions()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-            conversionConfig.SetUseCache(true);
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -223,62 +163,43 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 Height = 768
             };
 
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
         #endregion
 
-        #region Convert to Slides
+        #region Convert to Presentation Document
 
         /// <summary>
-        /// Convert file to PowerPiont format and get output as file path
+        /// Convert file to Presentation Document format and get output as file path
         /// </summary>
-        public static void ToSlidesAsPath()
+        public static void ConvertToPresentationAsPath()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentPath = conversionHandler.Convert<string>(inputGUIDFile, new SlidesSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new SlidesSaveOptions());
         }
 
         /// <summary>
-        /// Convert file to PowerPiont format and get output as Stream
+        /// Convert file to Presentation Document format and get output as Stream
         /// </summary>
-        public static void ToSlidesAsStream()
+        public static void ConvertToPresentationAsStream()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, new SlidesSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new SlidesSaveOptions());
         }
 
         /// <summary>
-        /// in Advanced example Convert Password Protected file to PowerPiont format
+        /// In AdvanceOptions()d example Convert Password Protected file to Presentation Document format
         /// </summary>
 
-        public static void ToSlidesAdvance()
+        public static void ConvertToPresentationAdvanceOptions()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-            conversionConfig.SetUseCache(true);
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -292,7 +213,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 NumPagesToConvert = 2,
             };
 
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
 

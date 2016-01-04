@@ -11,69 +11,43 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     public static class Rendering
     {
-        /// you can set Input and output paths and input file name along with license path
-        public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
-        public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
-        public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Conversion.lic");
-        public static string inputGUIDFile = "DOCXsample.docx";
-
-        #region Convert to HTML
+        #region Converts and Render in HTML
 
         /// <summary>
-        /// Convert file to HTML format and get output as file path
+        /// Converts and Render file to a HTML format and get output as file path
         /// </summary> 
 
-        public static void ToHTMLAsPath()
+        public static void RenderHTMLAsPath()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentPath = conversionHandler.Convert<string>(inputGUIDFile, new HtmlSaveOptions());
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+            
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new HtmlSaveOptions());
         }
 
         /// <summary>
-        /// Convert file to Excel format and get output as Stream
+        /// Converts and Render file as HTML format and get output as Stream
         /// </summary>
 
-        public static void ToHTMLAsStream()
+        public static void RenderHTMLAsStream()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, new HtmlSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new HtmlSaveOptions());
         }
 
         /// <summary>
-        /// in Advanced example Convert Password Protected file to Excel format
+        /// In AdvanceOptions()d example Converts and Render Password Protected file to Excel format
         /// </summary
 
-        public static void ToHTMLAdvance()
+        public static void RenderHTMLAdvanceOptions()
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-            // cache converted file
-            conversionConfig.SetUseCache(true);
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "rizwan" };
+            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
 
             // convert starting from page 2 and convert 2 pages
             SaveOptions saveOptions = new HtmlSaveOptions
@@ -82,65 +56,46 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 NumPagesToConvert = 2
             };
 
-            var convertedDocumentStream = conversionHandler.Convert<Stream>(inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
         #endregion
 
-        #region Convert to Image
+        #region Converts and Render in Image
 
 
         /// <summary>
-        /// Convert file to Image format and get output as file path
+        /// Converts and Render file to an Image format and get output as file path
         /// </summary> 
-
-        public static void ToImageAsPath()
+        /// <param name="outputFileType"></param>
+        public static void RenderImageAsPath(ImageSaveOptions.ImageFileType outputFileType)
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(inputGUIDFile, new ImageSaveOptions { ConvertFileType = ImageSaveOptions.ImageFileType.Jpg });
+            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
         }
 
         /// <summary>
-        /// Convert file to Image format and get output as Stream
+        /// Converts and Render file to an Image format and get output as Stream
         /// </summary>
-
-        public static void ToImageAsStream()
+        /// <param name="outputFileType"></param>
+        public static void RenderImageAsStream(ImageSaveOptions.ImageFileType outputFileType)
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
-
-            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(inputGUIDFile, new ImageSaveOptions { ConvertFileType = ImageSaveOptions.ImageFileType.Jpg });
+            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
         }
+
         /// <summary>
-        /// in Advanced example Convert Password Protected file to Image format
+        /// In AdvanceOptions()d example Converts and Render Password Protected file to Image format
         /// </summary>
-
-
-        public static void ToImageAdvance()
+        /// <param name="outputFileType"></param>
+        public static void RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType outputFileType)
         {
-            // Setup Conversion configuration
-            var conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
-            conversionConfig.SetUseCache(true);
-
-            //instantiating the conversion handler
-            var conversionHandler = new ConversionHandler(conversionConfig);
-
-            // set license path for GroupDocs.Conversion
-            // conversionHandler.SetLicense(licensePath);
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -149,7 +104,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // use DPI 300, image width 1024, image height 768
             SaveOptions saveOptions = new ImageSaveOptions
             {
-                ConvertFileType = ImageSaveOptions.ImageFileType.Tiff,
+                ConvertFileType = outputFileType,
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 Dpi = 300,
@@ -157,7 +112,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 Height = 768
             };
 
-            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
         #endregion

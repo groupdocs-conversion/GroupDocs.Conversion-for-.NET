@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using GroupDocs.Conversion.Converter.Option;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -11,85 +12,79 @@ namespace GroupDocs.Conversion.Examples.CSharp
         static void Main(string[] args)
         {
 
-            /// <summary>
-            ///START Convert to Cells examples
-            /// </summary>
+            /// you can set Input and output paths and input file name along with license path common for all example methods.
+            Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
+            Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
+            Common.inputGUIDFile = "DOCXsample.docx";
+            //Common.inputGUIDFile = "PPTSample.pptx";
+            //Common.inputGUIDFile = "PDFsample.pdf";
 
-            /// you can set Input and output paths and input file name along with license path
-            Conversion.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
-            Conversion.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
-            
-            Conversion.inputGUIDFile = "DOCXsample.docx";
-            //Conversion.inputGUIDFile = "PPTSample.pptx";
-            //Conversion.inputGUIDFile = "PDFsample.pdf";
-
-            // Result as file path (Excel)
-            Conversion.ToCellsAsPath();
-
-            // Result as Stream (Excel)
-            // Conversion.ToCellsAsStream();
-
-            // Advanced example (Excel)
-            //Conversion.ToCellsAdvance();
-
-            // Result as file path (PDF)
-            //Conversion.ToPdfAsPath();
-
-            // Result as Stream (PDF)
-            //Conversion.ToPdfAsStream();
-
-            // Advanced example (PDF)
-            // Conversion.ToPdfAdvance();
-
-            // Result as file path (PowerPoint)
-            //Conversion.ToSlidesAsPath();
-
-            // Result as Stream (PowerPoint)
-            //Conversion.ToSlidesAsStream();
-
-            // Advanced example (PowerPoint)
-            //ConversionConversionToSlidesAdvance();
-
-            // Result as  file path (Word)
-            //Conversion.ToWordsAsPath();
-
-            // Result as Stream (Word)
-            //Conversion.ToWordsAsStream();
-
-            // Advanced example (Word)
-            //Conversion.ToWordsAdvance();
-
+            // Uncomment following lines and specify the licence file to embed product licence.
+            // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Conversion.lic");
+            // Common.ApplyLicense();
 
             /// <summary>
-            ///Rendering to HTML and Image formats examples
+            /// **** Convert Spreadsheet, PDF, Presentation, Document Processing  formats.
             /// </summary>
 
 
-            /// you can set Input and output paths and input file name along with license path
-            Rendering.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
-            Rendering.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
+            // Convert file  Spreadsheet Document formats and get output as file path
+             Conversion.ConvertToSpreadsheetAsPath();
 
-            //Rendering.inputGUIDFile = "DOCXsample.docx";
-            //Rendering.inputGUIDFile = "PPTSample.pptx";
-            Rendering.inputGUIDFile = "PDFsample.pdf";
+            // Convert file  Spreadsheet Document formats and get output as Stream
+            // Conversion.ConvertToSpreadsheetStream();
 
-            // Result as file path
-            //Rendering.ToHTMLAsPath();
+            // In Advanced example Convert Password Protected file to Spreadsheet Document formats 
+            // Conversion.ConvertToSpreadsheetAdvanceOptions();
 
-            // Result as Stream
-            //Rendering.ToHTMLAsStream();
+            // Convert file to PDF format and get output as file path
+            // Conversion.ConvertToPdfAsPath();
 
-            // Advanced example
-            //Rendering.ToHTMLAdvance();
+            // Convert file to PDF format and get output as Stream
+            // Conversion.ConvertToPdfAsStream();
 
-            // Result as file path
-            // Rendering.ToImageAsPath();
+            // In Advanced example Convert Password Protected file to PDF format
+            // Conversion.ConvertToPdfAdvanceOptions();
 
-            // Result as Stream
-            //Rendering.ToImageAsStream();
+            // Convert file to Presentation Document format and get output as file path
+             Conversion.ConvertToPresentationAsPath();
 
-            // Advanced example
-            //Rendering.ToImageAdvance();
+            // Convert file to Presentation Document format and get output as Stream
+            // Conversion.ConvertToPresentationAsStream();
+
+            // In Advanced example Convert Password Protected file to Presentation Document format
+            // Conversion.ConversionToSlidesAdvanceOptions();
+
+            // Convert file to Word Processing Document format and get output as file path
+             Conversion.ConvertToWordDocumentAsPath();
+
+            // Convert file to Word Processing Document format and get output as Stream
+            // Conversion.ConvertToWordDocumentAsStream();
+
+            // In Advanced example Convert Password Protected file to Word Processing Document format
+            // Conversion.ConvertToWordDocumentAdvanceOptions();
+
+            /// <summary>
+            /// **** Rendering and Converting to HTML and Image formats.
+            /// </summary>
+
+            // Converts and Render file to a HTML format and get output as file path
+             Rendering.RenderHTMLAsPath();
+
+            // Converts and Render file as HTML format and get output as Stream
+            // Rendering.RenderHTMLAsStream();
+
+            // In Advanced example Converts and Render Password Protected file to Excel format
+            // Rendering.RenderHTMLAdvanceOptions();
+
+            // Converts and Render file to an Image format and get output as file path
+             Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
+
+            // Converts and Render file to an Image format and get output as Stream
+            // Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Png);
+
+            // In Advanced example Converts and Render Password Protected file to Image format
+            // Rendering.RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType.Gif);
         }
     }
 }
