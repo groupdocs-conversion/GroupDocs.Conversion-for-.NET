@@ -10,152 +10,86 @@ namespace GroupDocs.Conversion.Examples.CSharp
     {
         static void Main(string[] args)
         {
-            // ****************************************************************************************
-            // --------------- START Convert to Cells examples ---------------
-            // ****************************************************************************************
 
-            // you can set Input and output paths and input file name
-            ConvertToCells.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\SampleFiles");
-            ConvertToCells.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\OutputFiles");
-            //ConvertToCells.inputGUIDFile = "DOCXsample.docx";
-            //ConvertToCells.inputGUIDFile = "PDFsample.pdf";
-            ConvertToCells.inputGUIDFile = "PPTSample.pptx";
+            /// <summary>
+            ///START Convert to Cells examples
+            /// </summary>
 
-            // Result as file path
-            //ConvertToCells.ToCellsAsPath();
+            /// you can set Input and output paths and input file name along with license path
+            Conversion.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
+            Conversion.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
+            
+            Conversion.inputGUIDFile = "DOCXsample.docx";
+            //Conversion.inputGUIDFile = "PPTSample.pptx";
+            //Conversion.inputGUIDFile = "PDFsample.pdf";
 
-            // Result as Stream
-            //ConvertToCells.ToCellsAsStream();
+            // Result as file path (Excel)
+            Conversion.ToCellsAsPath();
 
-            // Advanced example
-            //ConvertToCells.ToCellsAdvance();
+            // Result as Stream (Excel)
+            // Conversion.ToCellsAsStream();
 
-            // ****************************************************************************************
-            // --------------- END Convert to Cells examples ---------------
-            // ****************************************************************************************
+            // Advanced example (Excel)
+            //Conversion.ToCellsAdvance();
+
+            // Result as file path (PDF)
+            //Conversion.ToPdfAsPath();
+
+            // Result as Stream (PDF)
+            //Conversion.ToPdfAsStream();
+
+            // Advanced example (PDF)
+            // Conversion.ToPdfAdvance();
+
+            // Result as file path (PowerPoint)
+            //Conversion.ToSlidesAsPath();
+
+            // Result as Stream (PowerPoint)
+            //Conversion.ToSlidesAsStream();
+
+            // Advanced example (PowerPoint)
+            //ConversionConversionToSlidesAdvance();
+
+            // Result as  file path (Word)
+            //Conversion.ToWordsAsPath();
+
+            // Result as Stream (Word)
+            //Conversion.ToWordsAsStream();
+
+            // Advanced example (Word)
+            //Conversion.ToWordsAdvance();
 
 
-            // ****************************************************************************************
-            // --------------- START Convert to HTML examples ---------------
-            // ****************************************************************************************
+            /// <summary>
+            ///Rendering to HTML and Image formats examples
+            /// </summary>
 
-            // you can set Input and output paths and input file name
-            ConvertToHtml.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\SampleFiles");
-            ConvertToHtml.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\OutputFiles");
-            //ConvertToHtml.inputGUIDFile = "DOCXsample.docx";
-            //ConvertToHtml.inputGUIDFile = "PDFsample.pdf";
-            ConvertToHtml.inputGUIDFile = "PPTSample.pptx";
 
-            // Result as file path
-            //ConvertToHtml.ToHTMLAsPath();
+            /// you can set Input and output paths and input file name along with license path
+            Rendering.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
+            Rendering.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
 
-            // Result as Stream
-            //ConvertToHtml.ToHTMLAsStream();
-
-            // Advanced example
-            //ConvertToHtml.ToHTMLAdvance();
-
-            // ****************************************************************************************
-            // --------------- END Convert to HTML examples ---------------
-            // ****************************************************************************************
-
-            // ****************************************************************************************
-            // --------------- START Convert to HTML examples ---------------
-            // ****************************************************************************************
-
-            // you can set Input and output paths and input file name
-            ConvertToImage.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\SampleFiles");
-            ConvertToImage.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\OutputFiles");
-            //ConvertToImage.inputGUIDFile = "DOCXsample.docx";
-            //ConvertToImage.inputGUIDFile = "PDFsample.pdf";
-            ConvertToImage.inputGUIDFile = "PPTSample.pptx";
-
-            // Result as file path
-            //ConvertToImage.ToImageAsPath();
-
-            // Result as Stream
-            //ConvertToImage.ToImageAsStream();
-
-            // Advanced example
-            //ConvertToImage.ToImageAdvance();
-
-            // ****************************************************************************************
-            // --------------- END Convert to Image examples ---------------
-            // ****************************************************************************************
-
-            // ****************************************************************************************
-            // --------------- START Convert to Pdf examples ---------------
-            // ****************************************************************************************
-
-            // you can set Input and output paths and input file name
-            ConvertToPdf.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\SampleFiles");
-            ConvertToPdf.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\OutputFiles");
-            //ConvertToPdf.inputGUIDFile = "DOCXsample.docx";
-            //ConvertToPdf.inputGUIDFile = "PDFsample.pdf";
-            ConvertToPdf.inputGUIDFile = "PPTSample.pptx";
+            //Rendering.inputGUIDFile = "DOCXsample.docx";
+            //Rendering.inputGUIDFile = "PPTSample.pptx";
+            Rendering.inputGUIDFile = "PDFsample.pdf";
 
             // Result as file path
-            //ConvertToPdf.ToPdfAsPath();
+            //Rendering.ToHTMLAsPath();
 
             // Result as Stream
-            //ConvertToPdf.ToPdfAsStream();
+            //Rendering.ToHTMLAsStream();
 
             // Advanced example
-            //ConvertToPdf.ToPdfAdvance();
-
-            // ****************************************************************************************
-            // --------------- END Convert to Pdf examples ---------------
-            // ****************************************************************************************
-
-            // ****************************************************************************************
-            // --------------- START Convert to Slides examples ---------------
-            // ****************************************************************************************
-
-            // you can set Input and output paths and input file name
-            ConvertToSlides.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\SampleFiles");
-            ConvertToSlides.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\OutputFiles");
-            //ConvertToSlides.inputGUIDFile = "DOCXsample.docx";
-            ConvertToSlides.inputGUIDFile = "PDFsample.pdf";
-            //ConvertToSlides.inputGUIDFile = "PPTSample.pptx";
+            //Rendering.ToHTMLAdvance();
 
             // Result as file path
-            //ConvertToSlides.ToSlidesAsPath();
+            // Rendering.ToImageAsPath();
 
             // Result as Stream
-            //ConvertToSlides.ToSlidesAsStream();
+            //Rendering.ToImageAsStream();
 
             // Advanced example
-            //ConvertToSlides.ToSlidesAdvance();
-
-            // ****************************************************************************************
-            // --------------- END Convert to Slides examples ---------------
-            // ****************************************************************************************
-
-
-            // ****************************************************************************************
-            // --------------- START Convert to Words examples ---------------
-            // ****************************************************************************************
-
-            // you can set Input and output paths and input file name
-            ConvertToWords.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\SampleFiles");
-            ConvertToWords.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\Data\OutputFiles");
-            //ConvertToWords.inputGUIDFile = "DOCXsample.docx";
-            //ConvertToWords.inputGUIDFile = "PDFsample.pdf";
-            ConvertToWords.inputGUIDFile = "PPTSample.pptx";
-
-            // Result as file path
-            ConvertToWords.ToWordsAsPath();
-
-            // Result as Stream
-            //ConvertToWords.ToWordsAsStream();
-
-            // Advanced example
-            //ConvertToWords.ToWordsAdvance();
-
-            // ****************************************************************************************
-            // --------------- END Convert to Words examples ---------------
-            // ****************************************************************************************
-
+            //Rendering.ToImageAdvance();
         }
     }
 }
