@@ -14,7 +14,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// you can set Input and output paths and input file name along with license path
         public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
         public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
-        public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"");
+        public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.conversion.lic");
         public static string inputGUIDFile = "DOCXsample.docx";
 
         #region Convert to Cells
