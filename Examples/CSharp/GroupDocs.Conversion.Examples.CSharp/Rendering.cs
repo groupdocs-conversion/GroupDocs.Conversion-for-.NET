@@ -26,7 +26,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         /// <summary>
-        /// Converts and Render file as HTML format and get output as Stream
+        /// Converts and Render Document as HTML format and outputs the resulting file to a stream
         /// </summary>
 
         public static void RenderHTMLAsStream()
@@ -38,7 +38,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         /// <summary>
-        /// In AdvanceOptions()d example Converts and Render Password Protected file to Excel format
+        /// In AdvanceOptions() example Converts and Render Password Protected file to HTML format
         /// </summary
 
         public static void RenderHTMLAdvanceOptions()
@@ -77,7 +77,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         /// <summary>
-        /// Converts and Render file to an Image format and get output as Stream
+        /// Converts and Render Document as Image format and outputs the resulting file to a stream
         /// </summary>
         /// <param name="outputFileType"></param>
         public static void RenderImageAsStream(ImageSaveOptions.ImageFileType outputFileType)

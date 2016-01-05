@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         /// <summary>
-        /// Convert file  Spreadsheet Document formats and get output as Stream
+        /// Converts documents to Spreadsheet Document formats and outputs the resulting document to a stream
         /// </summary> 
         public static void ConvertToSpreadsheetStream()
         {
@@ -79,7 +79,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
         /// <summary>
-        /// Convert file to Word Processing Document format and get output as Stream
+        /// Converts documents to Word Processing Document formats and outputs the resulting document to a stream
         /// </summary>
 
         public static void ConvertToWordDocumentAsStream()
@@ -130,7 +130,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         /// <summary>
-        /// Convert file to Pdf format and get output as Stream
+        /// Converts documents to Pdf Document formats and outputs the resulting document to a stream
         /// </summary>
 
         public static void ConvertToPdfAsStream()
@@ -182,7 +182,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         /// <summary>
-        /// Convert file to Presentation Document format and get output as Stream
+        /// Converts documents to Presentation Document format and outputs the resulting document to a stream
         /// </summary>
         public static void ConvertToPresentationAsStream()
         {
