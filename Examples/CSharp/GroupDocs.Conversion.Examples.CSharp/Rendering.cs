@@ -21,7 +21,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
-            
+
+            // Convert and save converted HTML documents.
+            // Returns paths to the converted HTML documents.
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new HtmlSaveOptions());
         }
 
@@ -34,11 +36,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
+            // Convert and save converted HTML documents. 
+            // Returns the converted HTML documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new HtmlSaveOptions());
         }
 
         /// <summary>
-        /// In AdvanceOptions() example Converts and Render Password Protected file to HTML format
+        /// In advance options example Converts and Render Password Protected file to HTML format
         /// </summary
 
         public static void RenderHTMLAdvanceOptions()
@@ -56,6 +60,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 NumPagesToConvert = 2
             };
 
+            // Unprotect input document, Convert and save HTML documents using advance options.
+            // Returns the converted HTML documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
@@ -73,6 +79,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
+            // Convert and save converted image file.
+            // Returns paths to the converted image file.
             var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
         }
 
@@ -85,11 +93,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
+            // Convert and save converted image file. 
+            // Returns the converted image file as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
         }
 
         /// <summary>
-        /// In AdvanceOptions()d example Converts and Render Password Protected file to Image format
+        /// In advance options example Converts and Render Password Protected file to Image format
         /// </summary>
         /// <param name="outputFileType"></param>
         public static void RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType outputFileType)
@@ -112,6 +122,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 Height = 768
             };
 
+            // Unprotect input document, Convert and save image file using advance options.
+            // Returns the converted image file as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, loadOptions, saveOptions);
         }
 
