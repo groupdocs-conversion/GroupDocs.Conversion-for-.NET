@@ -19,12 +19,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void RenderHTMLAsPath()
         {
+            //ExStart:RenderHTMLAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new HtmlSaveOptions());
+            //ExEnd:RenderHTMLAsPath
         }
 
         /// <summary>
@@ -33,12 +35,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void RenderHTMLAsStream()
         {
+            //ExStart:RenderHTMLAsStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted HTML documents. 
             // Returns the converted HTML documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new HtmlSaveOptions());
+            //ExEnd:RenderHTMLAsStream
         }
 
         /// <summary>
@@ -47,6 +51,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void RenderHTMLAdvanceOptions()
         {
+            //ExStart:RenderHTMLAdvanceOptions
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
@@ -63,6 +68,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Unprotect input document, Convert and save HTML documents using advance options.
             // Returns the converted HTML documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:RenderHTMLAdvanceOptions
         }
 
         #endregion
@@ -76,12 +82,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// <param name="outputFileType"></param>
         public static void RenderImageAsPath(ImageSaveOptions.ImageFileType outputFileType)
         {
+            //ExStart:RenderImageAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted image file.
             // Returns paths to the converted image file.
             var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
+            //ExEnd:RenderImageAsPath
         }
 
         /// <summary>
@@ -90,12 +98,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// <param name="outputFileType"></param>
         public static void RenderImageAsStream(ImageSaveOptions.ImageFileType outputFileType)
         {
+            //ExStart:RenderImageAsStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted image file. 
             // Returns the converted image file as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
+            //ExEnd:RenderImageAsStream
         }
 
         /// <summary>
@@ -104,6 +114,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// <param name="outputFileType"></param>
         public static void RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType outputFileType)
         {
+            //ExStart:RenderImageAdvanceOptions
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
@@ -125,6 +136,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Unprotect input document, Convert and save image file using advance options.
             // Returns the converted image file as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:RenderImageAdvanceOptions
         }
 
         #endregion

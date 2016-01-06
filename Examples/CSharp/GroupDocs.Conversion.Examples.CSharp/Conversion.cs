@@ -20,12 +20,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// </summary> 
         public static void ConvertToSpreadsheetAsPath()
         {
+            //ExStart:ConvertToSpreadsheetAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new CellsSaveOptions());
+            //ExEnd:ConvertToSpreadsheetAsPath
         }
 
         /// <summary>
@@ -33,12 +35,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// </summary> 
         public static void ConvertToSpreadsheetStream()
         {
+            //ExStart:ConvertToSpreadsheetStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted spreadsheet documents. 
             // Returns the converted spreadsheet documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new CellsSaveOptions());
+            //ExEnd:ConvertToSpreadsheetStream
         }
 
         /// <summary>
@@ -47,6 +51,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToSpreadsheetAdvanceOptions()
         {
+            //ExStart:ConvertToSpreadsheetAdvanceOptions
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
@@ -64,6 +69,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Unprotect input document, Convert and save spreadsheet documents using advance options.
             // Returns the converted spreadsheet documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:ConvertToSpreadsheetAdvanceOptions
         }
 
         #endregion
@@ -77,12 +83,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToWordDocumentAsPath()
         {
+            //ExStart:ConvertToWordDocumentAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted word processing documents.
             // Returns paths to the converted word processing documents.
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new WordsSaveOptions());
+            //ExEnd:ConvertToWordDocumentAsPath
         }
 
 
@@ -92,12 +100,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToWordDocumentAsStream()
         {
+            //ExStart:ConvertToWordDocumentAsStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted word processing documents. 
             // Returns the converted word processing documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new WordsSaveOptions());
+            //ExEnd:ConvertToWordDocumentAsStream
         }
 
         /// <summary>
@@ -106,6 +116,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToWordDocumentAdvanceOptions()
         {
+            //ExStart:ConvertToWordDocumentAdvanceOptions
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
@@ -123,6 +134,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Unprotect input document, Convert and save word processing documents using advance options.
             // Returns the converted word processing documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:ConvertToWordDocumentAdvanceOptions
         }
 
         #endregion
@@ -135,12 +147,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToPdfAsPath()
         {
+            //ExStart:ConvertToPdfAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions());
+            //ExEnd:ConvertToPdfAsPath
         }
 
         /// <summary>
@@ -149,12 +163,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToPdfAsStream()
         {
+            //ExStart:ConvertToPdfAsStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted Pdf documents. 
             // Returns the converted spreadsheet Pdf as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new PdfSaveOptions());
+            //ExEnd:ConvertToPdfAsStream
         }
 
         /// <summary>
@@ -162,6 +178,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// </summary>        
         public static void ConvertToPdfAdvanceOptions()
         {
+            //ExStart:ConvertToPdfAdvanceOptions
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
@@ -182,6 +199,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Unprotect input document, Convert and save Pdf documents using advance options.
             // Returns the converted spreadsheet Pdf as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:ConvertToPdfAdvanceOptions
         }
 
         #endregion
@@ -193,12 +211,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// </summary>
         public static void ConvertToPresentationAsPath()
         {
+            //ExStart:ConvertToPresentationAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted presentation documents.
             // Returns paths to the converted presentation documents.
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new SlidesSaveOptions());
+            //ExEnd:ConvertToPresentationAsPath
         }
 
         /// <summary>
@@ -206,12 +226,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// </summary>
         public static void ConvertToPresentationAsStream()
         {
+            //ExStart:ConvertToPresentationAsStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted presentation documents. 
             // Returns the converted presentation documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, new SlidesSaveOptions());
+            //ExEnd:ConvertToPresentationAsStream
         }
 
         /// <summary>
@@ -220,6 +242,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         public static void ConvertToPresentationAdvanceOptions()
         {
+            //ExStart:ConvertToPresentationAdvanceOptions
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
@@ -238,6 +261,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Unprotect input document, Convert and save presentation documents using advance options.
             // Returns the converted presentation documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:ConvertToPresentationAdvanceOptions
         }
 
 
