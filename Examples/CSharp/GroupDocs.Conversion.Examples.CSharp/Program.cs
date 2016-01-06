@@ -11,6 +11,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
     {
         static void Main(string[] args)
         {
+            //ExStart:ConvertFilesToDifferentFormats
 
             /// you can set Input and output paths and input file name along with license path common for all example methods.
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
@@ -85,6 +86,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // In Advanced example Converts and Render Password Protected file to Image format
             // Rendering.RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType.Gif);
+
+            //ExEnd:ConvertFilesToDifferentFormats
+
         }
     }
 }

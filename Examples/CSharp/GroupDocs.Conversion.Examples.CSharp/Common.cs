@@ -11,6 +11,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     public static class Common
     {
+        //ExStart:CommonClass
         // storagePath property to set input file/s directory
         public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
 
@@ -49,5 +50,6 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Apply GroupDocs.Conversion license using license path provided/set in licensePath property
             conversionHandler.SetLicense(licensePath);
         }
+        //ExEnd:CommonClass
     }
 }
