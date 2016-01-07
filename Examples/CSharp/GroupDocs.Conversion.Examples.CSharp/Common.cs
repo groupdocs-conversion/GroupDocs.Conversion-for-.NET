@@ -1,4 +1,5 @@
-﻿using System;
+﻿//ExStart:CommonClass
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     public static class Common
     {
-        //ExStart:CommonClass
+        //ExStart:CommonProperties
         // storagePath property to set input file/s directory
         public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
 
@@ -29,8 +30,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         // Creating new ConversionHandler class object with ConversionConfig object
         private static ConversionHandler conversionHandler = new ConversionHandler(conversionConfig);
+        //ExEnd:CommonProperties
 
-
+        //ExStart:getConversionHandler
         /// <summary>
         /// Get GroupDocs ConversionHandler Object
         /// </summary>
@@ -40,8 +42,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns the ConversionHandler static object
             return conversionHandler;
         }
+        //ExEnd:getConversionHandler
 
-
+        //ExStart:ApplyLicense
         /// <summary>
         /// Applies GroupDocs.Conversion license
         /// </summary>
@@ -50,6 +53,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Apply GroupDocs.Conversion license using license path provided/set in licensePath property
             conversionHandler.SetLicense(licensePath);
         }
-        //ExEnd:CommonClass
+        //ExEnd:ApplyLicense
     }
 }
+//ExEnd:CommonClass
