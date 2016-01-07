@@ -7,8 +7,8 @@ Imports GroupDocs.Conversion.Converter.Option
 Namespace GroupDocsConversionExamples.VisualBasic
     Module Module1
         Sub Main(args As String())
-            'ExStart:ExStart:ConvertFilesToDifferentFormats
-            ''' you can set Input and output paths and input file name along with license path common for all example methods.
+            'ExStart:ConvertFilesToDifferentFormats
+            ' you can set Input and output paths and input file name along with license path common for all example methods.
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\SampleFiles")
             Common.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\OutputFiles")
             Common.inputGUIDFile = "DOCXsample.docx"
@@ -82,7 +82,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' In Advanced example Converts and Render Password Protected file to Image format
             ' Rendering.RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType.Gif)
 
-            'ExEnd:ExStart:ConvertFilesToDifferentFormats
+            'ExEnd:ConvertFilesToDifferentFormats
         End Sub
     End Module
 End Namespace

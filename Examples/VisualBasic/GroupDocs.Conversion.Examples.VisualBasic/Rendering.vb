@@ -24,7 +24,6 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Convert and save converted HTML documents.
             ' Returns paths to the converted HTML documents.
             Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New HtmlSaveOptions())
-
             'ExEnd:RenderHTMLAsPath
         End Sub
 
@@ -40,7 +39,6 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Convert and save converted HTML documents. 
             ' Returns the converted HTML documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, New HtmlSaveOptions())
-
             'ExEnd:RenderHTMLAsStream
         End Sub
 
@@ -65,8 +63,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Unprotect input document, Convert and save HTML documents using advance options.
             ' Returns the converted HTML documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)
-
-            'ExStart:RenderHTMLAdvanceOptions
+            'ExEnd:RenderHTMLAdvanceOptions
         End Sub
 
 #End Region
@@ -90,8 +87,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Convert and save converted image file.
             ' Returns paths to the converted image file.
             Dim convertedDocumentPath = conversionHandler.Convert(Of IList(Of String))(Common.inputGUIDFile, objImageSaveOptions)
-
-            ' ExStart:RenderImageAsPath
+            ' ExEnd:RenderImageAsPath
         End Sub
 
         ''' <summary>
@@ -141,7 +137,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' use DPI 300, image width 1024, image height 768
             Dim convertedDocumentStream = conversionHandler.Convert(Of IList(Of Stream))(Common.inputGUIDFile, loadOptions, saveOptions)
 
-            'ExStart: RenderImageAdvanceOptions
+            'ExEnd:RenderImageAdvanceOptions
         End Sub
 
 #End Region

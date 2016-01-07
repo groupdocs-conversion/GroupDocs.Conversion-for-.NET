@@ -105,7 +105,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'Returns the converted word processing documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, New WordsSaveOptions())
 
-            'ExEnd: ConvertToWordDocumentAsStream
+            'ExEnd:ConvertToWordDocumentAsStream
         End Sub
 
         ''' <summary>
@@ -131,7 +131,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'Returns the converted word processing documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)
 
-            'ExStart:ConvertToWordDocumentAdvanceOptions
+            'ExEnd:ConvertToWordDocumentAdvanceOptions
 
         End Sub
 
@@ -152,7 +152,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Returns paths to the converted Pdf documents.
             Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New PdfSaveOptions())
 
-            'ExEnd:ConvertToPdfAsStream
+            'ExEnd:ConvertToPdfAsPath
         End Sub
 
         ''' <summary>
@@ -196,7 +196,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Returns the converted spreadsheet Pdf as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)
 
-            'ExEnd: ConvertToPdfAdvanceOptions
+            'ExEnd:ConvertToPdfAdvanceOptions
         End Sub
 
 #End Region
@@ -207,7 +207,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
         ''' Convert file to Presentation Document format and get output as file path
         ''' </summary>
         Public Shared Sub ConvertToPresentationAsPath()
-            'ExSrart: ConvertToPresentationAsPath
+            'ExStart:ConvertToPresentationAsPath
             ' Instantiating the conversion handler from custom common class
             Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
 
@@ -215,7 +215,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Returns paths to the converted presentation documents.
 
             Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New SlidesSaveOptions())
-            'ExEnd: ConvertToPresentationAsPath
+            'ExEnd:ConvertToPresentationAsPath
         End Sub
 
         ''' <summary>
@@ -230,7 +230,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Returns the converted presentation documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, New SlidesSaveOptions())
 
-            'ExEnd: ConvertToPresentationAsStream
+            'ExEnd:ConvertToPresentationAsStream
         End Sub
 
         ''' <summary>
@@ -257,7 +257,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Returns the converted presentation documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)
 
-            'ExEnd: ConvertToPresentationAdvanceOptions
+            'ExEnd:ConvertToPresentationAdvanceOptions
         End Sub
 
 
