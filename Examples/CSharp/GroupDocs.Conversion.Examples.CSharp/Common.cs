@@ -14,10 +14,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
     {
         //ExStart:CommonProperties
         // storagePath property to set input file/s directory
-        public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
+        public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data\SampleFiles");
 
         // cachePath property to set output file/s directory
-        public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
+        public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/OutputFiles");
 
         // licensePath property to set GroupDocs.Conversion license file anme and path
         public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.conversion.lic");
