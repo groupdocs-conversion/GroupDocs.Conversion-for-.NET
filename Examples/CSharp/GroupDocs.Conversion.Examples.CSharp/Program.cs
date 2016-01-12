@@ -14,8 +14,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:ConvertFilesToDifferentFormats
 
             /// you can set Input and output paths and input file name along with license path common for all example methods.
-            Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\SampleFiles");
-            Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\Data\OutputFiles");
+            Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
+            Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/OutputFiles");
             Common.inputGUIDFile = "DOCXsample.docx";
             //Common.inputGUIDFile = "PPTSample.pptx";
             //Common.inputGUIDFile = "PDFsample.pdf";
