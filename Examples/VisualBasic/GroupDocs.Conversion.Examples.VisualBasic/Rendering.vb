@@ -125,7 +125,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' convert file to Tiff, starting from page 2 and convert 2 pages,
             ' use DPI 300, image width 1024, image height 768
             Dim saveOptions As SaveOptions
-            saveOptions = New HtmlSaveOptions()
+            saveOptions = New ImageSaveOptions()
             'saveOptions.ConvertFileType = outputFileType
             saveOptions.PageNumber = 2
             saveOptions.NumPagesToConvert = 2
