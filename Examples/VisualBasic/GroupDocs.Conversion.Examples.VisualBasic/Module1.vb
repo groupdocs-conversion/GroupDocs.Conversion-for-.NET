@@ -2,157 +2,87 @@
 Imports System.Linq
 Imports System.Text
 Imports System.IO
+Imports GroupDocs.Conversion.Converter.Option
 
-Namespace GroupDocs.Conversion.Examples.VisualBasic
+Namespace GroupDocsConversionExamples.VisualBasic
     Module Module1
-        Sub Main()
-            ' ****************************************************************************************
-            ' --------------- START Convert to Cells examples ---------------
-            ' ****************************************************************************************
+        Sub Main(args As String())
+            'ExStart:ConvertFilesToDifferentFormats
+            ' you can set Input and output paths and input file name along with license path common for all example methods.
+            Common.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\SampleFiles")
+            Common.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\OutputFiles")
+            Common.inputGUIDFile = "DOCXsample.docx"
+            'Common.inputGUIDFile = "PPTSample.pptx"
+            'Common.inputGUIDFile = "PDFsample.pdf"
 
-            ' you can set Input and output paths and input file name
-            ConvertToCells.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\SampleFiles")
-            ConvertToCells.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\OutputFiles")
-            'ConvertToCells.inputGUIDFile = "DOCXsample.docx"
-            'ConvertToCells.inputGUIDFile = "PDFsample.pdf"
-            ConvertToCells.inputGUIDFile = "PPTSample.pptx"
+            ' Uncomment following lines and specify the licence file to embed product licence.
+            ' Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Conversion.lic")
+            ' Common.ApplyLicense()
 
-            ' Result as file path
-            ConvertToCells.ToCellsAsPath()
-
-            ' Result as Stream
-            'ConvertToCells.ToCellsAsStream()
-
-            ' Advanced example
-            'ConvertToCells.ToCellsAdvance()
-
-            ' ****************************************************************************************
-            ' --------------- END Convert to Cells examples ---------------
-            ' ****************************************************************************************
+            ''' <summary>
+            ''' **** Convert Spreadsheet, PDF, Presentation, Document Processing  formats.
+            ''' </summary>
 
 
-            ' ****************************************************************************************
-            ' --------------- START Convert to HTML examples ---------------
-            ' ****************************************************************************************
+            ' Convert file  Spreadsheet Document formats and get output as file path
+            Conversion.ConvertToSpreadsheetAsPath()
 
-            ' you can set Input and output paths and input file name
-            ConvertToHtml.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\SampleFiles")
-            ConvertToHtml.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\OutputFiles")
-            'ConvertToHtml.inputGUIDFile = "DOCXsample.docx"
-            'ConvertToHtml.inputGUIDFile = "PDFsample.pdf"
-            ConvertToHtml.inputGUIDFile = "PPTSample.pptx"
+            ' Convert file  Spreadsheet Document formats and get output as Stream
+            ' Conversion.ConvertToSpreadsheetStream()
 
-            ' Result as file path
-            'ConvertToHtml.ToHTMLAsPath()
+            ' In Advanced example Convert Password Protected file to Spreadsheet Document formats 
+            ' Conversion.ConvertToSpreadsheetAdvanceOptions()
 
-            ' Result as Stream
-            'ConvertToHtml.ToHTMLAsStream()
+            ' Convert file to PDF format and get output as file path
+            Conversion.ConvertToPdfAsPath()
 
-            ' Advanced example
-            'ConvertToHtml.ToHTMLAdvance()
+            ' Convert file to PDF format and get output as Stream
+            ' Conversion.ConvertToPdfAsStream()
 
-            ' ****************************************************************************************
-            ' --------------- END Convert to HTML examples ---------------
-            ' ****************************************************************************************
+            ' In Advanced example Convert Password Protected file to PDF format
+            ' Conversion.ConvertToPdfAdvanceOptions()
 
-            ' ****************************************************************************************
-            ' --------------- START Convert to HTML examples ---------------
-            ' ****************************************************************************************
+            ' Convert file to Presentation Document format and get output as file path
+            Conversion.ConvertToPresentationAsPath()
 
-            ' you can set Input and output paths and input file name
-            ConvertToImage.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\SampleFiles")
-            ConvertToImage.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\OutputFiles")
-            'ConvertToImage.inputGUIDFile = "DOCXsample.docx"
-            'ConvertToImage.inputGUIDFile = "PDFsample.pdf"
-            ConvertToImage.inputGUIDFile = "PPTSample.pptx"
+            ' Convert file to Presentation Document format and get output as Stream
+            ' Conversion.ConvertToPresentationAsStream()
 
-            ' Result as file path
-            'ConvertToImage.ToImageAsPath()
+            ' In Advanced example Convert Password Protected file to Presentation Document format
+            ' Conversion.ConversionToSlidesAdvanceOptions()
 
-            ' Result as Stream
-            'ConvertToImage.ToImageAsStream()
+            ' Convert file to Word Processing Document format and get output as file path
+            Conversion.ConvertToWordDocumentAsPath()
 
-            ' Advanced example
-            'ConvertToImage.ToImageAdvance()
+            ' Convert file to Word Processing Document format and get output as Stream
+            ' Conversion.ConvertToWordDocumentAsStream()
 
-            ' ****************************************************************************************
-            ' --------------- END Convert to Image examples ---------------
-            ' ****************************************************************************************
+            ' In Advanced example Convert Password Protected file to Word Processing Document format
+            ' Conversion.ConvertToWordDocumentAdvanceOptions()
 
-            ' ****************************************************************************************
-            ' --------------- START Convert to Pdf examples ---------------
-            ' ****************************************************************************************
+            ''' <summary>
+            ''' **** Rendering and Converting to HTML and Image formats.
+            ''' </summary>
 
-            ' you can set Input and output paths and input file name
-            ConvertToPdf.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\SampleFiles")
-            ConvertToPdf.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\OutputFiles")
-            'ConvertToPdf.inputGUIDFile = "DOCXsample.docx"
-            'ConvertToPdf.inputGUIDFile = "PDFsample.pdf"
-            ConvertToPdf.inputGUIDFile = "PPTSample.pptx"
+            ' Converts and Render file to a HTML format and get output as file path
+            Rendering.RenderHTMLAsPath()
 
-            ' Result as file path
-            'ConvertToPdf.ToPdfAsPath()
+            ' Converts and Render file as HTML format and get output as Stream
+            ' Rendering.RenderHTMLAsStream()
 
-            ' Result as Stream
-            'ConvertToPdf.ToPdfAsStream()
+            ' In Advanced example Converts and Render Password Protected file to Excel format
+            ' Rendering.RenderHTMLAdvanceOptions()
 
-            ' Advanced example
-            'ConvertToPdf.ToPdfAdvance()
+            ' Converts and Render file to an Image format and get output as file path
+            Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png)
 
-            ' ****************************************************************************************
-            ' --------------- END Convert to Pdf examples ---------------
-            ' ****************************************************************************************
+            ' Converts and Render file to an Image format and get output as Stream
+            ' Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Png)
 
-            ' ****************************************************************************************
-            ' --------------- START Convert to Slides examples ---------------
-            ' ****************************************************************************************
+            ' In Advanced example Converts and Render Password Protected file to Image format
+            ' Rendering.RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType.Gif)
 
-            ' you can set Input and output paths and input file name
-            ConvertToSlides.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\SampleFiles")
-            ConvertToSlides.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\OutputFiles")
-            'ConvertToSlides.inputGUIDFile = "DOCXsample.docx"
-            ConvertToSlides.inputGUIDFile = "PDFsample.pdf"
-            'ConvertToSlides.inputGUIDFile = "PPTSample.pptx"
-
-            ' Result as file path
-            'ConvertToSlides.ToSlidesAsPath()
-
-            ' Result as Stream
-            'ConvertToSlides.ToSlidesAsStream()
-
-            ' Advanced example
-            'ConvertToSlides.ToSlidesAdvance()
-
-            ' ****************************************************************************************
-            ' --------------- END Convert to Slides examples ---------------
-            ' ****************************************************************************************
-
-
-            ' ****************************************************************************************
-            ' --------------- START Convert to Words examples ---------------
-            ' ****************************************************************************************
-
-            ' you can set Input and output paths and input file name
-            ConvertToWords.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\SampleFiles")
-            ConvertToWords.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\Data\OutputFiles")
-            'ConvertToWords.inputGUIDFile = "DOCXsample.docx"
-            'ConvertToWords.inputGUIDFile = "PDFsample.pdf"
-            ConvertToWords.inputGUIDFile = "PPTSample.pptx"
-
-            ' Result as file path
-            'ConvertToWords.ToWordsAsPath()
-
-            ' Result as Stream
-            'ConvertToWords.ToWordsAsStream()
-
-            ' Advanced example
-            'ConvertToWords.ToWordsAdvance()
-
-            ' ****************************************************************************************
-            ' --------------- END Convert to Words examples ---------------
-            ' ****************************************************************************************
-
+            'ExEnd:ConvertFilesToDifferentFormats
         End Sub
-
     End Module
 End Namespace
