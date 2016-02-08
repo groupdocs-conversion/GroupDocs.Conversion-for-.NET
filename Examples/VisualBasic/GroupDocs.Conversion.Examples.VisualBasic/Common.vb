@@ -19,7 +19,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
         Public Shared cachePath As String = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\Cache")
 
         ' outputPath property to set output file/s directory
-        Public Shared outputPath As String = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data/ConvertedFiles")
+        Public Shared outputPath As String = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\ConvertedFiles")
 
         ' licensePath property to set GroupDocs.Conversion license file anme and path
         Public Shared licensePath As String = Path.Combine(Environment.CurrentDirectory, "GroupDocs.conversion.lic")
