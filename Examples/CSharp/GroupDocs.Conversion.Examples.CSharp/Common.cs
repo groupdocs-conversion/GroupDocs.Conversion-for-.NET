@@ -14,7 +14,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
     {
         //ExStart:CommonProperties
         // storagePath property to set input file/s directory
-        public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data\SampleFiles");
+        public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
 
         // cachePath property to set cache file/s directory
         public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
