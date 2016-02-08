@@ -10,7 +10,8 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExStart:ConvertFilesToDifferentFormats
             ' you can set Input and output paths and input file name along with license path common for all example methods.
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\SampleFiles")
-            Common.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\OutputFiles")
+            Common.cachePath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data\Cache")
+            Common.outputPath = Path.Combine(Environment.CurrentDirectory, "..\..\..\..\Data/ConvertedFiles")
             Common.inputGUIDFile = "DOCXsample.docx"
             'Common.inputGUIDFile = "PPTSample.pptx"
             'Common.inputGUIDFile = "PDFsample.pdf"

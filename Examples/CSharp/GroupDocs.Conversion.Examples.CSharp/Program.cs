@@ -15,7 +15,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             /// you can set Input and output paths and input file name along with license path common for all example methods.
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
-            Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/OutputFiles");
+            Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
+            Common.outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
             Common.inputGUIDFile = "DOCXsample.docx";
             //Common.inputGUIDFile = "PPTSample.pptx";
             //Common.inputGUIDFile = "PDFsample.pdf";
@@ -30,7 +31,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-             Conversion.ConvertToSpreadsheetAsPath();
+            Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
             // Conversion.ConvertToSpreadsheetStream();
@@ -48,7 +49,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Conversion.ConvertToPdfAdvanceOptions();
 
             // Convert file to Presentation Document format and get output as file path
-             Conversion.ConvertToPresentationAsPath();
+            Conversion.ConvertToPresentationAsPath();
 
             // Convert file to Presentation Document format and get output as Stream
             // Conversion.ConvertToPresentationAsStream();
@@ -57,7 +58,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Conversion.ConversionToSlidesAdvanceOptions();
 
             // Convert file to Word Processing Document format and get output as file path
-             Conversion.ConvertToWordDocumentAsPath();
+            Conversion.ConvertToWordDocumentAsPath();
 
             // Convert file to Word Processing Document format and get output as Stream
             // Conversion.ConvertToWordDocumentAsStream();
@@ -70,7 +71,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             /// </summary>
 
             // Converts and Render file to a HTML format and get output as file path
-             Rendering.RenderHTMLAsPath();
+            Rendering.RenderHTMLAsPath();
 
             // Converts and Render file as HTML format and get output as Stream
             // Rendering.RenderHTMLAsStream();
@@ -79,7 +80,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Rendering.RenderHTMLAdvanceOptions();
 
             // Converts and Render file to an Image format and get output as file path
-             Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
+            Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
 
             // Converts and Render file to an Image format and get output as Stream
             // Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Png);

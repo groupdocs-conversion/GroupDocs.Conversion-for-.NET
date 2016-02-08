@@ -20,7 +20,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
         Public Shared Sub ConvertToSpreadsheetAsPath()
             'ExStart:ConvertToSpreadsheetAsPath
             ' Instantiating the conversion handler from custom common class
-            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandlerUsingCache(True)
 
             'Convert and save converted spreadsheet documents.
             'Returns paths to the converted spreadsheet documents.
@@ -35,7 +35,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
         Public Shared Sub ConvertToSpreadsheetStream()
             'ExStart: ConvertToSpreadsheetStream
             ' Instantiating the conversion handler from custom common class
-            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandlerUsingCache(True)
 
             'Convert and save converted spreadsheet documents. 
             'Returns the converted spreadsheet documents as IO Stream.
@@ -51,7 +51,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
         Public Shared Sub ConvertToSpreadsheetAdvanceOptions()
             'ExStart:ConvertToSpreadsheetAdvanceOptions
             ' Instantiating the conversion handler from custom common class
-            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandlerUsingCache(True)
 
             'Set password to unprotect protected document during loading
             Dim loadOptions As New LoadOptions()

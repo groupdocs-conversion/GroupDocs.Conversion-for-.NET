@@ -16,8 +16,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // storagePath property to set input file/s directory
         public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data\SampleFiles");
 
-        // cachePath property to set output file/s directory
-        public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/OutputFiles");
+        // cachePath property to set cache file/s directory
+        public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
+
+        // outputPath property to set output file/s directory
+        public static string outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
 
         // licensePath property to set GroupDocs.Conversion license file anme and path
         public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.conversion.lic");
@@ -25,11 +28,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // inputGUIDFile property to set input file
         public static string inputGUIDFile = "DOCXsample.docx";
 
-        // Creating new ConversionConfig class object with input and output files directory path
-        private static ConversionConfig conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+        // Instantiate GroupDocs.Conversion ConversionConfig class object
+        private static ConversionConfig conversionConfig = null;
 
-        // Creating new ConversionHandler class object with ConversionConfig object
-        private static ConversionHandler conversionHandler = new ConversionHandler(conversionConfig);
+        // Instantiate GroupDocs.Conversion ConversionHandler class object
+        private static ConversionHandler conversionHandler = null;
+
+        // Instantiate GroupDocs.Conversion license
+        private static License license = new License();
+
         //ExEnd:CommonProperties
 
         //ExStart:getConversionHandler
@@ -39,10 +46,46 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// <returns>ConversionHandler</returns>
         public static ConversionHandler getConversionHandler()
         {
+            if (conversionConfig == null)
+            {
+                // Creating new ConversionConfig class object with input and output files directory path
+                conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath, OutputPath = outputPath };
+            }
+
+            // Set false to disable cache
+            conversionConfig.UseCache = false;
+
+            // Creating new ConversionHandler class object with ConversionConfig object
+            conversionHandler = new ConversionHandler(conversionConfig);
+
             // Returns the ConversionHandler static object
             return conversionHandler;
         }
         //ExEnd:getConversionHandler
+
+        //ExStart:getConversionHandlerUsingCache
+        /// <summary>
+        /// Get GroupDocs ConversionHandler Object
+        /// </summary>
+        /// <returns>ConversionHandler</returns>
+        public static ConversionHandler getConversionHandlerUsingCache(bool isUseCache)
+        {
+            if (conversionConfig == null)
+            {
+                // Creating new ConversionConfig class object with input and output files directory path
+                conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath, OutputPath = outputPath };
+            }
+
+            // Set to use cache or not
+            conversionConfig.UseCache = isUseCache;
+
+            // Creating new ConversionHandler class object with ConversionConfig object
+            conversionHandler = new ConversionHandler(conversionConfig);
+
+            // Returns the ConversionHandler static object
+            return conversionHandler;
+        }
+        //ExEnd:getConversionHandlerUsingCache
 
         //ExStart:ApplyLicense
         /// <summary>
@@ -51,7 +94,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static void ApplyLicense()
         {
             // Apply GroupDocs.Conversion license using license path provided/set in licensePath property
-            conversionHandler.SetLicense(licensePath);
+            license.SetLicense(licensePath);
         }
         //ExEnd:ApplyLicense
     }

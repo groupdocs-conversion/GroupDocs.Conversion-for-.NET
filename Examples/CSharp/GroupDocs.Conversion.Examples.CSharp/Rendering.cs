@@ -21,7 +21,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderHTMLAsPath
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandler();;
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
@@ -37,7 +37,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderHTMLAsStream
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandler();;
 
             // Convert and save converted HTML documents. 
             // Returns the converted HTML documents as IO Stream.
@@ -53,7 +53,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderHTMLAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandler();;
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -84,7 +84,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderImageAsPath
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandler();;
 
             // Convert and save converted image file.
             // Returns paths to the converted image file.
@@ -100,7 +100,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderImageAsStream
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandler();;
 
             // Convert and save converted image file. 
             // Returns the converted image file as IO Stream.
@@ -116,7 +116,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderImageAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandler();;
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };

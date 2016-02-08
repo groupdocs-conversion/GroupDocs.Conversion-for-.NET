@@ -22,7 +22,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToSpreadsheetAsPath
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandlerUsingCache(true);
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
@@ -37,7 +37,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToSpreadsheetStream
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandlerUsingCache(true);
 
             // Convert and save converted spreadsheet documents. 
             // Returns the converted spreadsheet documents as IO Stream.
@@ -53,7 +53,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToSpreadsheetAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
+            ConversionHandler conversionHandler = Common.getConversionHandlerUsingCache(true);
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
