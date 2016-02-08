@@ -24,6 +24,9 @@ namespace GroupdocsConversionMVCDemo.Models
         // Creating new ConversionHandler class object with ConversionConfig object
         private ConversionHandler conversionHandler;
 
+        // Instantiate GroupDocs.Conversion license
+        private static License license = new License();
+
         // <summary>
         /// Get GroupDocs ConversionHandler Object
         /// </summary>
@@ -36,8 +39,15 @@ namespace GroupdocsConversionMVCDemo.Models
 
             licensePath = Server.MapPath("~/App_Data/");
 
+            // Creating new ConversionConfig class object with input and output files directory path
             conversionConfig = new ConversionConfig { StoragePath = storagePath, CachePath = cachePath };
+
+            // Set false to disable cache
+            conversionConfig.UseCache = true;
+
+            // Creating new ConversionHandler class object with ConversionConfig object
             conversionHandler = new ConversionHandler(conversionConfig);
+
             // Returns the ConversionHandler static object
             return conversionHandler;
         }
@@ -48,7 +58,7 @@ namespace GroupdocsConversionMVCDemo.Models
         public void ApplyLicense()
         {
             // Apply GroupDocs.Conversion license using license path provided/set in licensePath property
-            conversionHandler.SetLicense(licensePath);
+            license.SetLicense(licensePath);
         }
     }
 }
