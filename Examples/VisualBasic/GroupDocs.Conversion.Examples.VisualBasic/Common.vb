@@ -33,9 +33,6 @@ Namespace GroupDocsConversionExamples.VisualBasic
         ' Declare ConversionHandler class object
         Private Shared conversionHandler As ConversionHandler
 
-        ' Instantiate GroupDocs.Conversion license
-        Private Shared license As New GroupDocs.Conversion.License()
-
         'ExEnd:CommonProperties
 
         'ExStart:getConversionHandler
@@ -86,13 +83,30 @@ Namespace GroupDocsConversionExamples.VisualBasic
         ''' <summary>
         ''' Applies product license
         ''' </summary>
-        Public Shared Sub ApplyLicense()
+        Public Shared Sub ApplyLicense(filepath As String)
 
-            ' Apply GroupDocs.Conversion license using license path provided/set in licensePath property
-            license.SetLicense(licensePath)
+            ' Instantiate GroupDocs.Conversion license
+            Dim license As New GroupDocs.Conversion.License()
+
+            ' Apply GroupDocs.Conversion license using license file path
+            license.SetLicense(filepath)
+
+        End Sub
+
+        ''' <summary>
+        ''' Applies product license
+        ''' </summary>
+        Public Shared Sub ApplyLicense(licenseStream As FileStream)
+
+            ' Instantiate GroupDocs.Conversion license
+            Dim license As New GroupDocs.Conversion.License()
+
+            ' Apply GroupDocs.Conversion license using license file stream
+            license.SetLicense(licenseStream)
 
         End Sub
         'ExEnd:ApplyLicense
+
     End Class
 End Namespace
 'ExEnd:CommonClass

@@ -21,9 +21,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Common.inputGUIDFile = "PPTSample.pptx";
             //Common.inputGUIDFile = "PDFsample.pdf";
 
-            // Uncomment following lines and specify the licence file to embed product licence.
-            // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Conversion.lic");
-            // Common.ApplyLicense();
+            // Uncomment following lines and specify the licence file to embed product licence using file path.
+            // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic");
+            // Common.ApplyLicense(Common.licensePath);
+
+            // Uncomment following lines and specify the licence file to embed product licence using stream.
+             Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
+             Common.ApplyLicense(licenseStream);
 
             /// <summary>
             /// **** Convert Spreadsheet, PDF, Presentation, Document Processing  formats.
