@@ -16,9 +16,13 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'Common.inputGUIDFile = "PPTSample.pptx"
             'Common.inputGUIDFile = "PDFsample.pdf"
 
-            ' Uncomment following lines and specify the licence file to embed product licence.
-            ' Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Conversion.lic")
-            ' Common.ApplyLicense()
+            ' Uncomment following lines and specify the licence file path to embed product licence.
+            ' Common.licensePath = Path.Combine(Environment.CurrentDirectory, "GroupDocs.Conversion.lic")
+            ' Common.ApplyLicense(Common.licensePath)
+
+            ' Uncomment following lines and specify the licence file stream to embed product licence.
+            'Dim licenseStream As New FileStream(Path.Combine(Environment.CurrentDirectory, "GroupDocs.total.lic"), FileMode.Open, FileAccess.Read)
+            'Common.ApplyLicense(licenseStream)
 
             ''' <summary>
             ''' **** Convert Spreadsheet, PDF, Presentation, Document Processing  formats.
