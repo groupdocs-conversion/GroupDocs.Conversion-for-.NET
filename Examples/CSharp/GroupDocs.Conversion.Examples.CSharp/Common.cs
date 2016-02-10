@@ -34,9 +34,6 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // Instantiate GroupDocs.Conversion ConversionHandler class object
         private static ConversionHandler conversionHandler = null;
 
-        // Instantiate GroupDocs.Conversion license
-        private static License license = new License();
-
         //ExEnd:CommonProperties
 
         //ExStart:getConversionHandler
@@ -91,10 +88,25 @@ namespace GroupDocs.Conversion.Examples.CSharp
         /// <summary>
         /// Applies GroupDocs.Conversion license
         /// </summary>
-        public static void ApplyLicense()
+        public static void ApplyLicense(string filepath)
         {
-            // Apply GroupDocs.Conversion license using license path provided/set in licensePath property
-            license.SetLicense(licensePath);
+            // Instantiate GroupDocs.Conversion license
+            GroupDocs.Conversion.License license = new GroupDocs.Conversion.License();
+
+            // Apply GroupDocs.Conversion license using license path
+            license.SetLicense(filepath);
+        }
+
+        /// <summary>
+        /// Applies GroupDocs.Conversion license using stream input
+        /// </summary>
+        public static void ApplyLicense(Stream licenseStream)
+        {
+            // Instantiate GroupDocs.Conversion license
+            GroupDocs.Conversion.License license = new GroupDocs.Conversion.License();
+
+            // Apply GroupDocs.Conversion license using license file stream
+            license.SetLicense(licenseStream);
         }
         //ExEnd:ApplyLicense
     }
