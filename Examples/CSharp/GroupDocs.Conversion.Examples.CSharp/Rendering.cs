@@ -25,7 +25,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
-            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new HtmlSaveOptions());
+            var saveOptions = new HtmlSaveOptions
+            {
+                CustomName = "cache",
+                PageNumber = 2,
+                NumPagesToConvert = 2,
+                UsePdf = true,
+                OutputType = OutputType.String
+            };
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new HtmlSaveOptions { OutputType = OutputType.String });
             //ExEnd:RenderHTMLAsPath
         }
 
@@ -88,8 +96,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted image file.
             // Returns paths to the converted image file.
-            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
-            //ExEnd:RenderImageAsPath
+            var saveOptions = new ImageSaveOptions
+            {
+                ConvertFileType = ImageSaveOptions.ImageFileType.Jpg,
+                OutputType = OutputType.String
+            };
+
+            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, saveOptions);
+            //ExEnd:RenderImageAsPathi
         }
 
         /// <summary>

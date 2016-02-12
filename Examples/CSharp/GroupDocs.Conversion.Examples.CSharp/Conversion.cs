@@ -22,11 +22,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToSpreadsheetAsPath
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandlerUsingCache(true);
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
-            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new CellsSaveOptions());
+
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new CellsSaveOptions { OutputType = OutputType.String });
             //ExEnd:ConvertToSpreadsheetAsPath
         }
 
@@ -37,7 +38,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToSpreadsheetStream
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandlerUsingCache(true);
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Convert and save converted spreadsheet documents. 
             // Returns the converted spreadsheet documents as IO Stream.
@@ -53,7 +54,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToSpreadsheetAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandlerUsingCache(true);
+            ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -89,7 +90,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted word processing documents.
             // Returns paths to the converted word processing documents.
-            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new WordsSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new WordsSaveOptions { OutputType = OutputType.String });
             //ExEnd:ConvertToWordDocumentAsPath
         }
 
@@ -153,7 +154,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
-            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions { OutputType = OutputType.String });
             //ExEnd:ConvertToPdfAsPath
         }
 
@@ -217,7 +218,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted presentation documents.
             // Returns paths to the converted presentation documents.
-            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new SlidesSaveOptions());
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new SlidesSaveOptions { OutputType = OutputType.String });
             //ExEnd:ConvertToPresentationAsPath
         }
 
