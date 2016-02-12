@@ -35,16 +35,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-            Conversion.ConvertToSpreadsheetAsPath();
+            //Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
             // Conversion.ConvertToSpreadsheetStream();
 
             // In Advanced example Convert Password Protected file to Spreadsheet Document formats 
-            // Conversion.ConvertToSpreadsheetAdvanceOptions();
+            Conversion.ConvertToSpreadsheetAdvanceOptions();
 
             // Convert file to PDF format and get output as file path
-            // Conversion.ConvertToPdfAsPath();
+             Conversion.ConvertToPdfAsPath();
 
             // Convert file to PDF format and get output as Stream
             // Conversion.ConvertToPdfAsStream();
