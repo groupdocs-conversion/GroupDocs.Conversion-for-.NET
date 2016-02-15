@@ -24,7 +24,10 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
             'Convert and save converted spreadsheet documents.
             'Returns paths to the converted spreadsheet documents.
-            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New CellsSaveOptions())
+
+            Dim cellsSaveOptions As New CellsSaveOptions()
+            cellsSaveOptions.OutputType = OutputType.String
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, cellsSaveOptions)
 
             'ExEnd:ConvertToSpreadsheetAsPath
         End Sub
@@ -86,7 +89,11 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
             'Convert and save converted word processing documents.
             'Returns paths to the converted word processing documents.
-            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New WordsSaveOptions())
+
+            Dim wordsSaveOptions As New WordsSaveOptions()
+            wordsSaveOptions.OutputType = OutputType.String
+
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, wordsSaveOptions)
 
             ' ExEnd:ConvertToWordDocumentAsPath
         End Sub
@@ -150,7 +157,9 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
             ' Convert and save converted Pdf documents.
             ' Returns paths to the converted Pdf documents.
-            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New PdfSaveOptions())
+            Dim pdfSaveOptions As New PdfSaveOptions()
+            pdfSaveOptions.OutputType = OutputType.String
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, PdfSaveOptions)
 
             'ExEnd:ConvertToPdfAsPath
         End Sub
@@ -214,7 +223,10 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Convert and save converted presentation documents.
             ' Returns paths to the converted presentation documents.
 
-            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New SlidesSaveOptions())
+            Dim slidesSaveOptions As New SlidesSaveOptions()
+            slidesSaveOptions.OutputType = OutputType.String
+
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, slidesSaveOptions)
             'ExEnd:ConvertToPresentationAsPath
         End Sub
 

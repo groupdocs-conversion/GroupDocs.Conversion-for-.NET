@@ -23,7 +23,9 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
             ' Convert and save converted HTML documents.
             ' Returns paths to the converted HTML documents.
-            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, New HtmlSaveOptions())
+            Dim htmlSaveOptions As New HtmlSaveOptions()
+            htmlSaveOptions.OutputType = OutputType.String
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, htmlSaveOptions)
             'ExEnd:RenderHTMLAsPath
         End Sub
 
@@ -83,6 +85,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' set output file type
             Dim objImageSaveOptions As New ImageSaveOptions()
             objImageSaveOptions.ConvertFileType = outputFileType
+            objImageSaveOptions.OutputType = OutputType.String
 
             ' Convert and save converted image file.
             ' Returns paths to the converted image file.
