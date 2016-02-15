@@ -45,15 +45,15 @@ namespace GroupdocsConversionMVCDemo.Controllers
                 {
                     if (outputFileType.ToLower().Equals("pdf"))
                     {
-                        convertResult = conversionHandler.Convert<string>(inputFile, new PdfSaveOptions());
+                        convertResult = conversionHandler.Convert<string>(inputFile, new PdfSaveOptions { OutputType = OutputType.String });
                     }
                     if (outputFileType.ToLower().Equals("xlsx"))
                     {
-                        convertResult = conversionHandler.Convert<string>(inputFile, new CellsSaveOptions());
+                        convertResult = conversionHandler.Convert<string>(inputFile, new CellsSaveOptions { OutputType = OutputType.String });
                     }
                     else if (outputFileType.ToLower().Equals("jpg"))
                     {
-                        IList<string> convertResults = conversionHandler.Convert<IList<string>>(inputFile, new ImageSaveOptions { ConvertFileType = ImageSaveOptions.ImageFileType.Jpg });
+                        IList<string> convertResults = conversionHandler.Convert<IList<string>>(inputFile, new ImageSaveOptions { ConvertFileType = ImageSaveOptions.ImageFileType.Jpg, OutputType = OutputType.String });
 
                         // Conver to Image format returns multiple images path as string array, one image for each input document page.
                         foreach (string s in convertResults)
@@ -68,7 +68,7 @@ namespace GroupdocsConversionMVCDemo.Controllers
                     else if (outputFileType.ToLower().Equals("png"))
                     {
                         // Conver to Image format returns multiple images path as string array, one image for each input document page.
-                        IList<string> convertResults = conversionHandler.Convert<IList<string>>(inputFile, new ImageSaveOptions { ConvertFileType = ImageSaveOptions.ImageFileType.Png });
+                        IList<string> convertResults = conversionHandler.Convert<IList<string>>(inputFile, new ImageSaveOptions { ConvertFileType = ImageSaveOptions.ImageFileType.Png, OutputType = OutputType.String });
                         foreach (string s in convertResults)
                         {
                             if (!s.Equals(""))
@@ -80,11 +80,11 @@ namespace GroupdocsConversionMVCDemo.Controllers
                     }
                     else if (outputFileType.ToLower().Equals("pptx"))
                     {
-                        convertResult = conversionHandler.Convert<string>(inputFile, new SlidesSaveOptions());
+                        convertResult = conversionHandler.Convert<string>(inputFile, new SlidesSaveOptions { OutputType = OutputType.String });
                     }
                     else if (outputFileType.ToLower().Equals("html"))
                     {
-                        convertResult = conversionHandler.Convert<string>(inputFile, new HtmlSaveOptions());
+                        convertResult = conversionHandler.Convert<string>(inputFile, new HtmlSaveOptions { OutputType = OutputType.String });
                     }
 
 
