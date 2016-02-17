@@ -3,10 +3,9 @@
 MVC Conversion Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
 The MVC Conversion Example allows user to easily Convert Documnents to other formats:
 
-+ **Predefined Document templates** 
-+ 
 The UI of the application is kept very simple and developers can enhance the features as their own needs since it is an
 Open Source Project.
+
 
 ## Prerequisite
 
@@ -16,9 +15,9 @@ Open Source Project.
 
 ## Features 
 
-+ Sets input path for Storage
-+ Sets output path converted file
++ Sets inputfile path
++ Sets output file path  for converted file
 + Sets cache file path
 + Sets license file path
-+ Converts the predefined Document to Selected Document format like . Pdf, wordprocessing , HTML , Image... so on
++ Converts the predefined pdf Document to the Selected Document format like . Pdf, word processing , HTML , Image... so on
 + Download converted Document from web browser.
