@@ -1,11 +1,10 @@
-## Web Report Generator Powered by GroupDocs.Assembly 
+## MVC Conversion Example Powered by GroupDocs.Conversion 
 
-Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
-The Web Report Generator allows user to easily create reports based on:
+MVC Conversion Example is an MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
+The MVC Conversion Example allows user to easily Convert Documnents to other formats:
 
-+ **Predefined custom templates** 
-+ **Your own database (MS SQL Server local OR Remote) tables, views and also with custom query**
-
++ **Predefined Document templates** 
++ 
 The UI of the application is kept very simple and developers can enhance the features as their own needs since it is an
 Open Source Project.
 
@@ -13,16 +12,13 @@ Open Source Project.
 
 + Visual Studio 2012 or later.
 + Any latest browsers (Firefox, Chrome ,IE9 or greater, Safari etc. )
-+ GroupDocs.Assembly 3.0.0.
++ GroupDocs.Conversion 3.0.0.
 
 ## Features 
 
-+ Connect to MS SQL Server local OR remote by providing connection string.
-+ Populate and use Tables from connected database.
-+ Populate and use Views from connected database.
-+ Create and use custom query over connected database.
-+ Upload and use MS Word Template file.
-+ Upload and use MS Excel Template file.
-+ Upload and use MS Power Point Template file.
-+ Generate Report in a format as per source Template Document format.
++ Sets input path for Storage
++ Sets output path converted file
++ Sets cache file path
++ Sets license file path
++ Converts the predefined Document to Selected Document format like . Pdf, wordprocessing , HTML , Image... so on
 + Download generated report from web browser.
