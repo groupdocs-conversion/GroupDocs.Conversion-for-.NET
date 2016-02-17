@@ -15,7 +15,7 @@ Open Source Project.
 
 ## Features 
 
-+ Sets inputfile path
++ Sets input file path
 + Sets output file path  for converted file
 + Sets cache file path
 + Sets license file path
