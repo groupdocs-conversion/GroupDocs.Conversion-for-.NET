@@ -1,4 +1,4 @@
-## GroupDocs.Conversion MVC Conversion Example   
+## GroupDocs.Conversion MVC Example   
 
 MVC Conversion Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
 The MVC Conversion Example allows user to easily Convert Documnents to other formats:
