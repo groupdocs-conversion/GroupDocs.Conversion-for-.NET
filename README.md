@@ -18,9 +18,9 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Conversion for .NET](#)
-+ **Download:** [Download GroupDocs.Conversion for .NET](#)
-+ **Documentation:** [GroupDocs.Conversion for .NET Documentation](#)
++ **Product Home:** [GroupDocs.Conversion for .NET](http://groupdocs.com/dot-net/document-conversion-library)
++ **Download:** [Download GroupDocs.Conversion for .NET](http://groupdocs.com/community/files/8/.net-libraries/default.aspx)
++ **Documentation:** [GroupDocs.Conversion for .NET Documentation](http://groupdocs.com/docs/display/conversionnet/Home)
 + **Forum:** [GroupDocs.Conversion for .NET Forum](#)
 + **Blog:** [GroupDocs.Conversion for .NET Blog](#)
 
