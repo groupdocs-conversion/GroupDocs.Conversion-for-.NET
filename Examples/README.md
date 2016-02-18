@@ -10,4 +10,4 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Conversion f
 
 ## How to Run the Examples?
 
-The package contains two projects, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. For more details, visit our [documentation website](http://groupdocs.com/docs/).
+The package contains two projects, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. For more details, visit  [How to Run Examples](http://groupdocs.com/docs/display/conversionnet/How+to+Run+Examples).
