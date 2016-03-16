@@ -26,8 +26,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
-             Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
-             Common.ApplyLicense(licenseStream);
+            Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
+            Common.ApplyLicense(licenseStream);
 
             /// <summary>
             /// **** Convert Spreadsheet, PDF, Presentation, Document Processing  formats.
@@ -44,13 +44,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertToSpreadsheetAdvanceOptions();
 
             // Convert file to PDF format and get output as file path
-             Conversion.ConvertToPdfAsPath();
+            Conversion.ConvertToPdfAsPath();
 
             // Convert file to PDF format and get output as Stream
             // Conversion.ConvertToPdfAsStream();
 
             // In Advanced example Convert Password Protected file to PDF format
             // Conversion.ConvertToPdfAdvanceOptions();
+
+            // Convert file to PDF format and get output as file path and get processing progress
+            Conversion.ConvertToPdfWithProgressAsPath();
 
             // Convert file to Presentation Document format and get output as file path
             Conversion.ConvertToPresentationAsPath();
@@ -63,6 +66,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert file to Word Processing Document format and get output as file path
             Conversion.ConvertToWordDocumentAsPath();
+
+            // Get Available Save Options for a Document by Extenssion
+            Conversion.GetAvailableSaveOptionsByExtenssion();
 
             // Convert file to Word Processing Document format and get output as Stream
             // Conversion.ConvertToWordDocumentAsStream();

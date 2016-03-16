@@ -159,7 +159,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' Returns paths to the converted Pdf documents.
             Dim pdfSaveOptions As New PdfSaveOptions()
             pdfSaveOptions.OutputType = OutputType.String
-            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, PdfSaveOptions)
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, pdfSaveOptions)
 
             'ExEnd:ConvertToPdfAsPath
         End Sub
@@ -274,5 +274,66 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
 
 #End Region
+
+
+#Region "Convert and Get Processing Progress"
+
+        ''' <summary>
+        ''' Convert file to Pdf format and get output as file path and get processing progress
+        ''' </summary>
+
+        'ExStart:ConvertToPdfWithProgressAsPath
+        Public Shared Sub ConvertToPdfWithProgressAsPath()
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' attach Conversion Progress Handler
+            AddHandler conversionHandler.ConversionProgress, AddressOf ConversionProgressHandler
+
+            ' Convert and save converted Pdf documents.
+            ' Returns paths to the converted Pdf documents.
+            Dim pdfSaveOptions As New PdfSaveOptions()
+            pdfSaveOptions.OutputType = OutputType.String
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, pdfSaveOptions)
+
+            Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath)
+            Console.ReadLine()
+        End Sub
+
+        Private Shared Sub ConversionProgressHandler(sender As Object, args As ConversionProgressEventArgs)
+            Console.WriteLine("Conversion progress: {0}", args.Progress)
+        End Sub
+
+        'ExEnd:ConvertToPdfWithProgressAsPath
+#End Region
+
+
+#Region "Get Available Save Options for a Document by Extenssion"
+
+        ''' <summary>
+        ''' Get Available Save Options for a Document by Extenssion
+        ''' </summary>
+
+        Public Shared Sub GetAvailableSaveOptionsByExtenssion()
+            'ExStart:GetAvailableSaveOptionsByExtenssion
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            Dim documentExtension = Path.GetExtension(Common.inputGUIDFile).TrimStart("."c)
+            Dim availableConversions = conversionHandler.GetSaveOptions(documentExtension)
+
+            'returns IDictionary<string, SaveOptions>
+            'list all available conversions
+            Console.WriteLine("*** Available Save Options ***")
+            For Each name As String In availableConversions.Keys
+                Console.WriteLine(name)
+            Next
+            'use prepared save option for ToPdf conversion
+            Dim result = conversionHandler.Convert(Of String)(Common.inputGUIDFile, availableConversions("pdf"))
+            'ExEnd:ConvertToPdfWithProgressAsPath
+        End Sub
+
+#End Region
+
     End Class
 End Namespace
