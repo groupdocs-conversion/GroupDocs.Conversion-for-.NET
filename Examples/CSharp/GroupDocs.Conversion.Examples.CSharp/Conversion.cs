@@ -267,5 +267,66 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
         #endregion
+
+        #region Convert and Get Processing Progress
+
+        /// <summary>
+        /// Convert file to Pdf format and get output as file path and get processing progress
+        /// </summary>
+
+        //ExStart:ConvertToPdfWithProgressAsPath
+        public static void ConvertToPdfWithProgressAsPath()
+        {
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // attach Conversion Progress Handler
+            conversionHandler.ConversionProgress += ConversionProgressHandler;
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions { OutputType = OutputType.String });
+
+            Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
+            Console.ReadLine();
+        }
+
+        private static void ConversionProgressHandler(object sender, ConversionProgressEventArgs args)
+        {
+            Console.WriteLine("Conversion progress: {0}", args.Progress);
+        }
+
+        //ExEnd:ConvertToPdfWithProgressAsPath
+        #endregion
+
+
+        #region Get Available Save Options for a Document by Extenssion
+
+        /// <summary>
+        /// Get Available Save Options for a Document by Extenssion
+        /// </summary>
+
+        public static void GetAvailableSaveOptionsByExtenssion()
+        {
+            //ExStart:GetAvailableSaveOptionsByExtenssion
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            var documentExtension = Path.GetExtension(Common.inputGUIDFile).TrimStart('.');
+            var availableConversions = conversionHandler.GetSaveOptions(documentExtension);  //returns IDictionary<string, SaveOptions>
+
+            //list all available conversions
+            Console.WriteLine("*** Available Save Options ***");
+            foreach (var name in availableConversions.Keys)
+            {
+                Console.WriteLine(name);
+            }
+            //use prepared save option for ToPdf conversion
+            var result = conversionHandler.Convert<string>(Common.inputGUIDFile, availableConversions["pdf"]);
+            //ExEnd:ConvertToPdfWithProgressAsPath
+        }
+
+        #endregion
+
     }
 }

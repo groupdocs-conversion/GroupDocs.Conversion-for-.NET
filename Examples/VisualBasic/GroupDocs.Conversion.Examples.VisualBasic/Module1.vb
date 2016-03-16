@@ -38,6 +38,9 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' In Advanced example Convert Password Protected file to Spreadsheet Document formats 
             ' Conversion.ConvertToSpreadsheetAdvanceOptions()
 
+            ' Convert file to PDF format and get output as file path and get processing progress
+            Conversion.ConvertToPdfWithProgressAsPath()
+
             ' Convert file to PDF format and get output as file path
             Conversion.ConvertToPdfAsPath()
 
@@ -46,6 +49,9 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
             ' In Advanced example Convert Password Protected file to PDF format
             ' Conversion.ConvertToPdfAdvanceOptions()
+
+            ' Get Available Save Options for a Document by Extenssion
+            Conversion.GetAvailableSaveOptionsByExtenssion()
 
             ' Convert file to Presentation Document format and get output as file path
             Conversion.ConvertToPresentationAsPath()
