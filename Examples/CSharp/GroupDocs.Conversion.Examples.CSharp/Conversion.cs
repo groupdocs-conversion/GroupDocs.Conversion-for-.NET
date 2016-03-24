@@ -73,6 +73,47 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToSpreadsheetAdvanceOptions
         }
 
+
+        /// <summary>
+        /// Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a file path
+        /// </summary>
+
+        public static void ConvertToSpreadsheetFromStreamToFile()
+        {
+            //ExStart:ConvertToSpreadsheetFromStreamToFile
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.inputGUIDFile, Common.storagePath), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted spreadsheet documents as File Path using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new CellsSaveOptions { OutputType = OutputType.String });
+
+            fileStream.Close();
+            //ExEnd:ConvertToSpreadsheetFromStreamToFile
+        }
+
+        /// <summary>
+        /// Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a stream
+        /// </summary>
+
+        public static void ConvertToSpreadsheetFromStreamToStream()
+        {
+            //ExStart:ConvertToSpreadsheetFromStreamToStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.inputGUIDFile, Common.storagePath), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted spreadsheet documents as IO Stream using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(fileStream, new CellsSaveOptions());
+
+            fileStream.Close();
+            //ExEnd:ConvertToSpreadsheetFromStreamToStream
+        }
+
         #endregion
 
         #region Convert to Word Processing Document
