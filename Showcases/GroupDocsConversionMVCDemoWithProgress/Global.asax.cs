@@ -2,11 +2,10 @@
 using GroupDocs.Conversion.Config;
 using GroupDocs.Conversion.Converter.Option;
 using GroupDocs.Conversion.Handler;
-using GroupDocsConversionMVCDemo;
+using GroupDocsConversionMVCDemoWithProgress;
 
-namespace GroupdocsConversionMVCDemo
+namespace GroupdocsConversionMVCDemoWithProgress
 {
-
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
