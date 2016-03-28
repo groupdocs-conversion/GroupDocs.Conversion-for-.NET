@@ -79,6 +79,55 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:RenderHTMLAdvanceOptions
         }
 
+        /// <summary>
+        /// Converts and Render streamed document into a HTML formated file and get output as file path
+        /// </summary>
+        public static void RenderToHTMLFromStreamToFile()
+        {
+            //ExStart:RenderToHTMLFromStreamToFile
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+
+            // Convert and save converted HTML documents.
+            // Returns paths to the converted HTML documents.
+            var saveOptions = new HtmlSaveOptions
+            {
+                CustomName = Common.inputGUIDFile,
+                PageNumber = 2,
+                NumPagesToConvert = 2,
+                UsePdf = true,
+                OutputType = OutputType.String
+            };
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:RenderToHTMLFromStreamToFile
+        }
+
+        /// <summary>
+        /// Converts and Render streamed document into a HTML formated file and get output as stream
+        /// </summary>
+        public static void RenderToHTMLFromStreamToStream()
+        {
+            //ExStart:RenderToHTMLFromStreamToStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+
+            // Convert and save converted HTML documents. 
+            // Returns the converted HTML documents as IO Stream.
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:RenderToHTMLFromStreamToStream
+        }
+
         #endregion
 
         #region Converts and Render in Image
@@ -151,6 +200,53 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns the converted image file as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, loadOptions, saveOptions);
             //ExEnd:RenderImageAdvanceOptions
+        }
+
+        /// <summary>
+        /// Converts and Render streamed file to an Image format and get output as file path
+        /// </summary>
+        /// <param name="outputFileType"></param>
+        public static void RenderToImageFromStreamToFile(ImageSaveOptions.ImageFileType outputFileType)
+        {
+            //ExStart:RenderToImageFromStreamToFile
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+
+            // Convert and save converted image file.
+            // Returns paths to the converted image file.
+            var saveOptions = new ImageSaveOptions
+            {
+                ConvertFileType = ImageSaveOptions.ImageFileType.Jpeg,
+                OutputType = OutputType.String
+            };
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:RenderToImageFromStreamToFile
+        }
+
+        /// <summary>
+        /// Converts and Render streamed Document as Image format and outputs the resulting file to a stream
+        /// </summary>
+        /// <param name="outputFileType"></param>
+        public static void RenderToImageFromStreamToStream(ImageSaveOptions.ImageFileType outputFileType)
+        {
+            //ExStart:RenderToImageFromStreamToStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+ 
+            // Returns the converted image file as IO Stream.
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:RenderToImageFromStreamToStream
         }
 
         #endregion

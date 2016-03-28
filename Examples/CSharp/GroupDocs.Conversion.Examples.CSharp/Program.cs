@@ -26,8 +26,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
-            Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
-            Common.ApplyLicense(licenseStream);
+            //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
+            //Common.ApplyLicense(licenseStream);
 
             /// <summary>
             /// **** Convert Spreadsheet, PDF, Presentation, Document Processing  formats.
@@ -35,7 +35,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-            Conversion.ConvertToSpreadsheetAsPath();
+            //Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
             // Conversion.ConvertToSpreadsheetStream();
@@ -44,13 +44,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertToSpreadsheetAdvanceOptions();
 
             // Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a file path
-            //Conversion.ConvertToSpreadsheetFromStreamToFile();
+            Conversion.ConvertToSpreadsheetFromStreamToFile();
 
             // Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a stream
             //Conversion.ConvertToSpreadsheetFromStreamToStream();
 
             // Convert file to PDF format and get output as file path
-            Conversion.ConvertToPdfAsPath();
+            //Conversion.ConvertToPdfAsPath();
 
             // Convert file to PDF format and get output as Stream
             // Conversion.ConvertToPdfAsStream();
@@ -59,10 +59,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Conversion.ConvertToPdfAdvanceOptions();
 
             // Convert file to PDF format and get output as file path and get processing progress
-            Conversion.ConvertToPdfWithProgressAsPath();
+            //Conversion.ConvertToPdfWithProgressAsPath();
+
+            // Converts stream input documents to pdf Document formats and outputs the resulting document to a file path
+            //Conversion.ConvertToPdfFromStreamToFile();
+
+            // Converts stream input documents to pdf Document formats and outputs the resulting document to a stream
+            //Conversion.ConvertToPdfFromStreamToStream();
 
             // Convert file to Presentation Document format and get output as file path
-            Conversion.ConvertToPresentationAsPath();
+            //Conversion.ConvertToPresentationAsPath();
 
             // Convert file to Presentation Document format and get output as Stream
             // Conversion.ConvertToPresentationAsStream();
@@ -70,11 +76,17 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // In Advanced example Convert Password Protected file to Presentation Document format
             // Conversion.ConversionToSlidesAdvanceOptions();
 
+            // Converts stream input documents to presentation Document formats and outputs the resulting document to a file path
+            //Conversion.ConvertToPresentationFromStreamToFile();
+
+            // Converts stream input documents to presentation Document formats and outputs the resulting document to a stream
+            //Conversion.ConvertToPresentationFromStreamToStream();
+
             // Convert file to Word Processing Document format and get output as file path
-            Conversion.ConvertToWordDocumentAsPath();
+            //Conversion.ConvertToWordDocumentAsPath();
 
             // Get Available Save Options for a Document by Extenssion
-            Conversion.GetAvailableSaveOptionsByExtenssion();
+            //Conversion.GetAvailableSaveOptionsByExtenssion();
 
             // Convert file to Word Processing Document format and get output as Stream
             // Conversion.ConvertToWordDocumentAsStream();
@@ -82,27 +94,45 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // In Advanced example Convert Password Protected file to Word Processing Document format
             // Conversion.ConvertToWordDocumentAdvanceOptions();
 
+            // Converts stream input documents to Word Processing Document formats and outputs the resulting document to a file path
+            //Conversion.ConvertToWordFromStreamToFile();
+
+            // Converts stream input documents to Word Processing Document formats and outputs the resulting document to a stream
+            //Conversion.ConvertToWordFromStreamToStream();
+
             /// <summary>
             /// **** Rendering and Converting to HTML and Image formats.
             /// </summary>
 
             // Converts and Render file to a HTML format and get output as file path
-            Rendering.RenderHTMLAsPath();
+            //Rendering.RenderHTMLAsPath();
 
             // Converts and Render file as HTML format and get output as Stream
             // Rendering.RenderHTMLAsStream();
+
+            // Converts and render stream input document to html format and get output as file path
+            //Rendering.RenderToHTMLFromStreamToFile();
+
+            // Converts and render stream input document to html and outputs the resulting document to a stream
+            //Rendering.RenderToHTMLFromStreamToStream();
 
             // In Advanced example Converts and Render Password Protected file to Excel format
             // Rendering.RenderHTMLAdvanceOptions();
 
             // Converts and Render file to an Image format and get output as file path
-            Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
+            //Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
 
             // Converts and Render file to an Image format and get output as Stream
             // Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Png);
 
             // In Advanced example Converts and Render Password Protected file to Image format
             // Rendering.RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType.Gif);
+
+            // Converts and render stream input document to image format and get output as file path
+            //Rendering.RenderToImageFromStreamToFile(ImageSaveOptions.ImageFileType.Jpeg);
+
+            // Converts and render stream input document to image and outputs the resulting document to a stream
+            //Rendering.RenderToImageFromStreamToStream(ImageSaveOptions.ImageFileType.Jpeg);
 
             //ExEnd:ConvertFilesToDifferentFormats
 

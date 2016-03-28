@@ -85,10 +85,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // read input document as a stream
-            FileStream fileStream = new FileStream(Path.Combine(Common.inputGUIDFile, Common.storagePath), FileMode.Open, FileAccess.Read);
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted spreadsheet documents as File Path using stream input.
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new CellsSaveOptions { OutputType = OutputType.String });
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new CellsSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
 
             fileStream.Close();
             //ExEnd:ConvertToSpreadsheetFromStreamToFile
@@ -105,11 +105,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // read input document as a stream
-            FileStream fileStream = new FileStream(Path.Combine(Common.inputGUIDFile, Common.storagePath), FileMode.Open, FileAccess.Read);
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted spreadsheet documents as IO Stream using stream input.
             var convertedDocumentStream = conversionHandler.Convert<Stream>(fileStream, new CellsSaveOptions());
-
             fileStream.Close();
             //ExEnd:ConvertToSpreadsheetFromStreamToStream
         }
@@ -179,6 +178,43 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToWordDocumentAdvanceOptions
         }
 
+        /// <summary>
+        /// Converts stream input documents to Word Processing Document formats and outputs the resulting document to a file path
+        /// </summary>
+        public static void ConvertToWordFromStreamToFile()
+        {
+            //ExStart:ConvertToWordFromStreamToFile
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted Word Processing Documents as File Path using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new WordsSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:ConvertToWordFromStreamToFile
+        }
+
+        /// <summary>
+        /// Converts stream input documents to Word Proccessing Document formats and outputs the resulting document to a stream
+        /// </summary>
+        public static void ConvertToWordFromStreamToStream()
+        {
+            //ExStart:ConvertToWordFromStreamToStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted Word Processing Documents as IO Stream using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(fileStream, new WordsSaveOptions());
+            fileStream.Close();
+            //ExEnd:ConvertToWordFromStreamToStream
+        }
+
         #endregion
 
         #region Convert to Pdf
@@ -244,6 +280,43 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToPdfAdvanceOptions
         }
 
+        /// <summary>
+        /// Converts stream input documents to pdf Document formats and outputs the resulting document to a file path
+        /// </summary>
+        public static void ConvertToPdfFromStreamToFile()
+        {
+            //ExStart:ConverToPdfFromStreamToFile
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted pdf documents as File Path using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new PdfSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:ConverToPdfFromStreamToFile
+        }
+
+        /// <summary>
+        /// Converts stream input documents to pdf Document formats and outputs the resulting document to a stream
+        /// </summary>
+        public static void ConvertToPdfFromStreamToStream()
+        {
+            //ExStart:ConvertToPdfFromStreamToStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted pdf documents as IO Stream using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(fileStream, new PdfSaveOptions());
+            fileStream.Close();
+            //ExEnd:ConvertToPdfFromStreamToStream
+        }
+
         #endregion
 
         #region Convert to Presentation Document
@@ -306,6 +379,42 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToPresentationAdvanceOptions
         }
 
+        /// <summary>
+        /// Converts stream input documents to Presentation Document formats and outputs the resulting document to a file path
+        /// </summary>
+        public static void ConvertToPresentationFromStreamToFile()
+        {
+            //ExStart:ConvertToPresentationFromStreamToFile
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted presentation documents as File Path using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new SlidesSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+
+            fileStream.Close();
+            //ExEnd:ConvertToPresentationFromStreamToFile
+        }
+
+        /// <summary>
+        /// Converts stream input documents to Presentation Document formats and outputs the resulting document to a stream
+        /// </summary>
+        public static void ConvertToPresentationFromStreamToStream()
+        {
+            //ExStart:ConvertToPresentationFromStreamToStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // Returns the converted presentation documents as IO Stream using stream input.
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(fileStream, new SlidesSaveOptions());
+            fileStream.Close();
+            //ExEnd:ConvertToPresentationFromStreamToStream
+        }
 
         #endregion
 
