@@ -73,6 +73,48 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:ConvertToSpreadsheetAdvanceOptions
         End Sub
 
+
+        ''' <summary>
+        ''' Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a file path
+        ''' </summary>
+
+        Public Shared Sub ConvertToSpreadsheetFromStreamToFile()
+            'ExStart:ConvertToSpreadsheetFromStreamToFile
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted spreadsheet documents as File Path using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New CellsSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:ConvertToSpreadsheetFromStreamToFile
+        End Sub
+
+        ''' <summary>
+        ''' Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a stream
+        ''' </summary>
+
+        Public Shared Sub ConvertToSpreadsheetFromStreamToStream()
+            'ExStart:ConvertToSpreadsheetFromStreamToStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted spreadsheet documents as IO Stream using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(fileStream, New CellsSaveOptions())
+            fileStream.Close()
+            'ExEnd:ConvertToSpreadsheetFromStreamToStream
+        End Sub
+
+
 #End Region
 
 #Region "Convert to Word Processing Document"
@@ -142,6 +184,46 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
         End Sub
 
+
+        ''' <summary>
+        ''' Converts stream input documents to Word Processing Document formats and outputs the resulting document to a file path
+        ''' </summary>
+        Public Shared Sub ConvertToWordFromStreamToFile()
+            'ExStart:ConvertToWordFromStreamToFile
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted Word Processing Documents as File Path using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New WordsSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:ConvertToWordFromStreamToFile
+        End Sub
+
+        ''' <summary>
+        ''' Converts stream input documents to Word Proccessing Document formats and outputs the resulting document to a stream
+        ''' </summary>
+        Public Shared Sub ConvertToWordFromStreamToStream()
+            'ExStart:ConvertToWordFromStreamToStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted Word Processing Documents as IO Stream using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(fileStream, New WordsSaveOptions())
+            fileStream.Close()
+            'ExEnd:ConvertToWordFromStreamToStream
+        End Sub
+
+
 #End Region
 
 #Region "Convert to Pdf"
@@ -208,6 +290,46 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:ConvertToPdfAdvanceOptions
         End Sub
 
+
+        ''' <summary>
+        ''' Converts stream input documents to pdf Document formats and outputs the resulting document to a file path
+        ''' </summary>
+        Public Shared Sub ConvertToPdfFromStreamToFile()
+            'ExStart:ConverToPdfFromStreamToFile
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted pdf documents as File Path using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New PdfSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:ConverToPdfFromStreamToFile
+        End Sub
+
+        ''' <summary>
+        ''' Converts stream input documents to pdf Document formats and outputs the resulting document to a stream
+        ''' </summary>
+        Public Shared Sub ConvertToPdfFromStreamToStream()
+            'ExStart:ConvertToPdfFromStreamToStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted pdf documents as IO Stream using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(fileStream, New PdfSaveOptions())
+            fileStream.Close()
+            'ExEnd:ConvertToPdfFromStreamToStream
+        End Sub
+
+
 #End Region
 
 #Region "Convert to Presentation Document"
@@ -270,6 +392,45 @@ Namespace GroupDocsConversionExamples.VisualBasic
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)
 
             'ExEnd:ConvertToPresentationAdvanceOptions
+        End Sub
+
+
+        ''' <summary>
+        ''' Converts stream input documents to Presentation Document formats and outputs the resulting document to a file path
+        ''' </summary>
+        Public Shared Sub ConvertToPresentationFromStreamToFile()
+            'ExStart:ConvertToPresentationFromStreamToFile
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted presentation documents as File Path using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New SlidesSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:ConvertToPresentationFromStreamToFile
+        End Sub
+
+        ''' <summary>
+        ''' Converts stream input documents to Presentation Document formats and outputs the resulting document to a stream
+        ''' </summary>
+        Public Shared Sub ConvertToPresentationFromStreamToStream()
+            'ExStart:ConvertToPresentationFromStreamToStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' Returns the converted presentation documents as IO Stream using stream input.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(fileStream, New SlidesSaveOptions())
+            fileStream.Close()
+            'ExEnd:ConvertToPresentationFromStreamToStream
         End Sub
 
 

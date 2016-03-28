@@ -68,6 +68,64 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:RenderHTMLAdvanceOptions
         End Sub
 
+
+        ''' <summary>
+        ''' Converts and Render streamed document into a HTML formated file and get output as file path
+        ''' </summary>
+        Public Shared Sub RenderToHTMLFromStreamToFile()
+            'ExStart:RenderToHTMLFromStreamToFile
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+
+
+            ' Convert and save converted HTML documents.
+            ' Returns paths to the converted HTML documents.
+            Dim saveOptions = New HtmlSaveOptions() With { _
+                 .CustomName = Common.inputGUIDFile, _
+                 .PageNumber = 2, _
+                 .NumPagesToConvert = 2, _
+                 .UsePdf = True, _
+                 .OutputType = OutputType.[String] _
+            }
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New HtmlSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:RenderToHTMLFromStreamToFile
+        End Sub
+
+        ''' <summary>
+        ''' Converts and Render streamed document into a HTML formated file and get output as stream
+        ''' </summary>
+        Public Shared Sub RenderToHTMLFromStreamToStream()
+            'ExStart:RenderToHTMLFromStreamToStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+
+
+            ' Convert and save converted HTML documents. 
+            ' Returns the converted HTML documents as IO Stream.
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New HtmlSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:RenderToHTMLFromStreamToStream
+        End Sub
+
+
 #End Region
 
 #Region "Converts and Render in Image"
@@ -142,6 +200,62 @@ Namespace GroupDocsConversionExamples.VisualBasic
 
             'ExEnd:RenderImageAdvanceOptions
         End Sub
+
+
+        ''' <summary>
+        ''' Converts and Render streamed file to an Image format and get output as file path
+        ''' </summary>
+        ''' <param name="outputFileType"></param>
+        Public Shared Sub RenderToImageFromStreamToFile(outputFileType As ImageSaveOptions.ImageFileType)
+            'ExStart:RenderToImageFromStreamToFile
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+
+
+            ' Convert and save converted image file.
+            ' Returns paths to the converted image file.
+            Dim saveOptions = New ImageSaveOptions() With { _
+                 .ConvertFileType = ImageSaveOptions.ImageFileType.Jpeg, _
+                 .OutputType = OutputType.[String] _
+            }
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New ImageSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:RenderToImageFromStreamToFile
+        End Sub
+
+        ''' <summary>
+        ''' Converts and Render streamed Document as Image format and outputs the resulting file to a stream
+        ''' </summary>
+        ''' <param name="outputFileType"></param>
+        Public Shared Sub RenderToImageFromStreamToStream(outputFileType As ImageSaveOptions.ImageFileType)
+            'ExStart:RenderToImageFromStreamToStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+
+
+            ' Returns the converted image file as IO Stream.
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New ImageSaveOptions() With { _
+                 .OutputType = OutputType.[String], _
+                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            })
+
+            fileStream.Close()
+            'ExEnd:RenderToImageFromStreamToStream
+        End Sub
+
 
 #End Region
     End Class

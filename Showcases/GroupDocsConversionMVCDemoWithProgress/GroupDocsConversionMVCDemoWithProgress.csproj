@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D05BFA34-B99A-4F7D-95AC-0A718443699E}</ProjectGuid>
+    <ProjectGuid>{88EF44CA-9F36-4F51-8FAD-CAB3B1ED1D24}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GroupDocsConversionMVCDemo</RootNamespace>
-    <AssemblyName>GroupDocsConversionMVCDemo</AssemblyName>
+    <RootNamespace>GroupDocsConversionMVCDemoWithProgress</RootNamespace>
+    <AssemblyName>GroupDocsConversionMVCDemoWithProgress</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -175,9 +175,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52476</DevelopmentServerPort>
+          <DevelopmentServerPort>54361</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:24215/</IISUrl>
+          <IISUrl>http://localhost:24217/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
