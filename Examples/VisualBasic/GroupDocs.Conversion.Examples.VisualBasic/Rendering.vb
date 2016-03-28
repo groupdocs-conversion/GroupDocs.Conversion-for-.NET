@@ -107,19 +107,13 @@ Namespace GroupDocsConversionExamples.VisualBasic
         Public Shared Sub RenderToHTMLFromStreamToStream()
             'ExStart:RenderToHTMLFromStreamToStream
             ' Instantiating the conversion handler from custom common class
-            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
-
-
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler
 
             ' Convert and save converted HTML documents. 
             ' Returns the converted HTML documents as IO Stream.
             ' read input document as a stream
-            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
-
-            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New HtmlSaveOptions() With { _
-                 .OutputType = OutputType.[String], _
-                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
-            })
+            Dim fileStream As FileStream = New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+            Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(fileStream, New HtmlSaveOptions)
 
             fileStream.Close()
             'ExEnd:RenderToHTMLFromStreamToStream
@@ -232,6 +226,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:RenderToImageFromStreamToFile
         End Sub
 
+
         ''' <summary>
         ''' Converts and Render streamed Document as Image format and outputs the resulting file to a stream
         ''' </summary>
@@ -247,14 +242,14 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' read input document as a stream
             Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
 
-            Dim convertedDocumentStream = conversionHandler.Convert(Of [String])(fileStream, New ImageSaveOptions() With { _
-                 .OutputType = OutputType.[String], _
-                 .CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) _
+            Dim convertedDocumentStream = conversionHandler.Convert(Of IList(Of Stream))(fileStream, New ImageSaveOptions() With { _
+                .ConvertFileType = outputFileType _
             })
 
             fileStream.Close()
             'ExEnd:RenderToImageFromStreamToStream
         End Sub
+
 
 
 #End Region

@@ -102,7 +102,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions 
+            { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
 
             fileStream.Close();
             //ExEnd:RenderToHTMLFromStreamToFile
@@ -122,7 +123,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(fileStream, new HtmlSaveOptions()); ;
 
             fileStream.Close();
             //ExEnd:RenderToHTMLFromStreamToStream
@@ -223,7 +224,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions 
+            { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
 
             fileStream.Close();
             //ExEnd:RenderToImageFromStreamToFile
@@ -243,7 +245,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(fileStream, new ImageSaveOptions { ConvertFileType = outputFileType });
 
             fileStream.Close();
             //ExEnd:RenderToImageFromStreamToStream
