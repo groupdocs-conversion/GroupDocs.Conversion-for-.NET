@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+using GroupDocs.Conversion.Config;
+using GroupDocs.Conversion.Converter.Option;
+using GroupDocs.Conversion.Handler;
+
+namespace GroupDocs.Conversion.Examples.CSharp
+{
+    public class ConversionManager : IConversionProgressListener, IConversionStatusListener
+    {
+        private readonly ConversionHandler _conversionHandler;
+        public ConversionManager(string path)
+        {
+            _conversionHandler = Common.getConversionHandler();
+            _conversionHandler.SetConversionProgressListener(this);
+            _conversionHandler.SetConversionStatusListener(this);
+        }
+        public void ConversionProgressChanged(ConversionProgressEventArgs args)
+        {
+            Console.WriteLine("Conversion progress: {0} %", args.Progress);
+        }
+        public void ConversionStatusChanged(ConversionEventArgs args)
+        {
+            Console.WriteLine("Conversion status changed to: {0}", args.Status);
+        }
+        public string Convert(string file)
+        {
+            var option = new PdfSaveOptions
+            {
+                OutputType = OutputType.String
+            };
+            return _conversionHandler.Convert<string>(file, option);
+        }
+    }
+}
