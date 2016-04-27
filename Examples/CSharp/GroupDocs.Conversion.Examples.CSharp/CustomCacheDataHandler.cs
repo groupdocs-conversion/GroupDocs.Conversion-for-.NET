@@ -1,4 +1,5 @@
-﻿using System;
+﻿//ExStart:CustomCacheDataHandlerClass
+using System;
 using System.IO;
 using Amazon;
 using Amazon.S3;
@@ -135,3 +136,4 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
     }
 }
+//ExEnd:CustomCacheDataHandlerClass

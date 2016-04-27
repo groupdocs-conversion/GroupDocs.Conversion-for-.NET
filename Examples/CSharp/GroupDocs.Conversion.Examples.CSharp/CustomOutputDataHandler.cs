@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿//ExStart:CustomOutputDataHandlerClass
+using System.IO;
 using Amazon;
 using Amazon.S3;
 using Amazon.S3.IO;
@@ -72,3 +73,4 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
     }
 }
+//ExEnd:CustomOutputDataHandlerClass

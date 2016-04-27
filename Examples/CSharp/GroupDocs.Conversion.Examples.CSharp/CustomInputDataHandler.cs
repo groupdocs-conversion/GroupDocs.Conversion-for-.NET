@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿//ExStart:CustomInputDataHandlerClass
+using System.IO;
 using Amazon;
 using Amazon.S3;
 using Amazon.S3.Model;
@@ -57,3 +58,4 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
     }
 }
+//ExEnd:CustomInputDataHandlerClass
