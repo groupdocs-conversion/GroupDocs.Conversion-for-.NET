@@ -21,7 +21,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderHTMLAsPath
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();;
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderHTMLAsStream
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();;
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             // Convert and save converted HTML documents. 
             // Returns the converted HTML documents as IO Stream.
@@ -61,7 +61,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderHTMLAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();;
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -102,8 +102,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions 
-            { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new HtmlSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
 
             fileStream.Close();
             //ExEnd:RenderToHTMLFromStreamToFile
@@ -142,7 +141,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderImageAsPath
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();;
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             // Convert and save converted image file.
             // Returns paths to the converted image file.
@@ -164,7 +163,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderImageAsStream
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();;
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             // Convert and save converted image file. 
             // Returns the converted image file as IO Stream.
@@ -180,7 +179,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:RenderImageAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();;
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
@@ -224,8 +223,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions 
-            { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
+            var convertedDocumentStream = conversionHandler.Convert<String>(fileStream, new ImageSaveOptions { OutputType = OutputType.String, CustomName = Path.GetFileNameWithoutExtension(Common.inputGUIDFile) });
 
             fileStream.Close();
             //ExEnd:RenderToImageFromStreamToFile
@@ -240,7 +238,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:RenderToImageFromStreamToStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler(); ;
- 
+
             // Returns the converted image file as IO Stream.
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
@@ -251,6 +249,32 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:RenderToImageFromStreamToStream
         }
 
+        /// <summary>
+        /// Converts and Render file to an PSD Image format and get output as file path
+        /// </summary> 
+        /// <param name="outputFileType"></param>
+        public static void RenderPSDImageAsPath()
+        {
+            //ExStart:RenderPSDImageAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+
+            // Convert and save converted image file.
+            // Returns paths to the converted image file.
+            var saveOptions = new ImageSaveOptions
+            {
+                ConvertFileType = ImageSaveOptions.ImageFileType.Psd,
+                OutputType = OutputType.String,
+                PsdOptions = new PsdOptions
+                {
+                    ColorMode = PsdOptions.ColorModes.Grayscale,
+                    CompressionMethod = PsdOptions.CompressionMethods.Raw
+                }
+            };
+
+            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, saveOptions);
+            //ExEnd:RenderPSDImageAsPath
+        }
         #endregion
     }
 }

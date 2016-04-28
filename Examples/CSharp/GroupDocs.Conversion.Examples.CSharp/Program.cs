@@ -44,7 +44,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertToSpreadsheetAdvanceOptions();
 
             // Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a file path
-            Conversion.ConvertToSpreadsheetFromStreamToFile();
+            //Conversion.ConvertToSpreadsheetFromStreamToFile();
+
+            // Convert file  Spreadsheet Document formats and enable GridLines and get output as file path
+            //Conversion.ConvertToSpreadsheetWithGridLinesAsPath();
+
+            // Convert file  Spreadsheet Document formats and use hidden sheets and get output as file path
+            //Conversion.ConvertToSpreadsheetEnableHiddenSheetsAsPath();
 
             // Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a stream
             //Conversion.ConvertToSpreadsheetFromStreamToStream();
@@ -133,6 +139,27 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Converts and render stream input document to image and outputs the resulting document to a stream
             //Rendering.RenderToImageFromStreamToStream(ImageSaveOptions.ImageFileType.Jpeg);
+
+            // Converts and Render file to an PSD Image format and get output as file path
+            //Rendering.RenderPSDImageAsPath();
+
+            // Convert file and get output as file path using Custom Input Data Handler
+            //Conversion.ConvertWithCustomInputDataHandler();
+
+            // Convert file and get output as file path using Custom Output Data Handler
+            //Conversion.ConvertWithCustomOutputDataHandler();
+
+            // Convert file and get Output as file path using Custom Cache Data Handler
+            //Conversion.ConvertWithCustomCacheDataHandler();
+
+            // Convert file and add watermark into output file
+            //Conversion.ConvertAndAddWaterMarkAsPath();
+
+            // Convert file using Conversion Listners Interfaces
+            //Conversion.ConvertUsingConversionLitenerAnddInterfaces();
+
+            // Convert and Get Pagewise output
+            //Conversion.ConvertAndGetPagewiseOutputAsPaths();
 
             //ExEnd:ConvertFilesToDifferentFormats
 

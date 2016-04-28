@@ -251,7 +251,36 @@ Namespace GroupDocsConversionExamples.VisualBasic
         End Sub
 
 
+        ''' <summary>
+        ''' Converts and Render file to an PSD Image format and get output as file path
+        ''' </summary> 
+        ''' <param name="outputFileType"></param>
+        Public Shared Sub RenderPSDImageAsPath()
+            'ExStart:RenderPSDImageAsPath
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+
+
+            ' Convert and save converted image file.
+            ' Returns paths to the converted image file.
+            Dim saveOptions As New ImageSaveOptions()
+            saveOptions.ConvertFileType = ImageSaveOptions.ImageFileType.Psd
+            saveOptions.OutputType = OutputType.String
+
+            ' Psd option
+            Dim psdOptions As New PsdOptions()
+            psdOptions.ColorMode = psdOptions.ColorModes.Grayscale
+            psdOptions.CompressionMethod = psdOptions.CompressionMethods.Raw
+
+            ' applying Psd Options
+            saveOptions.PsdOptions = psdOptions
+
+            Dim convertedDocumentPath = conversionHandler.Convert(Of IList(Of String))(Common.inputGUIDFile, saveOptions)
+            'ExEnd:RenderPSDImageAsPath
+        End Sub
 
 #End Region
+
     End Class
 End Namespace

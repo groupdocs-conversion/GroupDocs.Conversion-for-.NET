@@ -1,4 +1,5 @@
-﻿using System;
+﻿//ExStart:ConversionClass
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.IO;
 using GroupDocs.Conversion.Config;
 using GroupDocs.Conversion.Converter.Option;
 using GroupDocs.Conversion.Handler;
+using System.Drawing;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -29,6 +31,50 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new CellsSaveOptions { OutputType = OutputType.String });
             //ExEnd:ConvertToSpreadsheetAsPath
+        }
+
+        /// <summary>
+        /// Convert file  Spreadsheet Document formats and enable GridLines and get output as file path
+        /// </summary> 
+        public static void ConvertToSpreadsheetWithGridLinesAsPath()
+        {
+            //ExStart:ConvertToSpreadsheetWithGridLinesAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // Save options
+            SaveOptions saveOptions = new CellsSaveOptions
+             {
+                 OutputType = OutputType.String,
+                 ShowGridLines = true // display border for each all cells
+             };
+
+            // Convert and save converted spreadsheet documents.
+            // Returns paths to the converted spreadsheet documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, saveOptions);
+            //ExEnd:ConvertToSpreadsheetWithGridLinesAsPath
+        }
+
+        /// <summary>
+        /// Convert file  Spreadsheet Document formats and use hidden sheets and get output as file path
+        /// </summary> 
+        public static void ConvertToSpreadsheetEnableHiddenSheetsAsPath()
+        {
+            //ExStart:ConvertToSpreadsheetEnableHiddenSheetsAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // Save options
+            SaveOptions saveOptions = new CellsSaveOptions
+            {
+                OutputType = OutputType.String,
+                ShowHiddenSheets = true // use hidden sheets
+            };
+
+            // Convert and save converted spreadsheet documents.
+            // Returns paths to the converted spreadsheet documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, saveOptions);
+            //ExEnd:ConvertToSpreadsheetEnableHiddenSheetsAsPath
         }
 
         /// <summary>
@@ -441,7 +487,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Console.ReadLine();
         }
 
-        private static void ConversionProgressHandler(object sender, ConversionProgressEventArgs args)
+        private static void ConversionProgressHandler(ConversionProgressEventArgs args)
         {
             Console.WriteLine("Conversion progress: {0}", args.Progress);
         }
@@ -449,6 +495,120 @@ namespace GroupDocs.Conversion.Examples.CSharp
         //ExEnd:ConvertToPdfWithProgressAsPath
         #endregion
 
+        #region Convert and Get Processing Status of ConversionStart, ConversionProgress, ConversionComplete events
+
+        /// <summary>
+        /// Convert file to Pdf format and get output as file path and get Status of ConversionStart, ConversionProgress, ConversionComplete events
+        /// </summary>
+
+        //ExStart:ConvertToPdfWithProgressStatusAsPath
+        public static void ConvertToPdfWithProgressStatusAsPath()
+        {
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // attach ConversionStart event
+            conversionHandler.ConversionStart += delegate(ConversionStartEventArgs args)
+            {
+                Console.WriteLine("Conversion {0} started", args.ConversionGuid);
+            };
+
+            // attach ConversionProgress event
+            conversionHandler.ConversionProgress += delegate(ConversionProgressEventArgs args)
+            {
+                Console.WriteLine("Conversion {0} progress: {1} %", args.ConversionGuid, args.Progress);
+            };
+
+            // attach ConversionComplete event
+            conversionHandler.ConversionComplete += delegate(ConversionCompleteEventArgs args)
+            {
+                Console.WriteLine("Conversion {0} completed", args.ConversionGuid);
+                Console.WriteLine("Result document is {0}. Cache is {1}", args.ConversionType, args.UsedCache ? "used" : "not used");
+                Console.WriteLine("Result document has {0} page(s).", ((PdfConversionCompleteEventArgs)args).PageCount);
+            };
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions { OutputType = OutputType.String });
+        }
+
+        //ExEnd:ConvertToPdfWithProgressStatusAsPath
+        #endregion
+
+        #region Convert file and get output as file path using Custom Input Data Handler
+
+        /// <summary>
+        /// Convert file and get output as file path using Custom Input Data Handler
+        /// </summary>
+
+        //ExStart:ConvertWithCustomInputDataHandler
+        public static void ConvertWithCustomInputDataHandler()
+        {
+            // Creating new ConversionConfig class object with input and output files directory path
+            ConversionConfig conversionConfig = new ConversionConfig { StoragePath = Common.storagePath, CachePath = Common.cachePath, OutputPath = Common.outputPath };
+
+            // Instantiating the conversion handler from custom input data handler class
+            var inputDataHandler = new CustomInputDataHandler();
+            var conversionHandler = new ConversionHandler(conversionConfig, inputDataHandler);
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions { OutputType = OutputType.String });
+        }
+
+        //ExEnd:ConvertWithCustomInputDataHandler
+        #endregion
+
+        #region Convert file and get output as file path using Custom Output Data Handler
+
+        /// <summary>
+        /// Convert file and get output as file path using Custom Output Data Handler
+        /// </summary>
+
+        //ExStart:ConvertWithCustomOutputDataHandler
+        public static void ConvertWithCustomOutputDataHandler()
+        {
+            // Creating new ConversionConfig class object with input and output files directory path
+            ConversionConfig conversionConfig = new ConversionConfig { StoragePath = Common.storagePath, CachePath = Common.cachePath, OutputPath = Common.outputPath };
+
+            // Instantiating the conversion handler from custom output data handler class
+            var outputDataHandler = new CustomOutputDataHandler(conversionConfig);
+            var conversionHandler = new ConversionHandler(conversionConfig, outputDataHandler);
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions { OutputType = OutputType.String });
+
+            Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
+        }
+
+        //ExEnd:ConvertWithCustomOutputDataHandler
+        #endregion
+
+        #region Convert file and get Output as file path using Custom Cache Data Handler
+
+        /// <summary>
+        /// Convert file and get Output as file path using Custom Cache Data Handler
+        /// </summary>
+
+        //ExStart:ConvertWithCustomCacheDataHandler
+        public static void ConvertWithCustomCacheDataHandler()
+        {
+            // Creating new ConversionConfig class object with input and output files directory path
+            ConversionConfig conversionConfig = new ConversionConfig { StoragePath = Common.storagePath, CachePath = Common.cachePath, OutputPath = Common.outputPath };
+            conversionConfig.UseCache = true;
+
+            // Instantiating the conversion handler from custom cache data handler class
+            var cacheDataHandler = new CustomCacheDataHandler(conversionConfig);
+            var conversionHandler = new ConversionHandler(conversionConfig, cacheDataHandler);
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, new PdfSaveOptions { OutputType = OutputType.String });
+        }
+
+        //ExEnd:ConvertWithCustomCacheDataHandler
+        #endregion
 
         #region Get Available Save Options for a Document by Extenssion
 
@@ -478,5 +638,94 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         #endregion
 
+        #region Convert file and add watermark into output file
+
+        /// <summary>
+        /// Convert file and add watermark into output file
+        /// </summary>
+
+        //ExStart:ConvertAndAddWaterMarkAsPath
+        public static void ConvertAndAddWaterMarkAsPath()
+        {
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            SaveOptions saveoptions = new PdfSaveOptions
+            {
+                OutputType = OutputType.String,
+                WatermarkOptions = new WatermarkOptions("Watermark text")
+                {
+                    Color = Color.Blue,
+                    Font = new Font("Arial", 40),
+                    RotationAngle = 45,
+                    Transparency = 0.1,
+                    Left = 200,
+                    Top = 400
+                }
+            };
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, saveoptions);
+
+            Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
+            Console.ReadLine();
+        }
+
+        //ExEnd:ConvertAndAddWaterMarkAsPath
+        #endregion
+
+        #region Convert file using Conversion Listners Interfaces
+
+        /// <summary>
+        /// Convert file using Conversion Listners Interfaces
+        /// </summary>
+
+        //ExStart:ConvertUsingConversionLitenerAnddInterfaces
+        public static void ConvertUsingConversionLitenerAnddInterfaces()
+        {
+            // Instantiating the conversion handler from custom common class
+            var manager = new ConversionManager(Common.storagePath);
+            var result = manager.Convert(Common.inputGUIDFile);
+            Console.WriteLine(result);
+        }
+
+        //ExEnd:ConvertUsingConversionLitenerAnddInterfaces
+        #endregion
+
+        #region Convert and Get Pagewise output
+
+        /// <summary>
+        /// Convert and Get Pagewise output
+        /// </summary>
+
+        //ExStart:ConvertAndGetPagewiseOutputAsPaths
+        public static void ConvertAndGetPagewiseOutputAsPaths()
+        {
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // Note: when using PageMode expected result is either IList<string> or IList<Stream> depending
+            // of used OutputType in save options provided
+            SaveOptions saveoptions = new PdfSaveOptions
+            {
+                OutputType = OutputType.String,
+                PageMode = true // Enable to get each page converted as sperate document
+            };
+
+            // Convert and save converted Pdf documents.
+            // Returns paths to the converted Pdf documents.
+            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, saveoptions);
+
+            foreach (var path in convertedDocumentPath)
+            {
+                Console.WriteLine("{0}", path);
+            }
+        }
+
+        //ExEnd:ConvertAndGetPagewiseOutputAsPaths
+        #endregion
+
     }
 }
+//ExEnd:ConversionClass
