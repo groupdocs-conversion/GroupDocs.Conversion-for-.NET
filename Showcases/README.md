@@ -27,11 +27,6 @@ WebForms Conversion Example is a Web Forms Application that demonstrates the cor
 WebForms Conversion with progressbar Example is a Web Forms  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
 
 
-The MVC Conversion Example allows user to easily Convert Documnents to other formats:
-
-
-The UI of the application is kept very simple and developers can enhance the features as their own needs since it is an
-Open Source Project.
 
 
 
