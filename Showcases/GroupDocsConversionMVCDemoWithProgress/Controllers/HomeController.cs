@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
-using System.Web.Script.Serialization;
 using GroupDocs.Conversion.Config;
-using GroupDocs.Conversion.Converter.Option;
 using GroupDocs.Conversion.Handler;
 using GroupDocsConversionMVCDemoWithProgress.Models;
 
@@ -32,64 +29,49 @@ namespace GroupDocsConversionMVCDemoWithProgress.Controllers
             return View(model);
         }
 
-        private void ConversionProgressHandler(object sender, ConversionProgressEventArgs args)
+        public JsonResult CheckProgress(string guid)
         {
-            //Console.WriteLine("Conversion progress: {0}", args.Progress);
-        }
-
-        public string CheckProgress(string jobId)
-        {
-            if (System.Web.HttpContext.Current.Cache[jobId] == null)
+            if (System.Web.HttpContext.Current.Cache[guid] == null)
                 return null;
-            var callbackData = (ConversionHandler)System.Web.HttpContext.Current.Cache[jobId];
-            var serializer = new JavaScriptSerializer();
-            return serializer.Serialize(callbackData);
+            var manager = (ConversionManager)System.Web.HttpContext.Current.Cache[guid];
+
+            return Json(new { manager.Progress, manager.Status }, JsonRequestBehavior.AllowGet);
         }
 
-        public string BeginConvert(string inputFile, string outputFileType)
+        public JsonResult BeginConvert(string inputFile, string outputFileType)
         {
             try
             {
                 ConvertModel model = new ConvertModel();
                 model.storagePath = Server.MapPath("~/App_Data/");
                 model.cachePath = Server.MapPath("~/App_Data/output/");
-                ConversionConfig conversionConfig = new ConversionConfig { StoragePath = model.storagePath, CachePath = model.cachePath };
-                ConversionHandler conversionHandler = new ConversionHandler(conversionConfig);
-                conversionHandler.ConversionProgress += ConversionProgressHandler;
 
-                // Apply GroupDocs.Conversion license using license path provided/set in licensePath property
-                //model.licensePath = Server.MapPath("~/App_Data/");
-                //conversionHandler.SetLicense(model.licensePath);
+                ConversionManager conversionManager = new ConversionManager(model);
+                System.Web.HttpContext.Current.Cache[conversionManager.Guid] = conversionManager;
+                Task.Factory.StartNew(() => conversionManager.Convert(inputFile, outputFileType));
 
-                string outputFile = "converted\\SampleConverted." + outputFileType;
-
-                var saveOptions = conversionHandler.GetSaveOptions(outputFileType)[outputFileType];
-                saveOptions.OutputType = OutputType.String;
-
-                string convertResults = conversionHandler.Convert<String>(inputFile, saveOptions);
-                System.Web.HttpContext.Current.Cache[convertResults + "_instance"] = conversionHandler;
-                //Download(convertResults, outputFileType);
-
-                return convertResults;
+                return Json(new { conversionManager.Guid });
             }
             catch
             {
                 throw new ArgumentException("Output file type was not recognized");
             }
         }
-        private void Download(string outputFileName, string outputfileType)
+
+        public void Download(string guid)
         {
 
-            if (System.Web.HttpContext.Current.Cache[outputFileName + "_instance"] == null)
+            if (System.Web.HttpContext.Current.Cache[guid] == null)
                 return;
 
-            var conversion = (ConversionHandler)System.Web.HttpContext.Current.Cache[outputFileName + "_instance"];
+            var manager = (ConversionManager)System.Web.HttpContext.Current.Cache[guid];
+            var fileName = Path.GetFileName(manager.ResultPath);
             var response = System.Web.HttpContext.Current.Response;
             response.ClearContent();
             response.Clear();
-            response.ContentType = outputfileType;
-            response.AddHeader("Content-Disposition", "attachment; filename=" + outputfileType + ";");
-            response.TransmitFile(outputFileName);
+            response.ContentType = Path.GetExtension(fileName).Replace(".", "");
+            response.AddHeader("Content-Disposition", "attachment; filename=" + fileName + ";");
+            response.TransmitFile(manager.ResultPath);
             response.Flush();
             response.End();
         }

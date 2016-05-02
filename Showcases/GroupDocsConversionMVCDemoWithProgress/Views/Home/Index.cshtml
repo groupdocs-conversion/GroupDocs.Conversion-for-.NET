@@ -1,32 +1,31 @@
-﻿
-@model GroupDocsConversionMVCDemoWithProgress.Models.ConvertModel
+﻿@model GroupDocsConversionMVCDemoWithProgress.Models.ConvertModel
 @{
-    ViewBag.Title = "Groupdocs conversion demo";
+    ViewBag.Title = ":: GroupDocs Conversion With Progress MVC Demo";
 }
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#buttonConvert").bind("click", buttonStartHandler);
-            
-        });
-        var completed = false,
-            jobId = "",
-            buttonStartHandler = function () {
-                resetControlsState();
-                // geto selected output type
-                var outputFileType = $("#selectedOutputFileType  option:selected").text();
-                //starting covnersion and get its jobId
-                $.ajax({
-                    url: "/Home/BeginConvert?inputFile=@Model.inputGUIDFile&outputFileType=" + outputFileType,
-                    cache: false,
-                    type:'POST',
-                    success: function (data) {
-                        jobId = data;
-                        beginProgressCallbacks();
-                    }
-                });
-            },
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#buttonConvert").bind("click", buttonStartHandler);
+
+    });
+    var completed = false,
+        jobId = "",
+        buttonStartHandler = function () {
+            resetControlsState();
+            // geto selected output type
+            var outputFileType = $("#selectedOutputFileType  option:selected").text();
+            //starting covnersion and get its jobId
+            $.ajax({
+                url: "/Home/BeginConvert?inputFile=@Model.inputGUIDFile&outputFileType=" + outputFileType,
+                cache: false,
+                type: 'POST',
+                success: function (data) {
+                    jobId = data.Guid;
+                    beginProgressCallbacks();
+                }
+            });
+        },
             //call server each 800 miliseconds for the covnersion progress
-            beginProgressCallbacks = function() {
+            beginProgressCallbacks = function () {
                 if (!completed) {
                     callServer();
                     setTimeout(function () {
@@ -34,41 +33,35 @@
                     }, 800);
                 }
             },
-            callServer = function() {
+            callServer = function () {
                 $.ajax({
-                    url: '/Home/CheckProgress?jobId=' + jobId,
+                    url: '/Home/CheckProgress?guid=' + jobId,
                     cache: false,
                     success: receiveServerData
                 });
             },
             //receiving server data for the conversion progress
             receiveServerData = function (dataFromServer) {
-                var progressData = $.parseJSON(dataFromServer);
+                var progressData = dataFromServer;
                 if (progressData) {
-                    if (progressData.EventType == "JobStarted" || progressData.EventType == "JobProgress") {
+                    if (progressData.Status === "Started" || progressData.Status === "InProgress") {
                         $(".progress").show(1000);
                         $(".progress-bar").width(progressData.Progress + '%');
                         $("#buttonConvert").hide(1000);
-                    } else if (progressData.EventType == "JobCompleted") {
+                    } else if (progressData.Status === "Completed") {
                         $(".progress-bar").width('100%');
                         $(".progress").hide(1000);
                         $("#labelCompleted").show(100);
                         $("#buttonDownload").show(100);
                         $("#buttonConvert").show(2000);
                         completed = true;
-                    } else if (progressData.EventType == "JobFailed") {
-                        $("#labelFailed").text("Conversion failed: " + progressData.SerializedData);
-                        $("#labelFailed").show(100);
-                        $(".progress").hide(1000);
-                        $("#buttonConvert").show(1000);
-                        completed = true;
                     }
                 }
-            }, 
-            downnload = function() {
-                window.location="/Home/Download?jobId=" + jobId;
             },
-            resetControlsState = function() {
+            downnload = function () {
+                window.location = "/Home/Download?guid=" + jobId;
+            },
+            resetControlsState = function () {
                 $("#labelCompleted").hide(100);
                 $(".progress").hide(1000);
                 $("#buttonDownload").hide(100);
@@ -76,23 +69,26 @@
                 $("#labelCompleted").hide(100);
                 completed = false;
             };
-    </script>
-    <div style="padding: 20px 20px 20px 20px">
-        <div class="panel panel-default" style="width: 600px;">
-            <div class="panel-heading">Groupdocs conversion demo</div>
-            <div class="panel-body">
-                <div class="input-group">
-                    @Html.DropDownList("selectedOutputFileType", GroupDocsConversionMVCDemoWithProgress.Models.ConvertModel.AvailableFileTypes, "Please select output type", new { @class = "input-group-addon", style = "width:200px;", id = "selectedOutputFileType", onchange="resetControlsState();" })
-                    <button title="Convert" id="buttonConvert" class="btn btn-default">Convert</button>
-                </div>
-                <div class="progress" style="width: 200px; display: none">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0;"></div>
-                </div>
-                <br />
-                <div class="alert alert-danger" id="labelFailed" style="display: none">Conversion failed</div>
-                <div class="alert alert-success" id="labelCompleted" style="display: none">Conversion completed</div>
-                <button style="display: none;" class="btn btn-default" onclick="downnload();" id="buttonDownload">Download</button>
+</script>
+<div style="padding: 20px 20px 20px 20px">
+    <div class="panel panel-default" style="width: 90%;">
+        <div class="panel-heading"><b>GroupDocs Conversion With Progress MVC Demo</b></div>
+        <div class="panel-body">
+            <div class="alert alert-danger" id="labelFailed" style="display: none">Conversion failed</div>
+            <div class="alert alert-success" id="labelCompleted" style="display: none">Conversion completed</div>
+            <span class="label label-default">Input file: @Model.inputGUIDFile</span><br />
+            .
+            <div class="input-group">
+                @Html.DropDownList("selectedOutputFileType", GroupDocsConversionMVCDemoWithProgress.Models.ConvertModel.AvailableFileTypes, "Please select output type", new { @class = "input-group-addon", style = "width:300px;", id = "selectedOutputFileType", onchange = "resetControlsState();" })
+                &nbsp;&nbsp;
+                <button title="Convert" id="buttonConvert" class="btn btn-warning">Convert</button>
+                &nbsp;&nbsp;
+                <button style="display: none;" class="btn btn-success" onclick="downnload();" id="buttonDownload">Download</button>
+            </div>
+            <br />
+            <div class="progress" style="width: 100%; display: none">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0;"></div>
             </div>
         </div>
-        <span class="label label-default">Input file: @Model.inputGUIDFile</span>
     </div>
+</div>
