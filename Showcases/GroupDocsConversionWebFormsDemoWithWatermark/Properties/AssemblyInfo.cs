@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GroupDocsConversionWebFormsDemoWithProgress")]
+[assembly: AssemblyTitle("GroupDocsConversionWebFormsDemoWithWatermarkWithWatermark")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("GroupDocsConversionWebFormsDemoWithProgress")]
-[assembly: AssemblyCopyright("Copyright © 2016")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("GroupDocsConversionWebFormsDemoWithWatermarkWithWatermark")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("767a8e29-10ee-4856-8ccf-a3600b2f8086")]
+[assembly: Guid("e16a161a-0445-4c2a-9452-b5b4d0e0bb32")]
 
 // Version information for an assembly consists of the following four values:
 //
