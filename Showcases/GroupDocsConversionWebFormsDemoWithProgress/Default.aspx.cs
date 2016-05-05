@@ -86,7 +86,7 @@ namespace GroupDocsConversionWebFormsDemoWithProgress
             }
             return "Download Complete...";
         }
-        private void ConversionProgressHandler(object sender, ConversionProgressEventArgs args)
+        private void ConversionProgressHandler(ConversionProgressEventArgs args)
         {
             progressLabel.Text = args.Progress.ToString() + "% Converted.";
             ClientScript.RegisterStartupScript(this.GetType(), "showProgress", "showProgress(" + args.Progress.ToString() + ");", true);
