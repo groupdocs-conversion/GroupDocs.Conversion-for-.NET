@@ -88,6 +88,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Converts stream input documents to presentation Document formats and outputs the resulting document to a stream
             //Conversion.ConvertToPresentationFromStreamToStream();
 
+            // Convert file to Presentation Document format and remove comments and get output as file path
+            //Conversion.ConvertToPresentationWithoutCommentsAsPath();
+
             // Convert file to Word Processing Document format and get output as file path
             //Conversion.ConvertToWordDocumentAsPath();
 

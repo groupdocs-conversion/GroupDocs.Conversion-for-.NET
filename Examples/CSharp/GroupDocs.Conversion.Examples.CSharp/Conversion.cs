@@ -462,6 +462,28 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToPresentationFromStreamToStream
         }
 
+        /// <summary>
+        /// Convert file to Presentation Document format and remove comments and get output as file path
+        /// </summary>
+        public static void ConvertToPresentationWithoutCommentsAsPath()
+        {
+            //ExStart:ConvertToPresentationWithoutCommentsAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // Slide save options to remove slide comments
+            SaveOptions saveOptions = new SlidesSaveOptions
+            {
+                OutputType = OutputType.String,
+                RemoveSlidesComments = true // removes all slide comments
+            };
+
+            // Convert and save converted presentation documents.
+            // Returns paths to the converted presentation documents.
+            var convertedDocumentPath = conversionHandler.Convert<string>(Common.inputGUIDFile, saveOptions);
+            //ExEnd:ConvertToPresentationWithoutCommentsAsPath
+        }
+
         #endregion
 
         #region Convert and Get Processing Progress

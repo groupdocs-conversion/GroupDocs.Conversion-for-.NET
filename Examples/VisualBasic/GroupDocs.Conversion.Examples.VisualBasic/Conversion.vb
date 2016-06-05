@@ -476,6 +476,24 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:ConvertToPresentationFromStreamToStream
         End Sub
 
+        ''' <summary>
+        ''' Convert file to Presentation Document format and remove comments and get output as file path
+        ''' </summary>
+        Public Shared Sub ConvertToPresentationWithoutCommentsAsPath()
+            'ExStart:ConvertToPresentationWithoutCommentsAsPath
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' Convert and save converted presentation documents.
+            ' Returns paths to the converted presentation documents.
+
+            Dim slidesSaveOptions As New SlidesSaveOptions()
+            slidesSaveOptions.OutputType = OutputType.String
+            slidesSaveOptions.RemoveSlidesComments = True ' removes all slide comments
+
+            Dim convertedDocumentPath = conversionHandler.Convert(Of String)(Common.inputGUIDFile, slidesSaveOptions)
+            'ExEnd:ConvertToPresentationWithoutCommentsAsPath
+        End Sub
 
 #End Region
 
