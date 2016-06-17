@@ -74,8 +74,9 @@
       <HintPath>..\..\packages\AWSSDK.S3.3.2.3.1-beta\lib\net35\AWSSDK.S3.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Groupdocs.Conversion">
-      <HintPath>..\packages\groupdocs-conversion-dotnet.3.0.0\lib\Groupdocs.Conversion.dll</HintPath>
+    <Reference Include="GroupDocs.Conversion, Version=3.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\groupdocs-conversion-dotnet.3.3.0\lib\GroupDocs.Conversion.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
