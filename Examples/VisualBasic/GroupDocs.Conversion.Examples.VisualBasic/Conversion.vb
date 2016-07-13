@@ -266,6 +266,34 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:ConvertToWordFromStreamToStream
         End Sub
 
+        ''' <summary>
+        ''' In advance options example Convert Password Protected file to Word Processing Document format with show/hide track changes 
+        ''' </summary>
+
+        Public Shared Sub ConvertToWordDocumentAdvanceOptionswithtrackchanges()
+            'ExStart:ConvertToWordDocumentAdvanceOptions
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            'Set password to unprotect protected document during loading
+            Dim loadOptions As New LoadOptions()
+            loadOptions.Password = "secret"
+
+            ' convert file to Doc, starting from page 2 and convert 2 pages,
+            Dim saveOptions As New WordsSaveOptions()
+            saveOptions.ConvertFileType = WordsSaveOptions.WordsFileType.Doc
+            saveOptions.PageNumber = 2
+            saveOptions.NumPagesToConvert = 2
+            saveOptions.HideWordTrackedChanges = True
+
+            'Unprotect input document, Convert and save word processing documents using advance options show/hide track changes.
+            'Returns the converted word processing documents as IO Stream show/hide track changes.
+            Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)
+
+            'ExEnd:ConvertToWordDocumentAdvanceOptionswithtrackchanges
+
+        End Sub
+
 
 #End Region
 

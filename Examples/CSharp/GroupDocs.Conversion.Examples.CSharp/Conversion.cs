@@ -216,10 +216,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
                 PageNumber = 2,
                 NumPagesToConvert = 2,
+
             };
 
             // Unprotect input document, Convert and save word processing documents using advance options.
-            // Returns the converted word processing documents as IO Stream.
+            // Returns the converted word processing documents as IO Stream .
             var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
             //ExEnd:ConvertToWordDocumentAdvanceOptions
         }
@@ -261,6 +262,34 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToWordFromStreamToStream
         }
 
+
+        /// <summary>
+        /// Converts stream input documents to Word Proccessing Document formats with show/Hide Track Changes and outputs the resulting document to a stream
+        /// </summary>
+        public static void ConvertToWordDocumentAdvanceOptionswithtrackchanges()
+        {
+            //ExStart:ConvertToWordDocumentAdvanceOptionswithTrackchanges
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            //Set password to unprotect protected document during loading
+            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+
+            // convert file to Doc, starting from page 2 and convert 2 pages,
+            SaveOptions saveOptions = new WordsSaveOptions
+            {
+                ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
+                PageNumber = 2,
+                NumPagesToConvert = 2,
+                HideWordTrackedChanges = true,
+
+            };
+
+            // Unprotect input document, Convert and save word processing documents using advance options with Show/Hide Track changes.
+            // Returns the converted word processing documents as IO Stream with Show/Hide Track changes.
+            var convertedDocumentStream = conversionHandler.Convert<Stream>(Common.inputGUIDFile, loadOptions, saveOptions);
+            //ExEnd:ConvertToWordDocumentAdvanceOptionswithTrackchanges
+        }
         #endregion
 
         #region Convert to Pdf
