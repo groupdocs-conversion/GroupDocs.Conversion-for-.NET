@@ -1,0 +1,1 @@
+[Explore GroupDocs.Conversion API for .NET Examples using Visual Studio Plugin](https://github.com/groupdocs-Conversion/GroupDocs.Conversion-for-.NET/tree/master/Plugins/GroupDocs_Conversion_VSPlugin)

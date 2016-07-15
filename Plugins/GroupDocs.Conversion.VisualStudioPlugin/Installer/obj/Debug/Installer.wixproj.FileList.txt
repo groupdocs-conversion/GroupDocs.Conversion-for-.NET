@@ -1,8 +1,0 @@
-E:\groupdocsassemblyvsvs\out\Installer GroupDocs.Conversion for .NET API Examples.msi
-E:\groupdocsassemblyvsvs\out\Installer GroupDocs.Conversion for .NET API Examples.wixpdb
-D:\OfficeWork\Aspose\GroupDocs.Assembly\groupdocsconversionvs\out\Installer GroupDocs.Conversion for .NET API Examples.msi
-D:\OfficeWork\Aspose\GroupDocs.Assembly\groupdocsconversionvs\out\Installer GroupDocs.Conversion for .NET API Examples.wixpdb
-obj\Debug\Product.wixobj
-obj\Debug\Installer.wixproj.BindContentsFileListnull.txt
-obj\Debug\Installer.wixproj.BindOutputsFileListnull.txt
-obj\Debug\Installer.wixproj.BindBuiltOutputsFileListnull.txt
