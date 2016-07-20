@@ -241,19 +241,19 @@ namespace GroupDocsConversionVisualStudioPlugin.GUI
                 for (int i = 0; i < dllsPaths.Length; i++)
                 {
                     //For CSharp Project...
-                    if (!Directory.Exists(Path.Combine(destinationPath, "GroupDocs.Conversion.Examples.CSharp\\GroupDocs.Conversion.Examples", "Bin", "Debug")))
-                        Directory.CreateDirectory(Path.Combine(destinationPath, "GroupDocs.Conversion.Examples.CSharp\\GroupDocs.Conversion.Examples", "Bin", "Debug"));
-                    File.Copy(dllsPaths[i], Path.Combine(destinationPath, "GroupDocs.Conversion.Examples.CSharp\\GroupDocs.Conversion.Examples", "Bin", "Debug", Path.GetFileName(dllsPaths[i])), true);
+                    if (!Directory.Exists(Path.Combine(destinationPath, "CSharp", "Bin", "Debug")))
+                        Directory.CreateDirectory(Path.Combine(destinationPath, "CSharp", "Bin", "Debug"));
+                    File.Copy(dllsPaths[i], Path.Combine(destinationPath, "CSharp", "Bin", "Debug", Path.GetFileName(dllsPaths[i])), true);
 
                     //For VBasic Project...
-                    if (!Directory.Exists(Path.Combine(destinationPath, "GroupDocs.Conversion.Examples.VisualBasic", "Bin", "Debug")))
-                        Directory.CreateDirectory(Path.Combine(destinationPath, "GroupDocs.Conversion.Examples.VisualBasic", "Bin", "Debug"));
-                    File.Copy(dllsPaths[i], Path.Combine(destinationPath, "GroupDocs.Conversion.Examples.VisualBasic", "Bin", "Debug", Path.GetFileName(dllsPaths[i])), true);
+                    if (!Directory.Exists(Path.Combine(destinationPath, "VisualBasic", "Bin", "Debug")))
+                        Directory.CreateDirectory(Path.Combine(destinationPath, "VisualBasic", "Bin", "Debug"));
+                    File.Copy(dllsPaths[i], Path.Combine(destinationPath, "VisualBasic", "Bin", "Debug", Path.GetFileName(dllsPaths[i])), true);
                 }
 
                 progressBar1.Value = 50;
 
-                string[] projectFiles = Directory.GetFiles(Path.Combine(destinationPath, (rdbCSharp.Checked ? "GroupDocs.Conversion.Examples.CSharp\\GroupDocs.Conversion.Examples" : "GroupDocs.Conversion.Examples.VisualBasic")), (rdbCSharp.Checked ? "*.csproj" : "*.vbproj"));
+                string[] projectFiles = Directory.GetFiles(Path.Combine(destinationPath, (rdbCSharp.Checked ? "CSharp" : "VisualBasic")), (rdbCSharp.Checked ? "*.csproj" : "*.vbproj"));
                 for (int i = 0; i < projectFiles.Length; i++)
                 {
                     UpdatePrjReferenceHintPath(projectFiles[i], component);
