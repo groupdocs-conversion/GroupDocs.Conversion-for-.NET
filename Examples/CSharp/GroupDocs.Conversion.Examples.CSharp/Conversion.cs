@@ -47,6 +47,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
              {
                  OutputType = OutputType.String,
                  ShowGridLines = true // display border for each all cells
+                 
              };
 
             // Convert and save converted spreadsheet documents.
@@ -111,6 +112,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 ConvertFileType = CellsSaveOptions.CellsFileType.Xls,
                 PageNumber = 2,
                 NumPagesToConvert = 2
+                
             };
 
             // Unprotect input document, Convert and save spreadsheet documents using advance options.
