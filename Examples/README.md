@@ -16,4 +16,6 @@ The package contains two projects, one for C# examples and other for Visual Basi
 * Right click on solution and press "Enable NuGet package Restore"
 * Build the project.
 
+In other case, it is possible that Visual Studio is unable to automatically add APIs references due to Visual Studio version differences. In this case, please add references of missing APIs manually.
+
 For more details, visit  [How to Run Examples](http://groupdocs.com/docs/display/conversionnet/How+to+Run+Examples).
