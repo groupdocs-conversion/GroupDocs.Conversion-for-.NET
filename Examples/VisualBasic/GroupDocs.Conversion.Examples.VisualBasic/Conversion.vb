@@ -450,6 +450,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'Set password to unprotect protected document during loading
             Dim loadOptions As New LoadOptions()
             loadOptions.Password = "secret"
+            'DefaultFont = "Verdana"   'Default font for rendering the presentation. The following font will be used if a presentation font is missing.
 
             ' convert file to Ppt, starting from page 2 and convert 2 pages,
             ' use DPI 300, image width 1024, image height 768

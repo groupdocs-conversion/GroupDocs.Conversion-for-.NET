@@ -70,7 +70,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             SaveOptions saveOptions = new HtmlSaveOptions
             {
                 PageNumber = 2,
+                FixedLayout = true,
                 NumPagesToConvert = 2
+                
             };
 
             // Unprotect input document, Convert and save HTML documents using advance options.

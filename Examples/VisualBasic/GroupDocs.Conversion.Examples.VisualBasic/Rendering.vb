@@ -62,6 +62,7 @@ Namespace GroupDocsConversionExamples.VisualBasic
             saveOptions.PageNumber = 2
             saveOptions.NumPagesToConvert = 2
 
+
             ' Unprotect input document, Convert and save HTML documents using advance options.
             ' Returns the converted HTML documents as IO Stream.
             Dim convertedDocumentStream = conversionHandler.Convert(Of Stream)(Common.inputGUIDFile, loadOptions, saveOptions)

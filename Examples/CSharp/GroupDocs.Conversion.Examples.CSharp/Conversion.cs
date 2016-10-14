@@ -47,7 +47,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
              {
                  OutputType = OutputType.String,
                  ShowGridLines = true // display border for each all cells
-                 
+
              };
 
             // Convert and save converted spreadsheet documents.
@@ -112,7 +112,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 ConvertFileType = CellsSaveOptions.CellsFileType.Xls,
                 PageNumber = 2,
                 NumPagesToConvert = 2
-                
+
             };
 
             // Unprotect input document, Convert and save spreadsheet documents using advance options.
@@ -439,7 +439,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            LoadOptions loadOptions = new LoadOptions
+            {
+                Password = "secret"
+                // DefaultFont = "Verdana"  // Default font for rendering the presentation. The following font will be used if a presentation font is missing.
+            };
 
             // convert file to Ppt, starting from page 2 and convert 2 pages,
             // use DPI 300, image width 1024, image height 768
