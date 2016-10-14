@@ -60,6 +60,8 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' convert starting from page 2 and convert 2 pages
             Dim saveOptions As SaveOptions = New HtmlSaveOptions()
             saveOptions.PageNumber = 2
+            'saveOptions.FixedLayout = True
+
             saveOptions.NumPagesToConvert = 2
 
 
