@@ -1,4 +1,4 @@
- ## Visual Studio Plugin to Explore GroupDocs.Conversion Examples
+## Visual Studio Plugin to Explore GroupDocs.Conversion Examples
 
 GroupDocs.Conversion for .NET plugin is providing an ease to compile Next Generation GroupDocs.Conversion for .NET  examples and to explore the examples. It has reduced the efforts to download examples and the DLL file from different resources (GitHub, NuGet). You can quickly run CSharp or Visual Basic project. So all the manual steps to explore the examples have been exempted.
 
