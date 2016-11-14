@@ -46,8 +46,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="GroupDocs.Conversion">
-      <HintPath>..\..\packages\groupdocs-conversion-dotnet.16.10.0\lib\GroupDocs.Conversion.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\groupdocs-conversion-dotnet.16.11.0\lib\GroupDocs.Conversion.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
