@@ -783,6 +783,74 @@ namespace GroupDocs.Conversion.Examples.CSharp
         //ExEnd:ConvertAndGetPagewiseOutputAsPaths
         #endregion
 
+        #region Common Conversion Methods
+        /// <summary>
+        /// To get pages count of a document which will be converted
+        /// </summary> 
+        public static void GetDocumentPagesCountAsPath()
+        {
+            //ExStart:GetDocumentPagesCountAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // Convert and save converted spreadsheet documents.
+            // Returns paths to the converted  documents.
+
+            var count = conversionHandler.GetDocumentPagesCount(Common.inputGUIDFile);
+            Console.WriteLine(count);
+
+            //ExEnd:GetDocumentPagesCountAsPath
+        }
+
+        /// <summary>
+        /// To get possible conversions from file extension
+        /// </summary> 
+        public static void GetPossibleConversionsAsPath()
+        {
+            //ExStart:GetPossibleConversionsAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // get possible conversions from file extension.
+            string[] possibleConversions = conversionHandler.GetPossibleConversions(Common.inputGUIDFile);
+
+            Console.WriteLine("Possible Conversions: ");
+
+            for (int i = 0; i < possibleConversions.Length; i++)
+            {
+                Console.WriteLine(possibleConversions[i]);
+            }
+
+            //ExEnd:GetPossibleConversionsAsPath
+        }
+
+        /// <summary>
+        /// To get possible conversions from stream
+        /// </summary> 
+        public static void GetPossibleConversionsAsStream()
+        {
+            //ExStart:GetPossibleConversionsAsStream
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+
+            // read input document as a stream
+            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            // get possible conversions from stream
+            string[] possibleConversions = conversionHandler.GetPossibleConversions(fileStream);
+
+            Console.WriteLine("Possible Conversions: ");
+
+            for (int i = 0; i < possibleConversions.Length; i++)
+            {
+                Console.WriteLine(possibleConversions[i]);
+            }
+
+            //ExEnd:GetPossibleConversionsAsStream
+        }
+
+        #endregion
     }
 }
 //ExEnd:ConversionClass

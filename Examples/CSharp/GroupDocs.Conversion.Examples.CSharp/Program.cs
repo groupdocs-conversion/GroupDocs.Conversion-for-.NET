@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
             Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
             Common.outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
-            Common.inputGUIDFile = "Sample.docx";
+            Common.inputGUIDFile = "DOCXsample.docx";
             //Common.inputGUIDFile = "PPTSample.pptx";
             //Common.inputGUIDFile = "PDFsample.pdf";
 
@@ -35,7 +35,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-            Conversion.ConvertToSpreadsheetAsPath();
+          // Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
             // Conversion.ConvertToSpreadsheetStream();
@@ -163,6 +163,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and Get Pagewise output
             //Conversion.ConvertAndGetPagewiseOutputAsPaths();
+
+            //get pages count of a document which will be converted
+            Conversion.GetDocumentPagesCountAsPath();
+
+            //get possible conversions from file extension
+           //Conversion.GetPossibleConversionsAsPath();
+
+            /// get possible conversions from stream
+            //Conversion.GetPossibleConversionsAsStream();
 
             //ExEnd:ConvertFilesToDifferentFormats
 
