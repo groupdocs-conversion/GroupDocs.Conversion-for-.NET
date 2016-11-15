@@ -814,6 +814,70 @@ Namespace GroupDocsConversionExamples.VisualBasic
         'ExEnd:ConvertAndGetPagewiseOutputAsPaths
 #End Region
 
+#Region "Common Conversion Methods"
+        ''' <summary>
+        ''' To get pages count of a document which will be converted
+        ''' </summary> 
+        Public Shared Sub GetDocumentPagesCountAsPath()
+            'ExStart:GetDocumentPagesCountAsPath
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' Convert and save converted spreadsheet documents.
+            ' Returns paths to the converted  documents.
+
+            Dim count = conversionHandler.GetDocumentPagesCount(Common.inputGUIDFile)
+            Console.WriteLine(count)
+
+            'ExEnd:GetDocumentPagesCountAsPath
+        End Sub
+
+        ''' <summary>
+        ''' To get possible conversions from file extension
+        ''' </summary> 
+        Public Shared Sub GetPossibleConversionsAsPath()
+            'ExStart:GetPossibleConversionsAsPath
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' get possible conversions from file extension.
+            Dim possibleConversions As String() = conversionHandler.GetPossibleConversions(Common.inputGUIDFile)
+
+            Console.WriteLine("Possible Conversions: ")
+
+            For i As Integer = 0 To possibleConversions.Length - 1
+                Console.WriteLine(possibleConversions(i))
+            Next
+
+            'ExEnd:GetPossibleConversionsAsPath
+        End Sub
+
+        ''' <summary>
+        ''' To get possible conversions from stream
+        ''' </summary> 
+        Public Shared Sub GetPossibleConversionsAsStream()
+            'ExStart:GetPossibleConversionsAsStream
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+
+            ' read input document as a stream
+            Dim fileStream As New FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read)
+
+            ' get possible conversions from stream
+            Dim possibleConversions As String() = conversionHandler.GetPossibleConversions(fileStream)
+
+            Console.WriteLine("Possible Conversions: ")
+
+            For i As Integer = 0 To possibleConversions.Length - 1
+                Console.WriteLine(possibleConversions(i))
+            Next
+
+            'ExEnd:GetPossibleConversionsAsStream
+        End Sub
+
+#End Region
+
     End Class
 End Namespace
 'ExEnd:ConversionClass
