@@ -169,6 +169,10 @@ Namespace GroupDocsConversionExamples.VisualBasic
             ' get possible conversions from stream
             'Conversion.GetPossibleConversionsAsStream()
 
+
+            ' Converts and Render file to Webp format and get output as file path
+            Rendering.RenderWebpAsPath(ImageSaveOptions.ImageFileType.Webp)
+
             'ExEnd:ConvertFilesToDifferentFormats
         End Sub
     End Module
