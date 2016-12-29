@@ -283,6 +283,27 @@ Namespace GroupDocsConversionExamples.VisualBasic
             'ExEnd:RenderPSDImageAsPath
         End Sub
 
+
+        ''' <summary>
+        ''' Converts and Render file to an Webp format and get output as file path
+        ''' </summary> 
+        ''' <param name="outputFileType"></param>
+        Public Shared Sub RenderWebpAsPath(outputFileType As ImageSaveOptions.ImageFileType)
+            'ExStart:RenderWebpformatAsPath
+            ' Instantiating the conversion handler from custom common class
+            Dim conversionHandler As ConversionHandler = Common.getConversionHandler()
+
+            ' set output file type
+            Dim objImageSaveOptions As New ImageSaveOptions()
+            objImageSaveOptions.ConvertFileType = outputFileType
+            objImageSaveOptions.OutputType = OutputType.String
+
+            ' Convert and save converted Webp file.
+            ' Returns paths to the converted image file.
+            Dim convertedDocumentPath = conversionHandler.Convert(Of IList(Of String))(Common.inputGUIDFile, objImageSaveOptions)
+            ' ExEnd:RenderWebpformatAsPath
+        End Sub
+
 #End Region
 
     End Class

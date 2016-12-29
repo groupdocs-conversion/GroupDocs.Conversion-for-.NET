@@ -278,6 +278,30 @@ namespace GroupDocs.Conversion.Examples.CSharp
             var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, saveOptions);
             //ExEnd:RenderPSDImageAsPath
         }
+
+
+        /// <summary>
+        /// Converts and Render file to an Webp format and get output as file path
+        /// </summary> 
+        /// <param name="outputFileType"></param>
+        public static void RenderWebpAsPath(ImageSaveOptions.ImageFileType outputFileType)
+        {
+            //ExStart:RenderWebpformatAsPath
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+
+            // Convert and save converted Webp file.
+            // Returns paths to the converted Webp file.
+            var saveOptions = new ImageSaveOptions
+            {
+                ConvertFileType = ImageSaveOptions.ImageFileType.Webp,
+                OutputType = OutputType.String
+            };
+
+            var convertedDocumentPath = conversionHandler.Convert<IList<string>>(Common.inputGUIDFile, saveOptions);
+            //ExEnd:RenderWebpformatAsPath
+        }
+
         #endregion
     }
 }

@@ -173,6 +173,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             /// get possible conversions from stream
             //Conversion.GetPossibleConversionsAsStream();
 
+            // Converts and Render file to an Webp format and get output as file path
+            //Rendering.RenderWebpAsPath(ImageSaveOptions.ImageFileType.Webp);
+
             //ExEnd:ConvertFilesToDifferentFormats
 
         }
