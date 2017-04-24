@@ -26,7 +26,7 @@ The package contains two projects, one for C# examples and other for Visual Basi
 ## Prerequisite
 
 + Visual Studio 2012 or later.
-+ GroupDocs.Conversion 17.2.0.
++ GroupDocs.Conversion 17.3.0.
 
 
 In other case, it is possible that Visual Studio is unable to automatically add APIs references due to Visual Studio version differences. In this case, please add references of missing APIs manually.
