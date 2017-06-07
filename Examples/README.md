@@ -1,4 +1,4 @@
-##GroupDocs.Conversion for .NET Examples
+# GroupDocs.Conversion for .NET Examples
 
 This package contains C# and VB.NET Example Projects for [GroupDocs.Conversion for .NET](#) and sample input templates used in the examples.
 
@@ -8,7 +8,7 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Conversion f
   </a>
 </p>
 
-##How to Run the Examples?
+# How to Run the Examples?
 
 The package contains two projects, one for C# examples and other for Visual Basic examples. Follow the given steps to proceed with project build:
 
@@ -16,7 +16,7 @@ The package contains two projects, one for C# examples and other for Visual Basi
 * Right click on solution and press "Enable NuGet package Restore"
 * Build the project.
 
-## Prerequisite
+# Prerequisite
 
 + Visual Studio 2012 or later.
 + GroupDocs.Conversion 17.4.0.
