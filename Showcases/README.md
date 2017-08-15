@@ -51,7 +51,7 @@ WebForms Conversion with Watermark Example is a Web Forms  Application that demo
 
 + Any latest browsers (Firefox, Chrome ,IE9 or greater, Safari etc. )
 
-+ GroupDocs.Conversion 17.7.0.
++ GroupDocs.Conversion 17.8.0.
 
 
 
