@@ -181,7 +181,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted image file. 
             // Returns the converted image file as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new ImageSaveOptions {  });
+            MemoryStream targetStream = new MemoryStream();
+            convertedDocumentStream.Save(targetStream);
             //ExEnd:RenderImageAsStream
         }
 
@@ -202,17 +204,18 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // use DPI 300, image width 1024, image height 768
             SaveOptions saveOptions = new ImageSaveOptions
             {
-                ConvertFileType = outputFileType,
+                
                 PageNumber = 2,
                 NumPagesToConvert = 2,
-                Dpi = 300,
                 Width = 1024,
                 Height = 768
             };
 
             // Unprotect input document, Convert and save image file using advance options.
             // Returns the converted image file as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(Common.inputGUIDFile, loadOptions, saveOptions);
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, saveOptions);
+            MemoryStream targetStream = new MemoryStream();
+            convertedDocumentStream.Save(targetStream);
             //ExEnd:RenderImageAdvanceOptions
         }
 
@@ -258,7 +261,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert<IList<Stream>>(fileStream, new ImageSaveOptions { ConvertFileType = outputFileType });
+            var convertedDocumentStream = conversionHandler.Convert(fileStream, new ImageSaveOptions { });
+            MemoryStream targetStream = new MemoryStream();
+            convertedDocumentStream.Save(targetStream);
 
             fileStream.Close();
             //ExEnd:RenderToImageFromStreamToStream
