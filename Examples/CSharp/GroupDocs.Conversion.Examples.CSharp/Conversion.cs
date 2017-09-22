@@ -382,7 +382,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             };
 
             // Unprotect input document, Convert and save Pdf documents using advance options.
-            // Returns the converted spreadsheet Pdf as IO Stream.
+            // Returns the converted  Pdf as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, saveOptions);
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
