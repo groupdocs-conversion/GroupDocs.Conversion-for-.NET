@@ -29,11 +29,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
         public string Convert(string file)
         {
-            var option = new PdfSaveOptions
-            {
-                OutputType = OutputType.String
-            };
-            return _conversionHandler.Convert<string>(file, option);
+            
+            var convertedDocumentPath =_conversionHandler.Convert(file, new PdfSaveOptions());
+            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            return "result-" + Common.inputGUIDFile;
         }
     }
 }
