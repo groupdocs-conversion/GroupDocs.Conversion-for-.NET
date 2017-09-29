@@ -17,13 +17,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
             Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
             Common.outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
-            Common.inputGUIDFile = "Sample.docx";
+            
             //Common.inputGUIDFile = "PPTSample.pptx";
-            //Common.inputGUIDFile = "PDFsample.pdf";
+            Common.inputGUIDFile = "PDFsample.pdf";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            //Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic");
-            //Common.ApplyLicense(Common.licensePath);
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/Lic/GroupDocs.total.lic");
+            Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
             //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
@@ -35,10 +35,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-            Conversion.ConvertToSpreadsheetAsPath();
+          // Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
-            // Conversion.ConvertToSpreadsheetStream();
+             Conversion.ConvertToSpreadsheetStream();
 
             // In Advanced example Convert Password Protected file to Spreadsheet Document formats 
             //Conversion.ConvertToSpreadsheetAdvanceOptions();
@@ -56,7 +56,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertToSpreadsheetFromStreamToStream();
 
             // Convert file to PDF format and get output as file path
-            //Conversion.ConvertToPdfAsPath();
+            Conversion.ConvertToPdfAsPath();
 
             // Convert file to PDF format and get output as Stream
             // Conversion.ConvertToPdfAsStream();
@@ -163,6 +163,18 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and Get Pagewise output
             //Conversion.ConvertAndGetPagewiseOutputAsPaths();
+
+            //get pages count of a document which will be converted
+            Conversion.GetDocumentPagesCountAsPath();
+
+            //get possible conversions from file extension
+           //Conversion.GetPossibleConversionsAsPath();
+
+            /// get possible conversions from stream
+            //Conversion.GetPossibleConversionsAsStream();
+
+            // Converts and Render file to an Webp format and get output as file path
+            //Rendering.RenderWebpAsPath(ImageSaveOptions.ImageFileType.Webp);
 
             //ExEnd:ConvertFilesToDifferentFormats
 

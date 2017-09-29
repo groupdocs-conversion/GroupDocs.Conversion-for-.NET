@@ -1,4 +1,4 @@
-##GroupDocs.Conversion for .NET
+# GroupDocs.Conversion for .NET
 
 This package contains [Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples) for [GroupDocs.Conversion for .NET](#) that will help you understand API's working and write your own applications.
 
@@ -15,13 +15,13 @@ Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples)  | Contains the package of all .NET examples (C# & VB) and sample files that will help you learn how to use product features.
 
-## Resources
+# Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Conversion for .NET](http://groupdocs.com/dot-net/document-conversion-library)
 + **Download:** [Download GroupDocs.Conversion for .NET](http://groupdocs.com/community/files/8/.net-libraries/default.aspx)
 + **Documentation:** [GroupDocs.Conversion for .NET Documentation](http://groupdocs.com/docs/display/conversionnet/Home)
 + **Forum:** [GroupDocs.Conversion for .NET Forum](http://groupdocs.com/Community/forums/groupdocs.conversion-product-family/7/showforum.aspx)
-+ **Blog:** [GroupDocs.Conversion for .NET Blog](http://groupdocs.com/blog/category/conversion)
++ **Blog:** [GroupDocs.Conversion for .NET Blog](https://blog.groupdocs.com/category/groupdocs-conversions-product-family/)
 
 

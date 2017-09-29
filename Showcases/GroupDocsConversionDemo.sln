@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsConversionMVCDemo", "GroupDocsConversionMVCDemo\GroupDocsConversionMVCDemo.csproj", "{D05BFA34-B99A-4F7D-95AC-0A718443699E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsConversionMVCDemoWithProgress", "GroupDocsConversionMVCDemoWithProgress\GroupDocsConversionMVCDemoWithProgress.csproj", "{88EF44CA-9F36-4F51-8FAD-CAB3B1ED1D24}"
