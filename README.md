@@ -13,15 +13,15 @@ GroupDocs.Conversion for .NET is a universal document conversion library designe
 
 Directory | Description
 --------- | -----------
-[Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples)  | Contains the package of all .NET examples (C# & VB) and sample files that will help you learn how to use product features.
+[Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples)  | Contains the package of all .NET examples (C#) and sample files that will help you learn how to use product features.
 
 # Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Conversion for .NET](http://groupdocs.com/dot-net/document-conversion-library)
-+ **Download:** [Download GroupDocs.Conversion for .NET](http://groupdocs.com/community/files/8/.net-libraries/default.aspx)
-+ **Documentation:** [GroupDocs.Conversion for .NET Documentation](http://groupdocs.com/docs/display/conversionnet/Home)
-+ **Forum:** [GroupDocs.Conversion for .NET Forum](http://groupdocs.com/Community/forums/groupdocs.conversion-product-family/7/showforum.aspx)
++ **Product Home:** [GroupDocs.Conversion for .NET](https://www.groupdocs.com/products/conversion/net)
++ **Download:** [Download GroupDocs.Conversion for .NET](https://downloads.groupdocs.com/conversion/net)
++ **Documentation:** [GroupDocs.Conversion for .NET Documentation](https://docs.groupdocs.com/display/conversionnet/Home)
++ **Forum:** [GroupDocs.Conversion for .NET Forum](https://forum.groupdocs.com/c/conversion)
 + **Blog:** [GroupDocs.Conversion for .NET Blog](https://blog.groupdocs.com/category/groupdocs-conversions-product-family/)
 
 
