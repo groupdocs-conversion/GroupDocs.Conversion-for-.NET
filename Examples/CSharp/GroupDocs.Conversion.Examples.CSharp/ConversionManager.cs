@@ -31,8 +31,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             
             var convertedDocumentPath =_conversionHandler.Convert(file, new PdfSaveOptions());
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
-            return "result-" + Common.inputGUIDFile;
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
+            return "result-" + Common.inputGUIDFile + ".pdf";
         }
     }
 }
