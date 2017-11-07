@@ -13,7 +13,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     public static class Conversion
     {
-        public static string inputGUIDFile = "DOCXsample.docx";
+        //public static string inputGUIDFile = "DOCXsample.docx"; To overwrite inputfile
 
         #region Convert to Spreadsheet Document
 
