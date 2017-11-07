@@ -22,7 +22,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Common.inputGUIDFile = "PDFsample.pdf";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/Lic/GroupDocs.total.lic");
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/License/GroupDocs.total.lic");
             Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
@@ -35,7 +35,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-          // Conversion.ConvertToSpreadsheetAsPath();
+           Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
              Conversion.ConvertToSpreadsheetStream();

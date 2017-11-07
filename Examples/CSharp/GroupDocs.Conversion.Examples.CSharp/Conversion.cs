@@ -29,8 +29,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
 
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions {  });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions { });
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
 
             //ExEnd:ConvertToSpreadsheetAsPath
         }
@@ -54,7 +54,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
             //ExEnd:ConvertToSpreadsheetWithGridLinesAsPath
         }
 
@@ -76,7 +76,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
             //ExEnd:ConvertToSpreadsheetEnableHiddenSheetsAsPath
         }
 
@@ -144,7 +144,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Returns the converted spreadsheet documents as File Path using stream input.
             var convertedDocumentPath = conversionHandler.Convert(fileStream, new CellsSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
 
             fileStream.Close();
             //ExEnd:ConvertToSpreadsheetFromStreamToFile
@@ -189,8 +189,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted word processing documents.
             // Returns paths to the converted word processing documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new WordsSaveOptions {  });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new WordsSaveOptions { });
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
             //ExEnd:ConvertToWordDocumentAsPath
         }
 
@@ -259,7 +259,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Returns the converted Word Processing Documents as File Path using stream input.
             var convertedDocumentPath = conversionHandler.Convert(fileStream, new WordsSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
 
             fileStream.Close();
             //ExEnd:ConvertToWordFromStreamToFile
@@ -334,7 +334,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
 
             //ExEnd:ConvertToPdfAsPath
         }
@@ -404,7 +404,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Returns the converted pdf documents as File Path using stream input.
             var convertedDocumentPath = conversionHandler.Convert(fileStream, new PdfSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
 
             fileStream.Close();
             //ExEnd:ConverToPdfFromStreamToFile
@@ -446,8 +446,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted presentation documents.
             // Returns paths to the converted presentation documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new SlidesSaveOptions {  });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new SlidesSaveOptions { });
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".ppt");
             //ExEnd:ConvertToPresentationAsPath
         }
 
@@ -518,7 +518,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Returns the converted presentation documents as File Path using stream input.
             var convertedDocumentPath = conversionHandler.Convert(fileStream, new SlidesSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".ppt");
 
             fileStream.Close();
             //ExEnd:ConvertToPresentationFromStreamToFile
@@ -557,14 +557,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Slide save options to remove slide comments
             SaveOptions saveOptions = new SlidesSaveOptions
             {
-                
-                HideComments=true // hides all slide comments
+
+                HideComments = true // hides all slide comments
             };
 
             // Convert and save converted presentation documents.
             // Returns paths to the converted presentation documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".ppt");
             //ExEnd:ConvertToPresentationWithoutCommentsAsPath
         }
 
@@ -588,7 +588,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
 
             Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
             Console.ReadLine();
@@ -637,7 +637,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
         }
 
         //ExEnd:ConvertToPdfWithProgressStatusAsPath
@@ -662,7 +662,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
         }
 
         //ExEnd:ConvertWithCustomInputDataHandler
@@ -697,7 +697,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
         }
 
         //ExEnd:ConvertWithCustomCacheDataHandler
@@ -726,7 +726,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             }
             //use prepared save option for ToPdf conversion
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, availableConversions["pdf"]);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
             //ExEnd:ConvertToPdfWithProgressAsPath
         }
 
@@ -746,7 +746,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             SaveOptions saveoptions = new PdfSaveOptions
             {
-                
+
                 WatermarkOptions = new WatermarkOptions("Watermark text")
                 {
                     Color = Color.Blue,
@@ -761,7 +761,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveoptions);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
 
             Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
             Console.ReadLine();

@@ -34,7 +34,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 
             };
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new HtmlSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
             //ExEnd:RenderHTMLAsPath
         }
 
@@ -113,7 +113,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             var convertedDocumentPath = conversionHandler.Convert(fileStream, new HtmlSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
 
             fileStream.Close();
             //ExEnd:RenderToHTMLFromStreamToFile
@@ -165,7 +165,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             };
 
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".jpg");
             //ExEnd:RenderImageAsPathi
         }
 
@@ -241,7 +241,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             var convertedDocumentPath = conversionHandler.Convert(fileStream, new ImageSaveOptions { });
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".jpeg");
 
             fileStream.Close();
             //ExEnd:RenderToImageFromStreamToFile
@@ -315,7 +315,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             };
 
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Common.inputGUIDFile);
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".Webp");
             //ExEnd:RenderWebpformatAsPath
         }
 
