@@ -27,11 +27,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns paths to the converted HTML documents.
             var saveOptions = new HtmlSaveOptions
             {
-                
+
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 UsePdf = true,
-                
+
             };
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new HtmlSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
@@ -102,11 +102,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns paths to the converted HTML documents.
             var saveOptions = new HtmlSaveOptions
             {
-                
+
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 UsePdf = true,
-                
+
             };
 
             // read input document as a stream
@@ -161,12 +161,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns paths to the converted image file.
             var saveOptions = new ImageSaveOptions
             {
-                ConvertFileType = ImageSaveOptions.ImageFileType.Jpg,
+                ConvertFileType = outputFileType,
             };
 
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".jpg");
-            //ExEnd:RenderImageAsPathi
+
+            for (int pagenum = 1; pagenum <= convertedDocumentPath.PageCount; pagenum++)
+            {
+                convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + pagenum.ToString() + "." + outputFileType, pagenum);
+
+            }//ExEnd:RenderImageAsPathi
         }
 
         /// <summary>
@@ -181,7 +185,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted image file. 
             // Returns the converted image file as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new ImageSaveOptions {  });
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new ImageSaveOptions { });
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
             //ExEnd:RenderImageAsStream
@@ -204,7 +208,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // use DPI 300, image width 1024, image height 768
             SaveOptions saveOptions = new ImageSaveOptions
             {
-                
+
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 Width = 1024,
@@ -234,7 +238,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             var saveOptions = new ImageSaveOptions
             {
                 ConvertFileType = ImageSaveOptions.ImageFileType.Jpeg,
-                
+
             };
 
             // read input document as a stream
