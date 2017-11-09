@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Common.storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
             Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
             Common.outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
-            
+
             //Common.inputGUIDFile = "PPTSample.pptx";
             Common.inputGUIDFile = "PDFsample.pdf";
 
@@ -35,10 +35,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
 
             // Convert file  Spreadsheet Document formats and get output as file path
-           Conversion.ConvertToSpreadsheetAsPath();
+            //Conversion.ConvertToSpreadsheetAsPath();
 
             // Convert file  Spreadsheet Document formats and get output as Stream
-             Conversion.ConvertToSpreadsheetStream();
+            //Conversion.ConvertToSpreadsheetStream();
 
             // In Advanced example Convert Password Protected file to Spreadsheet Document formats 
             //Conversion.ConvertToSpreadsheetAdvanceOptions();
@@ -56,7 +56,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertToSpreadsheetFromStreamToStream();
 
             // Convert file to PDF format and get output as file path
-            Conversion.ConvertToPdfAsPath();
+            //Conversion.ConvertToPdfAsPath();
 
             // Convert file to PDF format and get output as Stream
             // Conversion.ConvertToPdfAsStream();
@@ -129,7 +129,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Rendering.RenderHTMLAdvanceOptions();
 
             // Converts and Render file to an Image format and get output as file path
-            //Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
+            Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Png);
 
             // Converts and Render file to an Image format and get output as Stream
             // Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Png);
@@ -165,10 +165,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertAndGetPagewiseOutputAsPaths();
 
             //get pages count of a document which will be converted
-            Conversion.GetDocumentPagesCountAsPath();
+            //Conversion.GetDocumentPagesCountAsPath();
 
             //get possible conversions from file extension
-           //Conversion.GetPossibleConversionsAsPath();
+            //Conversion.GetPossibleConversionsAsPath();
 
             /// get possible conversions from stream
             //Conversion.GetPossibleConversionsAsStream();
