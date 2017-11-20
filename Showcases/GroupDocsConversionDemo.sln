@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsConversionMVCDemo", "GroupDocsConversionMVCDemo\GroupDocsConversionMVCDemo.csproj", "{D05BFA34-B99A-4F7D-95AC-0A718443699E}"
 EndProject
@@ -14,6 +14,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsConversionMVCDemoWithWatermark", "GroupDocsConversionMVCDemoWithWatermark\GroupDocsConversionMVCDemoWithWatermark.csproj", "{EDD110B6-9CE6-491A-9BFF-6662A031EBC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsConversionWebFormsDemoWithWatermark", "GroupDocsConversionWebFormsDemoWithWatermark\GroupDocsConversionWebFormsDemoWithWatermark.csproj", "{3BAEF96C-15E2-4FA5-986B-84411201DBB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6B0209FB-FD39-43C9-AA23-AEC503D13A56}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

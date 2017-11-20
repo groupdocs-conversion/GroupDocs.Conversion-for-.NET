@@ -16,6 +16,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // storagePath property to set input file/s directory
         public static string storagePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/SampleFiles");
 
+        //fontsPath property
+        //public static string fontDir = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Fonts");
+
         // cachePath property to set cache file/s directory
         public static string cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
 
@@ -51,7 +54,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Set false to disable cache
             conversionConfig.UseCache = false;
-
+            //conversionConfig.FontDirectories.Add(fontDir);
             // Creating new ConversionHandler class object with ConversionConfig object
             conversionHandler = new ConversionHandler(conversionConfig);
 
