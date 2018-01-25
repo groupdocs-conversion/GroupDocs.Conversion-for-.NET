@@ -744,23 +744,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            SaveOptions saveoptions = new PdfSaveOptions
-            {
-
-                WatermarkOptions = new WatermarkOptions("Watermark text")
-                {
-                    Color = Color.Blue,
-                    Font = new Font("Arial", 40),
-                    RotationAngle = 45,
-                    Transparency = 0.1,
-                    Left = 200,
-                    Top = 400
-                }
-            };
+            var saveOptions = new PdfSaveOptions();
+            saveOptions.WatermarkOptions.Text = "Sample watermark";
+            saveOptions.WatermarkOptions.Color = Color.Red;
+            saveOptions.WatermarkOptions.Width = 100;
+            saveOptions.WatermarkOptions.Height = 100;
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveoptions);
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
 
             Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
@@ -805,11 +797,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:GetDocumentPagesCountAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
-
+            
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted  documents.
 
-            var count = conversionHandler.GetDocumentPagesCount(Common.inputGUIDFile);
+            var count = conversionHandler.GetDocumentInfo(Common.inputGUIDFile).PageCount;
             Console.WriteLine(count);
 
             //ExEnd:GetDocumentPagesCountAsPath

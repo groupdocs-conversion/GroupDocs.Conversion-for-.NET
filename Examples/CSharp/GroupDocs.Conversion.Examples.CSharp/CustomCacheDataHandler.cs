@@ -93,45 +93,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
             return GetCachePath(_conversionConfig.CachePath, cacheFileDescription);
         }
         private string GetCachePath(string path, CacheFileDescription cacheFileDescription)
-        {
+        {  
             if (cacheFileDescription.SaveOptions == null)
             {
                 throw new System.Exception("CacheFileDescription.Options is not set");
             }
-            string filePath = "";
-            string fileName = "";
-            var options = cacheFileDescription.SaveOptions as ImageSaveOptions;
-            if (options != null)
-            {
-                if (!string.IsNullOrEmpty(options.CustomName))
-                {
-                    if (options.UseWidthForCustomName)
-                    {
-                        fileName = string.Format("{0}_{1}.{2}", options.CustomName,
-                            options.Width,
-                            options.ConvertFileType.ToString().ToLower());
-                    }
-                    else
-                    {
-                        fileName = string.Format("{0}.{1}", options.CustomName,
-                            options.ConvertFileType.ToString().ToLower());
-                    }
-                }
-                else
-                {
-                    fileName = string.Format("{0}.{1}", cacheFileDescription.BaseName,
-                            options.ConvertFileType.ToString().ToLower());
-                }
-                filePath = string.Format(@"{0}\{1}\{2}\{3}", path, cacheFileDescription.Guid,
-                    options.PageNumber, fileName);
-            }
-            else
-            {
-                fileName = !string.IsNullOrEmpty(cacheFileDescription.SaveOptions.CustomName)
-                ? string.Format("{0}.{1}", cacheFileDescription.SaveOptions.CustomName, cacheFileDescription.SaveOptions.CustomName.Split('.')[1].ToString().ToLower())
-                : string.Format("{0}.{1}", cacheFileDescription.BaseName, cacheFileDescription.SaveOptions.CustomName.Split('.')[1].ToString().ToLower());
-                filePath = string.Format(@"{0}\{1}\{2}", path, cacheFileDescription.Guid, fileName);
-            }
+            var fileName = string.Format("{0}.{1}", cacheFileDescription.BaseName,
+             cacheFileDescription.SaveOptions.ConvertFileTypeExtension);
+
+            //var filePath = _fileSystem.Path.Combine(_conversionConfig.CachePath, cacheFileDescription.Guid, fileName);
+            var filePath = Path.Combine(_conversionConfig.CachePath, cacheFileDescription.Guid, fileName);
             return filePath;
         }
     }
