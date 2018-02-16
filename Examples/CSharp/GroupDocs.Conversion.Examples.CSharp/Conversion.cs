@@ -111,14 +111,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
 
             // convert file to Xls, starting from page 2 and convert 2 pages
-            SaveOptions saveOptions = new CellsSaveOptions
-            {
-                ConvertFileType = CellsSaveOptions.CellsFileType.Xls,
-                PageNumber = 2,
-                NumPagesToConvert = 2
+            SaveOptions saveOptions = new CellsSaveOptions();
 
-            };
-
+            saveOptions.ConvertFileType = CellsSaveOptions.CellsFileType.Xls;
+            saveOptions.PageNumber = 2;
+            saveOptions.NumPagesToConvert = 2;
+            saveOptions.CellsOptions.SkipEmptyRowsAndColumns = true;
+            saveOptions.CellsOptions.ConvertRange = "D1:F8";
             // Unprotect input document, Convert and save spreadsheet documents using advance options.
             // Returns the converted spreadsheet documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, saveOptions);
@@ -328,15 +327,20 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static void ConvertToPdfAsPath()
         {
             //ExStart:ConvertToPdfAsPath
-            // Instantiating the conversion handler from custom common class
+            //Instantiating the conversion handler from custom common class
+            //ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            // //Convert and save converted Pdf documents.
+            // //Returns paths to the converted Pdf documents.
+            //var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
+            //convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
             ConversionHandler conversionHandler = Common.getConversionHandler();
-
-            // Convert and save converted Pdf documents.
-            // Returns paths to the converted Pdf documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
+            ////ExEnd:ConvertToPdfAsPath 
+            var saveOptions = new GroupDocs.Conversion.Converter.Option.PdfSaveOptions();
+            saveOptions.ConvertFileType = PdfSaveOptions.PdfFileType.Pdf;
+            saveOptions.PdfOptions.PdfFormat = PdfOptions.PdfFormatType.PdfA_3A;
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
-
-            //ExEnd:ConvertToPdfAsPath
         }
 
         /// <summary>
@@ -482,8 +486,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Set password to unprotect protected document during loading
             LoadOptions loadOptions = new LoadOptions
             {
-                Password = "secret"
-                // DefaultFont = "Verdana"  // Default font for rendering the presentation. The following font will be used if a presentation font is missing.
+                Password = "secret",
+                //DefaultFont = "Verdana"  // Default font for rendering the presentation. The following font will be used if a presentation font is missing.
             };
 
             // convert file to Ppt, starting from page 2 and convert 2 pages,
@@ -797,7 +801,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:GetDocumentPagesCountAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
-            
+
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted  documents.
 
