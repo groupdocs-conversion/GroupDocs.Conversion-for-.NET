@@ -29,7 +29,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.conversion.lic");
 
         // inputGUIDFile property to set input file
-        public static string inputGUIDFile = "DOCXsample.docx";
+        public static string inputGUIDFile = "SKGM_FINAL1Purchase_Anugypati_Report2421821.xps";
 
         // Instantiate GroupDocs.Conversion ConversionConfig class object
         private static ConversionConfig conversionConfig = null;

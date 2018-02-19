@@ -162,7 +162,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             var saveOptions = new ImageSaveOptions
             {
                 ConvertFileType = outputFileType,
+                TiffOptions = { Compression = TiffOptions.TiffCompression.Ccitt4},
+                HorizontalResolution = 203,
+                VerticalResolution = 192,
             };
+            
 
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
 
@@ -184,13 +188,21 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
+            var saveOptions = new ImageSaveOptions
+            {
+                ConvertFileType = outputFileType,
+                TiffOptions = { Compression = TiffOptions.TiffCompression.Ccitt4 },
+                HorizontalResolution = 203,
+                VerticalResolution = 192,
+            };
+
             // Convert and save converted image file. 
             // Returns the converted image file as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new ImageSaveOptions { ConvertFileType = outputFileType });
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
 
             MemoryStream targetStream = new MemoryStream();
 
-            convertedDocumentStream.Save(targetStream, 1);
+            convertedDocumentStream.Save(targetStream);
 
             //ExEnd:RenderImageAsStream
         }
@@ -272,16 +284,44 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:RenderToImageFromStreamToStream
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler(); ;
+            var imageSaveOptions = new ImageSaveOptions
+            {
+                ConvertFileType = ImageSaveOptions.ImageFileType.Tiff,
+                Grayscale = true,
+                TiffOptions =
+                {
+                    Compression = TiffOptions.TiffCompression.Ccitt4
+                },
+                HorizontalResolution = 203,
+                VerticalResolution = 192,
+            };
 
-            // Returns the converted image file as IO Stream.
-            // read input document as a stream
-            FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+            var loadOptions = new LoadOptions();
+            using (var source = File.OpenRead(Common.inputGUIDFile))
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    using (var destination = File.OpenWrite("D:/GitRepos/GroupDocs.Conversion-for-.NET/Examples/Data/ConvertedFiles/" + i + "file.Tiff"))
+                    {
+                        using (var result = conversionHandler.Convert(source, loadOptions, imageSaveOptions))
+                        {
+                            result.Save(destination);
+                        }
+                    }
+                }
+                
+            }
 
-            var convertedDocumentStream = conversionHandler.Convert(fileStream, new ImageSaveOptions { });
-            MemoryStream targetStream = new MemoryStream();
-            convertedDocumentStream.Save(targetStream, 1);
 
-            fileStream.Close();
+            //// Returns the converted image file as IO Stream.
+            //// read input document as a stream
+            //FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
+
+            //var convertedDocumentStream = conversionHandler.Convert(fileStream, new ImageSaveOptions { });
+            //MemoryStream targetStream = new MemoryStream();
+            //convertedDocumentStream.Save(targetStream, 1);
+
+            //fileStream.Close();
             //ExEnd:RenderToImageFromStreamToStream
         }
 
