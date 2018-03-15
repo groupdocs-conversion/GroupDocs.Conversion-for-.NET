@@ -112,8 +112,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // convert file to Xls, starting from page 2 and convert 2 pages
             SaveOptions saveOptions = new CellsSaveOptions();
-
-            saveOptions.ConvertFileType = CellsSaveOptions.CellsFileType.Xls;
+             
             saveOptions.PageNumber = 2;
             saveOptions.NumPagesToConvert = 2;
             saveOptions.CellsOptions.SkipEmptyRowsAndColumns = true;
@@ -327,13 +326,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static void ConvertToPdfAsPath()
         {
             //ExStart:ConvertToPdfAsPath
-            //Instantiating the conversion handler from custom common class
-            //ConversionHandler conversionHandler = Common.getConversionHandler();
-
-            // //Convert and save converted Pdf documents.
-            // //Returns paths to the converted Pdf documents.
-            //var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new PdfSaveOptions { });
-            //convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
+            //Instantiating the conversion handler from custom common class 
             ConversionHandler conversionHandler = Common.getConversionHandler();
             ////ExEnd:ConvertToPdfAsPath 
             var saveOptions = new GroupDocs.Conversion.Converter.Option.PdfSaveOptions();
