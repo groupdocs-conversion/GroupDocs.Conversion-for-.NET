@@ -18,12 +18,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
             Common.outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
 
-            Common.inputGUIDFile = "Basic.docx";
+            Common.inputGUIDFile = "PDFsample.pdf";
             //Common.inputGUIDFile = "PDFsample.pdf";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
             Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/GroupDocs.total.lic");
-            Common.ApplyLicense(Common.licensePath);
+            //Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
             //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
@@ -141,7 +141,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Rendering.RenderToImageFromStreamToFile(ImageSaveOptions.ImageFileType.Jpeg);
 
             // Converts and render stream input document to image and outputs the resulting document to a stream
-            Rendering.RenderToImageFromStreamToStream(ImageSaveOptions.ImageFileType.Tiff);
+            //Rendering.RenderToImageFromStreamToStream(ImageSaveOptions.ImageFileType.Tiff);
 
             // Converts and Render file to an PSD Image format and get output as file path
             //Rendering.RenderPSDImageAsPath();
