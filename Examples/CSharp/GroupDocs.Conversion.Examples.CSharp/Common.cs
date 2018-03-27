@@ -112,6 +112,17 @@ namespace GroupDocs.Conversion.Examples.CSharp
             license.SetLicense(licenseStream);
         }
         //ExEnd:ApplyLicense
+
+        //ExStart:DocumentInformation
+        /// <summary>
+        /// Get page orientation 
+        /// </summary>
+        public static void DocumentInformation()
+        {
+            var docuemntInfo = conversionHandler.GetDocumentInfo(Common.inputGUIDFile);
+            Console.WriteLine(docuemntInfo.PageOrientation);
+        }
+        //ExEnd:DocumentInformation
     }
 
 
