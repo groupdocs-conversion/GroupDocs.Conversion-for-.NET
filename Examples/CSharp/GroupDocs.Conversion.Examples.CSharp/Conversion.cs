@@ -45,11 +45,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions
-             {
-                 ShowGridLines = true // display border for each all cells
-
-             };
+            SaveOptions saveOptions = new CellsSaveOptions(); 
+            saveOptions.CellsOptions.ShowGridLines = true;
+            
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
@@ -68,10 +66,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions
-            {
-                ShowHiddenSheets = true // use hidden sheets
-            };
+            SaveOptions saveOptions = new CellsSaveOptions();
+            saveOptions.CellsOptions.ShowHiddenSheets = true;
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
@@ -108,7 +104,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            LoadOptions loadOptions = new CellsLoadOptions
+            {
+                Password = "secret",
+                DefaultFont = "Verdana" 
+            };
 
             // convert file to Xls, starting from page 2 and convert 2 pages
             SaveOptions saveOptions = new CellsSaveOptions();
@@ -223,7 +223,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            LoadOptions loadOptions = new WordsLoadOptions
+            {
+                Password = "secret",
+                DefaultFont = "Verdana"
+            };
 
             // convert file to Doc, starting from page 2 and convert 2 pages,
             SaveOptions saveOptions = new WordsSaveOptions
@@ -331,7 +335,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ////ExEnd:ConvertToPdfAsPath 
             var saveOptions = new GroupDocs.Conversion.Converter.Option.PdfSaveOptions();
             saveOptions.ConvertFileType = PdfSaveOptions.PdfFileType.Pdf;
-            saveOptions.PdfOptions.PdfFormat = PdfOptions.PdfFormatType.PdfA_3A;
+            saveOptions.PdfOptions.PdfFormat = PdfOptions.PdfFormatType.PdfA_3A; 
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
         }
@@ -477,10 +481,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions
+            LoadOptions loadOptions = new SlidesLoadOptions
             {
                 Password = "secret",
-                //DefaultFont = "Verdana"  // Default font for rendering the presentation. The following font will be used if a presentation font is missing.
+                DefaultFont = "Verdana"  // Default font for rendering the presentation. The following font will be used if a presentation font is missing.
             };
 
             // convert file to Ppt, starting from page 2 and convert 2 pages,
@@ -746,11 +750,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             saveOptions.WatermarkOptions.Color = Color.Red;
             saveOptions.WatermarkOptions.Width = 100;
             saveOptions.WatermarkOptions.Height = 100;
+            saveOptions.WatermarkOptions.Background = true;
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
-            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
+            convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
 
             Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocumentPath);
             Console.ReadLine();
