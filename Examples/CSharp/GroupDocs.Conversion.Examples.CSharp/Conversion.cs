@@ -45,9 +45,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions(); 
+            SaveOptions saveOptions = new CellsSaveOptions();
             saveOptions.CellsOptions.ShowGridLines = true;
-            
+
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
@@ -107,12 +107,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             LoadOptions loadOptions = new CellsLoadOptions
             {
                 Password = "secret",
-                DefaultFont = "Verdana" 
+                DefaultFont = "Verdana"
             };
 
             // convert file to Xls, starting from page 2 and convert 2 pages
             SaveOptions saveOptions = new CellsSaveOptions();
-             
+
             saveOptions.PageNumber = 2;
             saveOptions.NumPagesToConvert = 2;
             saveOptions.CellsOptions.SkipEmptyRowsAndColumns = true;
@@ -332,12 +332,36 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:ConvertToPdfAsPath
             //Instantiating the conversion handler from custom common class 
             ConversionHandler conversionHandler = Common.getConversionHandler();
-            ////ExEnd:ConvertToPdfAsPath 
+
             var saveOptions = new GroupDocs.Conversion.Converter.Option.PdfSaveOptions();
+
+            //Image path
+            byte[] image = System.IO.File.ReadAllBytes(@"D:\GitRepos\GroupDocs.Conversion-for-.NET\Examples\Data\SampleFiles\MVCConversion.png");
+            //image watermark
+            saveOptions.WatermarkOptions.Image = image;
+            saveOptions.PdfOptions.Grayscale = true;
+            saveOptions.PdfOptions.Linearize = true;
+
+            // all images in the document are re-compressed. The compression is defined by the ImageQuality property.
+            saveOptions.PdfOptions.OptimizationOptions.CompressImages = true;
+
+            //  value in percent where 100% is unchanged quality and image size. To decrease the image size, use ImageQuality less than 100
+            //saveOptions.PdfOptions.OptimizationOptions.ImageQuality = 50;
+            // Link duplcate streams
+            //saveOptions.PdfOptions.OptimizationOptions.LinkDuplcateStreams = true;
+            // Remove unused objects
+            //saveOptions.PdfOptions.OptimizationOptions.RemoveUnusedObjects = true;
+            // Remove unused streams
+            //saveOptions.PdfOptions.OptimizationOptions.RemoveUnusedStreams = true;
+            // Make fonts not embedded if set to true
+            //saveOptions.PdfOptions.OptimizationOptions.UnembedFonts = true;
+
+            saveOptions.WordBookmarkOptions.BookmarksOutlineLevel = 5;
+
             saveOptions.ConvertFileType = PdfSaveOptions.PdfFileType.Pdf;
-            saveOptions.PdfOptions.PdfFormat = PdfOptions.PdfFormatType.PdfA_3A; 
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
+            //ExEnd:ConvertToPdfAsPath 
         }
 
         /// <summary>
