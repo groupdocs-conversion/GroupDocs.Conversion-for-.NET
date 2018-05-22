@@ -19,6 +19,7 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Conversion for .NET](https://products.groupdocs.com/conversion/net)
++ **API Reference:** [GroupDocs.Conversion for .NET API Reference](https://apireference.groupdocs.com/net/conversion)
 + **Documentation:** [GroupDocs.Conversion for .NET Documentation](https://docs.groupdocs.com/display/conversionnet/Home)
 + **Installation:** [GroupDocs.Conversion for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Conversion/)
 + **Free Support:** [GroupDocs.Conversion for .NET Free Support Forum](https://forum.groupdocs.com/c/conversion)
