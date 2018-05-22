@@ -19,9 +19,8 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Conversion for .NET](https://products.groupdocs.com/conversion/net)
-+ **Download:** [Download GroupDocs.Conversion for .NET](https://downloads.groupdocs.com/conversion/net)
 + **Documentation:** [GroupDocs.Conversion for .NET Documentation](https://docs.groupdocs.com/display/conversionnet/Home)
-+ **Forum:** [GroupDocs.Conversion for .NET Forum](https://forum.groupdocs.com/c/conversion)
-+ **Blog:** [GroupDocs.Conversion for .NET Blog](https://blog.groupdocs.com/category/groupdocs-conversions-product-family/)
-
-
++ **Installation:** [GroupDocs.Conversion for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Conversion/)
++ **Free Support:** [GroupDocs.Conversion for .NET Free Support Forum](https://forum.groupdocs.com/c/conversion)
++ **Paid Support:** [GroupDocs.Conversion for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
++ **Blog:** [GroupDocs.Conversion for .NET Blog](https://blog.groupdocs.com/category/groupdocs-conversion-product-family/)
