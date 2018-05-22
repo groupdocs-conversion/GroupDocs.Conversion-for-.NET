@@ -1,6 +1,6 @@
 # GroupDocs.Conversion for .NET
 
-This package contains [Examples](https://github.com/groupdocsconversion/GroupDocs_Conversion_NET/tree/master/Examples) for [GroupDocs.Conversion for .NET](#) that will help you understand API's working and write your own applications.
+This package contains [Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples) for [GroupDocs.Conversion for .NET](#) that will help you understand API's working and write your own applications.
 
 GroupDocs.Conversion for .NET is a universal document conversion library designed for easy integration into any .NET application. Allows you to convert back and forth between over 50 types of documents and images, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and 
 
