@@ -882,6 +882,29 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
 
         #endregion
+
+        public static void TempDataHanlderImplementation()
+        {
+            const string sourceFileName = "sample.docx"; //TODO: Put the source filename here
+            const string resultFileName = "result.pdf"; //TODO: Put the result filename here
+
+            var config = new ConversionConfig
+            {
+                StoragePath = ".",
+                OutputPath = ".",
+                TempDataHandler = new MyTempDataHandler
+            };
+
+            var handler = new ConversionHandler(config);
+
+
+            var result = handler.Convert(sourceFileName, new PdfSaveOptions());
+            result.Save(resultFileName);
+
+
+            Console.WriteLine("Done!");
+            Console.ReadKey();
+        }
     }
 }
 //ExEnd:ConversionClass
