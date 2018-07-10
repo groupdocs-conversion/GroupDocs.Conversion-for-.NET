@@ -29,7 +29,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
 
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions {});
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
 
             //ExEnd:ConvertToSpreadsheetAsPath
@@ -104,12 +104,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new CellsLoadOptions
-            {
-                Password = "secret",
-                DefaultFont = "Verdana"
-            };
 
+            var loadOptions = new CellsLoadOptions();
+            loadOptions.Password = "secret";
+            //loadOptions.DefaultFont = "Verdana";
+            loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
+            loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Xls, starting from page 2 and convert 2 pages
             SaveOptions saveOptions = new CellsSaveOptions();
 
@@ -223,12 +223,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new WordsLoadOptions
-            {
-                Password = "secret",
-                DefaultFont = "Verdana"
-            };
 
+            var loadOptions = new WordsLoadOptions();
+            loadOptions.Password = "secret";
+            //loadOptions.DefaultFont = "Verdana";
+            loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Angsana New", "Arial Unicode MS"));
+            loadOptions.AutoFontSubstitution = false;
             // convert file to Doc, starting from page 2 and convert 2 pages,
             SaveOptions saveOptions = new WordsSaveOptions
             {
@@ -399,6 +399,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // use DPI 300, page width 1024, page height 768
             SaveOptions saveOptions = new PdfSaveOptions
             {
+                EmailOptions =
+                {
+                    DisplayHeader = true,
+                    DisplayEmailAddress = true,
+                    DisplayFromEmailAddress = true,
+                    DisplayToEmailAddress = true,
+                    DisplayCcEmailAddress = true,
+                    DisplayBccEmailAddress = true
+                },
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 Dpi = 300,
@@ -505,14 +514,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new SlidesLoadOptions
-            {
-                Password = "secret",
-                DefaultFont = "Verdana"  // Default font for rendering the presentation. The following font will be used if a presentation font is missing.
-            };
-
-            // convert file to Ppt, starting from page 2 and convert 2 pages,
-            // use DPI 300, image width 1024, image height 768
+            var loadOptions = new SlidesLoadOptions();
+            loadOptions.Password = "secret";
+            //loadOptions.DefaultFont = "Verdana";
+            loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
+            loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
+            // convert file to Ppt, starting from page 2 and convert 2 pages, 
             SaveOptions saveOptions = new SlidesSaveOptions
             {
                 ConvertFileType = SlidesSaveOptions.SlidesFileType.Ppt,
@@ -892,9 +899,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             {
                 StoragePath = ".",
                 OutputPath = ".",
-                TempDataHandler = new MyTempDataHandler
+                TempDataHandler = new MyTempDataHandler()
             };
-
             var handler = new ConversionHandler(config);
 
 
