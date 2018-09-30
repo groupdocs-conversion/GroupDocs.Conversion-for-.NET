@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions();
+            CellsSaveOptions saveOptions = new CellsSaveOptions();
             saveOptions.CellsOptions.ShowGridLines = true;
 
 
@@ -66,7 +66,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions();
+            CellsSaveOptions saveOptions = new CellsSaveOptions();
             saveOptions.CellsOptions.ShowHiddenSheets = true;
 
             // Convert and save converted spreadsheet documents.
@@ -111,7 +111,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Xls, starting from page 2 and convert 2 pages
-            SaveOptions saveOptions = new CellsSaveOptions();
+            CellsSaveOptions saveOptions = new CellsSaveOptions();
 
             saveOptions.PageNumber = 2;
             saveOptions.NumPagesToConvert = 2;
@@ -230,7 +230,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Angsana New", "Arial Unicode MS"));
             loadOptions.AutoFontSubstitution = false;
             // convert file to Doc, starting from page 2 and convert 2 pages,
-            SaveOptions saveOptions = new WordsSaveOptions
+            WordsSaveOptions saveOptions = new WordsSaveOptions
             {
                 ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
                 PageNumber = 2,
@@ -302,7 +302,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
 
             // convert file to Doc, starting from page 2 and convert 2 pages,
-            SaveOptions saveOptions = new WordsSaveOptions
+            WordsSaveOptions saveOptions = new WordsSaveOptions
             {
                 ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
                 PageNumber = 2,
@@ -397,7 +397,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // convert starting from page 2 and convert 2 pages,
             // use DPI 300, page width 1024, page height 768
-            SaveOptions saveOptions = new PdfSaveOptions
+            PdfSaveOptions saveOptions = new PdfSaveOptions
             {
                 EmailOptions =
                 {
@@ -520,7 +520,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Ppt, starting from page 2 and convert 2 pages, 
-            SaveOptions saveOptions = new SlidesSaveOptions
+            SlidesSaveOptions saveOptions = new SlidesSaveOptions
             {
                 ConvertFileType = SlidesSaveOptions.SlidesFileType.Ppt,
                 PageNumber = 2,
@@ -587,7 +587,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Slide save options to remove slide comments
-            SaveOptions saveOptions = new SlidesSaveOptions
+            SlidesSaveOptions saveOptions = new SlidesSaveOptions
             {
 
                 HideComments = true // hides all slide comments
