@@ -29,7 +29,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
 
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions {});
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
 
             //ExEnd:ConvertToSpreadsheetAsPath
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions();
+            CellsSaveOptions saveOptions = new CellsSaveOptions();
             saveOptions.CellsOptions.ShowGridLines = true;
 
 
@@ -66,7 +66,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            SaveOptions saveOptions = new CellsSaveOptions();
+            CellsSaveOptions saveOptions = new CellsSaveOptions();
             saveOptions.CellsOptions.ShowHiddenSheets = true;
 
             // Convert and save converted spreadsheet documents.
@@ -111,7 +111,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Xls, starting from page 2 and convert 2 pages
-            SaveOptions saveOptions = new CellsSaveOptions();
+            CellsSaveOptions saveOptions = new CellsSaveOptions();
 
             saveOptions.PageNumber = 2;
             saveOptions.NumPagesToConvert = 2;
@@ -230,7 +230,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Angsana New", "Arial Unicode MS"));
             loadOptions.AutoFontSubstitution = false;
             // convert file to Doc, starting from page 2 and convert 2 pages,
-            SaveOptions saveOptions = new WordsSaveOptions
+            WordsSaveOptions saveOptions = new WordsSaveOptions
             {
                 ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
                 PageNumber = 2,
@@ -302,7 +302,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
 
             // convert file to Doc, starting from page 2 and convert 2 pages,
-            SaveOptions saveOptions = new WordsSaveOptions
+            WordsSaveOptions saveOptions = new WordsSaveOptions
             {
                 ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
                 PageNumber = 2,
@@ -397,7 +397,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // convert starting from page 2 and convert 2 pages,
             // use DPI 300, page width 1024, page height 768
-            SaveOptions saveOptions = new PdfSaveOptions
+            PdfSaveOptions saveOptions = new PdfSaveOptions
             {
                 EmailOptions =
                 {
@@ -520,7 +520,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Ppt, starting from page 2 and convert 2 pages, 
-            SaveOptions saveOptions = new SlidesSaveOptions
+            SlidesSaveOptions saveOptions = new SlidesSaveOptions
             {
                 ConvertFileType = SlidesSaveOptions.SlidesFileType.Ppt,
                 PageNumber = 2,
@@ -587,7 +587,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Slide save options to remove slide comments
-            SaveOptions saveOptions = new SlidesSaveOptions
+            SlidesSaveOptions saveOptions = new SlidesSaveOptions
             {
 
                 HideComments = true // hides all slide comments
@@ -688,8 +688,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionConfig conversionConfig = new ConversionConfig { StoragePath = Common.storagePath, CachePath = Common.cachePath, OutputPath = Common.outputPath };
 
             // Instantiating the conversion handler from custom input data handler class
-            var inputDataHandler = new CustomInputDataHandler();
-            var conversionHandler = new ConversionHandler(conversionConfig, inputDataHandler);
+            //var inputDataHandler = new CustomInputDataHandler();
+            var conversionHandler = new ConversionHandler(conversionConfig);
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
@@ -723,8 +723,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             conversionConfig.UseCache = true;
 
             // Instantiating the conversion handler from custom cache data handler class
-            var cacheDataHandler = new CustomCacheDataHandler(conversionConfig);
-            var conversionHandler = new ConversionHandler(conversionConfig, cacheDataHandler);
+            var conversionHandler = new ConversionHandler(conversionConfig);
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
@@ -782,6 +781,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             saveOptions.WatermarkOptions.Width = 100;
             saveOptions.WatermarkOptions.Height = 100;
             saveOptions.WatermarkOptions.Background = true;
+            saveOptions.PdfOptions.FormatingOptions.PageMode = PdfFormatingOptions.PdfPageMode.FullScreen;
+            saveOptions.PdfOptions.FormatingOptions.PageLayout = PdfFormatingOptions.PdfPageLayout.SinglePage;
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
@@ -911,6 +912,24 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Console.WriteLine("Done!");
             Console.ReadKey();
         }
+
+        public static void ConversionFromTxtDoc()
+        {
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            var loadOptions = new TxtLoadOptions();
+            loadOptions.DetectNumberingWithWhitespaces = false;
+            loadOptions.LeadingSpacesOptions = TxtLoadOptions.TxtLeadingSpacesOptions.Trim;
+            loadOptions.TrailingSpacesOptions = TxtLoadOptions.TxtTrailingSpacesOptions.Trim;
+            var saveOptions = new PdfSaveOptions();
+            var convertedDocument = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, saveOptions);
+            convertedDocument.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".pdf");
+
+            Console.WriteLine("The conversion finished. The result can be located here: {0}. Press <<ENTER>> to exit.", convertedDocument);
+            Console.ReadLine();
+        }
+
     }
 }
 //ExEnd:ConversionClass
