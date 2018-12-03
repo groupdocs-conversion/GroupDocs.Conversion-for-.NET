@@ -161,6 +161,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns paths to the converted image file.
             var saveOptions = new ImageSaveOptions
             {
+                RotateAngle = 45,
                 ConvertFileType = outputFileType,
                 TiffOptions = { Compression = TiffOptions.TiffCompression.Ccitt4},
                 HorizontalResolution = 203,

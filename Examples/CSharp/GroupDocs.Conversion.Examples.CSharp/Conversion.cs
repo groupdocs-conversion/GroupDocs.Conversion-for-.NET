@@ -8,6 +8,7 @@ using GroupDocs.Conversion.Config;
 using GroupDocs.Conversion.Converter.Option;
 using GroupDocs.Conversion.Handler;
 using System.Drawing;
+using GroupDocs.Conversion.Options.Load;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -390,10 +391,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
         {
             //ExStart:ConvertToPdfAdvanceOptions
             // Instantiating the conversion handler from custom common class
-            ConversionHandler conversionHandler = Common.getConversionHandler();
-
-            //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            ConversionHandler conversionHandler = Common.getConversionHandler(); 
+            var loadOptions = new PdfLoadOptions { Password = "secret", FlattenAllFields = false};
 
             // convert starting from page 2 and convert 2 pages,
             // use DPI 300, page width 1024, page height 768
@@ -408,6 +407,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
                     DisplayCcEmailAddress = true,
                     DisplayBccEmailAddress = true
                 },
+                Rotate = Options.Save.PdfSaveOptions.Rotation.None,
+                
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 Dpi = 300,
@@ -477,10 +478,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExStart:ConvertToPresentationAsPath
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
-
-            // Convert and save converted presentation documents.
+            //include hidden slides in converted document 
+            var loadOptions = new SlidesLoadOptions
+            {
+                ShowHiddenSlides = true
+            };
             // Returns paths to the converted presentation documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new SlidesSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, new SlidesSaveOptions { });
+            //measure conversion time
+            Console.WriteLine("Elapsed time: {0}ms", convertedDocumentPath.Elapsed);
+            //save output
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".ppt");
             //ExEnd:ConvertToPresentationAsPath
         }
