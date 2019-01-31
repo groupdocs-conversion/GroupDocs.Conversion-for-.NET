@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using GroupDocs.Conversion.Config;
-using GroupDocs.Conversion.Converter.Option;
 using GroupDocs.Conversion.Handler;
+using GroupDocs.Conversion.Options.Save;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {

@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using GroupDocs.Conversion.Config;
-using GroupDocs.Conversion.Converter.Option;
+using GroupDocs.Conversion.Options.Save;
+using GroupDocs.Conversion.Options.Load;
 using GroupDocs.Conversion.Handler;
 
 namespace GroupDocs.Conversion.Examples.CSharp
@@ -25,7 +26,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
-            var saveOptions = new HtmlSaveOptions
+            var saveOptions = new Options.Save.HtmlSaveOptions
             {
 
                 PageNumber = 2,
@@ -33,7 +34,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 UsePdf = true,
 
             };
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new HtmlSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new Options.Save.HtmlSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
             //ExEnd:RenderHTMLAsPath
         }
@@ -50,7 +51,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents. 
             // Returns the converted HTML documents as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new HtmlSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new Options.Save.HtmlSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
@@ -68,10 +69,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            Options.Load.LoadOptions loadOptions = new Options.Load.OneLoadOptions { Password = "secret" };
 
             // convert starting from page 2 and convert 2 pages
-            HtmlSaveOptions saveOptions = new HtmlSaveOptions
+            Options.Save.HtmlSaveOptions saveOptions = new Options.Save.HtmlSaveOptions
             {
                 PageNumber = 2,
                 FixedLayout = true,
@@ -100,7 +101,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
-            var saveOptions = new HtmlSaveOptions
+            var saveOptions = new Options.Save.HtmlSaveOptions
             {
 
                 PageNumber = 2,
@@ -112,7 +113,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentPath = conversionHandler.Convert(fileStream, new HtmlSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(fileStream, new Options.Save.HtmlSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
 
             fileStream.Close();
@@ -219,7 +220,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler(); ;
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            LoadOptions loadOptions = new LoadOptions();
 
             // convert file to Tiff, starting from page 2 and convert 2 pages,
             // use DPI 300, image width 1024, image height 768
