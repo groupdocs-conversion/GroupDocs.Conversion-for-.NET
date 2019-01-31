@@ -17,7 +17,6 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Common.cachePath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/Cache");
             Common.outputPath = Path.Combine(Environment.CurrentDirectory, @"../../../../Data/ConvertedFiles");
 
-            Common.inputGUIDFile = "PDFsample.pdf";
             //Common.inputGUIDFile = "PDFsample.pdf";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
