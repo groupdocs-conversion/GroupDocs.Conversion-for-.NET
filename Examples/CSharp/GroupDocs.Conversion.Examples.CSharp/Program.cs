@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
-using GroupDocs.Conversion.Converter.Option;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -22,7 +21,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Common.inputGUIDFile = "PDFsample.pdf";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/GroupDocs.total.lic");
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"E:/GroupDocs.Total.lic");
             //Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.

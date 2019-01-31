@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using GroupDocs.Conversion.Config;
-using GroupDocs.Conversion.Converter.Option;
 using GroupDocs.Conversion.Handler;
 using System.Drawing;
 using GroupDocs.Conversion.Options.Load;
+using GroupDocs.Conversion.Options.Save;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -47,7 +47,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Save options
             CellsSaveOptions saveOptions = new CellsSaveOptions();
-            saveOptions.CellsOptions.ShowGridLines = true;
+            //saveOptions.CellsOptions.ShowGridLines = true;
 
 
             // Convert and save converted spreadsheet documents.
@@ -68,7 +68,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Save options
             CellsSaveOptions saveOptions = new CellsSaveOptions();
-            saveOptions.CellsOptions.ShowHiddenSheets = true;
+            //saveOptions.CellsOptions.ShowHiddenSheets = true;
 
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
@@ -116,8 +116,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             saveOptions.PageNumber = 2;
             saveOptions.NumPagesToConvert = 2;
-            saveOptions.CellsOptions.SkipEmptyRowsAndColumns = true;
-            saveOptions.CellsOptions.ConvertRange = "D1:F8";
+            //saveOptions.CellsOptions.SkipEmptyRowsAndColumns = true;
+            //saveOptions.CellsOptions.ConvertRange = "D1:F8";
             // Unprotect input document, Convert and save spreadsheet documents using advance options.
             // Returns the converted spreadsheet documents as IO Stream.
             var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, saveOptions);
@@ -300,7 +300,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            LoadOptions loadOptions = new LoadOptions { Password = "secret" };
+            LoadOptions loadOptions = new LoadOptions();
 
             // convert file to Doc, starting from page 2 and convert 2 pages,
             WordsSaveOptions saveOptions = new WordsSaveOptions
@@ -308,7 +308,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
                 PageNumber = 2,
                 NumPagesToConvert = 2,
-                HideWordTrackedChanges = true,
+                //HideWordTrackedChanges = true,
 
             };
 
@@ -334,7 +334,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Instantiating the conversion handler from custom common class 
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
-            var saveOptions = new GroupDocs.Conversion.Converter.Option.PdfSaveOptions();
+            var saveOptions = new PdfSaveOptions();
 
             //Image path
             byte[] image = System.IO.File.ReadAllBytes(@"D:\GitRepos\GroupDocs.Conversion-for-.NET\Examples\Data\SampleFiles\MVCConversion.png");
@@ -398,15 +398,6 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // use DPI 300, page width 1024, page height 768
             PdfSaveOptions saveOptions = new PdfSaveOptions
             {
-                EmailOptions =
-                {
-                    DisplayHeader = true,
-                    DisplayEmailAddress = true,
-                    DisplayFromEmailAddress = true,
-                    DisplayToEmailAddress = true,
-                    DisplayCcEmailAddress = true,
-                    DisplayBccEmailAddress = true
-                },
                 Rotate = Options.Save.PdfSaveOptions.Rotation.None,
                 
                 PageNumber = 2,
@@ -597,7 +588,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             SlidesSaveOptions saveOptions = new SlidesSaveOptions
             {
 
-                HideComments = true // hides all slide comments
+               // HideComments = true // hides all slide comments
             };
 
             // Convert and save converted presentation documents.
@@ -788,8 +779,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             saveOptions.WatermarkOptions.Width = 100;
             saveOptions.WatermarkOptions.Height = 100;
             saveOptions.WatermarkOptions.Background = true;
-            saveOptions.PdfOptions.FormatingOptions.PageMode = PdfFormatingOptions.PdfPageMode.FullScreen;
-            saveOptions.PdfOptions.FormatingOptions.PageLayout = PdfFormatingOptions.PdfPageLayout.SinglePage;
+            //saveOptions.PdfOptions.FormatingOptions.PageMode = PdfFormatingOptions.PdfPageMode.FullScreen;
+            //saveOptions.PdfOptions.FormatingOptions.PageLayout = PdfFormatingOptions.PdfPageLayout.SinglePage;
 
             // Convert and save converted Pdf documents.
             // Returns paths to the converted Pdf documents.
