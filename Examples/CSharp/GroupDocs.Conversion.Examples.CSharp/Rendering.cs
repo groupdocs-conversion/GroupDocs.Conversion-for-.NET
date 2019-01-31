@@ -71,7 +71,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             LoadOptions loadOptions = new LoadOptions { Password = "secret" };
 
             // convert starting from page 2 and convert 2 pages
-            SaveOptions saveOptions = new HtmlSaveOptions
+            HtmlSaveOptions saveOptions = new HtmlSaveOptions
             {
                 PageNumber = 2,
                 FixedLayout = true,
@@ -161,6 +161,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Returns paths to the converted image file.
             var saveOptions = new ImageSaveOptions
             {
+                RotateAngle = 45,
                 ConvertFileType = outputFileType,
                 TiffOptions = { Compression = TiffOptions.TiffCompression.Ccitt4},
                 HorizontalResolution = 203,
@@ -222,7 +223,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // convert file to Tiff, starting from page 2 and convert 2 pages,
             // use DPI 300, image width 1024, image height 768
-            SaveOptions saveOptions = new ImageSaveOptions
+            ImageSaveOptions saveOptions = new ImageSaveOptions
             {
 
                 PageNumber = 2,
