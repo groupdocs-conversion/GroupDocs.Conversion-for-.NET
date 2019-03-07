@@ -9,6 +9,7 @@ using GroupDocs.Conversion.Handler;
 using System.Drawing;
 using GroupDocs.Conversion.Options.Load;
 using GroupDocs.Conversion.Options.Save;
+using static GroupDocs.Conversion.Options.Save.ImageSaveOptions;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -319,6 +320,37 @@ namespace GroupDocs.Conversion.Examples.CSharp
             convertedDocumentStream.Save(targetStream);
 
             //ExEnd:ConvertToWordDocumentAdvanceOptionswithTrackchanges
+        }
+        #endregion
+
+        #region Convert to Image
+
+        /// <summary>
+        /// Control brightness, contrast, gamma and flip when convert to image
+        /// </summary> 
+
+        public static void ConvertToImageWithExtendedOption(ImageFileType outputFileType)
+        {
+            //ExStart:ConvertToImageWithExtendedOption
+            // Instantiating the conversion handler from custom common class
+            ConversionHandler conversionHandler = Common.getConversionHandler();
+
+            var saveOptions = new ImageSaveOptions
+            {
+                FlipMode = FlipModes.FlipX,
+                Brightness = 50,
+                Contrast = 50,
+                Gamma = 0.5F
+            };
+            // Convert and save image documents.
+            var convertedDocument = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
+            //convertedDocument.Save("result");
+            for (int pagenum = 1; pagenum <= convertedDocument.PageCount; pagenum++)
+            {
+                convertedDocument.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + pagenum.ToString() + "." + outputFileType, pagenum);
+
+            }
+            //ExEnd:ConvertToImageWithExtendedOption
         }
         #endregion
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using GroupDocs.Conversion.Options.Save;
+using static GroupDocs.Conversion.Options.Save.ImageSaveOptions;
 
 namespace GroupDocs.Conversion.Examples.CSharp
 {
@@ -111,6 +113,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             /// **** Rendering and Converting to HTML and Image formats.
             /// </summary>
 
+            // Control brightness, contrast, gamma and flip when convert to image
+            //Conversion.ConvertToImageWithExtendedOption(ImageFileType.Jpeg);
+
             // Converts and Render file to a HTML format and get output as file path
             //Rendering.RenderHTMLAsPath();
 
@@ -130,7 +135,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Rendering.RenderImageAsPath(ImageSaveOptions.ImageFileType.Tiff);
 
             // Converts and Render file to an Image format and get output as Stream
-             //Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Tiff);
+            //Rendering.RenderImageAsStream(ImageSaveOptions.ImageFileType.Tiff);
 
             // In Advanced example Converts and Render Password Protected file to Image format
             // Rendering.RenderImageAdvanceOptions(ImageSaveOptions.ImageFileType.Gif);
@@ -154,7 +159,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //Conversion.ConvertWithCustomCacheDataHandler();
 
             // Convert file and add watermark into output file
-             //Conversion.ConvertAndAddWaterMarkAsPath();
+            //Conversion.ConvertAndAddWaterMarkAsPath();
 
             // Convert file using Conversion Listners Interfaces
             //Conversion.ConvertUsingConversionLitenerAnddInterfaces();
