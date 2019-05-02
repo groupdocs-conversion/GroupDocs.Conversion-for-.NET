@@ -119,7 +119,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static void DocumentInformation()
         {
             var docuemntInfo = conversionHandler.GetDocumentInfo(Common.inputGUIDFile);
-            Console.WriteLine(docuemntInfo.PageOrientation);
+            Console.WriteLine(docuemntInfo.GetPageOrientation(1));
         }
         //ExEnd:DocumentInformation
     }

@@ -26,7 +26,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
-            var saveOptions = new Options.Save.HtmlSaveOptions
+            var saveOptions = new MarkupSaveOptions
             {
 
                 PageNumber = 2,
@@ -34,7 +34,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
                 UsePdf = true,
 
             };
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new Options.Save.HtmlSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new MarkupSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
             //ExEnd:RenderHTMLAsPath
         }
@@ -51,7 +51,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents. 
             // Returns the converted HTML documents as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new Options.Save.HtmlSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new MarkupSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
@@ -72,7 +72,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             Options.Load.LoadOptions loadOptions = new Options.Load.OneLoadOptions { Password = "secret" };
 
             // convert starting from page 2 and convert 2 pages
-            Options.Save.HtmlSaveOptions saveOptions = new Options.Save.HtmlSaveOptions
+            MarkupSaveOptions saveOptions = new MarkupSaveOptions
             {
                 PageNumber = 2,
                 FixedLayout = true,
@@ -101,7 +101,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted HTML documents.
             // Returns paths to the converted HTML documents.
-            var saveOptions = new Options.Save.HtmlSaveOptions
+            var saveOptions = new MarkupSaveOptions
             {
 
                 PageNumber = 2,
@@ -113,7 +113,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentPath = conversionHandler.Convert(fileStream, new Options.Save.HtmlSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(fileStream, saveOptions);
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".html");
 
             fileStream.Close();
@@ -134,7 +134,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // read input document as a stream
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
-            var convertedDocumentStream = conversionHandler.Convert(fileStream, new HtmlSaveOptions()); ;
+            var convertedDocumentStream = conversionHandler.Convert(fileStream, new MarkupSaveOptions()); ;
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
