@@ -18,7 +18,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         //public static string inputGUIDFile = "DOCXsample.docx"; To overwrite inputfile
 
         #region Convert to Spreadsheet Document
-
+            
         /// <summary>
         /// Convert file  Spreadsheet Document formats and get output as file path
         /// </summary> 
@@ -31,12 +31,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Convert and save converted spreadsheet documents.
             // Returns paths to the converted spreadsheet documents.
 
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new SpreadsheetSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
 
             //ExEnd:ConvertToSpreadsheetAsPath
         }
-
+        
         /// <summary>
         /// Convert file  Spreadsheet Document formats and enable GridLines and get output as file path
         /// </summary> 
@@ -47,7 +47,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            CellsSaveOptions saveOptions = new CellsSaveOptions();
+            SpreadsheetSaveOptions saveOptions = new SpreadsheetSaveOptions();
             //saveOptions.CellsOptions.ShowGridLines = true;
 
 
@@ -57,7 +57,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
             //ExEnd:ConvertToSpreadsheetWithGridLinesAsPath
         }
-
+        
         /// <summary>
         /// Convert file  Spreadsheet Document formats and use hidden sheets and get output as file path
         /// </summary> 
@@ -68,7 +68,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Save options
-            CellsSaveOptions saveOptions = new CellsSaveOptions();
+            SpreadsheetSaveOptions saveOptions = new SpreadsheetSaveOptions();
             //saveOptions.CellsOptions.ShowHiddenSheets = true;
 
             // Convert and save converted spreadsheet documents.
@@ -77,7 +77,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
             //ExEnd:ConvertToSpreadsheetEnableHiddenSheetsAsPath
         }
-
+        
         /// <summary>
         /// Converts documents to Spreadsheet Document formats and outputs the resulting document to a stream
         /// </summary> 
@@ -89,12 +89,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted spreadsheet documents. 
             // Returns the converted spreadsheet documents as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new CellsSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new SpreadsheetSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
             //ExEnd:ConvertToSpreadsheetStream
         }
-
+        
         /// <summary>
         /// In advance options example Convert Password Protected file to Spreadsheet Document formats 
         /// </summary>
@@ -107,14 +107,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             //Set password to unprotect protected document during loading
 
-            var loadOptions = new CellsLoadOptions();
+            var loadOptions = new SpreadsheetLoadOptions();
             loadOptions.Password = "secret";
             //loadOptions.DefaultFont = "Verdana";
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Xls, starting from page 2 and convert 2 pages
-            CellsSaveOptions saveOptions = new CellsSaveOptions();
-
+            SpreadsheetSaveOptions saveOptions = new SpreadsheetSaveOptions();
+            saveOptions.ConvertFileType = SpreadsheetSaveOptions.SpreadsheetFileType.Xls;
             saveOptions.PageNumber = 2;
             saveOptions.NumPagesToConvert = 2;
             //saveOptions.CellsOptions.SkipEmptyRowsAndColumns = true;
@@ -128,7 +128,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToSpreadsheetAdvanceOptions
         }
 
-
+        
         /// <summary>
         /// Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a file path
         /// </summary>
@@ -143,13 +143,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted spreadsheet documents as File Path using stream input.
-            var convertedDocumentPath = conversionHandler.Convert(fileStream, new CellsSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(fileStream, new SpreadsheetSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".xls");
 
             fileStream.Close();
             //ExEnd:ConvertToSpreadsheetFromStreamToFile
         }
-
+        
         /// <summary>
         /// Converts stream input documents to Spreadsheet Document formats and outputs the resulting document to a stream
         /// </summary>
@@ -164,7 +164,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted spreadsheet documents as IO Stream using stream input.
-            var convertedDocumentStream = conversionHandler.Convert(fileStream, new CellsSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(fileStream, new SpreadsheetSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
@@ -175,7 +175,6 @@ namespace GroupDocs.Conversion.Examples.CSharp
         #endregion
 
         #region Convert to Word Processing Document
-
 
         /// <summary>
         /// Convert file to Word Processing Document format and get output as file path
@@ -189,11 +188,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted word processing documents.
             // Returns paths to the converted word processing documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new WordsSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, new WordProcessingSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
             //ExEnd:ConvertToWordDocumentAsPath
         }
-
 
         /// <summary>
         /// Converts documents to Word Processing Document formats and outputs the resulting document to a stream
@@ -207,13 +205,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted word processing documents. 
             // Returns the converted word processing documents as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new WordsSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new WordProcessingSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
             //ExEnd:ConvertToWordDocumentAsStream
         }
-
+        
         /// <summary>
         /// In advance options example Convert Password Protected file to Word Processing Document format
         /// </summary>
@@ -226,15 +224,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             //Set password to unprotect protected document during loading
 
-            var loadOptions = new WordsLoadOptions();
+            var loadOptions = new WordProcessingLoadOptions();
             loadOptions.Password = "secret";
             //loadOptions.DefaultFont = "Verdana";
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Angsana New", "Arial Unicode MS"));
             loadOptions.AutoFontSubstitution = false;
             // convert file to Doc, starting from page 2 and convert 2 pages,
-            WordsSaveOptions saveOptions = new WordsSaveOptions
+            WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions
             {
-                ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
+                ConvertFileType = WordProcessingSaveOptions.WordProcessingFileType.Doc,
                 PageNumber = 2,
                 NumPagesToConvert = 2,
 
@@ -248,7 +246,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             //ExEnd:ConvertToWordDocumentAdvanceOptions
         }
-
+        
         /// <summary>
         /// Converts stream input documents to Word Processing Document formats and outputs the resulting document to a file path
         /// </summary>
@@ -262,13 +260,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted Word Processing Documents as File Path using stream input.
-            var convertedDocumentPath = conversionHandler.Convert(fileStream, new WordsSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(fileStream, new WordProcessingSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".doc");
 
             fileStream.Close();
             //ExEnd:ConvertToWordFromStreamToFile
         }
-
+        
         /// <summary>
         /// Converts stream input documents to Word Proccessing Document formats and outputs the resulting document to a stream
         /// </summary>
@@ -282,7 +280,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted Word Processing Documents as IO Stream using stream input.
-            var convertedDocumentStream = conversionHandler.Convert(fileStream, new WordsSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(fileStream, new WordProcessingSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
@@ -290,7 +288,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ExEnd:ConvertToWordFromStreamToStream
         }
 
-
+        
         /// <summary>
         /// Converts stream input documents to Word Proccessing Document formats with show/Hide Track Changes and outputs the resulting document to a stream
         /// </summary>
@@ -304,9 +302,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             LoadOptions loadOptions = new LoadOptions();
 
             // convert file to Doc, starting from page 2 and convert 2 pages,
-            WordsSaveOptions saveOptions = new WordsSaveOptions
+            WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions
             {
-                ConvertFileType = WordsSaveOptions.WordsFileType.Doc,
+                ConvertFileType = WordProcessingSaveOptions.WordProcessingFileType.Doc,
                 PageNumber = 2,
                 NumPagesToConvert = 2,
                 //HideWordTrackedChanges = true,
@@ -355,7 +353,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         #endregion
 
         #region Convert to Pdf
-
+        
         /// <summary>
         /// Convert file to Pdf format and get output as file path
         /// </summary>
@@ -379,17 +377,17 @@ namespace GroupDocs.Conversion.Examples.CSharp
             saveOptions.PdfOptions.OptimizationOptions.CompressImages = true;
 
             //  value in percent where 100% is unchanged quality and image size. To decrease the image size, use ImageQuality less than 100
-            //saveOptions.PdfOptions.OptimizationOptions.ImageQuality = 50;
+            saveOptions.PdfOptions.OptimizationOptions.ImageQuality = 50;
             // Link duplcate streams
-            //saveOptions.PdfOptions.OptimizationOptions.LinkDuplcateStreams = true;
+            saveOptions.PdfOptions.OptimizationOptions.LinkDuplicateStreams = true;
             // Remove unused objects
-            //saveOptions.PdfOptions.OptimizationOptions.RemoveUnusedObjects = true;
+            saveOptions.PdfOptions.OptimizationOptions.RemoveUnusedObjects = true;
             // Remove unused streams
-            //saveOptions.PdfOptions.OptimizationOptions.RemoveUnusedStreams = true;
+            saveOptions.PdfOptions.OptimizationOptions.RemoveUnusedStreams = true;
             // Make fonts not embedded if set to true
-            //saveOptions.PdfOptions.OptimizationOptions.UnembedFonts = true;
+            saveOptions.PdfOptions.OptimizationOptions.UnembedFonts = true;
 
-            saveOptions.WordBookmarkOptions.BookmarksOutlineLevel = 5;
+            saveOptions.WordProcessingBookmarkOptions.BookmarksOutlineLevel = 5;
 
             saveOptions.ConvertFileType = PdfSaveOptions.PdfFileType.Pdf;
             var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, saveOptions);
@@ -492,7 +490,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
         #endregion
 
         #region Convert to Presentation Document
-
+        
         /// <summary>
         /// Convert file to Presentation Document format and get output as file path
         /// </summary>
@@ -502,19 +500,19 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // Instantiating the conversion handler from custom common class
             ConversionHandler conversionHandler = Common.getConversionHandler();
             //include hidden slides in converted document 
-            var loadOptions = new SlidesLoadOptions
+            var loadOptions = new PresentationLoadOptions
             {
                 ShowHiddenSlides = true
             };
             // Returns paths to the converted presentation documents.
-            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, new SlidesSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(Common.inputGUIDFile, loadOptions, new PresentationSaveOptions { });
             //measure conversion time
             Console.WriteLine("Elapsed time: {0}ms", convertedDocumentPath.Elapsed);
             //save output
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".ppt");
             //ExEnd:ConvertToPresentationAsPath
         }
-
+        
         /// <summary>
         /// Converts documents to Presentation Document format and outputs the resulting document to a stream
         /// </summary>
@@ -526,13 +524,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // Convert and save converted presentation documents. 
             // Returns the converted presentation documents as IO Stream.
-            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new SlidesSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(Common.inputGUIDFile, new PresentationSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
             //ExEnd:ConvertToPresentationAsStream
         }
-
+        
         /// <summary>
         /// In advance options example Convert Password Protected file to Presentation Document format
         /// </summary>
@@ -544,15 +542,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             //Set password to unprotect protected document during loading
-            var loadOptions = new SlidesLoadOptions();
+            var loadOptions = new PresentationLoadOptions();
             loadOptions.Password = "secret";
             //loadOptions.DefaultFont = "Verdana";
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Arial", "Tahoma"));
             loadOptions.FontSubstitutes.Add(new KeyValuePair<string, string>("Calibri", "Tahoma"));
             // convert file to Ppt, starting from page 2 and convert 2 pages, 
-            SlidesSaveOptions saveOptions = new SlidesSaveOptions
+            PresentationSaveOptions saveOptions = new PresentationSaveOptions
             {
-                ConvertFileType = SlidesSaveOptions.SlidesFileType.Ppt,
+                ConvertFileType = PresentationSaveOptions.PresentationFileType.Ppt,
                 PageNumber = 2,
                 NumPagesToConvert = 2,
             };
@@ -565,7 +563,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             //ExEnd:ConvertToPresentationAdvanceOptions
         }
-
+        
         /// <summary>
         /// Converts stream input documents to Presentation Document formats and outputs the resulting document to a file path
         /// </summary>
@@ -579,13 +577,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted presentation documents as File Path using stream input.
-            var convertedDocumentPath = conversionHandler.Convert(fileStream, new SlidesSaveOptions { });
+            var convertedDocumentPath = conversionHandler.Convert(fileStream, new PresentationSaveOptions { });
             convertedDocumentPath.Save("result-" + Path.GetFileNameWithoutExtension(Common.inputGUIDFile) + ".ppt");
 
             fileStream.Close();
             //ExEnd:ConvertToPresentationFromStreamToFile
         }
-
+        
         /// <summary>
         /// Converts stream input documents to Presentation Document formats and outputs the resulting document to a stream
         /// </summary>
@@ -599,14 +597,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
             FileStream fileStream = new FileStream(Path.Combine(Common.storagePath, Common.inputGUIDFile), FileMode.Open, FileAccess.Read);
 
             // Returns the converted presentation documents as IO Stream using stream input.
-            var convertedDocumentStream = conversionHandler.Convert(fileStream, new SlidesSaveOptions());
+            var convertedDocumentStream = conversionHandler.Convert(fileStream, new PresentationSaveOptions());
             MemoryStream targetStream = new MemoryStream();
             convertedDocumentStream.Save(targetStream);
 
             fileStream.Close();
             //ExEnd:ConvertToPresentationFromStreamToStream
         }
-
+        
         /// <summary>
         /// Convert file to Presentation Document format and remove comments and get output as file path
         /// </summary>
@@ -617,7 +615,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConversionHandler conversionHandler = Common.getConversionHandler();
 
             // Slide save options to remove slide comments
-            SlidesSaveOptions saveOptions = new SlidesSaveOptions
+            PresentationSaveOptions saveOptions = new PresentationSaveOptions
             {
 
                // HideComments = true // hides all slide comments
