@@ -112,6 +112,19 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
         //ExEnd:ApplyLicense
 
+        /// <summary>
+        /// Applies Metered License
+        /// </summary>
+        //ExStart:MeteredLicense
+        public static void MeteredLicense()
+        {
+            string PublicKey = ""; // Your public license key
+            string PrivateKey = ""; // Your private license key
+            Metered metered = new Metered();
+            metered.SetMeteredKey(PublicKey, PrivateKey);
+        }
+        //ExEnd:MeteredLicense
+
         //ExStart:DocumentInformation
         /// <summary>
         /// Get page orientation 
