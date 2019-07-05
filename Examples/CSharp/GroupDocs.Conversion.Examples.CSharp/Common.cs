@@ -125,6 +125,21 @@ namespace GroupDocs.Conversion.Examples.CSharp
         }
         //ExEnd:MeteredLicense
 
+        /// <summary>
+        /// Retrieves count of credits consumed.
+        /// </summary>
+        //ExStart:GetAlreadyUsedCredit
+        public static decimal GetAlreadyUsedCredit()
+        {
+            string PublicKey = ""; // Your public license key
+            string PrivateKey = ""; // Your private license key
+            Metered metered = new Metered();
+            metered.SetMeteredKey(PublicKey, PrivateKey);
+
+            return Metered.GetConsumptionCredit();
+        }
+        //ExEnd:GetAlreadyUsedCredit
+
         //ExStart:DocumentInformation
         /// <summary>
         /// Get page orientation 
