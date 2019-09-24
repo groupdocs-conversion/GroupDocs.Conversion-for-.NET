@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GroupDocs.Conversion.Examples.CSharp</RootNamespace>
+    <AssemblyName>GroupDocs.Conversion.Examples.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedUsage\Caching\HowToUseCustomCacheImplementation.cs" />
+    <Compile Include="AdvancedUsage\Caching\UseCacheWhenProcessingDocuments.cs" />
+    <Compile Include="AdvancedUsage\Converting\Common\ConvertNConsecutivePages.cs" />
+    <Compile Include="AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
+    <Compile Include="AdvancedUsage\Converting\Common\AddWatermark.cs" />
+    <Compile Include="AdvancedUsage\Converting\ConvertToImageWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Converting\ConvertToWordProcessingWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Converting\ConvertToPresentationWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Converting\ConvertToPdfWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtBySpecifyingEncoding.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingTrailingSpacesBehavior.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingLeadingSpacesBehavior.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationWithHiddenSlidesIncluded.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationByHiddingComments.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationBySpecifyingFontSubstitution.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndFlattenAllFields.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndHideAnnotations.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndRemoveEmbeddedFiles.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Note\ConvertNoteBySpecifyingFontSubstitution.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithAlteringFieldsVisibility.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingEncoding.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingDelimiter.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvByConvertingDateTimeAndNumericData.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Cad\ConvertCadAndSpecifyWidthAndHeight.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Cad\ConvertCadAndSpecifyLayouts.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingFontsubstitution.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingRange.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetByShowingGridLines.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySkippingEmptyRowsAndColumns.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetAndHideComments.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetWithHiddenSheetsIncluded.cs" />
+    <Compile Include="AdvancedUsage\Converting\ConvertToSpreadsheetWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Converting\ConvertToHtmlWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromAmazonS3.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromAzureBlobStorage.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromFtp.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromLocalDisk.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromStream.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromUrl.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingBySpecifyingFontSubstitution.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHiddingComments.cs" />
+    <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHiddingTrackedChanges.cs" />
+    <Compile Include="BasicUsage\ConvertToHtml\ConvertToHtml.cs" />
+    <Compile Include="BasicUsage\ConvertToImage\ConvertToPsd.cs" />
+    <Compile Include="BasicUsage\ConvertToImage\ConvertToPng.cs" />
+    <Compile Include="BasicUsage\ConvertToImage\ConvertToJpg.cs" />
+    <Compile Include="BasicUsage\ConvertToPdf\ConvertToPdf.cs" />
+    <Compile Include="BasicUsage\ConvertToPresentation\ConvertToPresentation.cs" />
+    <Compile Include="BasicUsage\ConvertToSpreadsheet\ConvertToSpreadsheet.cs" />
+    <Compile Include="BasicUsage\ConvertToWordProcessing\ConvertToWordProcessing.cs" />
+    <Compile Include="BasicUsage\GetPossibleConversions.cs" />
+    <Compile Include="BasicUsage\GetSourceDocumentInfo.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickStart\HelloWorld.cs" />
+    <Compile Include="QuickStart\SetLicenseFromFile.cs" />
+    <Compile Include="QuickStart\SetLicenseFromStream.cs" />
+    <Compile Include="QuickStart\SetMeteresLicense.cs" />
+    <Compile Include="RunExamples.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core">
+      <Version>3.3.103.33</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.S3">
+      <Version>3.3.104.21</Version>
+    </PackageReference>
+    <PackageReference Include="GroupDocs.Conversion">
+      <Version>19.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="StackExchange.Redis">
+      <Version>2.0.601</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Storage">
+      <Version>9.3.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
