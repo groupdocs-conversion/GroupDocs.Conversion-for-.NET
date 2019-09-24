@@ -1,76 +1,8 @@
-## GroupDocs.Conversion MVC & WebForms Examples
+# Showcases
 
+The front-ends provided in this section are open source and they are developed to help users seek the knowledge about the implementation of document conversion applications using GroupDocs.Conversion for .NET. The users can enjoy these open source document conversion applications and modify them as per their requirements. The following is the list of the available front ends.
 
-# MVC Conversion Demo 
-
-
-MVC Conversion Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
-
-
-# MVC Conversion with Progressbar Demo 
-
-
-
-MVC Conversion with progressbar Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
-
-
-# MVC Conversion with Watermark Demo 
-
-
-
-MVC Conversion with Watermark Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
-
-
-# WebForms Conversion Demo 
-
-
-WebForms Conversion Example is a Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
-
-
-# WebForms Conversion with Progressbar Demo 
-
-
-
-WebForms Conversion with progressbar Example is a Web Forms  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
-
-
-
-
-# WebForms Conversion with Watermark Demo 
-
-
-
-WebForms Conversion with Watermark Example is a Web Forms  Application that demonstrates the core functionalities provided by GroupDocs.Conversion for .NET.
-
-
-
-
-# Prerequisite
-
-+ Visual Studio 2012 or later.
-
-+ Any latest browsers (Firefox, Chrome ,IE9 or greater, Safari etc. )
-
-+ GroupDocs.Conversion 17.9.0.
-
-
-
-# Features 
-
-
-The Conversion Example allows user to easily Convert Documnents to other formats.
-
-The UI of the application is kept very simple and developers can enhance the features as their own needs since it is an
-Open Source Project.
-
-
-+ Sets input file path
-+ Sets output file path  for converted file
-
-+ Sets cache file path
-+ Sets license file path
-
-+ Converts the predefined pdf Document to the Selected Document format like . Pdf, word processing , HTML , Image... so on
-
-+ Download converted Document from web browser.
-
+Directory | Description
+--------- | -----------
+[GroupDocs.Conversion-for-.NET-MVC](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-MVC)  | Our new and improved GroupDocs.Conversion for .NET MVC UI Example - native, simple, fully configurable and optimized .NET document conversion application. 
+[GroupDocs.Conversion-for-.NET-WebForms](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-WebForms)  | Our new and improved GroupDocs.Conversion for .NET Web Forms UI Example - native, simple, fully configurable and optimized .NET document conversion application.

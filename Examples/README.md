@@ -18,7 +18,7 @@ The package contains C# examples. Follow the given steps to proceed with project
 # Prerequisite
 
 + Visual Studio 2012 or later.
-+ GroupDocs.Conversion 17.9.0.
++ GroupDocs.Conversion 19.9.0.
 
 
 In other case, it is possible that Visual Studio is unable to automatically add APIs references due to Visual Studio version differences. In this case, please add references of missing APIs manually.
