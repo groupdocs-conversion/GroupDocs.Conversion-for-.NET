@@ -1,8 +1,8 @@
 ## GroupDocs.Conversion for .NET
 
-This package contains [Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples) for [GroupDocs.Conversion for .NET](https://products.groupdocs.com/conversion/net) that will help you understand API's working and write your own applications.
+This package contains [Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples), [Showcases](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Showcases) and [Plugins](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Plugins) for [GroupDocs.Conversion for .NET](https://products.groupdocs.com/conversion/net) that will help you in understanding the API's working and writing your own applications.
 
-GroupDocs.Conversion for .NET is a universal document conversion API that is designed for easy integration into any .NET application. Allows you to convert back and forth between over 50 types of documents and images, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP).
+GroupDocs.Conversion for .NET is a powerful and intuitive library used for documents conversion with multiple and flexible options for a resulting document. Convert DOC to PDF, PDF to DOC, XLS to DOC, PDF to XLS, PPT to PDF and any other popular file formats with simple, intuitive and flexible GroupDocs.Conversion for .NET API.
 
 <p align="center">
 
@@ -14,19 +14,8 @@ GroupDocs.Conversion for .NET is a universal document conversion API that is des
 Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples)  | Contains the package of all .NET examples (C#) and sample files that will help you learn how to use product features.
-
-## How to Run the Examples
-
-+ You can either clone the repository using your favorite GitHub client or download the ZIP file from the above button.
-+ Extract the contents of the ZIP file to any folder on your computer.
-+ In the extracted files and folders, you can see solution file for C# Project.
-+ The project is created in Visual Studio 2013.
-+ Open the solution file in Visual Studio and build the project.
-+ On the first run, the dependencies will automatically be downloaded via NuGet.
-+ Open Program.cs file, all the examples are called from here.
-+ Uncomment the examples you want to run from within the project.
-
-Please find more details for how to run the examples [here](https://docs.groupdocs.com/display/conversionnet/How+to+Run+Examples).
+[Showcases](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Showcases)  | The open source UI examples have been developed to help the developers in order to give them an idea that how they will integrate the GroupDocs.Conversion for .NET API in the front end applications. 
+[Plugins](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Plugins)  | Contains the plugins related to GroupDocs.Conversion for Visual Studio.
 
 ## Resources
 
