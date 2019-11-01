@@ -74,6 +74,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string SAMPLE_CSV =>
             GetSampleFilePath("sample.csv");
 
+        // Email documents
+        public static string SAMPLE_EML =>
+            GetSampleFilePath("sample.eml");
+
         // Word Processing documents
         public static string SAMPLE_DOCX => 
             GetSampleFilePath("sample.docx");
