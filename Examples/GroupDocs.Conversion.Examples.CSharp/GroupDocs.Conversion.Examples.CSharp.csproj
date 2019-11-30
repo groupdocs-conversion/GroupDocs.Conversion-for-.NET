@@ -58,6 +58,7 @@
     <Compile Include="AdvancedUsage\Converting\ConvertToWordProcessingWithAdvancedOptions.cs" />
     <Compile Include="AdvancedUsage\Converting\ConvertToPresentationWithAdvancedOptions.cs" />
     <Compile Include="AdvancedUsage\Converting\ConvertToPdfWithAdvancedOptions.cs" />
+    <Compile Include="AdvancedUsage\Listening\ListenConversionStateAndProgress.cs" />
     <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithTimezoneOffset.cs" />
     <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtBySpecifyingEncoding.cs" />
     <Compile Include="AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingTrailingSpacesBehavior.cs" />
@@ -123,7 +124,7 @@
       <Version>3.3.104.21</Version>
     </PackageReference>
     <PackageReference Include="GroupDocs.Conversion">
-      <Version>19.10.0</Version>
+      <Version>19.11.0</Version>
     </PackageReference>
     <PackageReference Include="StackExchange.Redis">
       <Version>2.0.601</Version>
