@@ -15,6 +15,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
+#if NETCOREAPP
+            Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
+            {
+                DisplayHeader = false,
+                DisplayFromEmailAddress = false,
+                DisplayToEmailAddress = false,
+                DisplayEmailAddress = false,
+                DisplayCcEmailAddress = false,
+                DisplayBccEmailAddress = false
+            };
+#else
             Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
                 DisplayHeader = false,
@@ -24,7 +35,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 DisplayCcEmailAddress = false,
                 DisplayBccEmailAddress = false
             };
-            
+#endif
             using (Converter converter = new Converter(Constants.SAMPLE_MSG, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

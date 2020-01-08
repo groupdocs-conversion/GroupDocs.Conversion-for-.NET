@@ -1,4 +1,6 @@
-﻿using System;
+﻿#if !NETCOREAPP   
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -20,7 +22,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
         public static void Run()
         {
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            
+
             RedisCache cache = new RedisCache("sample_");
             Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
@@ -162,3 +164,5 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
         }
     }
 }
+
+#endif

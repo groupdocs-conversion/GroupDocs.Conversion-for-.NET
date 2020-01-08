@@ -15,11 +15,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.docx");
 
+#if NETCOREAPP
+            Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+            {
+                RemoveEmbeddedFiles = true
+            };
+#else                   
             Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
             {
                 RemoveEmbeddedFiles = true
             };
-            
+#endif
             using (Converter converter = new Converter(Constants.SAMPLE_PDF, getLoadOptions))
             {
                 WordProcessingConvertOptions options = new WordProcessingConvertOptions();

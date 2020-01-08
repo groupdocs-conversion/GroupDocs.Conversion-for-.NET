@@ -14,13 +14,19 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
-
+#if NETCOREAPP
+            Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
+            {
+                ConvertDateTimeData = true,
+                ConvertNumericData = true
+            };
+#else
             Contracts.Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
             {
                 ConvertDateTimeData = true,
                 ConvertNumericData = true
             };
-            
+#endif
             using (Converter converter = new Converter(Constants.SAMPLE_CSV, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

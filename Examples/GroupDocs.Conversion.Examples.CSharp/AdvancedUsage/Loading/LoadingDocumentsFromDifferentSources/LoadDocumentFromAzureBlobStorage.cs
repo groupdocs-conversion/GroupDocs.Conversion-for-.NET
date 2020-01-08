@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !NETCOREAPP         
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 using Microsoft.WindowsAzure.Storage;
@@ -57,3 +58,4 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         }
     }
 }
+#endif

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Conversion.Examples.CSharp.Framework", "GroupDocs.Conversion.Examples.CSharp.Framework\GroupDocs.Conversion.Examples.CSharp.Framework.csproj", "{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupDocs.Conversion.Examples.CSharp.Core", "GroupDocs.Conversion.Examples.CSharp.Core\GroupDocs.Conversion.Examples.CSharp.Core.csproj", "{B77DE298-C9DD-4833-88AE-50BB9A46F333}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GroupDocs.Conversion.Examples.CSharp", "GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.shproj", "{F4B5222C-C35A-4852-85A1-B81E067FD808}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems*{503c96ed-9eb1-4fba-84f9-6e80238d6be9}*SharedItemsImports = 4
+		GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems*{f4b5222c-c35a-4852-85a1-b81e067fd808}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Debug|x86.ActiveCfg = Debug|x86
+		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Debug|x86.Build.0 = Debug|x86
+		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Release|x86.ActiveCfg = Release|x86
+		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Release|x86.Build.0 = Release|x86
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Debug|x86.Build.0 = Debug|Any CPU
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Release|x86.ActiveCfg = Release|Any CPU
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C045606-B5BF-4A9C-96F5-E86D4BFB2EA5}
+	EndGlobalSection
+EndGlobal

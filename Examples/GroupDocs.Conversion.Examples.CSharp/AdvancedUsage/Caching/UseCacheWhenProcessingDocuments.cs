@@ -17,11 +17,18 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string cachePath = Path.Combine(outputDirectory, "cache");
             
             FileCache cache = new FileCache(cachePath);
+
+#if NETCOREAPP
+            Func<ConverterSettings> settingsFactory = () => new ConverterSettings
+            {
+                Cache = cache
+            };
+#else
             Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
                 Cache = cache
             };
-
+#endif
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX, settingsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

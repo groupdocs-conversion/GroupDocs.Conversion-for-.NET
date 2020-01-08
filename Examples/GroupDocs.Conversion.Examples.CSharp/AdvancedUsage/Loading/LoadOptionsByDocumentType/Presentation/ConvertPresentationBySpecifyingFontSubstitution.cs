@@ -17,6 +17,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
+#if NETCOREAPP
+            Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
+            {
+                DefaultFont = "Helvetica",
+                FontSubstitutes = new List<FontSubstitute>
+                {
+                    FontSubstitute.Create("Tahoma", "Arial"),
+                    FontSubstitute.Create("Times New Roman", "Arial"),
+                }
+            };
+#else
             Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
             {
                 DefaultFont = "Helvetica",
@@ -26,7 +37,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     FontSubstitute.Create("Times New Roman", "Arial"),
                 }
             };
-            
+#endif
             using (Converter converter = new Converter(Constants.PPTX_WITH_NOTES, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

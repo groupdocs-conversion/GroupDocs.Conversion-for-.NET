@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;NETCOREAPP</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="..\GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.3.109" />
+    <PackageReference Include="GroupDocs.Conversion" Version="19.12.1" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.601" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f4b5222c-c35a-4852-85a1-b81e067fd808</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GroupDocs.Conversion.Examples.CSharp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Caching\HowToUseCustomCacheImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Caching\UseCacheWhenProcessingDocuments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\AddWatermark.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertNConsecutivePages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToHtmlWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToImageWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToPdfWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToPresentationWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToSpreadsheetWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToWordProcessingWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Listening\ListenConversionStateAndProgress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromAmazonS3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromAzureBlobStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromFtp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromLocalDisk.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadingDocumentsFromDifferentSources\LoadDocumentFromUrl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Cad\ConvertCadAndSpecifyLayouts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Cad\ConvertCadAndSpecifyWidthAndHeight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvByConvertingDateTimeAndNumericData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingDelimiter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingEncoding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithAlteringFieldsVisibility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithTimezoneOffset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Note\ConvertNoteBySpecifyingFontSubstitution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndFlattenAllFields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndHideAnnotations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndRemoveEmbeddedFiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationByHiddingComments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationBySpecifyingFontSubstitution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationWithHiddenSlidesIncluded.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetAndHideComments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetByShowingGridLines.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySkippingEmptyRowsAndColumns.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingFontsubstitution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingRange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetWithHiddenSheetsIncluded.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingLeadingSpacesBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingTrailingSpacesBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtBySpecifyingEncoding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHiddingComments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHiddingTrackedChanges.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingBySpecifyingFontSubstitution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertToHtml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToJpg.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToPng.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToPsd.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPresentation\ConvertToPresentation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToSpreadsheet\ConvertToSpreadsheet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToWordProcessing\ConvertToWordProcessing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetPossibleConversions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetSourceDocumentInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetMeteresLicense.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Fonts\terminal-grotesque_open.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\shift_jis_encoded.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\hieroglyphs.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\hieroglyphs_1.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\password_protected.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.mpp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.msg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.one">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.ost">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.vsdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample_with_password.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_attachments.msg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_comment.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_empty_column.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_empty_row.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_folders.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_four_print_areas.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_hidden_page.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_hidden_row_and_column.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_hidden_sheet.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_jpg_image.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_layers_and_layouts.dwg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_missing_font.odg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_missing_font.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_notes.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_overflowing_text.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_subfolders.ost">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_tracked_changes.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

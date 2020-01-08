@@ -16,11 +16,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
+#if NETCOREAPP
+            Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
+            {
+                Encoding = Encoding.GetEncoding("shift_jis")
+            };
+#else
             Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
             {
                 Encoding = Encoding.GetEncoding("shift_jis")
             };
-            
+#endif
             using (Converter converter = new Converter(Constants.SAMPLE_TXT_SHIFT_JS_ENCODED, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

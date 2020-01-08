@@ -5,11 +5,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     internal static class Constants
     {
-        public const string LicensePath = "C://licenses//GroupDocs.Conversion.lic";
-        public const string SamplesPath = "../../../Resources/SampleFiles";
-        public const string FontsPath = "../../../Resources/Fonts";
-        public const string OutputPath = "../../Output/";
-        
+        public const string LicensePath = "./Resources/GroupDocs.Conversion.lic";
+        public const string SamplesPath = @"./Resources/SampleFiles";
+        public const string FontsPath = @"./Resources/Fonts";
+        public const string OutputPath = @"./Output";
+
         // CAD
         public static string SAMPLE_DWG_WITH_LAYOUTS_AND_LAYERS => 
             GetSampleFilePath("with_layers_and_layouts.dwg");
@@ -106,7 +106,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
             if (!Directory.Exists(outputDirectory))
                 Directory.CreateDirectory(outputDirectory);
 
-            return outputDirectory;
+            string path = Path.GetFullPath(outputDirectory);
+            return path;
         }
     }
 }

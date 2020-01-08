@@ -17,6 +17,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
+#if NETCOREAPP
+            Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
+            {
+                FontSubstitutes = new List<FontSubstitute>
+                {
+                    FontSubstitute.Create("Tahoma", "Arial"),
+                    FontSubstitute.Create("Times New Roman", "Arial"),
+                },
+                DefaultFont = "Helvetica"
+            };
+#else
             Contracts.Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
             {
                 FontSubstitutes = new List<FontSubstitute>
@@ -26,13 +37,13 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 },
                 DefaultFont = "Helvetica"
             };
-            
+#endif
             using (Converter converter = new Converter(Constants.SAMPLE_ONE, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
                 converter.Convert(outputFile, options);
             }
-
+            
             Console.WriteLine("\nNote document converted successfully. \nCheck output in {0}", outputFolder);
         }
     }
