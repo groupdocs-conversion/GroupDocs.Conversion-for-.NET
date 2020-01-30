@@ -1,20 +1,18 @@
 ﻿using System;
-using GroupDocs.Conversion.Contracts;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to get to what formats the source document could be converted
+    /// This example demonstrates how to get all possible conversions
     /// </summary>
-    internal static class GetPossibleConversions
+    internal static class GetAllPossibleConversions
     {
         public static void Run()
         {
-            using (Converter converter = new Converter(Constants.SAMPLE_DOCX))
+            var possibleConversions = Converter.GetAllPossibleConversions();
+            foreach(var conversions in possibleConversions)
             {
-                PossibleConversions conversions = converter.GetPossibleConversions();
-
-                Console.WriteLine("{0} is of type {1} and could be converted to:", Constants.SAMPLE_DOCX, conversions.Source.Extension);
+                Console.WriteLine("{0} could be converted to:", conversions.Source.Extension);
 
                 foreach (var conversion in conversions.All)
                 {

@@ -26,6 +26,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #region Basic Usage
 
+            GetAllPossibleConversions.Run();
+            GetPossibleConversionsForSpecifiedDocumentExtension.Run();
             GetPossibleConversions.Run();
             GetSourceDocumentInfo.Run();
 
@@ -76,6 +78,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             AddWatermark.Run();
             ConvertSpecificPages.Run();
+            GetDefaultConvertOptionsForDesiredTargetFormat.Run();
 
             #endregion
 
@@ -115,6 +118,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             ConvertEmailWithAlteringFieldsVisibility.Run();
             ConvertEmailWithTimezoneOffset.Run();
+            ConvertEmailWithAttachments.Run();
 
             #endregion
 

@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.3.109" />
-    <PackageReference Include="GroupDocs.Conversion" Version="19.12.1" />
+    <PackageReference Include="GroupDocs.Conversion" Version="20.1.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.0.601" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>

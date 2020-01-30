@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Caching\UseCacheWhenProcessingDocuments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\AddWatermark.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertNConsecutivePages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\GetDefaultConvertOptionsForDesiredTargetFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToHtmlWithAdvancedOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToImageWithAdvancedOptions.cs" />
@@ -34,6 +35,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingEncoding.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithAlteringFieldsVisibility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithTimezoneOffset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithAttachments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Note\ConvertNoteBySpecifyingFontSubstitution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndFlattenAllFields.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndHideAnnotations.cs" />
@@ -62,7 +64,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPresentation\ConvertToPresentation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToSpreadsheet\ConvertToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToWordProcessing\ConvertToWordProcessing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetAllPossibleConversions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetPossibleConversions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetPossibleConversionsForSpecifiedDocumentExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetSourceDocumentInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
@@ -82,6 +86,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\embedded-image-and-attachment.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\hieroglyphs.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

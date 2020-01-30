@@ -77,6 +77,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // Email documents
         public static string SAMPLE_EML =>
             GetSampleFilePath("sample.eml");
+        public static string SAMPLE_EML_WITH_ATTACHMENT =>
+            GetSampleFilePath("embedded-image-and-attachment.eml");
 
         // Word Processing documents
         public static string SAMPLE_DOCX => 

@@ -24,7 +24,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
                 Console.WriteLine("Width: {0}", pdfInfo.Width);
                 Console.WriteLine("Height: {0}", pdfInfo.Height);
                 Console.WriteLine("Is landscaped: {0}", pdfInfo.IsLandscape);
-                Console.WriteLine("Is Encrypted: {0}", pdfInfo.IsEncrypted);
+                Console.WriteLine("Is Password Protected: {0}", pdfInfo.IsPasswordProtected);
             }
 
             Console.WriteLine("\nDocument info retrieved successfully.");
