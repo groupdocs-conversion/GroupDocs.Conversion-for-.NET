@@ -12,7 +12,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
-            string url = "https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
+            string url = "https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/blob/master/Examples/GroupDocs.Conversion.Examples.CSharp/Resources/SampleFiles/sample.docx?raw=true";
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputDirectory, "converted.pdf");
 
