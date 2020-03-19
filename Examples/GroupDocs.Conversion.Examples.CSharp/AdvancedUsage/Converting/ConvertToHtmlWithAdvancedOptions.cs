@@ -32,7 +32,8 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 {
                     PageNumber = 2,
                     FixedLayout = true,
-                    PagesCount = 1
+                    PagesCount = 1,
+                    FixedLayoutShowBorders = false
                 };
                 converter.Convert(outputFile, options);
             }

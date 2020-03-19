@@ -34,8 +34,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingDelimiter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Csv\ConvertCsvBySpecifyingEncoding.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithAlteringFieldsVisibility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithUseOfGlobalization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithLocalizingEmailFields.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithTimezoneOffset.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Email\ConvertEmailWithAttachments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Markup\ConvertMarkupWithAddingPageNumbering.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Note\ConvertNoteBySpecifyingFontSubstitution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndFlattenAllFields.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndHideAnnotations.cs" />

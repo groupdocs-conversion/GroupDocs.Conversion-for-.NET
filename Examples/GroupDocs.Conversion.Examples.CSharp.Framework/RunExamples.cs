@@ -119,7 +119,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
             ConvertEmailWithAlteringFieldsVisibility.Run();
             ConvertEmailWithTimezoneOffset.Run();
             ConvertEmailWithAttachments.Run();
+            ConvertEmailWithLocalizingEmailFields.Run();
+            ConvertEmailWithUseOfGlobalization.Run();
 
+            #endregion
+
+            #region Markup
+
+            ConvertMarkupWithAddingPageNumbering.Run();
+            
             #endregion
 
             #region Note

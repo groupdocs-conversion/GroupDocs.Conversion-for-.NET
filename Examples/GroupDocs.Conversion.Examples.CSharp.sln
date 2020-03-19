@@ -12,6 +12,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems*{503c96ed-9eb1-4fba-84f9-6e80238d6be9}*SharedItemsImports = 4
+		GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems*{b77de298-c9dd-4833-88ae-50bb9a46f333}*SharedItemsImports = 5
 		GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems*{f4b5222c-c35a-4852-85a1-b81e067fd808}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

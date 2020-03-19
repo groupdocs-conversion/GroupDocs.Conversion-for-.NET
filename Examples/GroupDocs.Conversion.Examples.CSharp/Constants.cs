@@ -32,6 +32,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string SAMPLE_ONE =>
             GetSampleFilePath("sample.one");
 
+        // Markup
+        public static string SAMPLE_MARKUP =>
+            GetSampleFilePath("sample.html");
+
         // PDFs
         public static string SAMPLE_PDF => 
             GetSampleFilePath("sample.pdf");
