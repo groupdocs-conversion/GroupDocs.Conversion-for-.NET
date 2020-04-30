@@ -9,7 +9,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     /// <summary>
     /// This example demonstrates how to enable cache when convert document.
     /// </summary>
-    class UseCacheWhenProcessingDocuments
+    internal static class UseCacheWhenProcessingDocuments
     {
         public static void Run()
         {
@@ -29,7 +29,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 Cache = cache
             };
 #endif
-            using (Converter converter = new Converter(Constants.SAMPLE_DOCX, settingsFactory))
+            using (Converter converter = new Converter(Constants.SAMPLE_PDF, settingsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
 

@@ -12,7 +12,7 @@ using GroupDocs.Conversion.Caching;
 using GroupDocs.Conversion.Options.Convert;
 using StackExchange.Redis;
 
-namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
+namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 {
     internal class HowToUseCustomCacheImplementation
     {
@@ -29,7 +29,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
                 Cache = cache
             };
 
-            using (Converter converter = new Converter(Constants.SAMPLE_DOCX, settingsFactory))
+            using (Converter converter = new Converter(Constants.SAMPLE_PDF, settingsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
 
@@ -56,7 +56,8 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
 
         private readonly ConnectionMultiplexer _redis;
         private readonly IDatabase _db;
-        private readonly string _host = "192.168.0.1:6379";
+        // private readonly string _host = "192.168.0.1:6379";
+        private readonly string _host = "192.168.222.4:6379";
 
         public RedisCache(string cacheKeyPrefix)
         {
@@ -71,8 +72,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
                 return;
 
             string prefixedKey = GetPrefixedKey(key);
-            using (MemoryStream stream = GetStream(data))
+            using (MemoryStream stream = new MemoryStream())
             {
+                ((Stream) data).CopyTo(stream);
                 _db.StringSet(prefixedKey, RedisValue.CreateFrom(stream));
             }
         }
@@ -84,13 +86,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
 
             if (redisValue.HasValue)
             {
-                var data = Deserialize(redisValue);
-                value = data;
+                value = new MemoryStream(redisValue);
 
                 return true;
             }
-
-
+            
             value = default;
             return false;
         }
@@ -106,61 +106,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
         private string GetPrefixedKey(string key)
             => $"{_cacheKeyPrefix}{key}";
 
-        private object Deserialize(RedisValue redisValue)
-        {
-            object data;
-            using (MemoryStream stream = new MemoryStream(redisValue))
-            {
-                BinaryFormatter formatter = new BinaryFormatter
-                {
-                    Binder = new IgnoreAssemblyVersionSerializationBinder()
-                };
-
-                try
-                {
-                    data = formatter.Deserialize(stream);
-                }
-                catch (SerializationException)
-                {
-                    data = null;
-                }
-            }
-
-            return data;
-        }
-
-        private MemoryStream GetStream(object data)
-        {
-            MemoryStream result = new MemoryStream();
-
-            if (data is Stream stream)
-            {
-                stream.Position = 0;
-                stream.CopyTo(result);
-            }
-            else
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(result, data);
-            }
-
-            return result;
-        }
-
         public void Dispose()
         {
             _redis.Dispose();
-        }
-
-        private class IgnoreAssemblyVersionSerializationBinder : SerializationBinder
-        {
-            public override Type BindToType(string assemblyName, string typeName)
-            {
-                string assembly = Assembly.GetExecutingAssembly().FullName;
-                Type type = Type.GetType($"{typeName}, {assembly}");
-
-                return type;
-            }
         }
     }
 }

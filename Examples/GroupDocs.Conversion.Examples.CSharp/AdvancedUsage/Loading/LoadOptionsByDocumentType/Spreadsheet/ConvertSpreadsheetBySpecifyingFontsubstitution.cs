@@ -10,7 +10,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     /// <summary>
     /// This example demonstrates how to convert a spreadsheet document to pdf with advanced options
     /// </summary>
-    internal static class ConvertSpreadsheetBySpecifyingFontsubstitution
+    internal static class ConvertSpreadsheetBySpecifyingFontSubstitution
     {
         public static void Run()
         {

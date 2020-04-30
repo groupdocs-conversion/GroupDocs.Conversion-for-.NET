@@ -8,7 +8,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     /// <summary>
     /// This example demonstrates how to convert a word-processing document to pdf with advanced options
     /// </summary>
-    internal static class ConvertWordProcessingByHiddingComments
+    internal static class ConvertWordProcessingByHidingTrackedChanges
     {
         public static void Run()
         {
@@ -18,12 +18,12 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
             {
-                HideComments = true
+                HideWordTrackedChanges = true
             };
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
             {
-                HideComments = true
+                HideWordTrackedChanges = true
             };
 #endif
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_TRACKED_CHANGES, getLoadOptions))

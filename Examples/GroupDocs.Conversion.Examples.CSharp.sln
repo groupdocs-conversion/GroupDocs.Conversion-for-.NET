@@ -16,16 +16,24 @@ Global
 		GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems*{f4b5222c-c35a-4852-85a1-b81e067fd808}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Debug|x86.ActiveCfg = Debug|x86
 		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Debug|x86.Build.0 = Debug|x86
+		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Release|Any CPU.ActiveCfg = Release|x86
 		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Release|x86.ActiveCfg = Release|x86
 		{503C96ED-9EB1-4FBA-84F9-6E80238D6BE9}.Release|x86.Build.0 = Release|x86
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Debug|x86.Build.0 = Debug|Any CPU
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Release|x86.ActiveCfg = Release|Any CPU
 		{B77DE298-C9DD-4833-88AE-50BB9A46F333}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection

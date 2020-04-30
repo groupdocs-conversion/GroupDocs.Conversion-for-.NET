@@ -16,12 +16,14 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
-                ConvertAttachments = true
+                ConvertOwner = true,
+                ConvertOwned = true
             };
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
-                ConvertAttachments = true
+                ConvertOwner = true,
+                ConvertOwned = true
             };
 #endif
             using (Converter converter = new Converter(Constants.SAMPLE_EML_WITH_ATTACHMENT, getLoadOptions))

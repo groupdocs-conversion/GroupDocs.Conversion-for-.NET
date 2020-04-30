@@ -8,7 +8,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     /// <summary>
     /// This example demonstrates how to convert a presentation document to pdf with advanced options
     /// </summary>
-    internal static class ConvertPresentationByHiddingComments
+    internal static class ConvertPresentationByHidingComments
     {
         public static void Run()
         {

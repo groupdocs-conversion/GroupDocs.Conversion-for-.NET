@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using GroupDocs.Conversion.Examples.CSharp.AdvancedUsage;
 using GroupDocs.Conversion.Examples.CSharp.BasicUsage;
 using GroupDocs.Conversion.Examples.CSharp.QuickStart;
@@ -26,46 +25,46 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #region Basic Usage
 
-            GetAllPossibleConversions.Run();
-            GetPossibleConversionsForSpecifiedDocumentExtension.Run();
-            GetPossibleConversions.Run();
-            GetSourceDocumentInfo.Run();
+            // GetAllPossibleConversions.Run();
+            // GetPossibleConversionsForSpecifiedDocumentExtension.Run();
+            // GetPossibleConversions.Run();
+            // GetSourceDocumentInfo.Run();
 
             #region Convert document to HTML
 
-            ConvertToHtml.Run();
+            // ConvertToHtml.Run();
 
             #endregion
 
             #region Convert document to Image
 
-            ConvertToJpg.Run();
-            ConvertToPng.Run();
-            ConvertToPsd.Run();
+            // ConvertToJpg.Run();
+            // ConvertToPng.Run();
+            // ConvertToPsd.Run();
 
             #endregion
 
             #region Convert document to PDF
 
-            ConvertToPdf.Run();
+            // ConvertToPdf.Run();
 
             #endregion
 
             #region Convert document to Presentation
 
-            ConvertToPresentation.Run();
+            // ConvertToPresentation.Run();
 
             #endregion
 
             #region Convert document to Spreadsheet
 
-            ConvertToSpreadsheet.Run();
+            // ConvertToSpreadsheet.Run();
 
             #endregion
 
             #region Convert document to WordProcessing
 
-            ConvertToWordProcessing.Run();
+            // ConvertToWordProcessing.Run();
 
             #endregion
 
@@ -75,21 +74,20 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #region Common rendering options
 
-
-            AddWatermark.Run();
-            ConvertSpecificPages.Run();
-            GetDefaultConvertOptionsForDesiredTargetFormat.Run();
+            // AddWatermark.Run();
+            // ConvertSpecificPages.Run();
+            // GetDefaultConvertOptionsForDesiredTargetFormat.Run();
 
             #endregion
 
             #region Loading
 
-            LoadPasswordProtectedDocument.Run();
+            // LoadPasswordProtectedDocument.Run();
 
             #region Loading documents from different sources
 
-            LoadDocumentFromLocalDisk.Run();
-            LoadDocumentFromStream.Run();
+            // LoadDocumentFromLocalDisk.Run();
+            // LoadDocumentFromStream.Run();
             // LoadDocumentFromUrl.Run();
             // LoadDocumentFromFtp.Run();
             // LoadDocumentFromAmazonS3.Run();
@@ -101,73 +99,73 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #region Cad
 
-            ConvertCadAndSpecifyLayouts.Run();
-            ConvertCadAndSpecifyWidthAndHeight.Run();
+            // ConvertCadAndSpecifyLayouts.Run();
+            // ConvertCadAndSpecifyWidthAndHeight.Run();
 
             #endregion
 
             #region Csv
 
-            ConvertCsvByConvertingDateTimeAndNumericData.Run();
-            ConvertCsvBySpecifyingDelimiter.Run();
-            ConvertCsvBySpecifyingEncoding.Run();
+            // ConvertCsvByConvertingDateTimeAndNumericData.Run();
+            // ConvertCsvBySpecifyingDelimiter.Run();
+            // ConvertCsvBySpecifyingEncoding.Run();
 
             #endregion
 
             #region Email
 
-            ConvertEmailWithAlteringFieldsVisibility.Run();
-            ConvertEmailWithTimezoneOffset.Run();
-            ConvertEmailWithAttachments.Run();
-            ConvertEmailWithLocalizingEmailFields.Run();
-            ConvertEmailWithUseOfGlobalization.Run();
+            // ConvertEmailWithAlteringFieldsVisibility.Run();
+            // ConvertEmailWithTimezoneOffset.Run();
+            // ConvertEmailWithAttachments.Run();
+            // ConvertEmailWithLocalizingEmailFields.Run();
+            // ConvertEmailWithUseOfGlobalization.Run();
 
             #endregion
 
             #region Markup
 
-            ConvertMarkupWithAddingPageNumbering.Run();
+            // ConvertMarkupWithAddingPageNumbering.Run();
             
             #endregion
 
             #region Note
 
-            ConvertNoteBySpecifyingFontSubstitution.Run();
+            // ConvertNoteBySpecifyingFontSubstitution.Run();
 
             #endregion
 
             #region Pdf
 
-            ConvertPdfAndFlattenAllFields.Run();
-            ConvertPdfAndHideAnnotations.Run();
-            ConvertPdfAndRemoveEmbeddedFiles.Run();
+            // ConvertPdfAndFlattenAllFields.Run();
+            // ConvertPdfAndHideAnnotations.Run();
+            // ConvertPdfAndRemoveEmbeddedFiles.Run();
 
             #endregion
 
             #region Presentation
 
-            ConvertPresentationByHiddingComments.Run();
-            ConvertPresentationBySpecifyingFontSubstitution.Run();
-            ConvertPresentationWithHiddenSlidesIncluded.Run();
+            // ConvertPresentationByHidingComments.Run();
+            // ConvertPresentationBySpecifyingFontSubstitution.Run();
+            // ConvertPresentationWithHiddenSlidesIncluded.Run();
 
             #endregion
 
             #region Spreadsheet
 
-            ConvertSpreadsheetAndHideComments.Run();
-            ConvertSpreadsheetByShowingGridLines.Run();
-            ConvertSpreadsheetBySkippingEmptyRowsAndColumns.Run();
-            ConvertSpreadsheetBySpecifyingFontsubstitution.Run();
-            ConvertSpreadsheetBySpecifyingRange.Run();
-            ConvertSpreadsheetWithHiddenSheetsIncluded.Run();
+            // ConvertSpreadsheetAndHideComments.Run();
+            // ConvertSpreadsheetByShowingGridLines.Run();
+            // ConvertSpreadsheetBySkippingEmptyRowsAndColumns.Run();
+            // ConvertSpreadsheetBySpecifyingFontSubstitution.Run();
+            // ConvertSpreadsheetBySpecifyingRange.Run();
+            // ConvertSpreadsheetWithHiddenSheetsIncluded.Run();
 
             #endregion
 
             #region WordProcessing
 
-            ConvertWordProcessingByHiddingComments.Run();
-            ConvertWordProcessingByHiddingTrackedChanges.Run();
-            ConvertWordProcessingBySpecifyingFontSubstitution.Run();
+            // ConvertWordProcessingByHidingComments.Run();
+            // ConvertWordProcessingByHidingTrackedChanges.Run();
+            // ConvertWordProcessingBySpecifyingFontSubstitution.Run();
 
             #endregion
 
@@ -175,14 +173,24 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
-            ConvertToHtmlWithAdvancedOptions.Run();
-            ConvertToImageWithAdvancedOptions.Run();
-            ConvertToPdfWithAdvancedOptions.Run();
-            ConvertToPresentationWithAdvancedOptions.Run();
-            ConvertToSpreadsheetWithAdvancedOptions.Run();
-            ConvertToWordProcessingWithAdvancedOptions.Run();
+            #region Caching
 
-            ListenConversionStateAndProgress.Run();
+            // UseCacheWhenProcessingDocuments.Run();
+            // HowToUseCustomCacheImplementation.Run();
+
+            #endregion
+
+            // ConvertToHtmlWithAdvancedOptions.Run();
+            // ConvertToImageWithAdvancedOptions.Run();
+            // ConvertToPdfWithAdvancedOptions.Run();
+            // ConvertToPresentationWithAdvancedOptions.Run();
+            // ConvertToSpreadsheetWithAdvancedOptions.Run();
+            // ConvertToWordProcessingWithAdvancedOptions.Run();
+
+            // ConvertEachEmailAttachmentToDifferentFormat.Run();
+            // ConvertOstDocumentMessagesToDifferentFormats.Run();
+            
+            // ListenConversionStateAndProgress.Run();
 
             #endregion
 
