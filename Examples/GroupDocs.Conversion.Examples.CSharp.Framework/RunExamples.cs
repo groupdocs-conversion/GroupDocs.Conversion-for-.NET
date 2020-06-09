@@ -142,6 +142,11 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region PersonalStorage
+            // GetFoldersFromPersonalStorage.Run();
+            // ConvertPersonalStorageContentToDifferentFormats.Run();
+            #endregion
+            
             #region Presentation
 
             // ConvertPresentationByHidingComments.Run();
@@ -161,6 +166,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region Txt
+
+            // ConvertTxtByControllingLeadingSpacesBehavior.Run();
+            // ConvertTxtByControllingTrailingSpacesBehavior.Run(); 
+            // ConvertTxtBySpecifyingEncoding.Run();
+
+            #endregion
+
             #region WordProcessing
 
             // ConvertWordProcessingByHidingComments.Run();
@@ -169,6 +182,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region Xml
+
+            // ConvertXmlAsDataSourceToSpreadsheet.Run();
+            
+            #endregion
+            
             #endregion
 
             #endregion

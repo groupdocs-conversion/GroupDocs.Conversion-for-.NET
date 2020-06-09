@@ -102,9 +102,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string MISSING_FONT_ODG =>
             GetSampleFilePath("with_missing_font.odg");
 
+        // XML
+        public static string SAMPLE_XML_DATASOURCE =>
+            GetSampleFilePath("sample_datasource.xml");
+
         private static string GetSampleFilePath(string filePath) =>
             Path.Combine(SamplesPath, filePath);
-
+        
         public static string GetOutputDirectoryPath([CallerFilePath] string callerFilePath = null)
         {
             string outputDirectory = Path.Combine(OutputPath, Path.GetFileNameWithoutExtension(callerFilePath));

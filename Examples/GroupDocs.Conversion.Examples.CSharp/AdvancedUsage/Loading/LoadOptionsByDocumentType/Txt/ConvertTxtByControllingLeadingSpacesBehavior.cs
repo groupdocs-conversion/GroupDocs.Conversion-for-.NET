@@ -8,7 +8,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     /// <summary>
     /// This example demonstrates how to convert a txt document to pdf with advanced options
     /// </summary>
-    internal static class ConvertTxtByControlingLeadingSpacesBehavior
+    internal static class ConvertTxtByControllingLeadingSpacesBehavior
     {
         public static void Run()
         {

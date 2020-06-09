@@ -45,6 +45,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndFlattenAllFields.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndHideAnnotations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Pdf\ConvertPdfAndRemoveEmbeddedFiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\PersonalStorage\GetFoldersFromPersonalStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\PersonalStorage\ConvertPersonalStorageContentToDifferentFormats.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationByHidingComments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationBySpecifyingFontSubstitution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Presentation\ConvertPresentationWithHiddenSlidesIncluded.cs" />
@@ -54,12 +56,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingFontSubstitution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingRange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetWithHiddenSheetsIncluded.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingLeadingSpacesBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControlingTrailingSpacesBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControllingLeadingSpacesBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControllingTrailingSpacesBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtBySpecifyingEncoding.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHidingComments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHidingTrackedChanges.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingBySpecifyingFontSubstitution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Xml\ConvertXmlAsDataSourceToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertToHtml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToJpg.cs" />
@@ -83,7 +86,13 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Fonts\terminal-grotesque_open.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample_datasource.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\shift_jis_encoded.txt">
