@@ -21,7 +21,12 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             {
                 if (sourceType == EmailFileType.Eml)
                 {
-                    return new EmailLoadOptions {ConvertOwned = true, ConvertOwner = true};
+                    return new EmailLoadOptions
+                    {
+                        ConvertOwned = true, 
+                        ConvertOwner = true,
+                        Depth = 2
+                    };
                 }
 
                 return null;

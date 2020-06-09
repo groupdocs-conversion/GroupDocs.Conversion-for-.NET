@@ -17,13 +17,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
                 ConvertOwner = true,
-                ConvertOwned = true
+                ConvertOwned = true,
+                // convert email itself and the attachments 
+                Depth = 2
             };
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
                 ConvertOwner = true,
-                ConvertOwned = true
+                ConvertOwned = true,
+                // convert email itself and the attachments 
+                Depth = 2
             };
 #endif
             using (Converter converter = new Converter(Constants.SAMPLE_EML_WITH_ATTACHMENT, getLoadOptions))

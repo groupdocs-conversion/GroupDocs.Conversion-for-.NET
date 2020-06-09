@@ -26,7 +26,10 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 UseAsDataSource = true
             };
 #endif
-            using (Converter converter = new Converter(Constants.SAMPLE_XML_DATASOURCE, getLoadOptions))
+            using (Converter converter = new Converter(Constants.SAMPLE_XML_DATASOURCE, () => new XmlLoadOptions
+            {
+                UseAsDataSource = true
+            }))
             {
                 SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
                 converter.Convert(outputFile, options);

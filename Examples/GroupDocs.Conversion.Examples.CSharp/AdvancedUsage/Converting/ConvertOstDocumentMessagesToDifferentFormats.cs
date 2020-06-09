@@ -25,7 +25,8 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     {
                         ConvertOwned = true,
                         ConvertOwner = false,
-                        Folder = @"Root - Mailbox"
+                        Folder = @"Root - Mailbox", 
+                        Depth = 2
                     };
                 }
 
