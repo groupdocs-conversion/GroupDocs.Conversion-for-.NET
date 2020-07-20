@@ -40,7 +40,8 @@ The complete examples package of **GroupDocs.Conversion** is hosted on [GitHub
 In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like following image:
 ![](conversion/net/images/how-to-run-examples.png)
 In extracted files and folders, you can find CSharp solution file. The project is created in **Microsoft Visual Studio 2019**. The **Resources** folder contains all the sample document and image files used in the examples.  
-To run the examples, open the solution file in Visual Studio and build the project. To add missing references of **GroupDocs.Conversion** see [Development Environment, Installation and Configuration](https://docs.groupdocs.com/display/conversionnet/Development+Environment%2C+Installation+and+Configuration). All the functions are called from **RunExamples.cs**.   
+To run the examples, open the solution file in Visual Studio and build the project. To add missing references of **GroupDocs.Conversion** see [Development Environment, Installation and Configuration]({{< ref "conversion/net/getting-started/installation.md" >}}). All the functions are called from **RunExamples.cs**.   
+
 Un-comment the function you want to run and comment the rest.
 ![](conversion/net/images/how-to-run-examples_1.png)
 
