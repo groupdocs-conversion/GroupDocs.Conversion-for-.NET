@@ -1,6 +1,6 @@
 ---
 id: groupdocs-conversion-for-net-20-7-release-notes
-url: conversion/net/groupdocs-conversion-for-net-20-6-release-notes
+url: conversion/net/groupdocs-conversion-for-net-20-7-release-notes
 title: GroupDocs.Conversion for .NET 20.7 Release Notes
 weight: 1
 description: ""
@@ -62,7 +62,8 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
     
     * **GroupDocs.Conversion.Options.Convert.WatermarkOptions** property **Font**  - will be removed in v20.10. Property **WatermarkFont** must be used instead.
 
-2.  **Following properties are removed**
+
+3.  **Following properties are removed**
     
     * From **GroupDocs.Conversion.ConverterSettings** property **DefaultFont**
     * From **GroupDocs.Conversion.Options.Convert.PdfOptions** property **FormatingOptions**
