@@ -10,7 +10,7 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [NoteLoadOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/noteloadoptions) to give you control over how source Note document will be processed. The following options could be set:
 
-*   **[DefaultFont](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/noteloadoptions/properties/defaultfont)** - default font for Note document. The specified font will be used if a font is missing
+*   **[DefaultFont](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/noteloadoptions/properties/defaultfont)** - default font for Note document. The specified font will be used if a font is missing. An absolute path to font file must be provided.
 *   **[FontSubstitutes](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/noteloadoptions/properties/fontsubstitutes)** - substitutes specific fonts from the Note document
 *   **[Password](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/noteloadoptions/properties/password)** - password to unlock protected document
 
