@@ -61,8 +61,7 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 2.  **Following properties are marked as obsolete**
     
     * **GroupDocs.Conversion.Options.Convert.WatermarkOptions** property **Font**  - will be removed in v20.10. Property **WatermarkFont** must be used instead.
-
-
+    
 3.  **Following properties are removed**
     
     * From **GroupDocs.Conversion.ConverterSettings** property **DefaultFont**

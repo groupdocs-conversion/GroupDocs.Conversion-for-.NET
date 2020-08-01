@@ -2,7 +2,7 @@
 id: groupdocs-conversion-for-net-20-6-release-notes
 url: conversion/net/groupdocs-conversion-for-net-20-6-release-notes
 title: GroupDocs.Conversion for .NET 20.6 Release Notes
-weight: 1
+weight: 2
 description: ""
 keywords: 
 productName: GroupDocs.Conversion for .NET
