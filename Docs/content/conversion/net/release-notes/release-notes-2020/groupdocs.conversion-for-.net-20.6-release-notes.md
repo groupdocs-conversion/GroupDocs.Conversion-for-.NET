@@ -21,7 +21,7 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key |  Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3848 | Feature | Implement conversion from/to Fodp |
 | CONVERSIONNET-3901 | Feature | Implement conversion from Md |

@@ -21,7 +21,7 @@ Additionally one bug is fixed: 
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key |Category | Summary | 
 | --- | --- | --- |
 | CONVERSIONNET-3142 | Bug | Specified argument was out of the range of valid values when converting a spreadsheet document to pdf |
 

@@ -24,7 +24,7 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3053 | Feature | Enabled metered licensing |
 | CONVERSIONNET-3058 | Feature | Implement conversion from Dib |

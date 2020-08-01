@@ -25,7 +25,7 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3290 | Feature | EML to MSG conversion |
 | CONVERSIONNET-3512 | Feature | API to retrieve prepared default ConvertOptions for desired target conversion |

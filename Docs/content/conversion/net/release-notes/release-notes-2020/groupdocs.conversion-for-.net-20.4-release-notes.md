@@ -23,7 +23,7 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3225 | Feature | Support for auto page numbering while export to PDF |
 | CONVERSIONNET-3710 | Feature | Convert each email attachment to different type |

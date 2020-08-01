@@ -21,7 +21,7 @@ There are 5 features, improvements and bug-fixes in this release, most notable a
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3323 | Feature | Keep the timezone of the SENT field |
 | CONVERSIONNET-3330 | Feature | Add .NET Standard 2.0 support |

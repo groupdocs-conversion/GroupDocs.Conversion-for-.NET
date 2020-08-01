@@ -19,7 +19,7 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3460 | Feature | Provide information for conversion start, end and progress |
 | CONVERSIONNET-3345 | Improvement | MPP to XLS conversion improvement and missing information |

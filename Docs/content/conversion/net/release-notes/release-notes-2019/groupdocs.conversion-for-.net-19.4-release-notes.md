@@ -20,7 +20,7 @@ This regular monthly release contains 5+ improvements and bug fixes. Most notabl
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-2980 | Feature | Implement automatic naming when saving converted document to file |
 | CONVERSIONNET-2983 | Feature | Implement conversion from Cmx |

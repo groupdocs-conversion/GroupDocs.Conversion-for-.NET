@@ -22,7 +22,7 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3351 | Feature | Support for page numeration in the output document when convert html to Wordprocessing documents |
 | CONVERSIONNET-3733 | Feature | Hide / remove borders while converting DOCX to HTML |

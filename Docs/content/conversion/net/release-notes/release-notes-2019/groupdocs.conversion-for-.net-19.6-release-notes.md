@@ -24,7 +24,7 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3089 | Feature | Implement conversion from Xlam |
 | CONVERSIONNET-3091 | Feature | Implement conversion to Xlam |

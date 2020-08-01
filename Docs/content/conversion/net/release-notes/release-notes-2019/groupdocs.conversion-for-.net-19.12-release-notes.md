@@ -20,7 +20,7 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Summary | Category |
+| Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-3539 | Feature | Convert XML documents without transformation |
 | CONVERSIONNET-3526 | Improvement | New overload Convert methods which accepts ConvertedDocumentStream or ConvertedPageStream delegates |
