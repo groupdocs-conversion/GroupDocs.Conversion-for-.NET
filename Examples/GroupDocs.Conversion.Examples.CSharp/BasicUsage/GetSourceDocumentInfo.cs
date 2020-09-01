@@ -10,7 +10,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {            
-            using (Converter converter = new Converter(Constants.SAMPLE_PDF))
+            using (Converter converter = new Converter(Constants.SAMPLE_PDF_WITH_TOC))
             {
                 IDocumentInfo info = converter.GetDocumentInfo();
 
@@ -25,6 +25,13 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
                 Console.WriteLine("Height: {0}", pdfInfo.Height);
                 Console.WriteLine("Is landscaped: {0}", pdfInfo.IsLandscape);
                 Console.WriteLine("Is Password Protected: {0}", pdfInfo.IsPasswordProtected);
+
+                Console.WriteLine("Table of contents");
+                Console.WriteLine(new string('=', 40));
+                foreach (var tocItem in pdfInfo.TableOfContents)
+                {
+                    Console.WriteLine($"{tocItem.Title}: {tocItem.Page}");
+                }
             }
 
             Console.WriteLine("\nDocument info retrieved successfully.");

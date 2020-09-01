@@ -37,4 +37,51 @@ There are 10 features, improvements and bug-fixes in this release, most notable 
 
 ## Public API and Backward Incompatible Changes
 
-None
+1.  **Introduced new property in class WordprocessingDocumentInfo**
+    
+    ```csharp
+    /// <summary>
+    /// Table of contents
+    /// </summary>
+    public IEnumerable<TableOfContentsItem> TableOfContents { get; private set; } 
+    ```
+    
+2.  **Introduced new property in class PdfDocumentInfo**
+    
+    ```csharp
+    /// <summary>
+    /// Table of contents
+    /// </summary>
+    public IEnumerable<TableOfContentsItem> TableOfContents { get; private set; } 
+    ```
+    
+3.  **Introduced new class GroupDocs.Conversion.Contracts.TableOfContentsItem**
+    
+    ```csharp
+    /// <summary>
+    /// Contains Table of contents item metadata
+    /// </summary>
+    public class TableOfContentsItem
+    {
+        /// <summary>
+        /// Bookmark title
+        /// </summary>
+        public string Title { get; }
+        /// <summary>
+        /// Bookmark page
+        /// </summary>
+        public int Page { get; }
+    }
+    ```
+    Usage
+    ```csharp
+    const string source = "sample-toc.docx";
+    using (var converter = new Converter(source))
+    {
+        var documentInfo = (WordprocessingDocumentInfo) converter.GetDocumentInfo();
+        foreach (var tocItem in documentInfo.TableOfContents)
+        {
+            Console.WriteLine($"{tocItem.Title}: {tocItem.Page}");
+        }
+    }
+    ```

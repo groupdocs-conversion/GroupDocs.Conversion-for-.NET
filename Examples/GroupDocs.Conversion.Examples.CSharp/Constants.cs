@@ -39,6 +39,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // PDFs
         public static string SAMPLE_PDF => 
             GetSampleFilePath("sample.pdf");
+        public static string SAMPLE_PDF_WITH_TOC => 
+            GetSampleFilePath("sample-toc.pdf");
         public static string SAMPLE_PDF_WITH_PASSWORD => 
             GetSampleFilePath("sample_with_password.pdf");
         public static string HIEROGLYPHS_PDF => 
@@ -87,6 +89,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // Word Processing documents
         public static string SAMPLE_DOCX => 
             GetSampleFilePath("sample.docx");
+        public static string SAMPLE_DOCX_WITH_TOC => 
+            GetSampleFilePath("sample-toc.docx");
         public static string SAMPLE_DOCX_WITH_COMMENT => 
             GetSampleFilePath("with_comment.docx");
         public static string SAMPLE_DOCX_WITH_PASSWORD => 

@@ -22,7 +22,7 @@ Along with this GroupDocs.Conversion provides additional information for the fo
 Here is a code snippet to demonstrate how to obtain document info for PDF document.
 
 ```csharp
-using (Converter converter = new Converter("sample.pdf"))
+using (Converter converter = new Converter("sample-toc.pdf"))
 {
     IDocumentInfo info = converter.GetDocumentInfo();
     PdfDocumentInfo pdfInfo = (PdfDocumentInfo) info;
@@ -35,6 +35,10 @@ using (Converter converter = new Converter("sample.pdf"))
     Console.WriteLine("Height: {0}", pdfInfo.Height);
     Console.WriteLine("Is landscaped: {0}", pdfInfo.IsLandscape);
     Console.WriteLine("Is Encrypted: {0}", pdfInfo.IsEncrypted);
+    foreach (var tocItem in pdfInfo.TableOfContents)
+    {
+        Console.WriteLine($"{tocItem.Title}: {tocItem.Page}");
+    }
 }
 ```
 
