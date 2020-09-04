@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 GroupDocs.Conversion provides [MarkupLoadOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/markuploadoptions) to give you control over how source Note document will be processed. The following options could be set:
-*   **[PageNumbering](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/markuploadoptions/properties/pagemnumbering)** - enable or disable generation of page numbering in converted document. Default: false  
+*   **[PageNumbering](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/markuploadoptions/properties/pagenumbering)** - enable or disable generation of page numbering in converted document. Default: false  
 
 ## Enable page numbering when converting to Wordprocessing
 
