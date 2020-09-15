@@ -20,12 +20,12 @@ Directory | Description
 ## Document & Image Conversion Features
 
 - [80+ supported file formats](https://docs.groupdocs.com/conversion/net/supported-document-formats/).
-- Add various types of watermark to the converted document.
+- [Add watermark to the converted documents](https://docs.groupdocs.com/conversion/net/add-watermark/).
 - Convert PDF & images to Grayscale & linearize PDF documents for the web.
 - Remove annotations & embedded files.
-- Convert specific pages or N consecutive pages.
+- Convert specific pages or [N consecutive pages](https://docs.groupdocs.com/conversion/net/convert-n-consecutive-pages/).
 - Convert to HTML format with absolutely positioned HTML elements.
-- Cache conversion results to local drive or use extension point to customization.
+- [Cache conversion results](https://docs.groupdocs.com/conversion/net/how-to-use-custom-cache-implementation/) to local drive or use extension points.
 - Load & convert password protected documents.
 - Monitor file conversion progress (Start, End) directly at client-side.
 
