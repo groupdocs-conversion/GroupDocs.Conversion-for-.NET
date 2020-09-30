@@ -1,14 +1,14 @@
 ---
-id: groupdocs-conversion-for-net-20-8-release-notes
+id: groupdocs-conversion-for-net-20-9-release-notes
 url: conversion/net/groupdocs-conversion-for-net-20-8-release-notes
-title: GroupDocs.Conversion for .NET 20.8 Release Notes
+title: GroupDocs.Conversion for .NET 20.9 Release Notes
 weight: 1
 description: ""
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for .NET 20.8{{< /alert >}}
+{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for .NET 20.9{{< /alert >}}
 
 ## Major Features
 
@@ -48,4 +48,3 @@ There are 5+ improvements and bug-fixes in this release, most notable are:
     /// </summary>
     public bool CheckExcelRestriction { get; set; }  
     ```
-    
