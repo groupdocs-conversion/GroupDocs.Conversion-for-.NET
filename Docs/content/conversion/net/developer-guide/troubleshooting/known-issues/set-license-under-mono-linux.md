@@ -9,6 +9,8 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
+In some cases under Mono/Linux when license is set from relative path unexpected exceptions are raised.
+
 Under Mono/Linux use one of the following ways to set the license:
 
 1. Set license with absolute path e.g
