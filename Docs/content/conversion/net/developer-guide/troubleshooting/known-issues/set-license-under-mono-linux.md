@@ -1,7 +1,7 @@
 ---
 id: set-license-under-mono-linux
 url: conversion/net/set-license-under-mono-linux
-title: How to set license under Mono/Linux
+title: Set license under Mono/Linux
 weight: 6
 description: ""
 keywords: 
@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-If under Mono/Linux observe unexpected exceptions when license is set, but this exceptions do not appear without license, try to set the license by the one of the following two ways:
+Under Mono/Linux use one of the following ways to set the license:
 
 1. Set license with absolute path e.g
 

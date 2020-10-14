@@ -1,8 +1,8 @@
 ---
-id: knowledge-base
-url: conversion/net/knowledge-base
-title: Knowledge Base
-weight: 2
+id: known-issues
+url: conversion/net/known-issues
+title: Known issues
+weight: 4
 description: ""
 keywords: 
 productName: GroupDocs.Conversion for .NET

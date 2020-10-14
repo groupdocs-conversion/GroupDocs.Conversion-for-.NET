@@ -2,7 +2,7 @@
 id: migration-notes
 url: conversion/net/migration-notes
 title: Migration Notes
-weight: 3
+weight: 4
 description: ""
 keywords: 
 productName: GroupDocs.Conversion for .NET
