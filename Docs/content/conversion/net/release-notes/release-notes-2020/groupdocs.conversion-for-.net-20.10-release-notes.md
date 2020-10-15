@@ -27,6 +27,7 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | CONVERSIONNET-4205 |  Improvement | Improved page extraction when converting from word documents  |
 | CONVERSIONNET-4208 |  Improvement | Csv/ods pagination |
 | CONVERSIONNET-4157 |  Bug	        | Not supported file type exception |
+| CONVERSIONNET-4180 |  Bug         | DOCX->PDF conversion: 'Object reference not set to an instance of an object.' |
 | CONVERSIONNET-4206 |  Bug         | Failed conversion from particular Mhtml to Pdf |
 | CONVERSIONNET-4211 |  Bug         | Exception is thrown when converting particular Html document to Xlsx |
 
