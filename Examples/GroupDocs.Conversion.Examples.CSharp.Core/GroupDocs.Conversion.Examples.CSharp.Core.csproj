@@ -13,9 +13,10 @@
   <Import Project="..\GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.S3" Version="3.3.110.60" />
-    <PackageReference Include="GroupDocs.Conversion" Version="20.8.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.1.30" />
+    <PackageReference Include="AWSSDK.S3" Version="3.5.4" />
+    <PackageReference Include="GroupDocs.Conversion" Version="20.11.0" />
+    <PackageReference Include="SkiaSharp" Version="2.80.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.1.58" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>
 
