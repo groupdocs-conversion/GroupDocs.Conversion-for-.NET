@@ -19,6 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
+                ConvertOwned = false,
                 FieldTextMap = new Dictionary<EmailField, string>
                 {
                     {EmailField.Subject, "Gegenstand"},
@@ -29,6 +30,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
+                ConvertOwned = false,
                 FieldTextMap = new Dictionary<EmailField, string>
                 {
                     { EmailField.Subject, "Gegenstand" },

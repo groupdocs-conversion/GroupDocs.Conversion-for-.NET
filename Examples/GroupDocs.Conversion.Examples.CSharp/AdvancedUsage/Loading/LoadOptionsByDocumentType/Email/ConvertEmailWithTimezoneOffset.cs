@@ -18,11 +18,13 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
+                ConvertOwned = false,
                 TimeZoneOffset = TimeSpan.FromHours(5)
             };
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
+                ConvertOwned = false,
                 TimeZoneOffset = TimeSpan.FromHours(5)
             };
 #endif

@@ -18,6 +18,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
+                ConvertOwned = false,
                 DisplayHeader = false,
                 DisplayFromEmailAddress = false,
                 DisplayToEmailAddress = false,
@@ -28,6 +29,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
+                ConvertOwned = false,
                 DisplayHeader = false,
                 DisplayFromEmailAddress = false,
                 DisplayToEmailAddress = false,

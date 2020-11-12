@@ -91,9 +91,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // LoadDocumentFromStream.Run();
             // LoadDocumentFromUrl.Run();
             // LoadDocumentFromFtp.Run();
-            // LoadDocumentFromAmazonS3.Run();
-            // LoadDocumentFromAzureBlobStorage.Run();
-
+            
             #endregion
 
             #region Load options by document type
@@ -144,8 +142,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #endregion
 
             #region PersonalStorage
+            
             // GetFoldersFromPersonalStorage.Run();
             // ConvertPersonalStorageContentToDifferentFormats.Run();
+            
             #endregion
 
             #region Presentation

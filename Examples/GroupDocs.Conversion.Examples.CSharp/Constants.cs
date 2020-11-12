@@ -103,12 +103,16 @@ namespace GroupDocs.Conversion.Examples.CSharp
             GetSampleFilePath("shift_jis_encoded.txt");
 
         // Images
-        public static string MISSING_FONT_ODG =>
+        public static string SAMPLE_MISSING_FONT_ODG =>
             GetSampleFilePath("with_missing_font.odg");
 
         // XML
         public static string SAMPLE_XML_DATASOURCE =>
             GetSampleFilePath("sample_datasource.xml");
+
+        // Default font
+        public static string SAMPLE_DEFAULT_FONT =>
+            Path.Combine(FontsPath, "terminal-grotesque_open.otf");
 
         private static string GetSampleFilePath(string filePath) =>
             Path.Combine(SamplesPath, filePath);

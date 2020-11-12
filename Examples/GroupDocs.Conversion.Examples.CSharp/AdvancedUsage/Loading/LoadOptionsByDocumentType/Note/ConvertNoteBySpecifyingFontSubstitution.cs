@@ -25,7 +25,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     FontSubstitute.Create("Tahoma", "Arial"),
                     FontSubstitute.Create("Times New Roman", "Arial"),
                 },
-                DefaultFont = "Helvetica"
+                DefaultFont = Constants.SAMPLE_DEFAULT_FONT
             };
 #else
             Contracts.Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
@@ -35,7 +35,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     FontSubstitute.Create("Tahoma", "Arial"),
                     FontSubstitute.Create("Times New Roman", "Arial"),
                 },
-                DefaultFont = "Helvetica"
+                DefaultFont = Constants.SAMPLE_DEFAULT_FONT
             };
 #endif
             using (Converter converter = new Converter(Constants.SAMPLE_ONE, getLoadOptions))
