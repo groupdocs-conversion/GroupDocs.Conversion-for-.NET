@@ -1,32 +1,34 @@
 ---
-id: convert-specific-pages
-url: conversion/net/convert-specific-pages
-title: Convert specific pages
-weight: 4
-description: "This article demonstrates how to convert specific document pages by page number using GroupDocs.Conversion for .NET API."
-keywords: Convert page, Convert pages, Convert specific pages
+id: get-default-load-options-for-source-format
+url: conversion/net/get-default-load-options-for-source-format
+title: Get default load options for a source format
+weight: 2
+description: "Following this article you will learn how to get default load options for a source format with GroupDocs.Conversion for .NET API."
+keywords: Get default load options, Load options
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) also provides the feature to convert selected page number.
+**[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net)** allows you to get default load options for the source document format. This will allow you to get default load options runtime, knowing the source format.
 
 Here are the steps to follow:
 
-*   Create new instance of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class and pass source document path as a constructor parameter
+*   Call the static [GetPossibleConversion](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.converter/getpossibleconversions/methods/1) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class with source file extension as a parameter.
+*   From received possible conversion read the [LoadOptions](https://apireference-qa.groupdocs.com/conversion/net/groupdocs.conversion.contracts/possibleconversions/properties/loadoptions) property.
+*   Create new instance of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class and pass source document path as a constructor parameter and load options from the previous step
 *   Instantiate the proper [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) class e.g. (**[PdfConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/pdfconvertoptions)**, **[WordProcessingConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/wordprocessingconvertoptions)**, **[SpreadsheetConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/spreadsheetconvertoptions)** etc.)
-*   Set [Pages](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert.commonconvertoptions/1/properties/pages) property of the [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) instance with list of desired page number to be converted
-*   Call [Convert](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/convert/2) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class instance and pass filename for the converted document and the instance of [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) from the previous steps
+*   Call [Convert](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/convert/2) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class instance and pass filename for the converted document and the instance of [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) from the previous step
 
-Following code snippet shows how to convert first and third pages from the source document:
+Following code snippet shows how to get default load options for a wordprocessing document:
 
 ```csharp
-using (Converter converter = new Converter("sample.docx"))
+var possibleConversions = Converter.GetPossibleConversions("docx");
+var loadOptions = (WordProcessingLoadOptions) possibleConversions.LoadOptions;
+loadOptions.Password = "12345";
+
+using (Converter converter = new Converter("password_protected.docx", () => loadOptions))
 {
-    PdfConvertOptions options = new PdfConvertOptions
-    {
-        Pages = new List<int>{ 1, 3 }
-    };
-    converter.Convert("converted.pdf", options);
+    var convertOptions = new PdfConvertOptions();
+    converter.Convert(outputFile, convertOptions);
 }
 ```
 

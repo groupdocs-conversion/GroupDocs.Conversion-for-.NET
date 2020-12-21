@@ -2,7 +2,7 @@
 id: convert-n-consecutive-pages
 url: conversion/net/convert-n-consecutive-pages
 title: Convert N consecutive pages
-weight: 2
+weight: 3
 description: "This article demonstrates how to convert consecutive document pages using GroupDocs.Conversion for .NET API."
 keywords: Convert consecutive document pages, Convert pages, Convert document page
 productName: GroupDocs.Conversion for .NET
