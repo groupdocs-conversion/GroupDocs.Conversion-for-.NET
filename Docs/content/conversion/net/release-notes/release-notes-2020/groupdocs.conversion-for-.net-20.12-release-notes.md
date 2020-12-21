@@ -42,7 +42,6 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-4302 | Bug | Can't convert to xls |
 | CONVERSIONNET-4305 | Bug | FileTypeNotSupportedException: 'Not supported file type' when extracting MSG file attachments |
 | CONVERSIONNET-4317 | Bug | Null reference exception when converting a particular Word file to PDF |
-| CONVERSIONNET-4329 | Bug | Fix failing integration tests |
 | CONVERSIONNET-4340 | Bug | SVG to PDF conversion issue |
 
 ## Public API and Backward Incompatible Changes
