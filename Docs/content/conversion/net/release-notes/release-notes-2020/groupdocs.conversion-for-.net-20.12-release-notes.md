@@ -32,6 +32,7 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-4323 | Improvement | Skip unsupported files when converting contained documents from a container document |
 | CONVERSIONNET-3986 | Bug | PSD to XLS conversion issue |
 | CONVERSIONNET-4002 | Bug | ODS to XLSM conversion issue |
+| CONVERSIONNET-4081 | Bug | Font issues when converting particular word document to spreadsheet |
 | CONVERSIONNET-4082 | Bug | Converting particular word document to excel hangs |
 | CONVERSIONNET-4213 | Bug | Exception when converting particular Htm to Xlsx |
 | CONVERSIONNET-4214 | Bug | Exception when converting particular Htm to Xlsx |
@@ -43,6 +44,7 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-4305 | Bug | FileTypeNotSupportedException: 'Not supported file type' when extracting MSG file attachments |
 | CONVERSIONNET-4317 | Bug | Null reference exception when converting a particular Word file to PDF |
 | CONVERSIONNET-4340 | Bug | SVG to PDF conversion issue |
+
 
 ## Public API and Backward Incompatible Changes
 

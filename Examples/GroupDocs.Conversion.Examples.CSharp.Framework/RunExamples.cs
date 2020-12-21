@@ -82,6 +82,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #region Loading
 
+            // GetDefaultLoadOptionsForSourceDocument.Run();
             // LoadPasswordProtectedDocument.Run();
 
             #region Loading documents from different sources

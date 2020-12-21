@@ -2,7 +2,7 @@
 id: load-password-protected-document
 url: conversion/net/load-password-protected-document
 title: Load password-protected document
-weight: 3
+weight: 4
 description: "Learn this article and check how to load and convert password-protected documents using GroupDocs.Conversion for .NET API."
 keywords: Load and convert password-protected document, Load and convert protected document, Load and convert document with password
 productName: GroupDocs.Conversion for .NET
