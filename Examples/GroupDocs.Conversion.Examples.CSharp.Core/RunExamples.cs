@@ -78,6 +78,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // AddWatermark.Run();
             // ConvertSpecificPages.Run();
             // GetDefaultConvertOptionsForDesiredTargetFormat.Run();
+            // ConvertToStream.Run();
 
             #endregion
 

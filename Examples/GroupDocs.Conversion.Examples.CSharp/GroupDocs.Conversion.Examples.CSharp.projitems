@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Caching\UseCacheWhenProcessingDocuments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\AddWatermark.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertNConsecutivePages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertToStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\GetDefaultLoadOptionsForSourceDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\GetDefaultConvertOptionsForDesiredTargetFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
