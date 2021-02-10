@@ -1,3 +1,4 @@
+![Nuget](https://img.shields.io/nuget/v/groupdocs.conversion) ![Nuget](https://img.shields.io/nuget/dt/groupdocs.conversion) ![GitHub](https://img.shields.io/github/license/groupdocs-conversion/GroupDocs.Conversion-for-.NET)
 # Document Conversion API for .NET
 
 [GroupDocs.Conversion for .NET](https://products.groupdocs.com/conversion/net) is a powerful on-premise library used for documents conversion with flexible options for the resulting document. Convert DOC to PDF, PDF to DOC, XLS to DOC, PDF to XLS, PPT to PDF and many other popular document formats with just a few lines of code.
