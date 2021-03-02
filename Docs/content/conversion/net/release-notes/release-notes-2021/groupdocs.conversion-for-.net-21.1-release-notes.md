@@ -12,33 +12,46 @@ hideChildren: False
 
 ## Major Features
 
-There are 15 features, improvements and bug-fixes in this release, most notable are:
+There are 20+ features, improvements and bug-fixes in this release, most notable are:
 
-*   Conversion from Cgm file format
-*   Improved Cells conversions 
-*   Improved Image conversions
-*   Improved Pdf conversions
+*   Conversion from DWFX file format
+*   Converting word document with form to fillable PDF form 
+*   Converting word documents with BarCode fonts
 
 ## Full List of Issues Covering all Changes in this Release
 
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-1894 | Feature	    | Implement conversion from Cgm |
-| CONVERSIONNET-1905 | Feature	    | Support converting password protected ODS document |
-| CONVERSIONNET-1906 | Feature	    | Support password protection when converting to ODS |
-| CONVERSIONNET-1927 | Feature	    | Implement conversion from Plt |
-| CONVERSIONNET-1928 | Feature	    | Implement conversion from Igs |
-| CONVERSIONNET-1911 | Improvement	| Improve Cells conversion options |
-| CONVERSIONNET-1912 | Improvement	| Improve Html conversion options |
-| CONVERSIONNET-1913 | Improvement	| Improve Image conversion options |
-| CONVERSIONNET-1915 | Improvement	| Improve Pdf conversion options |
-| CONVERSIONNET-1916 | Improvement	| Improve Slides conversion options |
-| CONVERSIONNET-1917 | Improvement	| Improve Words conversion options |
-| CONVERSIONNET-1930 | Improvement	| Pdf to Cells improvement |
-| CONVERSIONNET-1520 | Bug	        | Xps to Pdf conversion issue |
-| CONVERSIONNET-1907 | Bug	        | Excel to SVG conversion issue |
-| CONVERSIONNET-1920 | Bug	        | XLS to HTML output is too small |
+| CONVERSIONNET-3849 | Feature | Implement conversion from DWFX |
+| CONVERSIONNET-4311 | Improvement | Word file with form field conversion to fillable PDF form |
+| CONVERSIONNET-3418 | Bug | Conversion from PDF to PDF3_1 format takes too long |
+| CONVERSIONNET-3900 | Bug | DXF to XLS conversion issue |
+| CONVERSIONNET-4033 | Bug | Can't convert html to pdf |
+| CONVERSIONNET-4046 | Bug | IFC to PDF conversion issue | 
+| CONVERSIONNET-4086 | Bug | Converting a DOCX file with BarCode fonts |
+| CONVERSIONNET-4153 | Bug | PSD to PPT/PPTX conversion issue |
+| CONVERSIONNET-4159 | Bug | EMF to JPG conversion issue |
+| CONVERSIONNET-4219 | Bug | XLSB to XLS conversion issue |
+| CONVERSIONNET-4245 | Bug | Cannot convert particular DXF document |
+| CONVERSIONNET-4246 | Bug | Cannot convert particular Odp document |
+| CONVERSIONNET-4247 | Bug | Cannot convert particular Pptx document |
+| CONVERSIONNET-4256 | Bug | Cannot convert Emf to Png |
+| CONVERSIONNET-4261 | Bug | Cannot convert Xlsb to Xlsx |
+| CONVERSIONNET-4273 | Bug | Issue converting MSG with large images or tables to PDF |
+| CONVERSIONNET-4274 | Bug | Cannot convert particular Xltx document |
+| CONVERSIONNET-4313 | Bug | Cannot convert a particular XLSX to XLSM |
+| CONVERSIONNET-4318 | Bug | DOCX/DOC to XLS conversion issue |
+| CONVERSIONNET-4324 | Bug | Resultant PDF when generated using .NET Core 3.1 is corrupted |
+| CONVERSIONNET-4326 | Bug | DOCX to PDF conversion exception: 'Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')' |
+| CONVERSIONNET-4336 | Bug | PDF to PPT conversion with font substitution |
+| CONVERSIONNET-4339 | Bug | Cannot convert particular XLSX |
+| CONVERSIONNET-4372 | Bug | PDF to PPTX conversion - invalid chracters |
+| CONVERSIONNET-4377 | Bug | Word to HTML conversion issue, additional space in a word |
+| CONVERSIONNET-4391 | Bug | Conversion result file is empty |
+| CONVERSIONNET-4424 | Bug | TIFF to PDF conversion issue |
+| CONVERSIONNET-4425 | Bug | Paragraph splitting issue in PDF to DOCX conversion |
+
 
 
 
