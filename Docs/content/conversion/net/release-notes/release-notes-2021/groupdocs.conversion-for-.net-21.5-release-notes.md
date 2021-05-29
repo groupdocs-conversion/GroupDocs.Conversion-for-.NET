@@ -50,4 +50,15 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 
 ## Public API and Backward Incompatible Changes
 
-None
+1.  **Introduced new class DataConvertOptions**
+2.  **Introduced new class DiagramConvertOptions**
+3.  **Introduced new class ProjectManagementConvertOptions**
+4.  **Introduced new class DataLoadOptions**
+5.  **Introduced new property in class XmlLoadOptions**
+    
+    ```csharp
+    /// <summary>
+    /// Use Xml document as data source
+    /// </summary>
+    public bool UseAsDataSource { get; set; }
+    ```
