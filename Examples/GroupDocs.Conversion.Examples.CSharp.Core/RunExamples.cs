@@ -110,7 +110,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertCsvByConvertingDateTimeAndNumericData.Run();
             // ConvertCsvBySpecifyingDelimiter.Run();
             // ConvertCsvBySpecifyingEncoding.Run();
-
+            
             #endregion
 
             #region Email
@@ -210,6 +210,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // ConvertEachEmailAttachmentToDifferentFormat.Run();
             // ConvertOstDocumentMessagesToDifferentFormats.Run();
+
+            // ConvertCsvToJson.Run();
+            // ConvertCsvToXml.Run();
+            // ConvertJsonAsDataSourceToSpreadsheet.Run();
 
             // ListenConversionStateAndProgress.Run();
 

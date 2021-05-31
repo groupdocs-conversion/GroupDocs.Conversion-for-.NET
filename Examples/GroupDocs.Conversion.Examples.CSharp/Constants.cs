@@ -110,6 +110,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string SAMPLE_XML_DATASOURCE =>
             GetSampleFilePath("sample_datasource.xml");
 
+        // JSON
+        public static string SAMPLE_JSON =>
+            GetSampleFilePath("sample.json");
+
         // Default font
         public static string SAMPLE_DEFAULT_FONT =>
             Path.Combine(FontsPath, "terminal-grotesque_open.otf");

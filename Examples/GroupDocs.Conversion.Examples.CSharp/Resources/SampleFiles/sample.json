@@ -1,0 +1,17 @@
+[
+{"Employee":"David","Quarter":"1","Product":"Maxilaku","Continent":"Asia","Country":"China","Sale":"2000"},
+{"Employee":"David","Quarter":"2","Product":"Maxilaku","Continent":"Asia","Country":"India","Sale":"500"},
+{"Employee":"David","Quarter":"3","Product":"Chai","Continent":"Asia","Country":"Korea","Sale":"1200"},
+{"Employee":"David","Quarter":"4","Product":"Maxilaku","Continent":"Asia","Country":"India","Sale":"1500"},
+{"Employee":"James","Quarter":"1","Product":"Chang","Continent":"Europe","Country":"France","Sale":"500"},
+{"Employee":"James","Quarter":"2","Product":"Chang","Continent":"Europe","Country":"France","Sale":"1500"},
+{"Employee":"James","Quarter":"3","Product":"Chang","Continent":"Europe","Country":"Germany","Sale":"800"},
+{"Employee":"James","Quarter":"4","Product":"Chang","Continent":"Europe","Country":"Italy","Sale":"900"},
+{"Employee":"James","Quarter":"4","Product":"Chang","Continent":"Europe","Country":"France","Sale":"500"},
+{"Employee":"Miya","Quarter":"1","Product":"Geitost","Continent":"America","Country":"U.S.","Sale":"1600"},
+{"Employee":"Miya","Quarter":"1","Product":"Chai","Continent":"America","Country":"U.S.","Sale":"600"},
+{"Employee":"Miya","Quarter":"2","Product":"Geitost","Continent":"America","Country":"Brazil","Sale":"2000"},
+{"Employee":"Miya","Quarter":"2","Product":"Geitost","Continent":"America","Country":"U.S.","Sale":"500"},
+{"Employee":"Miya","Quarter":"2","Product":"Geitost","Continent":"America","Country":"U.S.","Sale":"900"},
+{"Employee":"Total","Quarter":"#NAME?","Product":"","Continent":"","Country":"","Sale":"#NAME?"}
+]

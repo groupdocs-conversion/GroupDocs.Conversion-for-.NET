@@ -14,6 +14,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\AddWatermark.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertNConsecutivePages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertToStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertCsvToJson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertCsvToXml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\GetDefaultLoadOptionsForSourceDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\GetDefaultConvertOptionsForDesiredTargetFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHidingComments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingByHidingTrackedChanges.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingBySpecifyingFontSubstitution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertJsonAsDataSourceToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Xml\ConvertXmlAsDataSourceToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertToHtml.cs" />
@@ -91,6 +94,9 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -204,5 +210,8 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\with_tracked_changes.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Json\" />
   </ItemGroup>
 </Project>
