@@ -171,7 +171,7 @@
       <Version>4.5.1</Version>
     </PackageReference>
     <PackageReference Include="System.Net.Http">
-      <Version>4.3.3</Version>
+      <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="System.Numerics.Vectors">
       <Version>4.4.0</Version>
