@@ -197,4 +197,4 @@ FakesAssemblies/
 *.opt
 deploy_key
 
-#*.lic
+*.lic
