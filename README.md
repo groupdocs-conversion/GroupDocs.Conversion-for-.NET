@@ -12,10 +12,9 @@
 
 Directory | Description
 --------- | -----------
-[Docs](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples)  | Product documentation containing Developer's Guide, Release Notes & more.
-[Demos](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Demos)  | Source code for the live demos hosted at https://products.groupdocs.app/conversion/family.
-[Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples)  | Package contains C# example project & sample documents used in the examples.
-[Showcases](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Showcases)  | The open source UI examples to integrate GroupDocs.Conversion in front end applications. 
+[Docs](https://github.com/groupdocs-conversion/GroupDocs.Conversion-Docs)  | Product documentation containing Developer's Guide, Release Notes & more.
+[Demos](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Demos)  | The open source UI examples to integrate GroupDocs.Conversion in front end applications. Source code for the live demos hosted at https://products.groupdocs.app/conversion/family. 
+[Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Examples)  | Package contains C# example project & sample documents used in the examples. 
 [Plugins](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Plugins)  | Contains Visual Studio plugins related to GroupDocs.Conversion.
 
 ## Document & Image Conversion Features
