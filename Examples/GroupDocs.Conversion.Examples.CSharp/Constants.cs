@@ -118,6 +118,78 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string SAMPLE_DEFAULT_FONT =>
             Path.Combine(FontsPath, "terminal-grotesque_open.otf");
 
+        // BMP
+        public static string SAMPLE_BMP =>
+            GetSampleFilePath("sample.bmp");
+
+        // CGM
+        public static string SAMPLE_CGM =>
+            GetSampleFilePath("sample.cgm");
+        
+        // DICOM
+        public static string SAMPLE_DICOM =>
+            GetSampleFilePath("sample.dcm");
+
+        // EMF
+        public static string SAMPLE_EMF =>
+            GetSampleFilePath("sample.emf");
+
+        // EPUB
+        public static string SAMPLE_EPUB =>
+            GetSampleFilePath("sample.epub");
+
+        // HTML
+        public static string SAMPLE_HTML =>
+            GetSampleFilePath("sample.html");
+
+        // JPG
+        public static string SAMPLE_JPG =>
+            GetSampleFilePath("sample.jpg");
+
+        // MARKDOWN
+        public static string SAMPLE_MD =>
+            GetSampleFilePath("sample.md");
+
+        // MHTML
+        public static string SAMPLE_MHTML =>
+            GetSampleFilePath("sample.mhtml");
+
+        // PCL
+        public static string SAMPLE_PCL =>
+            GetSampleFilePath("sample.pcl");
+
+        // PNG
+        public static string SAMPLE_PNG =>
+            GetSampleFilePath("sample.png");
+
+        // PS
+        public static string SAMPLE_PS =>
+            GetSampleFilePath("sample.ps");
+
+        // SVG
+        public static string SAMPLE_SVG =>
+            GetSampleFilePath("sample.svg");
+
+        // TEX
+        public static string SAMPLE_TEX =>
+            GetSampleFilePath("sample.tex");
+
+        // TIFF
+        public static string SAMPLE_TIFF =>
+            GetSampleFilePath("sample.tiff");
+
+        // XML
+        public static string SAMPLE_XML =>
+            GetSampleFilePath("sample.xml");
+
+        // XPS
+        public static string SAMPLE_XPS =>
+            GetSampleFilePath("sample.xps");
+
+
+
+
+
         private static string GetSampleFilePath(string filePath) =>
             Path.Combine(SamplesPath, filePath);
         

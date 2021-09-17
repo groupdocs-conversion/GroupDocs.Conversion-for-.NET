@@ -73,7 +73,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToJpg.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToPng.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToImage\ConvertToPsd.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertXpsToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertXmlToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertTxtToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertTiffToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertTexToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertSvgToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertPsToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertPngToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertPclToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertMhtmlToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertMarkdownToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertJpgToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertHtmlToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertEpubToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertEmfToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertDicomToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertCgmToPdf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertToPdf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPdf\ConvertBmpToPdf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToPresentation\ConvertToPresentation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToSpreadsheet\ConvertToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToWordProcessing\ConvertToWordProcessing.cs" />
@@ -91,9 +109,36 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Fonts\terminal-grotesque_open.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.tiff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.cgm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.emf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.epub">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -106,6 +151,27 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\shift_jis_encoded.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.mhtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.pcl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.ps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.xps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\embedded-image-and-attachment.eml">

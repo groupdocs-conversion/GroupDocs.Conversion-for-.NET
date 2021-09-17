@@ -47,6 +47,24 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #region Convert document to PDF
 
             // ConvertToPdf.Run();
+            // ConvertBmpToPdf.Run();
+            // ConvertCgmToPdf.Run();
+            // ConvertDicomToPdf.Run();
+            // ConvertEmfToPdf.Run();
+            // ConvertEpubToPdf.Run();
+            // ConvertHtmlToPdf.Run();
+            // ConvertJpgToPdf.Run();
+            // ConvertMarkdownToPdf.Run();
+            // ConvertMhtmlToPdf.Run();
+            // ConvertPclToPdf.Run();
+            // ConvertPngToPdf.Run();
+            // ConvertPsToPdf.Run();
+            // ConvertSvgToPdf.Run();
+            // ConvertTexToPdf.Run();
+            // ConvertTiffToPdf.Run();
+            // ConvertTxtToPdf.Run();
+            // ConvertXmlToPdf.Run();
+            // ConvertXpsToPdf.Run();
 
             #endregion
 
