@@ -1,0 +1,35 @@
+From MAILER-DAEMON Fri Jul  8 12:08:34 2011
+From: Author <author1@example.com>
+To: Recipient <recipient1@example.com>
+Subject: Sample message 1
+Content-Type: text/plain
+MIME-Version: 1.0
+
+This is the body 1.
+
+From MAILER-DAEMON Fri Jul  8 12:08:34 2011
+From: Author <author2@example.com>
+To: Recipient <recipient2@example.com>
+Subject: Sample message 2
+Content-Type: text/plain
+MIME-Version: 1.0
+
+This is the body 2.
+
+From MAILER-DAEMON Fri Jul  8 12:08:34 2011
+From: Author <author3@example.com>
+To: Recipient <recipient3@example.com>
+Subject: Sample message 3
+Content-Type: text/plain
+MIME-Version: 1.0
+
+This is the body 3.
+
+From MAILER-DAEMON Fri Jul  8 12:08:34 2011
+From: Author <author4@example.com>
+To: Recipient <recipient4@example.com>
+Subject: Sample message 4
+Content-Type: text/plain
+MIME-Version: 1.0
+
+This is the body 4.

@@ -66,6 +66,27 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertXmlToPdf.Run();
             // ConvertXpsToPdf.Run();
 
+            //ConvertDwfToPdf.Run();
+            //ConvertDwfxToPdf.Run();
+            //ConvertEmlToPdf.Run();
+            //ConvertEmzToPdf.Run();
+            //ConvertIfcToPdf.Run();
+            //ConvertIgsToPdf.Run();
+            ////ConvertMboxToPdf.Run();
+            //ConvertMppToPdf.Run();
+            //ConvertMsgToPdf.Run();
+            //ConvertOneToPdf.Run();
+            //ConvertOxpsToPdf.Run();
+            //ConvertPpsmToPdf.Run();
+            //ConvertPptmToPdf.Run();
+            ////ConvertPstToPdf.Run();
+            //ConvertStlToPdf.Run();
+            //ConvertTsvToPdf.Run();
+            //ConvertVcfToPdf.Run();
+            //ConvertVsdToPdf.Run();
+            //ConvertVsdxToPdf.Run();
+            //ConvertXlsmToPdf.Run();
+
             #endregion
 
             #region Convert document to Presentation
@@ -129,7 +150,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertCsvByConvertingDateTimeAndNumericData.Run();
             // ConvertCsvBySpecifyingDelimiter.Run();
             // ConvertCsvBySpecifyingEncoding.Run();
-            
+
             #endregion
 
             #region Email
@@ -145,7 +166,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #region Markup
 
             // ConvertMarkupWithAddingPageNumbering.Run();
-            
+
             #endregion
 
             #region Note
@@ -166,9 +187,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // GetFoldersFromPersonalStorage.Run();
             // ConvertPersonalStorageContentToDifferentFormats.Run();
-            
+
             #endregion
-            
+
             #region Presentation
 
             // ConvertPresentationByHidingComments.Run();
@@ -207,7 +228,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #region Xml
 
             // ConvertXmlAsDataSourceToSpreadsheet.Run();
-            
+
             #endregion
 
             #endregion
@@ -234,7 +255,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertCsvToJson.Run();
             // ConvertCsvToXml.Run();
             // ConvertJsonAsDataSourceToSpreadsheet.Run();
-            
+
             // ListenConversionStateAndProgress.Run();
 
             #endregion

@@ -186,9 +186,52 @@ namespace GroupDocs.Conversion.Examples.CSharp
         public static string SAMPLE_XPS =>
             GetSampleFilePath("sample.xps");
 
+        // DWF
+        public static string SAMPLE_DWF => GetSampleFilePath("sample.dwf");
 
+        // DWFX
+        public static string SAMPLE_DWFX => GetSampleFilePath("sample.dwfx");
+        
+        // EMZ
+        public static string SAMPLE_EMZ => GetSampleFilePath("sample.emz");
 
+        // IFC
+        public static string SAMPLE_IFC => GetSampleFilePath("sample.ifc");
 
+        // IGS
+        public static string SAMPLE_IGS => GetSampleFilePath("sample.igs");
+
+        // MBOX
+        public static string SAMPLE_MBOX => GetSampleFilePath("sample.mbox");
+        
+        // OXPS
+        public static string SAMPLE_OXPS => GetSampleFilePath("sample.oxps");
+
+        // PPSM
+        public static string SAMPLE_PPSM => GetSampleFilePath("sample.ppsm");
+
+        // PPTM
+        public static string SAMPLE_PPTM => GetSampleFilePath("sample.pptm");
+
+        // PST
+        public static string SAMPLE_PST => GetSampleFilePath("sample.pst");
+
+        // STL
+        public static string SAMPLE_STL => GetSampleFilePath("sample.stl");
+
+        // TSV
+        public static string SAMPLE_TSV => GetSampleFilePath("sample.tsv");
+
+        // VCF
+        public static string SAMPLE_VCF => GetSampleFilePath("sample.vcf");
+
+        // VSD
+        public static string SAMPLE_VSD => GetSampleFilePath("sample.vsd");
+
+        // XLSM
+        public static string SAMPLE_XLSM => GetSampleFilePath("sample.xlsm");
+
+        /***  -----------------     *************/
 
         private static string GetSampleFilePath(string filePath) =>
             Path.Combine(SamplesPath, filePath);
