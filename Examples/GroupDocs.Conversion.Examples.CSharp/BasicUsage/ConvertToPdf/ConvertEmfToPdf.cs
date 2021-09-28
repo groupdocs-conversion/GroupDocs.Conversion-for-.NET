@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert EMF image to PDF.
+    /// This example demonstrates how to convert EMF file into PDF format.
+    /// For more details about Enhanced Metafile Format (.emf) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-emf-to-pdf
     /// </summary>
     internal static class ConvertEmfToPdf
     {

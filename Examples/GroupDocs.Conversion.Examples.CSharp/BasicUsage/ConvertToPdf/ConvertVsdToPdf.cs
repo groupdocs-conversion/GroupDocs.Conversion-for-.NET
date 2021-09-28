@@ -5,7 +5,9 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert VSD image to PDF.
+    /// This example demonstrates how to convert VSD file into PDF format.
+    /// For more details about Visio Drawing File Format (.vsd) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-vsd-to-pdf
     /// </summary>
     internal static class ConvertVsdToPdf
     {

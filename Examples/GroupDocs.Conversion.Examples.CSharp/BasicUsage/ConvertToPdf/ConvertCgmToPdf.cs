@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert CGM image to PDF.
+    /// This example demonstrates how to convert CGM file into PDF format.
+    /// For more details about Computer Graphics Metafile (.cgm) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-cgm-to-pdf
     /// </summary>
     internal static class ConvertCgmToPdf
     {

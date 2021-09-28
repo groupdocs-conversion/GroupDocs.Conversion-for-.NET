@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert EPUB to PDF.
+    /// This example demonstrates how to convert EPUB file into PDF format.
+    /// For more details about Digital E-Book File Format (.epub) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-epub-to-pdf
     /// </summary>
     internal static class ConvertEpubToPdf
     {
@@ -13,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "epub-converted-to.pdf");
-
+            
             // Load the source EPUB file
             using (Converter converter = new Converter(Constants.SAMPLE_EPUB))
             {

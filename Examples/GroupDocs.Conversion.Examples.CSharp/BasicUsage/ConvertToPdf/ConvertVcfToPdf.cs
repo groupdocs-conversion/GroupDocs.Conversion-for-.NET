@@ -5,7 +5,9 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert VCF image to PDF.
+    /// This example demonstrates how to convert VCF file into PDF format.
+    /// For more details about vCard File (.vcf) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-vcf-to-pdf
     /// </summary>
     internal static class ConvertVcfToPdf
     {

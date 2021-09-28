@@ -5,7 +5,9 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert MPP image to PDF.
+    /// This example demonstrates how to convert MPP file into PDF format.
+    /// For more details about Microsoft Project File (.mpp) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-mpp-to-pdf
     /// </summary>
     internal static class ConvertMppToPdf
     {

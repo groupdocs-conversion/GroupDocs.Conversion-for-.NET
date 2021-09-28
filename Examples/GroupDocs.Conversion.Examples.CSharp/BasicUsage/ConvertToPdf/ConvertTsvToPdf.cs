@@ -5,7 +5,9 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert TSV image to PDF.
+    /// This example demonstrates how to convert TSV file into PDF format.
+    /// For more details about Tab Separated Values File (.tsv) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-tsv-to-pdf
     /// </summary>
     internal static class ConvertTsvToPdf
     {

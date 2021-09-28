@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert SVG to PDF.
+    /// This example demonstrates how to convert SVG file into PDF format.
+    /// For more details about Scalable Vector Graphics File (.svg) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-svg-to-pdf
     /// </summary>
     internal static class ConvertSvgToPdf
     {
@@ -13,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "svg-converted-to.pdf");
-
+            
             // Load the source SVG file
             using (Converter converter = new Converter(Constants.SAMPLE_SVG))
             {

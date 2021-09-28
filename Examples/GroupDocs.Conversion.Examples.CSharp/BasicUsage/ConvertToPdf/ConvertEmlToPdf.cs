@@ -5,7 +5,9 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert EML image to PDF.
+    /// This example demonstrates how to convert EML file into PDF format.
+    /// For more details about E-Mail Message File (.eml) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-eml-to-pdf
     /// </summary>
     internal static class ConvertEmlToPdf
     {

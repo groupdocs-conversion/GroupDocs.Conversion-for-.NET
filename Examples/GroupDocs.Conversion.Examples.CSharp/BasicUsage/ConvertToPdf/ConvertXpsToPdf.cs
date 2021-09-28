@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert XPS to PDF.
+    /// This example demonstrates how to convert XPS file into PDF format.
+    /// For more details about Open XML Paper Specification (.xps) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-xps-to-pdf
     /// </summary>
     internal static class ConvertXpsToPdf
     {
@@ -13,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "xps-converted-to.pdf");
-
+            
             // Load the source XPS file
             using (Converter converter = new Converter(Constants.SAMPLE_XPS))
             {

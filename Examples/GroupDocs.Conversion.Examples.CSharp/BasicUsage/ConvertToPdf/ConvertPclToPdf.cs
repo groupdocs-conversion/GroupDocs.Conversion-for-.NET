@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert PCL to PDF.
+    /// This example demonstrates how to convert PCL file into PDF format.
+    /// For more details about Printer Command Language Document (.pcl) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-pcl-to-pdf
     /// </summary>
     internal static class ConvertPclToPdf
     {
@@ -13,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "pcl-converted-to.pdf");
-
+            
             // Load the source PCL file
             using (Converter converter = new Converter(Constants.SAMPLE_PCL))
             {

@@ -5,7 +5,9 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert IFC image to PDF.
+    /// This example demonstrates how to convert IFC file into PDF format.
+    /// For more details about Industry Foundation Classes (IFC) File Format (.ifc) to Portable Document (.pdf) conversion please check this documentation article 
+    /// https://docs.groupdocs.com/conversion/net/convert-ifc-to-pdf
     /// </summary>
     internal static class ConvertIfcToPdf
     {

@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<office:document office:mimetype="application/vnd.oasis.opendocument.presentation" xmlns:ooo="http://openoffice.org/2004/office" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
+  <office:meta>
+    <meta:generator>Aspose.Slides for .NET</meta:generator>
+    <meta:creation-date>2019-08-27T13:44:09.0000000Z</meta:creation-date>
+    <dc:date>2019-08-27T13:44:09.0000000Z</dc:date>
+    <meta:print-date>2019-08-27T16:44:09.2750000</meta:print-date>
+    <meta:editing-cycles>1</meta:editing-cycles>
+    <meta:editing-duration>PT0H1M0S</meta:editing-duration>
+  </office:meta>
+  <office:settings>
+    <config:config-item-set config:name="ooo:configuration-settings">
+      <config:config-item config:name="LoadReadonly" config:type="boolean">true</config:config-item>
+    </config:config-item-set>
+  </office:settings>
+  <office:styles />
+  <office:automatic-styles>
+    <style:page-layout style:name="pageLayout1">
+      <style:page-layout-properties fo:page-width="25.3984251968504cm" fo:page-height="19.0488188976378cm" style:print-orientation="landscape" />
+    </style:page-layout>
+    <style:page-layout style:name="pageLayout3">
+      <style:page-layout-properties fo:page-width="19.0488188976378cm" fo:page-height="25.3984251968504cm" style:print-orientation="portrait" />
+    </style:page-layout>
+    <style:style style:name="gp3" style:family="drawing-page">
+      <style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" presentation:background-objects-visible="false" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+    </style:style>
+    <style:style style:name="Mgr0" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr1" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" fo:padding-top="0.126992125984252cm" fo:padding-bottom="0.126992125984252cm" fo:padding-left="0.253984251968504cm" fo:padding-right="0.253984251968504cm" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP2" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT3" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="44pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="Mgr4" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr5" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" fo:padding-top="0.126992125984252cm" fo:padding-bottom="0.126992125984252cm" fo:padding-left="0.253984251968504cm" fo:padding-right="0.253984251968504cm" draw:fill="none" />
+    </style:style>
+    <text:list-style style:name="ML6">
+      <text:list-level-style-bullet text:level="1" text:bullet-char="•">
+        <style:list-level-properties text:min-label-width="0.95244094488189cm" />
+        <style:text-properties fo:color="#000000" fo:font-size="100%" />
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <style:style style:name="MP6" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-right="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT7" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="32pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <text:list-style style:name="ML8">
+      <text:list-level-style-bullet text:level="2" text:bullet-char="–">
+        <style:list-level-properties text:space-before="1.26992125984252cm" text:min-label-width="0.793700787401575cm" />
+        <style:text-properties fo:color="#000000" fo:font-size="100%" />
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <style:style style:name="MP8" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-right="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT9" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="28pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <text:list-style style:name="ML10">
+      <text:list-level-style-bullet text:level="3" text:bullet-char="•">
+        <style:list-level-properties text:space-before="2.53984251968504cm" text:min-label-width="0.63496062992126cm" />
+        <style:text-properties fo:color="#000000" fo:font-size="100%" />
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <style:style style:name="MP10" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-right="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT11" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="24pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <text:list-style style:name="ML12">
+      <text:list-level-style-bullet text:level="4" text:bullet-char="–">
+        <style:list-level-properties text:space-before="3.80976377952756cm" text:min-label-width="0.63496062992126cm" />
+        <style:text-properties fo:color="#000000" fo:font-size="100%" />
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <style:style style:name="MP12" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-right="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT13" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="20pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <text:list-style style:name="ML14">
+      <text:list-level-style-bullet text:level="5" text:bullet-char="»">
+        <style:list-level-properties text:space-before="5.07968503937008cm" text:min-label-width="0.63496062992126cm" />
+        <style:text-properties fo:color="#000000" fo:font-size="100%" />
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <style:style style:name="MP14" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-right="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT15" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="20pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="Mgr16" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr17" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" fo:padding-top="0.126992125984252cm" fo:padding-bottom="0.126992125984252cm" fo:padding-left="0.253984251968504cm" fo:padding-right="0.253984251968504cm" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP18" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT19" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="12pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="Mgr20" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr21" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" />
+    </style:style>
+    <style:style style:name="Mgr22" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr23" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" fo:padding-top="0.126992125984252cm" fo:padding-bottom="0.126992125984252cm" fo:padding-left="0.253984251968504cm" fo:padding-right="0.253984251968504cm" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP24" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="right" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT25" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="12pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gp35" style:family="drawing-page">
+      <style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" presentation:background-objects-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+    </style:style>
+    <style:style style:name="Mgr26" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr27" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP28" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT29" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="44pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="Mgr30" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr31" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP32" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT33" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="32pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="Mgr34" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr35" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP36" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="left" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT37" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="12pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="Mgr38" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="Mpr39" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="MP40" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="right" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="MT41" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="12pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gp0" style:family="drawing-page">
+      <style:drawing-page-properties presentation:background-objects-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+      <style:graphic-properties draw:fill="solid" draw:fill-color="#ffffff" />
+    </style:style>
+    <style:style style:name="gr1" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr2" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P3" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T4" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="44pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr5" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr6" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P7" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T8" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="32pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr9" style:family="graphic">
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="pr10" style:family="presentation">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.0705511811023622cm" svg:stroke-color="#385d8a" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" draw:fill="solid" draw:fill-color="#4f81bd" />
+    </style:style>
+    <style:style style:name="P11" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T12" style:family="text">
+      <style:text-properties fo:color="#ffffff" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="18pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr13" style:family="graphic">
+      <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="true" draw:auto-grow-height="true" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" fo:wrap-option="no-wrap" style:protect="position size" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" style:editable="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P14" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="150%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" />
+    </style:style>
+    <style:style style:name="P15" style:family="text">
+      <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ff9999" style:text-line-through-type="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-line-through-text-style="none" style:text-position="0% 100" fo:font-family="Calibri" fo:font-size="0.4in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" fo:text-shadow="0.04in 0in 0pc #000000" style:text-underline-type="none" style:text-underline-style="none" fo:font-weight="bold" style:letter-kerning="true" />
+    </style:style>
+    <style:style style:name="gp16" style:family="drawing-page">
+      <style:drawing-page-properties presentation:background-objects-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+      <style:graphic-properties draw:fill="solid" draw:fill-color="#ffffff" />
+    </style:style>
+    <style:style style:name="gr17" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr18" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P19" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T20" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="44pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr21" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr22" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P23" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T24" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="32pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr25" style:family="graphic">
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="pr26" style:family="presentation">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.0705511811023622cm" svg:stroke-color="#385d8a" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" draw:fill="solid" draw:fill-color="#4f81bd" />
+    </style:style>
+    <style:style style:name="P27" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T28" style:family="text">
+      <style:text-properties fo:color="#ffffff" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="18pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr29" style:family="graphic">
+      <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="true" draw:auto-grow-height="true" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" fo:wrap-option="no-wrap" style:protect="position size" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" style:editable="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P30" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="150%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" />
+    </style:style>
+    <style:style style:name="P31" style:family="text">
+      <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ff9999" style:text-line-through-type="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-line-through-text-style="none" style:text-position="0% 100" fo:font-family="Calibri" fo:font-size="0.4in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" fo:text-shadow="0.04in 0in 0pc #000000" style:text-underline-type="none" style:text-underline-style="none" fo:font-weight="bold" style:letter-kerning="true" />
+    </style:style>
+    <style:style style:name="gp32" style:family="drawing-page">
+      <style:drawing-page-properties presentation:background-objects-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+      <style:graphic-properties draw:fill="solid" draw:fill-color="#ffffff" />
+    </style:style>
+    <style:style style:name="gr33" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr34" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P35" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T36" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="44pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr37" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr38" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P39" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T40" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="32pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr41" style:family="graphic">
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="pr42" style:family="presentation">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.0705511811023622cm" svg:stroke-color="#385d8a" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" draw:fill="solid" draw:fill-color="#4f81bd" />
+    </style:style>
+    <style:style style:name="P43" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T44" style:family="text">
+      <style:text-properties fo:color="#ffffff" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="18pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr45" style:family="graphic">
+      <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="true" draw:auto-grow-height="true" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" fo:wrap-option="no-wrap" style:protect="position size" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" style:editable="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P46" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="150%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" />
+    </style:style>
+    <style:style style:name="P47" style:family="text">
+      <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ff9999" style:text-line-through-type="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-line-through-text-style="none" style:text-position="0% 100" fo:font-family="Calibri" fo:font-size="0.4in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" fo:text-shadow="0.04in 0in 0pc #000000" style:text-underline-type="none" style:text-underline-style="none" fo:font-weight="bold" style:letter-kerning="true" />
+    </style:style>
+    <style:style style:name="gp48" style:family="drawing-page">
+      <style:drawing-page-properties presentation:background-objects-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+      <style:graphic-properties draw:fill="solid" draw:fill-color="#ffffff" />
+    </style:style>
+    <style:style style:name="gr49" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr50" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P51" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T52" style:family="text">
+      <style:text-properties fo:color="#000000" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="44pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr53" style:family="graphic">
+      <style:graphic-properties draw:auto-grow-width="false" draw:auto-grow-height="false" />
+    </style:style>
+    <style:style style:name="pr54" style:family="presentation">
+      <style:graphic-properties draw:stroke="none" fo:wrap-option="wrap" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P55" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="20%" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T56" style:family="text">
+      <style:text-properties fo:color="#898989" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="32pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr57" style:family="graphic">
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="pr58" style:family="presentation">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.0705511811023622cm" svg:stroke-color="#385d8a" draw:textarea-vertical-align="middle" fo:wrap-option="wrap" draw:fill="solid" draw:fill-color="#4f81bd" />
+    </style:style>
+    <style:style style:name="P59" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="100%" fo:text-align="center" fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" />
+    </style:style>
+    <style:style style:name="T60" style:family="text">
+      <style:text-properties fo:color="#ffffff" style:text-outline="false" style:text-position="0% 100%" fo:font-family="'Arial'" style:font-family-asian="'Arial'" style:font-family-complex="'Arial'" fo:font-size="18pt" fo:letter-spacing="normal" style:font-relief="none" />
+    </style:style>
+    <style:style style:name="gr61" style:family="graphic">
+      <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+      <style:graphic-properties draw:stroke="none" draw:auto-grow-width="true" draw:auto-grow-height="true" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" fo:wrap-option="no-wrap" style:protect="position size" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" style:editable="false" draw:fill="none" />
+    </style:style>
+    <style:style style:name="P62" style:family="paragraph">
+      <style:paragraph-properties fo:line-height="150%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb" />
+    </style:style>
+    <style:style style:name="P63" style:family="text">
+      <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#ff9999" style:text-line-through-type="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-line-through-text-style="none" style:text-position="0% 100" fo:font-family="Calibri" fo:font-size="0.4in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" fo:text-shadow="0.04in 0in 0pc #000000" style:text-underline-type="none" style:text-underline-style="none" fo:font-weight="bold" style:letter-kerning="true" />
+    </style:style>
+  </office:automatic-styles>
+  <office:master-styles>
+    <style:master-page style:name="Master1-Slide" style:page-layout-name="pageLayout1" draw:style-name="gp3">
+      <style:header />
+      <style:footer />
+      <draw:frame draw:style-name="Mgr0" presentation:style-name="Mpr1" svg:x="1.26992125984252cm" svg:y="0.76283599132628cm" svg:width="22.8585826771654cm" svg:height="3.1748031496063cm" presentation:class="title" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP2">
+            <text:span text:style-name="MT3">Click to edit Master title style</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr4" presentation:style-name="Mpr5" svg:x="1.26992125984252cm" svg:y="4.44472387118602cm" svg:width="22.8585826771654cm" svg:height="12.5713396592028cm" presentation:class="outline" presentation:placeholder="true">
+        <draw:text-box>
+          <text:list text:style-name="ML6">
+            <text:list-item>
+              <text:p text:style-name="MP6">
+                <text:span text:style-name="MT7">Click to edit Master text styles</text:span>
+              </text:p>
+              <text:list text:style-name="ML8">
+                <text:list-item>
+                  <text:p text:style-name="MP8">
+                    <text:span text:style-name="MT9">Second level</text:span>
+                  </text:p>
+                  <text:list text:style-name="ML10">
+                    <text:list-item>
+                      <text:p text:style-name="MP10">
+                        <text:span text:style-name="MT11">Third level</text:span>
+                      </text:p>
+                      <text:list text:style-name="ML12">
+                        <text:list-item>
+                          <text:p text:style-name="MP12">
+                            <text:span text:style-name="MT13">Fourth level</text:span>
+                          </text:p>
+                          <text:list text:style-name="ML14">
+                            <text:list-item>
+                              <text:p text:style-name="MP14">
+                                <text:span text:style-name="MT15">Fifth level</text:span>
+                              </text:p>
+                            </text:list-item>
+                          </text:list>
+                        </text:list-item>
+                      </text:list>
+                    </text:list-item>
+                  </text:list>
+                </text:list-item>
+              </text:list>
+            </text:list-item>
+          </text:list>
+        </draw:text-box>
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr16" presentation:style-name="Mpr17" svg:x="1.26992125984252cm" svg:y="17.6554330708661cm" svg:width="5.92629921259843cm" svg:height="1.01417322834646cm" presentation:class="date-time" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP18">
+            <text:span text:style-name="MT19">11/7/2009</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr20" presentation:style-name="Mpr21" svg:x="8.67779527559055cm" svg:y="17.6554330708661cm" svg:width="8.04283464566929cm" svg:height="1.01417322834646cm" presentation:class="footer" presentation:placeholder="true">
+        <draw:text-box />
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr22" presentation:style-name="Mpr23" svg:x="18.2022047244094cm" svg:y="17.6554330708661cm" svg:width="5.92629921259843cm" svg:height="1.01417322834646cm" presentation:class="page-number" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP24">
+            <text:span text:style-name="MT25">‹#›</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+    </style:master-page>
+    <style:master-page style:name="Master1-Layout1-title-Title-Slide" style:page-layout-name="pageLayout1" draw:style-name="gp35">
+      <style:header />
+      <style:footer />
+      <draw:frame draw:style-name="Mgr26" presentation:style-name="Mpr27" svg:x="1.26992125984252cm" svg:y="0.76283599132628cm" svg:width="22.8585826771654cm" svg:height="3.1748031496063cm" presentation:class="title" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP28">
+            <text:span text:style-name="MT29">Click to edit Master title style</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr30" presentation:style-name="Mpr31" svg:x="1.26992125984252cm" svg:y="4.44472387118602cm" svg:width="22.8585826771654cm" svg:height="12.5713396592028cm" presentation:class="subtitle" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP32">
+            <text:span text:style-name="MT33">Click to edit Master subtitle style</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr34" presentation:style-name="Mpr35" svg:x="1.26992125984252cm" svg:y="17.6554330708661cm" svg:width="5.92629921259843cm" svg:height="1.01417322834646cm" presentation:class="date-time" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP36">
+            <text:span text:style-name="MT37">11/7/2009</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+      <draw:frame draw:style-name="Mgr38" presentation:style-name="Mpr39" svg:x="18.2022047244094cm" svg:y="17.6554330708661cm" svg:width="5.92629921259843cm" svg:height="1.01417322834646cm" presentation:class="page-number" presentation:placeholder="true">
+        <draw:text-box>
+          <text:p text:style-name="MP40">
+            <text:span text:style-name="MT41">‹#›</text:span>
+          </text:p>
+        </draw:text-box>
+      </draw:frame>
+    </style:master-page>
+  </office:master-styles>
+  <office:body>
+    <office:presentation>
+      <draw:page draw:name="Slide_258" draw:style-name="gp0" draw:master-page-name="Master1-Layout1-title-Title-Slide" draw:id="Slide-258">
+        <draw:frame draw:style-name="gr1" presentation:style-name="pr2" svg:x="1.26992125984252cm" svg:y="0.76283599132628cm" svg:width="22.8585826771654cm" svg:height="3.1748031496063cm" presentation:class="title" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P3">
+              <text:span text:style-name="T4">Click to edit Master title style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr5" presentation:style-name="pr6" svg:x="1.26992125984252cm" svg:y="4.44472387118602cm" svg:width="22.8585826771654cm" svg:height="12.5713396592028cm" presentation:class="subtitle" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P7">
+              <text:span text:style-name="T8">Click to edit Master subtitle style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr9" presentation:style-name="pr10" svg:x="5.29133858267717cm" svg:y="2.64566929133858cm" svg:width="5.29133858267717cm" svg:height="1.76377952755906cm">
+          <draw:text-box>
+            <text:p text:style-name="P11">
+              <text:span text:style-name="T12">Groupdocs Sample Text - Slide 1</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr13" svg:x="3.7956537586122cm" svg:y="7.34437797966905cm" svg:width="7in" svg:height="1.7in">
+          <draw:text-box>
+            <text:p text:style-name="P14">
+              <text:span text:style-name="P15">Evaluation only.</text:span>
+            </text:p>
+            <text:p text:style-name="P14">
+              <text:span text:style-name="P15">Created with Aspose.Slides for .NET 2.0 20.4.</text:span>
+            </text:p>
+            <text:p text:style-name="P14">
+              <text:span text:style-name="P15">Copyright 2004-2020Aspose Pty Ltd.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+      </draw:page>
+      <draw:page draw:name="Slide_260" draw:style-name="gp16" draw:master-page-name="Master1-Layout1-title-Title-Slide" draw:id="Slide-260">
+        <draw:frame draw:style-name="gr17" presentation:style-name="pr18" svg:x="1.26992125984252cm" svg:y="0.76283599132628cm" svg:width="22.8585826771654cm" svg:height="3.1748031496063cm" presentation:class="title" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P19">
+              <text:span text:style-name="T20">Click to edit Master title style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr21" presentation:style-name="pr22" svg:x="1.26992125984252cm" svg:y="4.44472387118602cm" svg:width="22.8585826771654cm" svg:height="12.5713396592028cm" presentation:class="subtitle" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P23">
+              <text:span text:style-name="T24">Click to edit Master subtitle style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr25" presentation:style-name="pr26" svg:x="5.29133858267717cm" svg:y="2.64566929133858cm" svg:width="5.29133858267717cm" svg:height="1.76377952755906cm">
+          <draw:text-box>
+            <text:p text:style-name="P27">
+              <text:span text:style-name="T28">Groupdocs Sample Text - Slide 2</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr29" svg:x="3.7956537586122cm" svg:y="7.34437797966905cm" svg:width="7in" svg:height="1.7in">
+          <draw:text-box>
+            <text:p text:style-name="P30">
+              <text:span text:style-name="P31">Evaluation only.</text:span>
+            </text:p>
+            <text:p text:style-name="P30">
+              <text:span text:style-name="P31">Created with Aspose.Slides for .NET 2.0 20.4.</text:span>
+            </text:p>
+            <text:p text:style-name="P30">
+              <text:span text:style-name="P31">Copyright 2004-2020Aspose Pty Ltd.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+      </draw:page>
+      <draw:page draw:name="Slide_262" draw:style-name="gp32" draw:master-page-name="Master1-Layout1-title-Title-Slide" draw:id="Slide-262">
+        <draw:frame draw:style-name="gr33" presentation:style-name="pr34" svg:x="1.26992125984252cm" svg:y="0.76283599132628cm" svg:width="22.8585826771654cm" svg:height="3.1748031496063cm" presentation:class="title" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P35">
+              <text:span text:style-name="T36">Click to edit Master title style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr37" presentation:style-name="pr38" svg:x="1.26992125984252cm" svg:y="4.44472387118602cm" svg:width="22.8585826771654cm" svg:height="12.5713396592028cm" presentation:class="subtitle" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P39">
+              <text:span text:style-name="T40">Click to edit Master subtitle style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr41" presentation:style-name="pr42" svg:x="5.29133858267717cm" svg:y="2.64566929133858cm" svg:width="5.29133858267717cm" svg:height="1.76377952755906cm">
+          <draw:text-box>
+            <text:p text:style-name="P43">
+              <text:span text:style-name="T44">Groupdocs Sample Text - Slide 3</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr45" svg:x="3.7956537586122cm" svg:y="7.34437797966905cm" svg:width="7in" svg:height="1.7in">
+          <draw:text-box>
+            <text:p text:style-name="P46">
+              <text:span text:style-name="P47">Evaluation only.</text:span>
+            </text:p>
+            <text:p text:style-name="P46">
+              <text:span text:style-name="P47">Created with Aspose.Slides for .NET 2.0 20.4.</text:span>
+            </text:p>
+            <text:p text:style-name="P46">
+              <text:span text:style-name="P47">Copyright 2004-2020Aspose Pty Ltd.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+      </draw:page>
+      <draw:page draw:name="Slide_264" draw:style-name="gp48" draw:master-page-name="Master1-Layout1-title-Title-Slide" draw:id="Slide-264">
+        <draw:frame draw:style-name="gr49" presentation:style-name="pr50" svg:x="1.26992125984252cm" svg:y="0.76283599132628cm" svg:width="22.8585826771654cm" svg:height="3.1748031496063cm" presentation:class="title" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P51">
+              <text:span text:style-name="T52">Click to edit Master title style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr53" presentation:style-name="pr54" svg:x="1.26992125984252cm" svg:y="4.44472387118602cm" svg:width="22.8585826771654cm" svg:height="12.5713396592028cm" presentation:class="subtitle" presentation:placeholder="true">
+          <draw:text-box>
+            <text:p text:style-name="P55">
+              <text:span text:style-name="T56">Click to edit Master subtitle style</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr57" presentation:style-name="pr58" svg:x="5.29133858267717cm" svg:y="2.64566929133858cm" svg:width="5.29133858267717cm" svg:height="1.76377952755906cm">
+          <draw:text-box>
+            <text:p text:style-name="P59">
+              <text:span text:style-name="T60">Groupdocs Sample Text - Slide 4</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr61" svg:x="3.7956537586122cm" svg:y="7.34437797966905cm" svg:width="7in" svg:height="1.7in">
+          <draw:text-box>
+            <text:p text:style-name="P62">
+              <text:span text:style-name="P63">Evaluation only.</text:span>
+            </text:p>
+            <text:p text:style-name="P62">
+              <text:span text:style-name="P63">Created with Aspose.Slides for .NET 2.0 20.4.</text:span>
+            </text:p>
+            <text:p text:style-name="P62">
+              <text:span text:style-name="P63">Copyright 2004-2020Aspose Pty Ltd.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+      </draw:page>
+    </office:presentation>
+  </office:body>
+</office:document>
