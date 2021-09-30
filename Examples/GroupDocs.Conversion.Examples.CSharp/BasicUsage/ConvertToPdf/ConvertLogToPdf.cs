@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "log-converted-to.pdf");
             
             // Load the source LOG file
-            using (Converter converter = new Converter(Constants.SAMPLE_LOG))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_LOG))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

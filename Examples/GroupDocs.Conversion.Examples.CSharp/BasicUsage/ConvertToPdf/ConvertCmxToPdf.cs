@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "cmx-converted-to.pdf");
             
             // Load the source CMX file
-            using (Converter converter = new Converter(Constants.SAMPLE_CMX))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_CMX))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

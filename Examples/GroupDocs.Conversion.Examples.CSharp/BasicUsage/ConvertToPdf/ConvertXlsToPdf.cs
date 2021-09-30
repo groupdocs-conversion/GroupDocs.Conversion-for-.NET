@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "xls-converted-to.pdf");
             
             // Load the source XLS file
-            using (Converter converter = new Converter(Constants.SAMPLE_XLS))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_XLS))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

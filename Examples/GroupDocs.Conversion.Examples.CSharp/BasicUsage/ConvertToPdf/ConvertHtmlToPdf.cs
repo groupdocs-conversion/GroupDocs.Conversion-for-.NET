@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "html-converted-to.pdf");
             
             // Load the source HTML file
-            using (Converter converter = new Converter(Constants.SAMPLE_HTML))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_HTML))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

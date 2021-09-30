@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "ifc-converted-to.pdf");
             
             // Load the source IFC file
-            using (Converter converter = new Converter(Constants.SAMPLE_IFC))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_IFC))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

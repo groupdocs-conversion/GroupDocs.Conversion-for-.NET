@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "vdx-converted-to.pdf");
             
             // Load the source VDX file
-            using (Converter converter = new Converter(Constants.SAMPLE_VDX))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_VDX))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

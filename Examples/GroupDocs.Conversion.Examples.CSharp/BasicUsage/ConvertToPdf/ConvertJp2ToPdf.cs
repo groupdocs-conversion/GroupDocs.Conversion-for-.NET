@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "jp2-converted-to.pdf");
             
             // Load the source JP2 file
-            using (Converter converter = new Converter(Constants.SAMPLE_JP2))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_JP2))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "msg-converted-to.pdf");
             
             // Load the source MSG file
-            using (Converter converter = new Converter(Constants.SAMPLE_MSG))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MSG))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

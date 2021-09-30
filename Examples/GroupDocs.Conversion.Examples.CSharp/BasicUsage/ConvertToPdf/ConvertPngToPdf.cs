@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "png-converted-to.pdf");
             
             // Load the source PNG file
-            using (Converter converter = new Converter(Constants.SAMPLE_PNG))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PNG))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

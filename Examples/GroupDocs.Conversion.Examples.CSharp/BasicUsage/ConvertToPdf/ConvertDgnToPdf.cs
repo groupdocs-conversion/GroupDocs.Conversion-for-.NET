@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "dgn-converted-to.pdf");
             
             // Load the source DGN file
-            using (Converter converter = new Converter(Constants.SAMPLE_DGN))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_DGN))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "dib-converted-to.pdf");
             
             // Load the source DIB file
-            using (Converter converter = new Converter(Constants.SAMPLE_DIB))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_DIB))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

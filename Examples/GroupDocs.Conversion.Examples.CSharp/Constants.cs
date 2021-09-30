@@ -5,7 +5,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 {
     internal static class Constants
     {
-        public const string LicensePath = "./Resources/GroupDocs.Conversion.lic";
+        public const string LicensePath = @"C:\GroupDocs\Licenses\Conholdate\Total\Subscription\Valid\Conholdate.Total.Product.Family.lic";
         public const string SamplesPath = @"./Resources/SampleFiles";
         public const string FontsPath = @"./Resources/Fonts";
         public const string OutputPath = @"./Output";

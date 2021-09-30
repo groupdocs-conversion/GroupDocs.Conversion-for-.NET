@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "gif-converted-to.pdf");
             
             // Load the source GIF file
-            using (Converter converter = new Converter(Constants.SAMPLE_GIF))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_GIF))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }

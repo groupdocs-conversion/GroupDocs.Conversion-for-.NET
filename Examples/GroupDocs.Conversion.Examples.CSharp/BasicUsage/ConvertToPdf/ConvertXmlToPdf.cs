@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "xml-converted-to.pdf");
             
             // Load the source XML file
-            using (Converter converter = new Converter(Constants.SAMPLE_XML))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_XML))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                var options = new PdfConvertOptions();
                 // Save converted PDF file
                 converter.Convert(outputFile, options);
             }
