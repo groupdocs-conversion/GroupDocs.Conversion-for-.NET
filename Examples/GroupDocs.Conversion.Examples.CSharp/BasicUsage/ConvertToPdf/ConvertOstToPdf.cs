@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using GroupDocs.Conversion.FileTypes;
 using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Options.Load;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
@@ -14,14 +16,20 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         public static void Run()
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
-            string outputFile = Path.Combine(outputFolder, "ost-converted-to.pdf");
+            string outputFile = Path.Combine(outputFolder, "ost-converted-{0}-to.pdf");
             
             // Load the source OST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == PersonalStorageFileType.Ost 
+                                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                                : null))
             {
                 var options = new PdfConvertOptions();
+                var counter = 1;
                 // Save converted PDF file
-                converter.Convert(outputFile, options);
+                converter.Convert(
+                    (FileType fyleType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+                    options
+                );
             }
 
             Console.WriteLine("\nConversion to pdf completed successfully. \nCheck output in {0}", outputFolder);
