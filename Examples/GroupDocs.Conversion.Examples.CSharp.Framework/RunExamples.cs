@@ -428,6 +428,94 @@ namespace GroupDocs.Conversion.Examples.CSharp
             //ConvertXpsToXlsx.Run();
             #endregion
 
+            #region Convert to CSV
+            //ConvertCf2ToCsv.Run();
+            //ConvertDgnToCsv.Run();
+            //ConvertDocmToCsv.Run();
+            //ConvertDocToCsv.Run();
+            //ConvertDocxToCsv.Run();
+            //ConvertDotmToCsv.Run();
+            //ConvertDotToCsv.Run();
+            //ConvertDotxToCsv.Run();
+            //ConvertDwfToCsv.Run();
+            //ConvertDwfxToCsv.Run();
+            //ConvertDwgToCsv.Run();
+            //ConvertDwtToCsv.Run();
+            //ConvertDxfToCsv.Run();
+            //ConvertEmlToCsv.Run();
+            //ConvertEmlxToCsv.Run();
+            //ConvertEpubToCsv.Run();
+            //ConvertFodpToCsv.Run();
+            //ConvertFodsToCsv.Run();
+            //ConvertHtmlToCsv.Run();
+            //ConvertHtmToCsv.Run();
+            //ConvertIfcToCsv.Run();
+            //ConvertIgsToCsv.Run();
+            //ConvertLogToCsv.Run();
+            ////ConvertMboxToCsv.Run();
+            //ConvertMdToCsv.Run();
+            //ConvertMhtmlToCsv.Run();
+            //ConvertMhtToCsv.Run();
+            //ConvertMobiToCsv.Run();
+            //ConvertMppToCsv.Run();
+            //ConvertMptToCsv.Run();
+            //ConvertMpxToCsv.Run();
+            //ConvertMsgToCsv.Run();
+            //ConvertOdpToCsv.Run();
+            //ConvertOdsToCsv.Run();
+            //ConvertOdtToCsv.Run();
+            //ConvertOneToCsv.Run();
+            ////ConvertOstToCsv.Run();
+            //ConvertOtpToCsv.Run();
+            //ConvertOtsToCsv.Run();
+            //ConvertOttToCsv.Run();
+            //ConvertOxpsToCsv.Run();
+            //ConvertPclToCsv.Run();
+            //ConvertPdfToCsv.Run();
+            //ConvertPltToCsv.Run();
+            //ConvertPotmToCsv.Run();
+            //ConvertPotToCsv.Run();
+            //ConvertPotxToCsv.Run();
+            //ConvertPpsmToCsv.Run();
+            //ConvertPpsToCsv.Run();
+            //ConvertPpsxToCsv.Run();
+            //ConvertPptmToCsv.Run();
+            //ConvertPptToCsv.Run();
+            //ConvertPptxToCsv.Run();
+            //ConvertPsToCsv.Run();
+            ////ConvertPstToCsv.Run();
+            //ConvertRtfToCsv.Run();
+            //ConvertStlToCsv.Run();
+            //ConvertSxcToCsv.Run();
+            //ConvertTexToCsv.Run();
+            //ConvertTsvToCsv.Run();
+            //ConvertTxtToCsv.Run();
+            //ConvertVcfToCsv.Run();
+            //ConvertVdwToCsv.Run();
+            //ConvertVdxToCsv.Run();
+            //ConvertVsdmToCsv.Run();
+            //ConvertVsdToCsv.Run();
+            //ConvertVsdxToCsv.Run();
+            //ConvertVssmToCsv.Run();
+            //ConvertVssToCsv.Run();
+            //ConvertVssxToCsv.Run();
+            //ConvertVstmToCsv.Run();
+            //ConvertVstToCsv.Run();
+            //ConvertVstxToCsv.Run();
+            //ConvertVsxToCsv.Run();
+            //ConvertVtxToCsv.Run();
+            //ConvertXlamToCsv.Run();
+            //ConvertXlsbToCsv.Run();
+            //ConvertXlsmToCsv.Run();
+            //ConvertXlsToCsv.Run();
+            //ConvertXlsxToCsv.Run();
+            //ConvertXltmToCsv.Run();
+            //ConvertXltToCsv.Run();
+            //ConvertXltxToCsv.Run();
+            //ConvertXmlToCsv.Run();
+            //ConvertXpsToCsv.Run();
+            #endregion
+            
             #endregion
 
             #region Convert document to WordProcessing
