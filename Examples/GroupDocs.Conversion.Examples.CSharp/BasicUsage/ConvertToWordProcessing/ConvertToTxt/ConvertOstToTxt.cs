@@ -19,21 +19,18 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "ost-converted-{0}-to.txt");
             
             // Load the source OST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == PersonalStorageFileType.Ost 
-                                                                                                            ? new PersonalStorageLoadOptions()
-                                                                                                            : null))
-            {
-                var options = new WordProcessingConvertOptions
-                {
-                    Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt
-                };
-                var counter = 1;
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == PersonalStorageFileType.Ost
+                                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                                : null))
+	        {
+                WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt };
+		        var counter = 1;
                 // Save converted TXT file
                 converter.Convert(
-                    (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
-                );
-            }
+                );            
+	        }
 
             Console.WriteLine("\nConversion to txt completed successfully. \nCheck output in {0}", outputFolder);
         }

@@ -20,17 +20,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             
             // Load the source OST file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == PersonalStorageFileType.Ost
-                                                                                                            ? new PersonalStorageLoadOptions()
-                                                                                                            : null))
-            {
-                WordProcessingConvertOptions options = new WordProcessingConvertOptions
-                {
-                    Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc
-                };
-                var counter = 1;
+                                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                                : null))
+	        {
+                WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc };
+		        var counter = 1;
                 // Save converted DOC file
-                converter.Convert((FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create), options);
-            }
+                converter.Convert(
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+                    options
+                );            
+	        }
 
             Console.WriteLine("\nConversion to doc completed successfully. \nCheck output in {0}", outputFolder);
         }

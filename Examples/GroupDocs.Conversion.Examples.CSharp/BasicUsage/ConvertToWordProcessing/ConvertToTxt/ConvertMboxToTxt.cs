@@ -22,18 +22,15 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX, fileType => fileType == EmailFileType.Mbox
                                                                                                                 ? new MboxLoadOptions()
                                                                                                                 : null))
-            {
-                WordProcessingConvertOptions options = new WordProcessingConvertOptions
-                {
-                    Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt
-                };
-                var counter = 1;
+	        {
+                WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt };
+		        var counter = 1;
                 // Save converted TXT file
                 converter.Convert(
-                    (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
-                );
-            }
+                );            
+	        }
 
             Console.WriteLine("\nConversion to txt completed successfully. \nCheck output in {0}", outputFolder);
         }

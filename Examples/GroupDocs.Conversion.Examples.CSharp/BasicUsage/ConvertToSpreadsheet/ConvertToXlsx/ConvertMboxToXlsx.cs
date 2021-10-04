@@ -20,17 +20,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             
             // Load the source MBOX file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX, fileType => fileType == EmailFileType.Mbox
-                                                                                                            ? new MboxLoadOptions()
-                                                                                                            : null ))
-            {
+                                                                                                                ? new MboxLoadOptions()
+                                                                                                                : null))
+	        {
                 var options = new SpreadsheetConvertOptions();
-                var counter = 1;
+		        var counter = 1;
                 // Save converted XLSX file
                 converter.Convert(
-                    (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
-                );
-            }
+                );            
+	        }
 
             Console.WriteLine("\nConversion to xlsx completed successfully. \nCheck output in {0}", outputFolder);
         }

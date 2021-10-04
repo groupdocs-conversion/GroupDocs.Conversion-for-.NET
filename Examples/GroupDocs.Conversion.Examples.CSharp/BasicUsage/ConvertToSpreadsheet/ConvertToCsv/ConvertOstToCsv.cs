@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using GroupDocs.Conversion.FileTypes;
 using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Options.Load;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
@@ -14,15 +16,21 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         public static void Run()
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
-            string outputFile = Path.Combine(outputFolder, "ost-converted-to.csv");
+            string outputFile = Path.Combine(outputFolder, "ost-converted-{0}-to.csv");
             
             // Load the source OST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST))
-            {
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == PersonalStorageFileType.Ost
+                                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                                : null))
+	        {
                 SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+		        var counter = 1;
                 // Save converted CSV file
-                converter.Convert(outputFile, options);
-            }
+                converter.Convert(
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+                    options
+                );            
+	        }
 
             Console.WriteLine("\nConversion to csv completed successfully. \nCheck output in {0}", outputFolder);
         }

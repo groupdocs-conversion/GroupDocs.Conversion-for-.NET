@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.IO.Packaging;
 using GroupDocs.Conversion.FileTypes;
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
@@ -21,20 +20,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             
             // Load the source MBOX file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX, fileType => fileType == EmailFileType.Mbox
-                                                                                                            ? new MboxLoadOptions()
-                                                                                                            : null ))
-            {
-                var options = new SpreadsheetConvertOptions
-                {
-                    Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls
-                };
-                var counter = 1;
+                                                                                                                ? new MboxLoadOptions()
+                                                                                                                : null))
+	        {
+                SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls };
+		        var counter = 1;
                 // Save converted XLS file
                 converter.Convert(
-                    (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
-                );
-            }
+                );            
+	        }
 
             Console.WriteLine("\nConversion to xls completed successfully. \nCheck output in {0}", outputFolder);
         }

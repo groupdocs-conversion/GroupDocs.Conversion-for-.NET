@@ -20,17 +20,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             
             // Load the source PST file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, fileType => fileType == PersonalStorageFileType.Pst
-                                                                                                            ? new PersonalStorageLoadOptions()
-                                                                                                            : null))
-            {
+                                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                                : null))
+	        {
                 var options = new WordProcessingConvertOptions();
-                var counter = 1;
+		        var counter = 1;
                 // Save converted DOCX file
                 converter.Convert(
-                    (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
-                );
-            }
+                );            
+	        }
 
             Console.WriteLine("\nConversion to docx completed successfully. \nCheck output in {0}", outputFolder);
         }
