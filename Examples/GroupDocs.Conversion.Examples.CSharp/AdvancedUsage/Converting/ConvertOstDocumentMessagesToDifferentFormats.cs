@@ -23,8 +23,6 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 {
                     return new PersonalStorageLoadOptions
                     {
-                        ConvertOwned = true,
-                        ConvertOwner = false,
                         Folder = @"Root - Mailbox", 
                         Depth = 2
                     };

@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using GroupDocs.Conversion.FileTypes;
 using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Options.Load;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
@@ -14,14 +16,23 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         public static void Run()
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
-            string outputFile = Path.Combine(outputFolder, "mbox-converted-to.doc");
+            string outputFile = Path.Combine(outputFolder, "mbox-converted-{0}-to.doc");
             
             // Load the source MBOX file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX))
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX, fileType => fileType == EmailFileType.Mbox 
+                                                                                                            ? new MboxLoadOptions()
+                                                                                                            : null))
             {
-                WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc };
+                var options = new WordProcessingConvertOptions
+                {
+                    Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc
+                };
+                var counter = 1;
                 // Save converted DOC file
-                converter.Convert(outputFile, options);
+                converter.Convert(
+                    (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+                    options
+                );
             }
 
             Console.WriteLine("\nConversion to doc completed successfully. \nCheck output in {0}", outputFolder);
