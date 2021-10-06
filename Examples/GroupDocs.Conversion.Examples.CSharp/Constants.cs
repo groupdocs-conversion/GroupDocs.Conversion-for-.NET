@@ -39,7 +39,8 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         // DICOM
         public static string SAMPLE_DICOM => GetSampleFilePath("sample.dcm");
-
+        public static string SAMPLE_DCM => GetSampleFilePath("sample.dcm");
+        
         // DJVU
         public static string SAMPLE_DJVU => GetSampleFilePath("sample.djvu");
 
