@@ -19,9 +19,8 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             {
                 PdfConvertOptions options = new PdfConvertOptions
                 {
-                    Watermark = new WatermarkOptions
+                    Watermark = new WatermarkTextOptions("Sample watermark")
                     {
-                        Text = "Sample watermark",
                         Color = Color.Red,
                         Width = 100,
                         Height = 100,
