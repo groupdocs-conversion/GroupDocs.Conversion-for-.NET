@@ -658,7 +658,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertDngToPdf.Run();
             // ConvertDocToPdf.Run();
             // ConvertDocmToPdf.Run();
-            // ConvertDocxToPdf.Run();np
+            // ConvertDocxToPdf.Run();
             // ConvertDotToPdf.Run();
             // ConvertDotmToPdf.Run();
             // ConvertDotxToPdf.Run();
@@ -2005,6 +2005,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertJsonAsDataSourceToSpreadsheet.Run();
 
             // ListenConversionStateAndProgress.Run();
+
+            #endregion
+
+            #region Fluent syntax
+
+            // HelloWorldFluent.Run();
+            // GetPossibleConversionsFluent.Run();
+            // LoadPasswordProtectedDocument.Run();
 
             #endregion
 

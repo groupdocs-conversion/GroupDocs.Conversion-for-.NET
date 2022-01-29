@@ -68,6 +68,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\WordProcessing\ConvertWordProcessingBySpecifyingFontSubstitution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertJsonAsDataSourceToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Xml\ConvertXmlAsDataSourceToSpreadsheet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocumentFluent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertAiToHtml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertBmpToHtml.cs" />
@@ -1829,10 +1830,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToWordProcessing\ConvertToTxt\ConvertXpsToTxt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToWordProcessing\ConvertToWordProcessing.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetAllPossibleConversions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetPossibleConversionsFluent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetPossibleConversions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetPossibleConversionsForSpecifiedDocumentExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetSourceDocumentInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorldFluent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromStream.cs" />

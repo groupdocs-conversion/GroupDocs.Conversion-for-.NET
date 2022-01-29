@@ -2008,6 +2008,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region Fluent syntax
+
+            // HelloWorldFluent.Run();
+            // GetPossibleConversionsFluent.Run();
+            // LoadPasswordProtectedDocument.Run();
+
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("All done.");
             Console.ReadKey();
