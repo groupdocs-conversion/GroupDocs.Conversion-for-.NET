@@ -5,9 +5,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using GroupDocs.Conversion.Caching;
 using GroupDocs.Conversion.Options.Convert;
 using StackExchange.Redis;
@@ -24,7 +21,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputDirectory = Constants.GetOutputDirectoryPath();
 
             RedisCache cache = new RedisCache("sample_");
-            Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
+            Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
                 Cache = cache
             };

@@ -15,19 +15,12 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-#if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
                 ConvertOwned = false,
                 TimeZoneOffset = TimeSpan.FromHours(5)
             };
-#else
-            Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
-            {
-                ConvertOwned = false,
-                TimeZoneOffset = TimeSpan.FromHours(5)
-            };
-#endif
+
             using (Converter converter = new Converter(Constants.SAMPLE_EML, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

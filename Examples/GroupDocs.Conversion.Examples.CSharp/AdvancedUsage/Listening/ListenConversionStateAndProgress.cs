@@ -34,7 +34,6 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-#if NETCOREAPP
             Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
                 Listener = new ConverterListener()
@@ -45,17 +44,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 Password = "12345"
             };
            
-#else     
-            Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
-            {
-                Listener = new ConverterListener()
-            };
 
-            Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
-            {
-                Password = "12345"
-            };
-#endif
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_PASSWORD, getLoadOptions, settingsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

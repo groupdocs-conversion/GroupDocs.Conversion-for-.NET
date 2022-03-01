@@ -15,17 +15,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-#if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
             {
                 HideWordTrackedChanges = true
             };
-#else
-            Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
-            {
-                HideWordTrackedChanges = true
-            };
-#endif
+
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_TRACKED_CHANGES, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

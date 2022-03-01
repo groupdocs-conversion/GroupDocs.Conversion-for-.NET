@@ -18,17 +18,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             
             FileCache cache = new FileCache(cachePath);
 
-#if NETCOREAPP
             Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
                 Cache = cache
             };
-#else
-            Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
-            {
-                Cache = cache
-            };
-#endif
+
             using (Converter converter = new Converter(Constants.SAMPLE_PDF, settingsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();

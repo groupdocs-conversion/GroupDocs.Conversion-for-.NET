@@ -15,17 +15,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.docx");
 
-#if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new MarkupLoadOptions
             {
                 PageNumbering = true
             };
-#else
-            Contracts.Func<LoadOptions> getLoadOptions = () => new MarkupLoadOptions
-            {
-                PageNumbering = true
-            };
-#endif
+
             using (Converter converter = new Converter(Constants.SAMPLE_MARKUP, getLoadOptions))
             {
                 WordProcessingConvertOptions options = new WordProcessingConvertOptions();

@@ -13,7 +13,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         public static void Run()
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
-#if NETCOREAPP
+
             Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
             {
                 ConvertOwner = true,
@@ -21,15 +21,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 // convert email itself and the attachments 
                 Depth = 2
             };
-#else
-            Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
-            {
-                ConvertOwner = true,
-                ConvertOwned = true,
-                // convert email itself and the attachments 
-                Depth = 2
-            };
-#endif
+
             using (Converter converter = new Converter(Constants.SAMPLE_EML_WITH_ATTACHMENT, getLoadOptions))
             {
                 int index = 1;

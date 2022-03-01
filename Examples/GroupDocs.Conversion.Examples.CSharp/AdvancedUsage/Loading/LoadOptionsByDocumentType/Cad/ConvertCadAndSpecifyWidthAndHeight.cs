@@ -15,19 +15,12 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-#if NETCOREAPP
             Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
             {
                 Width = 1920,
                 Height = 1080
             };
-#else
-            Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
-            {
-                Width = 1920,
-                Height = 1080
-            };
-#endif
+
             using (Converter converter = new Converter(Constants.SAMPLE_DWG_WITH_LAYOUTS_AND_LAYERS, getLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
