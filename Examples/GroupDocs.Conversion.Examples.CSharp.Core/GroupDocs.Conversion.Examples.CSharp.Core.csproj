@@ -2,21 +2,22 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE;NETCOREAPP</DefineConstants>
+    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
   <Import Project="..\GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.S3" Version="3.5.4" />
-    <PackageReference Include="GroupDocs.Conversion" Version="22.2.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.1.58" />
-    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+    <PackageReference Include="Aspose.OCR" Version="22.4.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.8.23" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.11.0" />
+    <PackageReference Include="GroupDocs.Conversion" Version="22.4.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.5.61" />
   </ItemGroup>
 
 </Project>

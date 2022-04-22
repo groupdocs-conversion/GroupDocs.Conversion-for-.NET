@@ -1,10 +1,7 @@
-﻿#if !NETCOREAPP         
-using System;
+﻿using System;
 using System.IO;
+using Azure.Storage.Blobs;
 using GroupDocs.Conversion.Options.Convert;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 {
@@ -30,32 +27,33 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 
         public static Stream DownloadFile(string blobName)
         {
-            CloudBlobContainer container = GetContainer();
+            BlobContainerClient container = GetContainer();
 
-            CloudBlob blob = container.GetBlobReference(blobName);
+            BlobClient blob = container.GetBlobClient(blobName);
             MemoryStream memoryStream = new MemoryStream();
-            blob.DownloadToStream(memoryStream);
+            blob.DownloadTo(memoryStream);
             memoryStream.Position = 0;
             return memoryStream;
         }
 
-        private static CloudBlobContainer GetContainer()
+        private static BlobContainerClient GetContainer()
         {
-            string accountName = "***";
-            string accountKey = "***";
-            string endpoint = $"https://{accountName}.blob.core.windows.net/";
+            // Get a connection string to our Azure Storage account.  You can
+            // obtain your connection string from the Azure Portal (click
+            // Access Keys under Settings in the Portal Storage account blade)
+            // or using the Azure CLI with:
+            //
+            //     az storage account show-connection-string --name <account_name> --resource-group <resource_group>
+            //
+            // And you can provide the connection string to your application
+            // using an environment variable.
+            string connectionString = "<connection_string>";
             string containerName = "***";
 
-            StorageCredentials storageCredentials = new StorageCredentials(accountName, accountKey);
-            CloudStorageAccount cloudStorageAccount = new CloudStorageAccount(
-                storageCredentials, new Uri(endpoint), null, null, null);
-            CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
-
-            CloudBlobContainer container = cloudBlobClient.GetContainerReference(containerName);
+            BlobContainerClient container = new BlobContainerClient(connectionString, containerName);
             container.CreateIfNotExists();
 
             return container;
         }
     }
 }
-#endif

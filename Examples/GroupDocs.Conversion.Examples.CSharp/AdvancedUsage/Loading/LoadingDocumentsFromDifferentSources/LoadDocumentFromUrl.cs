@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Net;
+using System.Net.Http;
 using GroupDocs.Conversion.Options.Convert;
 
 namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
@@ -27,18 +27,21 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 
         private static Stream GetRemoteFile(string url)
         {
-            WebRequest request = WebRequest.Create(url);
-
-            using (WebResponse response = request.GetResponse())
+            var client = new HttpClient();
+            
+            using (HttpResponseMessage response = client.GetAsync(url).Result)
                 return GetFileStream(response);
         }
 
-        private static Stream GetFileStream(WebResponse response)
+        private static Stream GetFileStream(HttpResponseMessage response)
         {
             MemoryStream fileStream = new MemoryStream();
 
-            using (Stream responseStream = response.GetResponseStream())
-                responseStream.CopyTo(fileStream);
+            using (HttpContent content = response.Content)
+            {
+                using (Stream responseStream = content.ReadAsStreamAsync().Result)
+                    responseStream.CopyTo(fileStream);
+            }
 
             fileStream.Position = 0;
             return fileStream;

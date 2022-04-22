@@ -1919,7 +1919,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #endregion
 
             #region Note
-
+            
             // ConvertNoteBySpecifyingFontSubstitution.Run();
 
             #endregion
@@ -1992,6 +1992,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // ConvertToHtmlWithAdvancedOptions.Run();
             // ConvertToImageWithAdvancedOptions.Run();
+            // ConvertImageUsingOcr.Run();
             // ConvertToPdfWithAdvancedOptions.Run();
             // ConvertToPresentationWithAdvancedOptions.Run();
             // ConvertToSpreadsheetWithAdvancedOptions.Run();

@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertToStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertCsvToJson.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertCsvToXml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertImageUsingOcr.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\GetDefaultLoadOptionsForSourceDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\GetDefaultConvertOptionsForDesiredTargetFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
