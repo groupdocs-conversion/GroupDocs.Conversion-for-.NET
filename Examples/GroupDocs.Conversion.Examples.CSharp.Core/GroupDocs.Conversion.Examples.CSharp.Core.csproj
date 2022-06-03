@@ -16,7 +16,7 @@
     <PackageReference Include="Aspose.OCR" Version="22.4.0" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.8.23" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.11.0" />
-    <PackageReference Include="GroupDocs.Conversion" Version="22.4.0" />
+    <PackageReference Include="GroupDocs.Conversion" Version="22.5.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.5.61" />
   </ItemGroup>
 
