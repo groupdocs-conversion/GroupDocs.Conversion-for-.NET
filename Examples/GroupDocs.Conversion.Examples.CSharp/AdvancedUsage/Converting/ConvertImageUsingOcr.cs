@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
+using Aspose.Drawing;
 using Aspose.OCR;
-using GroupDocs.Conversion.FileTypes;
 using GroupDocs.Conversion.Integration.Ocr;
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
@@ -99,7 +98,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                             int fragWidth = (int)Math.Round(GetEquivalentLength(fragment) * fixWidthChar);
                             int actualLength = (index == lineText.Length - 1) ? lineText.Length : index;
                             previousWidth = (int)Math.Round(GetEquivalentLength(lineText.Substring(0, actualLength - frag.Count)) * fixWidthChar);
-                            fragments.Add(new TextFragment(fragment, new Rectangle(boundingRect.X + previousWidth,
+                            fragments.Add(new TextFragment(fragment, new System.Drawing.Rectangle(boundingRect.X + previousWidth,
                                 boundingRect.Y, fragWidth, boundingRect.Height)));
                             fragIndex += fragment.Length;
                             frag.Clear();
