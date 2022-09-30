@@ -14,10 +14,10 @@
 
   <ItemGroup>
     <PackageReference Include="Aspose.OCR" Version="22.7.0" />
-    <PackageReference Include="AWSSDK.S3" Version="3.7.8.23" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.9.62" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.13.1" />
-    <PackageReference Include="GroupDocs.Conversion" Version="22.8.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.5.61" />
+    <PackageReference Include="GroupDocs.Conversion" Version="22.9.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.66" />
   </ItemGroup>
 
 </Project>
