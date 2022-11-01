@@ -48,7 +48,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     var rectangles = api.GetRectangles(ms, AreasType.LINES, false);
                     var result = api.RecognizeImage(ms, new RecognitionSettings
                     {
-                        DetectAreas = false,
+                        DetectAreasMode = DetectAreasMode.COMBINE,
                         RecognitionAreas = rectangles
                     });
                     return CreateRecognizedImageFromResult(result);
