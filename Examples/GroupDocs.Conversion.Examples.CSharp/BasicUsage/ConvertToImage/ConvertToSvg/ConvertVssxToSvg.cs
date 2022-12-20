@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             // Load the source VSSX file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_VSSX))
             {
-                ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Svg };
+                PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions { Format = GroupDocs.Conversion.FileTypes.PageDescriptionLanguageFileType.Svg };
                 // Save converted SVG file
                 converter.Convert(outputFile, options);
             }

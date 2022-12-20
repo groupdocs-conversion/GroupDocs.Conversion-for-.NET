@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             // Load the source ODG file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_ODG))
             {
-                var options = new MarkupConvertOptions();
+                var options = new WebConvertOptions();
                 // Save converted HTML file
                 converter.Convert(outputFile, options);
             }

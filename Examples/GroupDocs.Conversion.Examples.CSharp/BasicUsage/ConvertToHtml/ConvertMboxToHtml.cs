@@ -23,7 +23,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
                                                                                                                 ? new MboxLoadOptions()
                                                                                                                 : null))
 	        {
-                var options = new MarkupConvertOptions();
+                var options = new WebConvertOptions();
 		        var counter = 1;
                 // Save converted HTML file
                 converter.Convert(

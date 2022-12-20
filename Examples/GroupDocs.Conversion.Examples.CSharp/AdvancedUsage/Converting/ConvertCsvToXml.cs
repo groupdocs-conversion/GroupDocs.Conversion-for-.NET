@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             using (Converter converter = new Converter(Constants.SAMPLE_CSV))
             {
-                DataConvertOptions options = new DataConvertOptions
+                WebConvertOptions options = new WebConvertOptions
                 {
-                    Format = DataFileType.Xml
+                    Format = WebFileType.Xml
                 };
                 converter.Convert(outputFile, options);
             }

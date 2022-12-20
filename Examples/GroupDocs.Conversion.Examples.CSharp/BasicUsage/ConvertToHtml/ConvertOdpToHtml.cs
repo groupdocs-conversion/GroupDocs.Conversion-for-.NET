@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             // Load the source ODP file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_ODP))
             {
-                var options = new MarkupConvertOptions();
+                var options = new WebConvertOptions();
                 // Save converted HTML file
                 converter.Convert(outputFile, options);
             }

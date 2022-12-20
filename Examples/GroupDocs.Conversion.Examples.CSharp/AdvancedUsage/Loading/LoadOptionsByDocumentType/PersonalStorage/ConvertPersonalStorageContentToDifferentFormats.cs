@@ -20,7 +20,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             using (Converter converter = new Converter(Constants.SAMPLE_OST, (FileType fileType) =>
             {
-                if (fileType == PersonalStorageFileType.Ost)
+                if (fileType == EmailFileType.Ost)
                 {
                     return new PersonalStorageLoadOptions
                     {
@@ -61,7 +61,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                         return new PdfConvertOptions();
                     }
 
-                    return new MarkupConvertOptions();
+                    return new WebConvertOptions();
                 });
             }
 

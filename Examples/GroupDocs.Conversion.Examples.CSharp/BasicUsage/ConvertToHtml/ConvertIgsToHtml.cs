@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             // Load the source IGS file
             using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_IGS))
             {
-                var options = new MarkupConvertOptions();
+                var options = new WebConvertOptions();
                 // Save converted HTML file
                 converter.Convert(outputFile, options);
             }

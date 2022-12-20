@@ -19,11 +19,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "ost-converted-{0}-to.html");
             
             // Load the source OST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == PersonalStorageFileType.Ost
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == EmailFileType.Ost
                                                                                                                 ? new PersonalStorageLoadOptions()
                                                                                                                 : null))
 	        {
-                var options = new MarkupConvertOptions();
+                var options = new WebConvertOptions();
 		        var counter = 1;
                 // Save converted HTML file
                 converter.Convert(

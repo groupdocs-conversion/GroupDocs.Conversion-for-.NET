@@ -23,9 +23,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             using (Converter converter = new Converter(Constants.SAMPLE_CSV, ()=> loadOptions))
             {
-                DataConvertOptions options = new DataConvertOptions
+                WebConvertOptions options = new WebConvertOptions
                 {
-                    Format = DataFileType.Json
+                    Format = WebFileType.Json
                 };
                 converter.Convert(outputFile, options);
             }

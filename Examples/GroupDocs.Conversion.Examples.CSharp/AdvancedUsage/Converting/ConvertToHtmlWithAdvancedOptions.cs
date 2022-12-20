@@ -22,7 +22,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_PASSWORD, getLoadOptions))
             {
-                MarkupConvertOptions options = new MarkupConvertOptions
+                WebConvertOptions options = new WebConvertOptions
                 {
                     PageNumber = 2,
                     FixedLayout = true,

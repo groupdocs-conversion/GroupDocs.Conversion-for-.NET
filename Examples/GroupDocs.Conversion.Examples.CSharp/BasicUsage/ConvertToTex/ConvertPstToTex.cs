@@ -19,11 +19,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "pst-converted-{0}-to.tex");
             
             // Load the source PST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, fileType => fileType == PersonalStorageFileType.Pst
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, fileType => fileType == EmailFileType.Ost
                                                                                                                 ? new PersonalStorageLoadOptions()
                                                                                                                 : null))
 	        {
-                PdfConvertOptions options = new PdfConvertOptions { Format = GroupDocs.Conversion.FileTypes.PdfFileType.Tex };
+                PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions { Format = GroupDocs.Conversion.FileTypes.PageDescriptionLanguageFileType.Tex };
 		        var counter = 1;
                 // Save converted TEX file
                 converter.Convert(

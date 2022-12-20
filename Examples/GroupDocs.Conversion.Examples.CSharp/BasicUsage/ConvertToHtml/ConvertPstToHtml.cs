@@ -19,11 +19,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "pst-converted-{0}-to.html");
             
             // Load the source PST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, fileType => fileType == PersonalStorageFileType.Pst
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, fileType => fileType == EmailFileType.Pst
                                                                                                                 ? new PersonalStorageLoadOptions()
                                                                                                                 : null))
 	        {
-                var options = new MarkupConvertOptions();
+                var options = new WebConvertOptions();
 		        var counter = 1;
                 // Save converted HTML file
                 converter.Convert(

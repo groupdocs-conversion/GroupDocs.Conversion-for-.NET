@@ -23,7 +23,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
                                                                                                                 ? new MboxLoadOptions()
                                                                                                                 : null))
 	        {
-                PdfConvertOptions options = new PdfConvertOptions { Format = GroupDocs.Conversion.FileTypes.PdfFileType.Tex };
+                PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions { Format = GroupDocs.Conversion.FileTypes.PageDescriptionLanguageFileType.Tex };
 		        var counter = 1;
                 // Save converted TEX file
                 converter.Convert(

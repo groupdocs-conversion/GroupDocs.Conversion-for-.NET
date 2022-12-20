@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             LoadOptions LoadOptionsProvider(FileType sourceType)
             {
-                if (sourceType == PersonalStorageFileType.Ost)
+                if (sourceType == EmailFileType.Ost)
                 {
                     return new PersonalStorageLoadOptions
                     {

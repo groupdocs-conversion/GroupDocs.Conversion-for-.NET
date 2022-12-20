@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.docx");
 
-            Func<LoadOptions> getLoadOptions = () => new MarkupLoadOptions
+            Func<LoadOptions> getLoadOptions = () => new WebLoadOptions
             {
                 PageNumbering = true
             };
