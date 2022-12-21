@@ -17,13 +17,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertCsvToJson.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertCsvToXml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertImageUsingOcr.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToImageWithAdvancedOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\GetDefaultLoadOptionsForSourceDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\GetDefaultConvertOptionsForDesiredTargetFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertEachEmailAttachmentToDifferentFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertOstDocumentMessagesToDifferentFormats.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToHtmlWithAdvancedOptions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToImageWithAdvancedOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertFromRarToPdfAndCompress.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToPdfWithAdvancedOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToPresentationWithAdvancedOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToSpreadsheetWithAdvancedOptions.cs" />
@@ -71,6 +72,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Xml\ConvertXmlAsDataSourceToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocumentFluent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertFromCompression\ExtractFromCompression.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertFromCompression\ConvertFromCompression.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertAiToHtml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertBmpToHtml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertCdrToHtml.cs" />
@@ -2110,6 +2113,9 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.pst">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.rar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.rtf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -2210,6 +2216,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

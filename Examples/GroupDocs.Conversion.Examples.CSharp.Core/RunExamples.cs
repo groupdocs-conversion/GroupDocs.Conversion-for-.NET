@@ -1857,6 +1857,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region Convert from compression
+            
+            // ConvertFromCompression.Run();
+            // ExtractFromCompression.Run();
+
+            #endregion
+
             #endregion
 
             #region Advanced Usage
@@ -1997,6 +2004,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertToPresentationWithAdvancedOptions.Run();
             // ConvertToSpreadsheetWithAdvancedOptions.Run();
             // ConvertToWordProcessingWithAdvancedOptions.Run();
+            // ConvertFromRarToPdfAndCompress.Run();
 
             // ConvertEachEmailAttachmentToDifferentFormat.Run();
             // ConvertOstDocumentMessagesToDifferentFormats.Run();

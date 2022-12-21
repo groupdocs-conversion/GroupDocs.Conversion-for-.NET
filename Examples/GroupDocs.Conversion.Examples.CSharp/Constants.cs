@@ -260,6 +260,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // PST
         public static string SAMPLE_PST => GetSampleFilePath("sample.pst");
 
+        // RAR
+        public static string SAMPLE_RAR => GetSampleFilePath("sample.rar");
+
         // RTF
         public static string SAMPLE_RTF => GetSampleFilePath("sample.rtf");
 
@@ -370,6 +373,12 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
         // XPS
         public static string SAMPLE_XPS => GetSampleFilePath("sample.xps");
+
+        // ZIP
+        public static string SAMPLE_ZIP => GetSampleFilePath("sample.zip");
+
+        // ZIP WITH FOLDERS
+        public static string SAMPLE_ZIP_WITH_FOLDERS => GetSampleFilePath("with_folders.zip");
 
 
 

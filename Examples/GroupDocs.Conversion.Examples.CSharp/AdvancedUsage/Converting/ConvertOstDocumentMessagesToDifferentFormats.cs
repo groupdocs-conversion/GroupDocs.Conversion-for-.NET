@@ -23,7 +23,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 {
                     return new PersonalStorageLoadOptions
                     {
-                        Folder = @"Root - Mailbox", 
+                        Folder = @"Root - Mailbox/IPM_SUBTREE/Inbox", 
                         Depth = 2
                     };
                 }
