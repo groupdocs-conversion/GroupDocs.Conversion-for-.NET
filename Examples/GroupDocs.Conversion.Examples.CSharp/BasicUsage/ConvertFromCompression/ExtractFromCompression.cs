@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using GroupDocs.Conversion.FileTypes;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
@@ -17,12 +18,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
                 converter.Convert(() => new MemoryStream(), (Stream convertedStream, string sourceFileName) =>
                 {
                     string fileName = Path.Combine(outputFolder, sourceFileName);
-                    Directory.CreateDirectory(Path.GetDirectoryName(fileName)!);
+                    var folderName = Path.GetDirectoryName(fileName);
+                    if (!string.IsNullOrEmpty(folderName))
+                    {
+                        Directory.CreateDirectory(folderName);
+                    }
+
                     using (var fs = new FileStream(fileName, FileMode.Create))
                     {
                         convertedStream.CopyTo(fs);
                     }
-                }, (_, _) => null);
+                }, (string sourceDocumentName, FileType sourceType) => null);
             }
 
             Console.WriteLine("\nExtract from compression completed successfully. \nCheck output in {0}", outputFolder);
