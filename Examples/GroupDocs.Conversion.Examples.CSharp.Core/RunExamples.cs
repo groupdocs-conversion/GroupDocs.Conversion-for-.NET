@@ -2015,6 +2015,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // ListenConversionStateAndProgress.Run();
 
+            // LogToConsole.Run();
+            // LogToCustom.Run();
+
             #endregion
 
             #region Fluent syntax

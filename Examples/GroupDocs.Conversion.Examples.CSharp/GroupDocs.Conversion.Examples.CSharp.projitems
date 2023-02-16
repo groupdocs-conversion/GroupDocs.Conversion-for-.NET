@@ -72,6 +72,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Xml\ConvertXmlAsDataSourceToSpreadsheet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocumentFluent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadPasswordProtectedDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Logging\Logging.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertFromCompression\ExtractFromCompression.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertFromCompression\ConvertFromCompression.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ConvertToHtml\ConvertAiToHtml.cs" />
