@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.png");
-            GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
+            Func<int, Stream> getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
 
             // Load the source OTS file
             using (Converter converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OTS))
