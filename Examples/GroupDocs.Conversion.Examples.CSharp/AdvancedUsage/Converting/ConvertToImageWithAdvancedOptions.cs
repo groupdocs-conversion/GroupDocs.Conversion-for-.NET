@@ -16,7 +16,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.png");
 
-            SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
+            Func<int, Stream> getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
 
             using (Converter converter = new Converter(Constants.SAMPLE_PDF))
             {
