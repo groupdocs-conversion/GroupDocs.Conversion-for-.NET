@@ -1858,7 +1858,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #endregion
 
             #region Convert from compression
-            
+
             // ConvertFromCompression.Run();
             // ExtractFromCompression.Run();
 
@@ -1926,7 +1926,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #endregion
 
             #region Note
-            
+
             // ConvertNoteBySpecifyingFontSubstitution.Run();
 
             #endregion
@@ -1991,9 +1991,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region Saving
+
+            // SaveToStream.Run();
+            #endregion
+
             #region Caching
 
-            //// UseCacheWhenProcessingDocuments.Run();
+            // UseCacheWhenProcessingDocuments.Run();
 
             #endregion
 
@@ -2024,7 +2029,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // HelloWorldFluent.Run();
             // GetPossibleConversionsFluent.Run();
-            // LoadPasswordProtectedDocument.Run();
+            // LoadPasswordProtectedDocumentFluent.Run();
 
             #endregion
 

@@ -6,7 +6,7 @@ using GroupDocs.Conversion.Options.Convert;
 namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 {
     /// <summary>
-    /// This example demonstrates how to convert document from stream.
+    /// This example demonstrates how to convert file from stream.
     /// </summary>
     class LoadDocumentFromStream
     {
@@ -25,7 +25,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 converter.Convert(outputFile, options);
             }
 
-            Console.WriteLine($"\nSource document converted successfully.\nCheck output in {outputDirectory}.");
+            Console.WriteLine($"\nSource file converted successfully.\nCheck output in {outputDirectory}.");
         }
 
         private static Stream GetFileStream() => 

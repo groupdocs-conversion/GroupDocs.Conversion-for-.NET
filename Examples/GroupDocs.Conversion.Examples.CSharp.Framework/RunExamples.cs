@@ -16,7 +16,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #region Quick Start
 
-            SetLicenseFromFile.Run();
+            // SetLicenseFromFile.Run();
             // SetLicenseFromStream.Run();
             // SetMeteredLicense.Run();
             // HelloWorld.Run();
@@ -1856,7 +1856,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             #endregion
 
             #region Convert from compression
-            
+
             // ConvertFromCompression.Run();
             // ExtractFromCompression.Run();
 
@@ -1990,9 +1990,14 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             #endregion
 
+            #region Saving
+
+            // SaveToStream.Run();
+            #endregion
+
             #region Caching
 
-            //// UseCacheWhenProcessingDocuments.Run();
+            // UseCacheWhenProcessingDocuments.Run();
             // HowToUseCustomCacheImplementation.Run();
 
             #endregion
@@ -2017,14 +2022,13 @@ namespace GroupDocs.Conversion.Examples.CSharp
 
             // LogToConsole.Run();
             // LogToCustom.Run();
-
             #endregion
 
             #region Fluent syntax
 
             // HelloWorldFluent.Run();
             // GetPossibleConversionsFluent.Run();
-            // LoadPasswordProtectedDocument.Run();
+            // LoadPasswordProtectedDocumentFluent.Run();
 
             #endregion
 
