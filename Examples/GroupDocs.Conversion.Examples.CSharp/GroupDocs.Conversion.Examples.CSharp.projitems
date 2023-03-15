@@ -61,6 +61,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySkippingEmptyRowsAndColumns.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingFontSubstitution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingRange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetBySpecifyingSheetIndexes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Spreadsheet\ConvertSpreadsheetWithHiddenSheetsIncluded.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControllingLeadingSpacesBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadOptionsByDocumentType\Txt\ConvertTxtByControllingTrailingSpacesBehavior.cs" />

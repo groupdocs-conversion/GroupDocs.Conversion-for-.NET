@@ -1961,6 +1961,7 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertSpreadsheetBySkippingEmptyRowsAndColumns.Run();
             // ConvertSpreadsheetBySpecifyingFontSubstitution.Run();
             // ConvertSpreadsheetBySpecifyingRange.Run();
+            // ConvertSpreadsheetBySpecifyingSheetIndexes.Run();
             // ConvertSpreadsheetWithHiddenSheetsIncluded.Run();
 
             #endregion
