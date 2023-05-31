@@ -64,15 +64,19 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         private RecognizedImage CreateRecognizedImageFromResult(RecognitionResult result)
         {
             var lines = new List<TextLine>();
+
+            
             for (var i = 0; i < result.RecognitionAreasText.Count; i++)
             {
-                var fragments = SplitToFragments(result.RecognitionAreasText[i].Trim('\r', '\n'), result.RecognitionAreasRectangles[i]);
+                var rectangle = result.RecognitionAreasRectangles[i];
+                var s = result.RecognitionAreasText[i].Trim('\r', '\n');
+                var fragments = SplitToFragments(s, rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
                 lines.Add(new TextLine(fragments));
             }
             return new RecognizedImage(lines);
         }
 
-        private static List<TextFragment> SplitToFragments(string lineText, Rectangle boundingRect)
+        private static List<TextFragment> SplitToFragments(string lineText, int rectangleX, int rectangleY, int rectangleWidth, int rectangleHeight)
         {
             var fragments = new List<TextFragment>();
             if (!string.IsNullOrEmpty(lineText))
@@ -81,7 +85,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 bool isWhitespace = false;
                 List<char> frag = new List<char>();
                 int previousWidth = 0;
-                float fixWidthChar = boundingRect.Width / GetEquivalentLength(lineText);
+                float fixWidthChar = rectangleWidth / GetEquivalentLength(lineText);
                 while (index < lineText.Length)
                 {
                     if (frag.Count == 0)
@@ -98,8 +102,8 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                             int fragWidth = (int)Math.Round(GetEquivalentLength(fragment) * fixWidthChar);
                             int actualLength = (index == lineText.Length - 1) ? lineText.Length : index;
                             previousWidth = (int)Math.Round(GetEquivalentLength(lineText.Substring(0, actualLength - frag.Count)) * fixWidthChar);
-                            fragments.Add(new TextFragment(fragment, new System.Drawing.Rectangle(boundingRect.X + previousWidth,
-                                boundingRect.Y, fragWidth, boundingRect.Height)));
+                            fragments.Add(new TextFragment(fragment, new System.Drawing.Rectangle(rectangleX + previousWidth,
+                                rectangleY, fragWidth, rectangleHeight)));
                             fragIndex += fragment.Length;
                             frag.Clear();
                             isWhitespace = altIsWhitespace;
@@ -111,7 +115,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             }
             return fragments;
         }
-
+        
         private static readonly List<char> NarrowChars = new List<char>(new char[] { ',', '.', ':', ';', '!', '|', '(', ')', '{', '}',
             'l', 'i', 'I', '-', '+', 'f', 't', 'r'});
         private static readonly List<char> WideChars = new List<char>(new char[] { '\t', 'm', 'w', 'M', 'W' });
