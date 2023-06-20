@@ -13,8 +13,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.QuickStart
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string convertedFile = Path.Combine(outputDirectory, "converted.pdf");
 
-            var converter = new Converter();
-            converter.Load(Constants.SAMPLE_DOCX).ConvertTo(convertedFile).Convert();
+            FluentConverter.Load(Constants.SAMPLE_DOCX).ConvertTo(convertedFile).Convert();
 
             Console.WriteLine($"\nSource document converted successfully.\nCheck output in {outputDirectory}.");
         }

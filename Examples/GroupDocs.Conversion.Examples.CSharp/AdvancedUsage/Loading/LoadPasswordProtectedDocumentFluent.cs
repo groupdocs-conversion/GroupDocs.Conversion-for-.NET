@@ -16,8 +16,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            var converter = new Converter();
-            converter.Load(Constants.SAMPLE_DOCX_WITH_PASSWORD).WithOptions(() => new WordProcessingLoadOptions
+            FluentConverter.Load(Constants.SAMPLE_DOCX_WITH_PASSWORD).WithOptions(() => new WordProcessingLoadOptions
                 {
                     Password = "12345"
                 })

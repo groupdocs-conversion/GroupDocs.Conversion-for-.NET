@@ -10,7 +10,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
-            PossibleConversions conversions = new Converter().Load(Constants.SAMPLE_DOCX).GetPossibleConversions();
+            PossibleConversions conversions = FluentConverter.Load(Constants.SAMPLE_DOCX).GetPossibleConversions();
 
             Console.WriteLine("{0} is of type {1} and could be converted to:", Constants.SAMPLE_DOCX,
                 conversions.Source.Extension);
