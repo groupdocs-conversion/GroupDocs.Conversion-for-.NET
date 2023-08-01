@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             
             using (Converter converter = new Converter(Constants.SAMPLE_ZIP_WITH_FOLDERS))
             {
-                converter.Convert(() => new MemoryStream(), (Stream convertedStream, string sourceFileName) =>
+                converter.Convert(() => new MemoryStream(), (string sourceFileName, FileType convertedFileType, Stream convertedStream) =>
                 {
                     string fileName = Path.Combine(outputFolder, sourceFileName);
                     var folderName = Path.GetDirectoryName(fileName);
