@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Aspose.Drawing;
+using System.Linq;
 using Aspose.OCR;
 using GroupDocs.Conversion.Integration.Ocr;
 using GroupDocs.Conversion.Options.Convert;
@@ -40,17 +40,22 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             try
             {
                 var api = new AsposeOcr();
-                
+                var ocrInput = new OcrInput(InputType.SingleImage);
+
                 using (MemoryStream ms = new MemoryStream())
                 {
                     imageStream.Position = 0;
                     imageStream.CopyTo(ms);
-                    var rectangles = api.GetRectangles(ms, AreasType.LINES, false);
-                    var result = api.RecognizeImage(ms, new RecognitionSettings
-                    {
-                        DetectAreasMode = DetectAreasMode.COMBINE,
-                        RecognitionAreas = rectangles
-                    });
+                    ms.Position = 0;
+                    ocrInput.Add(ms);
+
+                    var detectedRectangles = api.DetectRectangles(ocrInput, AreasType.LINES, false).First();
+                    var result = api.Recognize(ocrInput, new RecognitionSettings
+                        {
+                            DetectAreasMode = DetectAreasMode.COMBINE,
+                            RecognitionAreas = detectedRectangles.Rectangles
+                        })
+                        .First();
                     return CreateRecognizedImageFromResult(result);
                 }
             }
