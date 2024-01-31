@@ -17,7 +17,7 @@
     <PackageReference Include="AWSSDK.Core" Version="3.7.300.24" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.304.1" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
-    <PackageReference Include="GroupDocs.Conversion" Version="23.12.0" />
+    <PackageReference Include="GroupDocs.Conversion" Version="24.1.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.7.10" />
   </ItemGroup>
 

@@ -28,8 +28,8 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     PagesCount = 1,
                     Rotate = Rotation.On180,
                     Dpi = 300,
-                    Width = 1024,
-                    Height = 768
+                    PageWidth = 1024,
+                    PageHeight = 768
                 };
                 converter.Convert(outputFile, options);
             }
