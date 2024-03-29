@@ -15,15 +15,15 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
-            {
-                Width = 1920,
-                Height = 1080
-            };
+            Func<LoadOptions> getLoadOptions = () => new CadLoadOptions();
 
             using (Converter converter = new Converter(Constants.SAMPLE_DWG_WITH_LAYOUTS_AND_LAYERS, getLoadOptions))
             {
-                PdfConvertOptions options = new PdfConvertOptions();
+                PdfConvertOptions options = new PdfConvertOptions
+                {
+                    PageWidth = 1440,
+                    PageHeight = 810
+                };
                 converter.Convert(outputFile, options);
             }
 

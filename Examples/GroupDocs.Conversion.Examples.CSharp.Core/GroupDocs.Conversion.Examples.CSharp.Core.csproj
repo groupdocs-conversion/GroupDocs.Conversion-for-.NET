@@ -13,12 +13,12 @@
   <Import Project="..\GroupDocs.Conversion.Examples.CSharp\GroupDocs.Conversion.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Aspose.OCR" Version="24.2.0" />
-    <PackageReference Include="AWSSDK.Core" Version="3.7.302.14" />
-    <PackageReference Include="AWSSDK.S3" Version="3.7.305.29" />
+    <PackageReference Include="Aspose.OCR" Version="24.3.1" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.303.4" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.307.5" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
-    <PackageReference Include="GroupDocs.Conversion" Version="24.2.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.7.27" />
+    <PackageReference Include="GroupDocs.Conversion" Version="24.3.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
   </ItemGroup>
 
 </Project>
