@@ -21,7 +21,6 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 DisplayHeader = false,
                 DisplayFromEmailAddress = false,
                 DisplayToEmailAddress = false,
-                DisplayEmailAddress = false,
                 DisplayCcEmailAddress = false,
                 DisplayBccEmailAddress = false
             };
