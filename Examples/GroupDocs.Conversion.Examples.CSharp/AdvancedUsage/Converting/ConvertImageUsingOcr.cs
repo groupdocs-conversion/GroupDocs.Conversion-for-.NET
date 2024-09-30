@@ -20,7 +20,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
 
-            var imageLoadOptions = new ImageLoadOptions();
+            var imageLoadOptions = new RasterImageLoadOptions();
             imageLoadOptions.SetOcrConnector(new OcrConnector());
 
             using (Converter converter = new Converter(Constants.SAMPLE_JPEG, () => imageLoadOptions))
