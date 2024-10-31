@@ -39,7 +39,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 Listener = new ConverterListener()
             };
 
-            Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
             {
                 Password = "12345"
             };

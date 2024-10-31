@@ -16,7 +16,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new EmailLoadOptions
             {
                 ConvertOwned = false,
                 FieldTextMap = new Dictionary<EmailField, string>

@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PresentationLoadOptions
             {
                 DefaultFont = "Helvetica",
                 FontSubstitutes = new List<FontSubstitute>

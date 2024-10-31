@@ -19,10 +19,10 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 using (Converter converter = new Converter(Constants.SAMPLE_DOCX))
                 {
                     var convertOptions = new PdfConvertOptions();
-                    converter.Convert(() => new MemoryStream(), (sourceFileName, convertedFileType, convertedStream) =>
+                    converter.Convert(convertOptions, (ConvertedContext convertedContext) =>
                     {
-                        convertedStream.CopyTo(outputStream);
-                    } ,convertOptions);
+                        convertedContext.ConvertedStream.CopyTo(outputStream);
+                    });
                 }
             }
 

@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "mbox-converted-{0}-to.doc");
             
             // Load the source MBOX file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX, fileType => fileType == EmailFileType.Mbox
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_MBOX, (LoadContext loadContext) => loadContext.SourceFormat == EmailFileType.Mbox
                                                                                                                 ? new MboxLoadOptions()
                                                                                                                 : null))
 	        {
@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 		        var counter = 1;
                 // Save converted DOC file
                 converter.Convert(
-		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (SaveContext saveContext) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
                 );            
 	        }

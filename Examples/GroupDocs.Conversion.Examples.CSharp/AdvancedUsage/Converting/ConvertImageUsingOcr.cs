@@ -23,7 +23,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             var imageLoadOptions = new RasterImageLoadOptions();
             imageLoadOptions.SetOcrConnector(new OcrConnector());
 
-            using (Converter converter = new Converter(Constants.SAMPLE_JPEG, () => imageLoadOptions))
+            using (Converter converter = new Converter(Constants.SAMPLE_JPEG, (LoadContext loadContext) => imageLoadOptions))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
                 converter.Convert(outputFile, options);

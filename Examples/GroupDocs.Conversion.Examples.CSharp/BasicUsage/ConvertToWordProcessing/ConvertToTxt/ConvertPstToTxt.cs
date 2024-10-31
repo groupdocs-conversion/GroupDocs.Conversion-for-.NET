@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "pst-converted-{0}-to.txt");
             
             // Load the source PST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, fileType => fileType == EmailFileType.Ost
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_PST, (LoadContext loadContext) => loadContext.SourceFormat == EmailFileType.Ost
                                                                                                                 ? new PersonalStorageLoadOptions()
                                                                                                                 : null))
 	        {
@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 		        var counter = 1;
                 // Save converted TXT file
                 converter.Convert(
-		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (SaveContext saveContext) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
                 );            
 	        }

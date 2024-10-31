@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             
             FluentConverter.Load(Constants.SAMPLE_RAR)
-                .ConvertTo(p => new MemoryStream()).WithOptions(new PdfConvertOptions())
+                .ConvertTo((SaveContext p) => new MemoryStream()).WithOptions(new PdfConvertOptions())
                 .Compress(new CompressionConvertOptions { Format = CompressionFileType.Zip }).OnCompressionCompleted(
                     compressedStream =>
                     {

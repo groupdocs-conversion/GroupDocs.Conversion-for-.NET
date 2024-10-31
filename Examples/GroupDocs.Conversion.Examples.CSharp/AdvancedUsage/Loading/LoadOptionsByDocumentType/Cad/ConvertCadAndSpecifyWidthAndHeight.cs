@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            Func<LoadOptions> getLoadOptions = () => new CadLoadOptions();
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CadLoadOptions();
 
             using (Converter converter = new Converter(Constants.SAMPLE_DWG_WITH_LAYOUTS_AND_LAYERS, getLoadOptions))
             {

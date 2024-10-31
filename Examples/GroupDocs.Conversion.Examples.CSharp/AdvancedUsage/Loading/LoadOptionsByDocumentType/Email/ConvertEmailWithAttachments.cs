@@ -14,7 +14,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
 
-            Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new EmailLoadOptions
             {
                 ConvertOwner = true,
                 ConvertOwned = true,
@@ -26,7 +26,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             {
                 int index = 1;
                 PdfConvertOptions options = new PdfConvertOptions();
-                converter.Convert(() =>
+                converter.Convert((SaveContext saveContext) =>
                 {
                     string fileName = index == 1 ? "converted.pdf" : $"converted-attachment-{index - 1}.pdf";
                     index++;

@@ -17,9 +17,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             
             var index = 1;
 
-            LoadOptions LoadOptionsProvider(FileType sourceType)
+            LoadOptions LoadOptionsProvider(LoadContext loadContext)
             {
-                if (sourceType == EmailFileType.Ost)
+                if (loadContext.SourceFormat == EmailFileType.Ost)
                 {
                     return new PersonalStorageLoadOptions
                     {
@@ -31,15 +31,15 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 return null;
             }
 
-            Stream ConvertedStreamProvider(FileType targetType)
+            Stream ConvertedStreamProvider(SaveContext saveContext)
             {
-                string outputFile = Path.Combine(outputFolder, $"converted-{index++}.{targetType.Extension}");
+                string outputFile = Path.Combine(outputFolder, $"converted-{index++}.{saveContext.TargetFormat.Extension}");
                 return new FileStream(outputFile, FileMode.Create);
             }
 
-            ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)
+            ConvertOptions ConvertOptionsProvider(ConvertContext convertContext)
             {
-                if (sourceType == EmailFileType.Msg)
+                if (convertContext.SourceFormat == EmailFileType.Msg)
                 {
                     return new PdfConvertOptions();
                 }

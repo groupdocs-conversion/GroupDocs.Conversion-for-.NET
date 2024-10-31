@@ -15,15 +15,12 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.xlsx");
 
-            Func<LoadOptions> getLoadOptions = () => new XmlLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new XmlLoadOptions
             {
                 UseAsDataSource = true
             };
 
-            using (Converter converter = new Converter(Constants.SAMPLE_XML_DATASOURCE, () => new XmlLoadOptions
-            {
-                UseAsDataSource = true
-            }))
+            using (Converter converter = new Converter(Constants.SAMPLE_XML_DATASOURCE, getLoadOptions))
             {
                 SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
                 converter.Convert(outputFile, options);

@@ -14,7 +14,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            Func<Stream> getOutputStream = () => GetFileStream(outputFile);
+            Func<SaveContext, Stream> getOutputStream = saveContext => GetFileStream(outputFile);
 
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX))
             {

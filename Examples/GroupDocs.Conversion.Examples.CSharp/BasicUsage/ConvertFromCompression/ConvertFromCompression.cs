@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             {
                 PdfConvertOptions options = new PdfConvertOptions();
                 int i = 0;
-                converter.Convert(() => new FileStream(Path.Combine(outputFolder, $"converted-{++i}.pdf"), FileMode.Create), options);
+                converter.Convert((SaveContext saveContext) => new FileStream(Path.Combine(outputFolder, $"converted-{++i}.pdf"), FileMode.Create), options);
             }
 
             Console.WriteLine("\nConversion from compression completed successfully. \nCheck output in {0}", outputFolder);

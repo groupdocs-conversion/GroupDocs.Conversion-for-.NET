@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.docx");
 
-            Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOptions
             {
                 RemoveEmbeddedFiles = true
             };

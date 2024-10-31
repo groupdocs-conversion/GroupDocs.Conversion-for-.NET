@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using GroupDocs.Conversion.FileTypes;
 
 namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 {
@@ -15,9 +14,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             
             using (Converter converter = new Converter(Constants.SAMPLE_ZIP_WITH_FOLDERS))
             {
-                converter.Convert(() => new MemoryStream(), (string sourceFileName, FileType convertedFileType, Stream convertedStream) =>
+                converter.Convert((ConvertContext convertContext) => null,  (ConvertedContext convertedContext) =>
                 {
-                    string fileName = Path.Combine(outputFolder, sourceFileName);
+                    string fileName = Path.Combine(outputFolder, convertedContext.SourceFileName);
                     var folderName = Path.GetDirectoryName(fileName);
                     if (!string.IsNullOrEmpty(folderName))
                     {
@@ -26,9 +25,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 
                     using (var fs = new FileStream(fileName, FileMode.Create))
                     {
-                        convertedStream.CopyTo(fs);
+                        convertedContext.ConvertedStream.CopyTo(fs);
                     }
-                }, (string sourceDocumentName, FileType sourceType) => null);
+                });
             }
 
             Console.WriteLine("\nExtract from compression completed successfully. \nCheck output in {0}", outputFolder);

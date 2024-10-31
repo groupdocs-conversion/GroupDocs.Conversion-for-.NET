@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
             string outputFile = Path.Combine(outputFolder, "ost-converted-{0}-to.docx");
             
             // Load the source OST file
-            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, fileType => fileType == EmailFileType.Ost
+            using (var converter = new GroupDocs.Conversion.Converter(Constants.SAMPLE_OST, (LoadContext loadContext) => loadContext.SourceFormat == EmailFileType.Ost
                                                                                                                 ? new PersonalStorageLoadOptions()
                                                                                                                 : null))
 	        {
@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.BasicUsage
 		        var counter = 1;
                 // Save converted DOCX file
                 converter.Convert(
-		            (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		            (SaveContext saveContext) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
                     options
                 );            
 	        }

@@ -18,9 +18,9 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
 
-            using (Converter converter = new Converter(Constants.SAMPLE_OST, (FileType fileType) =>
+            using (Converter converter = new Converter(Constants.SAMPLE_OST, (LoadContext loadContext) =>
             {
-                if (fileType == EmailFileType.Ost)
+                if (loadContext.SourceFormat == EmailFileType.Ost)
                 {
                     return new PersonalStorageLoadOptions
                     {
@@ -28,7 +28,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     };
                 }
 
-                if (fileType == EmailFileType.Msg)
+                if (loadContext.SourceFormat == EmailFileType.Msg)
                 {
                     return new EmailLoadOptions
                     {
@@ -41,14 +41,14 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             }))
             {
                 int index = 0;
-                converter.Convert((FileType fileType) =>
+                converter.Convert((SaveContext saveContext) =>
                 {
-                    string fileName = $"converted_{++index}.{fileType.Extension}";
+                    string fileName = $"converted_{++index}.{saveContext.TargetFormat.Extension}";
                     string outputFile = Path.Combine(outputFolder, fileName);
                     return new FileStream(outputFile, FileMode.Create);
-                }, (string sourceFileName, FileType fileType) =>
+                }, (ConvertContext convertContext) =>
                 {
-                    if (fileType == ImageFileType.Jpg)
+                    if (convertContext.SourceFormat == ImageFileType.Jpg)
                     {
                         return new ImageConvertOptions
                         {
@@ -56,7 +56,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                         };
                     }
 
-                    if (fileType == WordProcessingFileType.Docx)
+                    if (convertContext.SourceFormat == WordProcessingFileType.Docx)
                     {
                         return new PdfConvertOptions();
                     }

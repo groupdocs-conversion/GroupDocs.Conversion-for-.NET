@@ -21,7 +21,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                 Separator = ','
             };
 
-            using (Converter converter = new Converter(Constants.SAMPLE_CSV, ()=> loadOptions))
+            using (Converter converter = new Converter(Constants.SAMPLE_CSV, (LoadContext loadContext)=> loadOptions))
             {
                 WebConvertOptions options = new WebConvertOptions
                 {

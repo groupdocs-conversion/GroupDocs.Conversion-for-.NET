@@ -15,7 +15,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             string outputFolder = Constants.GetOutputDirectoryPath();
             string outputFile = Path.Combine(outputFolder, "converted.pdf");
 
-            Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
+            Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CadLoadOptions
             {
                 LayoutNames = new[] { "Layout1", "Layout3" }
             };

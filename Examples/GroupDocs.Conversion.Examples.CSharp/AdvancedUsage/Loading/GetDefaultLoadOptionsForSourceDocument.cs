@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             var loadOptions = (WordProcessingLoadOptions) possibleConversions.LoadOptions;
             loadOptions.Password = "12345";
             
-            using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_PASSWORD, () => loadOptions))
+            using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_PASSWORD, (LoadContext loadContext) => loadOptions))
             {
                 var convertOptions = new PdfConvertOptions();
                 converter.Convert(outputFile, convertOptions);
