@@ -52,7 +52,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
                     var detectedRectangles = api.DetectRectangles(ocrInput, AreasType.LINES, false).First();
                     var result = api.Recognize(ocrInput, new RecognitionSettings
                         {
-                            DetectAreasMode = DetectAreasMode.COMBINE,
+                            DetectAreasMode = DetectAreasMode.UNIVERSAL,
                             RecognitionAreas = detectedRectangles.Rectangles
                         })
                         .First();
