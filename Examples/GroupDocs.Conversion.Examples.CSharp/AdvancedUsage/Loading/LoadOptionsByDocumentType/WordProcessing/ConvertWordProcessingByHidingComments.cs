@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
             {
-                HideComments = true
+                CommentDisplayMode = WordProcessingCommentDisplay.Hidden
             };
 
             using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_TRACKED_CHANGES, getLoadOptions))

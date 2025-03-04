@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
             {
-                HideComments = true,
+                PrintComments = SpreadsheetPrintComments.PrintNoComments,
                 OnePagePerSheet = true,
             };
 

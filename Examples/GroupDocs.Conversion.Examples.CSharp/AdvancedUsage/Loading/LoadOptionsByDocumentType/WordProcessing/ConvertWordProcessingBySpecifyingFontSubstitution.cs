@@ -19,7 +19,6 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
             {
-                AutoFontSubstitution = false,
                 DefaultFont = "Helvetica",
                 FontSubstitutes = new List<FontSubstitute>
                 {

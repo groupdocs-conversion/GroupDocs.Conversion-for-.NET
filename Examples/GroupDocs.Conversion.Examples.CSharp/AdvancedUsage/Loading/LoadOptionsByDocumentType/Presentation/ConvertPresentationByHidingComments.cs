@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PresentationLoadOptions
             {
-                HideComments = true
+                CommentsPosition = PresentationCommentsPosition.None
             };
 
             using (Converter converter = new Converter(Constants.PPTX_WITH_NOTES, getLoadOptions))
