@@ -21,8 +21,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             {
                 PdfConvertOptions options = new PdfConvertOptions
                 {
-                    PageWidth = 1440,
-                    PageHeight = 810
+                    SizeSettings =
+                    {
+                        PageWidth = 1440,
+                        PageHeight = 810
+                    }
                 };
                 converter.Convert(outputFile, options);
             }
