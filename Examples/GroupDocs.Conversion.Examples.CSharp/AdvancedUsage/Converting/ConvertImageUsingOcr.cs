@@ -71,11 +71,11 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
             var lines = new List<TextLine>();
 
             
-            for (var i = 0; i < result.RecognitionAreasText.Count; i++)
+            foreach (var line in result.RecognitionLinesResult)
             {
-                var rectangle = result.RecognitionAreasRectangles[i];
-                var s = result.RecognitionAreasText[i].Trim('\r', '\n');
-                var fragments = SplitToFragments(s, rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
+                var rectangle = line.Line;
+                var s = line.TextInLine.Trim('\r', '\n');
+                var fragments = SplitToFragments(s, (int)rectangle.X, (int)rectangle.Y, (int)rectangle.Width, (int)rectangle.Height);
                 lines.Add(new TextLine(fragments));
             }
             return new RecognizedImage(lines);
