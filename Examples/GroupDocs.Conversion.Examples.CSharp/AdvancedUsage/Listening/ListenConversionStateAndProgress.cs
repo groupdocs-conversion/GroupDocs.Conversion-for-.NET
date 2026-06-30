@@ -11,22 +11,25 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
     /// </summary>
     internal static class ListenConversionStateAndProgress
     {
-        private class ConverterListener : IConverterListener
+        private static ConversionEvents ConversionEventsFactory()
         {
-            public void Started()
+            var conversionEvents = new ConversionEvents
             {
-                Console.WriteLine("Conversion started...");
-            }
+                OnConversionStarted = () =>
+                {
+                    Console.WriteLine("Conversion started...");
+                },
+                OnConversionProgress = (current) =>
+                {
+                    Console.WriteLine($"... {current} % ...");
+                },
+                OnConversionCompleted = () =>
+                {
+                    Console.WriteLine("... conversion completed");
+                }
+            };
 
-            public void Progress(byte current)
-            {
-                Console.WriteLine($"... {current} % ...");
-            }
-
-            public void Completed()
-            {
-                Console.WriteLine("... conversion completed");
-            }
+            return conversionEvents;
         }
 
         public static void Run()
@@ -36,16 +39,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 
             Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
-                Listener = new ConverterListener()
             };
 
             Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
             {
                 Password = "12345"
             };
-           
 
-            using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_PASSWORD, getLoadOptions, settingsFactory))
+            Func<ConversionEvents> conversionEventsFactory = ConversionEventsFactory;
+
+
+            using (Converter converter = new Converter(Constants.SAMPLE_DOCX_WITH_PASSWORD, getLoadOptions, settingsFactory, conversionEventsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
                 converter.Convert(outputFile, options);
