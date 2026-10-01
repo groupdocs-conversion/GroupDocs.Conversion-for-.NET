@@ -14,16 +14,17 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
         {
             string outputFolder = Constants.GetOutputDirectoryPath();
             
-            FluentConverter.Load(Constants.SAMPLE_RAR)
-                .ConvertTo((SaveContext p) => new MemoryStream()).WithOptions(new PdfConvertOptions())
-                .Compress(new CompressionConvertOptions { Format = CompressionFileType.Zip }).OnCompressionCompleted(
-                    compressedStream =>
+            FluentConverter
+                .WithEvents(e => e.OnCompressionCompleted = compressedStream =>
+                {
+                    using (var fs = new FileStream(Path.Combine(outputFolder, "converted.zip"), FileMode.Create))
                     {
-                        using (var fs = new FileStream(Path.Combine(outputFolder, "converted.zip"), FileMode.Create))
-                        {
-                            compressedStream.CopyTo(fs);
-                        }
-                    })
+                        compressedStream.CopyTo(fs);
+                    }
+                })
+                .Load(Constants.SAMPLE_RAR)
+                .ConvertTo((SaveContext p) => new MemoryStream()).WithOptions(new PdfConvertOptions())
+                .Compress(new CompressionConvertOptions { Format = CompressionFileType.Zip })
                 .Convert();
 
             Console.WriteLine("\nDocument converted successfully. \nCheck output in {0}", outputFolder);

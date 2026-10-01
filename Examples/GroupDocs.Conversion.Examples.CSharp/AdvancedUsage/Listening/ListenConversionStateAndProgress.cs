@@ -2,7 +2,6 @@
 using System.IO;
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
-using GroupDocs.Conversion.Reporting;
 
 namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage
 {

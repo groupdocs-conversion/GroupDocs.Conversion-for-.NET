@@ -2011,6 +2011,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // ConvertToSpreadsheetWithAdvancedOptions.Run();
             // ConvertToWordProcessingWithAdvancedOptions.Run();
             // ConvertFromRarToPdfAndCompress.Run();
+            // ConvertPresentationToHtmlSlideshow.Run();
+            // ConvertZipToAar.Run();
+            // ConvertKmzToGeoJson.Run();
 
             // ConvertEachEmailAttachmentToDifferentFormat.Run();
             // ConvertOstDocumentMessagesToDifferentFormats.Run();

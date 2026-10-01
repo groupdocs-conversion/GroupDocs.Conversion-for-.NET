@@ -152,6 +152,9 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // JPX
         public static string SAMPLE_JPX => GetSampleFilePath("sample.jpx");
 
+        // KMZ
+        public static string SAMPLE_KMZ => GetSampleFilePath("sample.kmz");
+
         // LOG
         public static string SAMPLE_LOG => GetSampleFilePath("sample.log");
 
