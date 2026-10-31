@@ -19,6 +19,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertImageUsingOcr.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertToImageWithAdvancedOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\GetDefaultLoadOptionsForSourceDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\ExternalResources\LoadExternalResourcesFromTrustedLocations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\ExternalResources\DecideExternalResourcesWithHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\ExternalResources\RunScriptsOfTrustedHtmlDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\ExternalResources\ConvertXbrlWithRemoteTaxonomy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\GetDefaultConvertOptionsForDesiredTargetFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\Common\ConvertSpecificPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Converting\ConvertEachEmailAttachmentToDifferentFormat.cs" />
@@ -2018,6 +2022,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.kmz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample-external-resources.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample-remote-taxonomy.xbrl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sample.log">

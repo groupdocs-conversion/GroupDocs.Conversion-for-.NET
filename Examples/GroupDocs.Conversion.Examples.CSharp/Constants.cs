@@ -155,6 +155,10 @@ namespace GroupDocs.Conversion.Examples.CSharp
         // KMZ
         public static string SAMPLE_KMZ => GetSampleFilePath("sample.kmz");
 
+        // External resources
+        public static string SAMPLE_HTML_WITH_EXTERNAL_RESOURCES => GetSampleFilePath("sample-external-resources.html");
+        public static string SAMPLE_XBRL_WITH_REMOTE_TAXONOMY => GetSampleFilePath("sample-remote-taxonomy.xbrl");
+
         // LOG
         public static string SAMPLE_LOG => GetSampleFilePath("sample.log");
 

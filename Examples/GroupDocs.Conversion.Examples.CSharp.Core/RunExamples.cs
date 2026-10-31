@@ -1883,6 +1883,15 @@ namespace GroupDocs.Conversion.Examples.CSharp
             // GetDefaultLoadOptionsForSourceDocument.Run();
             // LoadPasswordProtectedDocument.Run();
 
+            #region External resources
+
+            // LoadExternalResourcesFromTrustedLocations.Run();
+            // DecideExternalResourcesWithHandler.Run();
+            // RunScriptsOfTrustedHtmlDocument.Run();
+            // ConvertXbrlWithRemoteTaxonomy.Run();
+
+            #endregion
+
             #region Loading documents from different sources
 
             // LoadDocumentFromLocalDisk.Run();

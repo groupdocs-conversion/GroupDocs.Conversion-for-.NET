@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xbrl
+  xmlns="http://www.xbrl.org/2003/instance"
+  xmlns:dei="http://xbrl.sec.gov/dei/2019-01-31"
+  xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:us-gaap="http://fasb.org/us-gaap/2019-01-31"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:schemaRef
+    xlink:type="simple"
+    xlink:href="https://raw.githubusercontent.com/xbrlus/contractor/2019-09-01/contractor_all_2019-09-01_r01.xsd"/>
+  <context id="FY2025">
+    <entity>
+      <identifier scheme="http://example.com/entity">SAMPLE</identifier>
+    </entity>
+    <period>
+      <startDate>2025-01-01</startDate>
+      <endDate>2025-12-31</endDate>
+    </period>
+  </context>
+  <context id="I2025">
+    <entity>
+      <identifier scheme="http://example.com/entity">SAMPLE</identifier>
+    </entity>
+    <period>
+      <instant>2025-12-31</instant>
+    </period>
+  </context>
+  <unit id="USD">
+    <measure>iso4217:USD</measure>
+  </unit>
+  <dei:EntityRegistrantName contextRef="FY2025">Sample Contractor, LLC</dei:EntityRegistrantName>
+  <us-gaap:Cash contextRef="I2025" unitRef="USD" decimals="0">125000</us-gaap:Cash>
+  <us-gaap:Revenues contextRef="FY2025" unitRef="USD" decimals="0">980000</us-gaap:Revenues>
+</xbrl>
